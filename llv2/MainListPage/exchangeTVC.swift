@@ -208,6 +208,7 @@ class exchangeTVC: UITableViewController {
         
         let index = tableView.indexPathForSelectedRow?.row
         viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }

@@ -33,6 +33,10 @@ class profileCheckController: UIViewController {
     
     @IBOutlet weak var chat: UIButton!
     
+    @IBOutlet weak var edit: UIButton!
+    @IBOutlet weak var delete: UIButton!
+    
+    
     var pid = String()
     var uid = String()
     
@@ -48,6 +52,10 @@ class profileCheckController: UIViewController {
         //如果是自己，没办法chat
         if (uidLabel.text == Auth.auth().currentUser!.uid){
             self.chat.isHidden = true
+        }
+        else{
+            self.edit.isHidden = true
+            self.delete.isHidden = true
         }
         
         
