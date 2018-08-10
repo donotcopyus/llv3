@@ -54,18 +54,6 @@ class xianzhiTVC: UITableViewController{
     }
     
     
-    //传值prepare
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "checkProf",
-            let destination = segue.destination as? profileCheckController,
-            let index = tableView.indexPathForSelectedRow?.row
-        {
-            destination.uid = arrayOfCellData[index].author.uid
-        }
-    }
-    
-    
-    
     func observePost(){
         
         let postRef = Database.database().reference().child("xianzhi")
@@ -197,6 +185,17 @@ class xianzhiTVC: UITableViewController{
     @IBAction func goback(_ sender: UIButton) {
         // self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil);
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
     

@@ -20,6 +20,8 @@
 		516F7FC8210101BD001C0C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516F7FC6210101BD001C0C55 /* LaunchScreen.storyboard */; };
 		516F7FD3210101BD001C0C55 /* llv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FD2210101BD001C0C55 /* llv2Tests.swift */; };
 		516F7FDE210101BD001C0C55 /* llv2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FDD210101BD001C0C55 /* llv2UITests.swift */; };
+		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
+		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
 		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
 		51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */; };
 		51B562602101023200FF8D25 /* revealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624E2101022E00FF8D25 /* revealController.swift */; };
@@ -94,6 +96,8 @@
 		516F7FD9210101BD001C0C55 /* llv2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = llv2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		516F7FDD210101BD001C0C55 /* llv2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llv2UITests.swift; sourceTree = "<group>"; };
 		516F7FDF210101BD001C0C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
+		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
 		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
 		51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePictureViewController.swift; sourceTree = "<group>"; };
 		51B5624E2101022E00FF8D25 /* revealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = revealController.swift; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				FA270008211B41E000B6133A /* alreadySendVC.swift */,
 				FA27000A211B41F800B6133A /* likeVC.swift */,
 				519B31E8211BEBFB002850AB /* profileCheckController.swift */,
+				518BD2C3211D464D00B56514 /* checkXianzhiController.swift */,
+				518BD2C1211D402F00B56514 /* checkCarpoolController.swift */,
 			);
 			path = MainListPage;
 			sourceTree = "<group>";
@@ -595,6 +601,8 @@
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				FA968173211CDB9B006250BD /* likePVC.swift in Sources */,
+				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
+				518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,

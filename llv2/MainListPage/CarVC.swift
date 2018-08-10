@@ -178,13 +178,19 @@ class CarVC: UITableViewController {
         return 101.5
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let vcName = identities[indexPath.row]
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-//        self.navigationController?.pushViewController(viewController!, animated: true)
-//
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
+        
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+    
+    
     @IBAction func goback(_ sender: UIButton) {
        // self.navigationController?.popViewController(animated: true)
          dismiss(animated: true, completion: nil);

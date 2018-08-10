@@ -1,45 +1,39 @@
 //
-//  profileCheckController.swift
+//  checkCarpoolController.swift
 //  llv2
 //
-//  Created by Luna Cao on 2018/8/8.
+//  Created by Luna Cao on 2018/8/9.
 //  Copyright © 2018年 Luna Cao. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class profileCheckController: UIViewController {
-    
-    
-    @IBAction func back(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
-    }
+class checkCarpoolController: UIViewController {
     
     @IBOutlet weak var pidLabel: UILabel!
-    @IBOutlet weak var headImage: UIImageView!
-    
-    @IBOutlet weak var username: UILabel!
-    
-    @IBOutlet weak var time: UILabel!
-    
-    @IBOutlet weak var specific: UILabel!
-    
-    @IBOutlet weak var isCur: UILabel!
-    
-    @IBOutlet weak var extra: UILabel!
-    
     @IBOutlet weak var uidLabel: UILabel!
+    @IBOutlet weak var headImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var route: UILabel!
+    @IBOutlet weak var seat: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var depTime: UILabel!
     
     @IBOutlet weak var chat: UIButton!
-    
     @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
-    
     var pid = String()
     var uid = String()
+
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,11 +52,10 @@ class profileCheckController: UIViewController {
             self.delete.isHidden = true
         }
         
-        
-       let postRef = Database.database().reference().child("exchange/\(pid)")
+        let postRef = Database.database().reference().child("carpool/\(pid)")
         
         postRef.observe(DataEventType.value, with:{
-          (snapshot) in
+            (snapshot) in
             let post = snapshot.value as? [String:Any]
             let author = post!["author"] as? [String:Any]
             
@@ -78,38 +71,24 @@ class profileCheckController: UIViewController {
             let dform = DateFormatter()
             dform.dateFormat = "MM月dd日 HH:mm"
             
-            self.time.text = dform.string(from:date as Date)
+            self.time.text = "发送于：" + dform.string(from:date as Date)
             
-            let chu = post!["haveMoney"] as? String
-            let qiu = post!["wantMoney"] as? String
-            let fullstring = "出" + chu! + ", 求" + qiu!
+            let arr = post!["arrCity"] as? String
+            let dep = post!["depCity"] as? String
+            let fullstring = "从" + dep! + ", 到" + arr!
+            self.route.text = fullstring
             
-            self.specific.text = fullstring
+            self.seat.text = "剩余座位：" + (post!["remainSeat"] as? String)!
             
-            let isC = post!["currencyBol"] as? Bool
-            if (isC == true){
-                self.isCur.text = "实时汇率"
-            }
-            else{
-                self.isCur.text = "非实时汇率"
-            }
+            self.date.text = "出发日期：" + (post!["depDate"] as? String)!
             
-            let extraI = post!["extraInfo"] as? String
-            self.extra.text = extraI
+            self.depTime.text = "大致出发时间：" + (post!["depTime1"] as? String)! + " ~ " + (post!["depTime2"] as? String)!
             
         })
         
-        
-        
 
-        // Do any additional setup after loading the view.
+       
     }
-    
-    @IBAction func chat(_ sender: UIButton) {
-        //chatbox
-    }
-    
- 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,14 +96,5 @@ class profileCheckController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

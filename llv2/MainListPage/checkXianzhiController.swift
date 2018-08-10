@@ -1,38 +1,33 @@
 //
-//  profileCheckController.swift
+//  checkXianzhiController.swift
 //  llv2
 //
-//  Created by Luna Cao on 2018/8/8.
+//  Created by Luna Cao on 2018/8/10.
 //  Copyright © 2018年 Luna Cao. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class profileCheckController: UIViewController {
-    
+class checkXianzhiController: UIViewController {
     
     @IBAction func back(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBOutlet weak var pidLabel: UILabel!
-    @IBOutlet weak var headImage: UIImageView!
-    
-    @IBOutlet weak var username: UILabel!
-    
-    @IBOutlet weak var time: UILabel!
-    
-    @IBOutlet weak var specific: UILabel!
-    
-    @IBOutlet weak var isCur: UILabel!
-    
-    @IBOutlet weak var extra: UILabel!
-    
     @IBOutlet weak var uidLabel: UILabel!
     
+    @IBOutlet weak var headImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var info: UILabel!
     @IBOutlet weak var chat: UIButton!
-    
     @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
@@ -42,7 +37,7 @@ class profileCheckController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //get pid，藏起来
         self.pidLabel.isHidden = true
         self.pidLabel.text = pid
@@ -58,11 +53,10 @@ class profileCheckController: UIViewController {
             self.delete.isHidden = true
         }
         
-        
-       let postRef = Database.database().reference().child("exchange/\(pid)")
+         let postRef = Database.database().reference().child("xianzhi/\(pid)")
         
         postRef.observe(DataEventType.value, with:{
-          (snapshot) in
+            (snapshot) in
             let post = snapshot.value as? [String:Any]
             let author = post!["author"] as? [String:Any]
             
@@ -78,38 +72,39 @@ class profileCheckController: UIViewController {
             let dform = DateFormatter()
             dform.dateFormat = "MM月dd日 HH:mm"
             
-            self.time.text = dform.string(from:date as Date)
+            self.time.text = "发送于：" + dform.string(from:date as Date)
             
-            let chu = post!["haveMoney"] as? String
-            let qiu = post!["wantMoney"] as? String
-            let fullstring = "出" + chu! + ", 求" + qiu!
-            
-            self.specific.text = fullstring
-            
-            let isC = post!["currencyBol"] as? Bool
-            if (isC == true){
-                self.isCur.text = "实时汇率"
-            }
-            else{
-                self.isCur.text = "非实时汇率"
+            let url1 = post!["imageOneUrl"] as? String
+            if (url1 != ""){
+            let tourl1 = URL(string:url1!)
+            let data1 = try?Data(contentsOf:tourl1!)
+                self.image1.image = UIImage(data:data1!)
             }
             
-            let extraI = post!["extraInfo"] as? String
-            self.extra.text = extraI
+            let url2 = post!["imageTwoUrl"] as? String
+            if (url2 != ""){
+                let tourl2 = URL(string:url2!)
+                let data2 = try?Data(contentsOf:tourl2!)
+                self.image2.image = UIImage(data:data2!)
+            }
+            
+            let url3 = post!["imageThreeUrl"] as? String
+            if (url3 != ""){
+                let tourl3 = URL(string:url3!)
+                let data3 = try?Data(contentsOf:tourl3!)
+                self.image3.image = UIImage(data:data3!)
+            }
+            
+            self.name.text = "物品： " + (post!["name"] as? String)!
+            self.price.text = "价格： " + (post!["price"] as? String)!
+            
+            self.info.text = post!["extraInfo"] as? String
+            
             
         })
         
         
-        
-
-        // Do any additional setup after loading the view.
     }
-    
-    @IBAction func chat(_ sender: UIButton) {
-        //chatbox
-    }
-    
- 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,14 +112,5 @@ class profileCheckController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
