@@ -20,26 +20,32 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         return true
     }
-
-
+    
+    var subm = 0
+    
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     
     var rotationAngle: CGFloat!
-
+    
     @IBOutlet weak var otherDep: UITextField!
     @IBOutlet weak var otherArr: UITextField!
-
+    
     //handle数据库行为
     @IBAction func sendBtn(_ sender: Any) {
         
         let alert = UIAlertController(title: title, message: "Send Advertisement?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+           // self.sendData()
             
         } ))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
         } ))
         present(alert, animated: true, completion: nil)
+
+        
         
         //check出发城市和到达城市，确保field不为空
         var dept = button.currentTitle!
@@ -49,7 +55,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if(dept == "其他"){
             
             dept = self.otherDep.text!
-
+            
             //如果没有输入城市名
             if dept == ""{
                 //alert
@@ -97,7 +103,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         //确保出发日期比目前日期要晚
         let currentDate = Date()
         let compare = NSCalendar.current.compare(currentDate, to: datepicker.date, toGranularity: .day)
-
+        
         if (compare == ComparisonResult.orderedDescending) {
             //alert
             print("啥玩意儿啊时间已经过了！")
@@ -124,7 +130,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let postRef = Database.database().reference().child("carpool").childByAutoId()
         
         let postObj = [
-        
+            
             "depCity":dept,
             "arrCity":arri,
             "remainSeat":remainSeat,
@@ -138,11 +144,15 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 "photoURL":userProfile.photoURL.absoluteString
             ]
             
-        ] as [String:Any]
+            ] as [String:Any]
         
+        
+        
+        //  func sendData() {
         postRef.setValue(postObj, withCompletionBlock: {error, ref in
-            if error == nil{
+            if error == nil && (self.subm == 1) {
                 //发送得太快了？
+                
                 self.performSegue(withIdentifier: "goB", sender: self)
                 
             }
@@ -152,18 +162,20 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 return
             }
         })
-        
+        // }
         
     }
+    
+
     
     
     @IBAction func dChanged(_ sender: UITextField) {
         
         if(button.currentTitle! != "其他"){
-         button.setTitle("其他", for: .normal)
-      }
+            button.setTitle("其他", for: .normal)
+        }
         
-       otherDep.text = sender.text
+        otherDep.text = sender.text
         
     }
     
@@ -178,19 +190,19 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     //alert
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        createAlert(title: "Send Advertisement", message: "you sure?")
-//    }
-//
-//    func createAlert (title: String, message: String) {
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-//
-//        } ))
-//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-//        } ))
-//    }
-//
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        createAlert(title: "Send Advertisement", message: "you sure?")
+    //    }
+    //
+    //    func createAlert (title: String, message: String) {
+    //        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    //            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+    //
+    //        } ))
+    //            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+    //        } ))
+    //    }
+    //
     
     
     //end alert
@@ -200,7 +212,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))
         
         button.setTitle("出发城市", for: .normal)
@@ -209,21 +221,21 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         self.view.addSubview(button)
         
-
-
+        
+        
         button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
         
         
         
-       //---------------------------------
+        //---------------------------------
         b2 = dropDownBtn.init(frame: CGRect(x:210, y:55, width: 150, height: 40))
-
+        
         b2.setTitle("到达城市", for: .normal)
-
+        
         b2.translatesAutoresizingMaskIntoConstraints = true
-
+        
         b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
-
+        
         self.view.addSubview(b2)
         
         
@@ -233,12 +245,12 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         rotationAngle = -90 * (.pi/180)
         let y = seatNum.frame.origin.y
         seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
-      
+        
         seatNum.frame = CGRect(x: -100, y: y, width: view.frame.width + 100, height: 100)
         
         
-
-  }
+        
+    }
     
     
     override func didReceiveMemoryWarning() {
@@ -273,7 +285,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         seat.text = "剩余座位数：\(dataSource[row])"
-
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -281,10 +293,10 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         //view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
     }
     
-
-
+    
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
- 
+        
         let view = UIView()
         let label = UILabel()
         //(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -294,21 +306,21 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     
-//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//
-//
-//        let titleLb = dataSource[row]
-//        return NSAttributedString(string: titleLb, attributes: [NSFontAttributeName:UIFont(name: "Helvetica",size: 14!, NSForegroundColorAttributeName: UIColor.white)]?)
-//    }
-        
-
+    //    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    //
+    //
+    //        let titleLb = dataSource[row]
+    //        return NSAttributedString(string: titleLb, attributes: [NSFontAttributeName:UIFont(name: "Helvetica",size: 14!, NSForegroundColorAttributeName: UIColor.white)]?)
+    //    }
+    
+    
     
     
     //-------------------------------------------------
     
     
     
-//date label
+    //date label
     @IBOutlet weak var godate: UILabel!
     @IBOutlet weak var datepicker: UIDatePicker!
     
@@ -321,7 +333,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         godate.text = "出发日期 \(strDate)"
     }
     
-
+    
     
     //time label
     @IBOutlet private weak var showGoTime: UILabel!
@@ -345,7 +357,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func latestGo(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         
-    //    dateFormatter.dateStyle = DateFormatter.Style.short
+        //    dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         
         let strDate = dateFormatter.string(from: latestGo.date)
@@ -360,7 +372,7 @@ protocol dropDownProtocol {
 
 class dropDownBtn: UIButton, dropDownProtocol {
     
-
+    
     
     func dropDownPressed(string: String){
         
@@ -368,7 +380,7 @@ class dropDownBtn: UIButton, dropDownProtocol {
         self.dismissDropDown()
     }
     
-
+    
     var dropView = dropDownView()
     
     var height = NSLayoutConstraint()
@@ -517,7 +529,7 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         self.delegate.dropDownPressed(string: dropDownOptions[indexPath.row])
         self.tableView.deselectRow(at: indexPath, animated: true)
-       
+        
     }
     
     
