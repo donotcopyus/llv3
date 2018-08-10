@@ -37,7 +37,12 @@ class checkXianzhiController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
+        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
+        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
 
+        
         //get pid，藏起来
         self.pidLabel.isHidden = true
         self.pidLabel.text = pid
@@ -79,6 +84,8 @@ class checkXianzhiController: UIViewController {
             let tourl1 = URL(string:url1!)
             let data1 = try?Data(contentsOf:tourl1!)
                 self.image1.image = UIImage(data:data1!)
+                self.image1.addGestureRecognizer(pictureTap1)
+                self.image1.isUserInteractionEnabled = true
             }
             
             let url2 = post!["imageTwoUrl"] as? String
@@ -86,6 +93,8 @@ class checkXianzhiController: UIViewController {
                 let tourl2 = URL(string:url2!)
                 let data2 = try?Data(contentsOf:tourl2!)
                 self.image2.image = UIImage(data:data2!)
+                self.image2.addGestureRecognizer(pictureTap2)
+                self.image2.isUserInteractionEnabled = true
             }
             
             let url3 = post!["imageThreeUrl"] as? String
@@ -93,6 +102,8 @@ class checkXianzhiController: UIViewController {
                 let tourl3 = URL(string:url3!)
                 let data3 = try?Data(contentsOf:tourl3!)
                 self.image3.image = UIImage(data:data3!)
+                self.image3.addGestureRecognizer(pictureTap3)
+                self.image3.isUserInteractionEnabled = true
             }
             
             self.name.text = "物品： " + (post!["name"] as? String)!
@@ -105,6 +116,30 @@ class checkXianzhiController: UIViewController {
         
         
     }
+    
+    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        
+
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

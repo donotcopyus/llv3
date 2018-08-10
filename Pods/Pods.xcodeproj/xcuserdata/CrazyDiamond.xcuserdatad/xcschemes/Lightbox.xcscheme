@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB33426523581DE5A39BEC42E84CD867"
+               BlueprintIdentifier = "C92BD4A850C96E2A615C59515E40FAB7"
                BlueprintName = "Lightbox"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Lightbox.framework">
