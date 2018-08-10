@@ -33,6 +33,14 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     //handle数据库行为
     @IBAction func sendBtn(_ sender: Any) {
         
+        let alert = UIAlertController(title: title, message: "Send Advertisement?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            
+        } ))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        } ))
+        present(alert, animated: true, completion: nil)
+        
         //check出发城市和到达城市，确保field不为空
         var dept = button.currentTitle!
         var arri = b2.currentTitle!
@@ -167,6 +175,26 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         otherArr.text = sender.text
     }
+    
+    //alert
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        createAlert(title: "Send Advertisement", message: "you sure?")
+//    }
+//
+//    func createAlert (title: String, message: String) {
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+//
+//        } ))
+//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+//        } ))
+//    }
+//
+    
+    
+    //end alert
+    
     
     
     override func viewDidLoad() {
