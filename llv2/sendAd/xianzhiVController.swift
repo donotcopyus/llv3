@@ -90,6 +90,11 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     
     @IBAction func send(_ sender: Any) {
         
+        
+        
+        
+        
+        
         //数据库其他行为
         guard let name = self.name.text else{
             return
@@ -97,7 +102,18 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         
         if (name == ""){
            //alert输入名字
-            return
+            let alert = UIAlertController(title: title, message: "Please Enter The Name of this Ad", preferredStyle: .alert)
+
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+
+                
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            
+            //return
         }
         
         guard let price = self.price.text else{
@@ -106,7 +122,20 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         
         if(price == ""){
            //alert输入价格
-            return
+            
+            let alert = UIAlertController(title: title, message: "Please Enter The Price", preferredStyle: .alert)
+            
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                
+                
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            
+            
+           // return
         }
         
         var extraInfo = self.txtv.text
