@@ -184,16 +184,10 @@ class exchangeTVC: UITableViewController {
             
         })
         
-       // cell.connectUser(<#T##sender: UIButton##UIButton#>)
-       // cell.connectDetail.tag = indexPath
-//        cell.connectDetail.addTarget(self, action: "jump", for: .touchUpInside)
 
         return cell
     }
     
-//    func jump() {
-//       print("jumping")
-//    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -209,11 +203,26 @@ class exchangeTVC: UITableViewController {
   //*********************************************
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vcName = identities[indexPath.row]
-        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-        self.navigationController?.pushViewController(viewController!, animated: true)
+       
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckE") as! profileCheckController
+        
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
   
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
