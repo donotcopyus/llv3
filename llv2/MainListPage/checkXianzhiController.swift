@@ -140,6 +140,18 @@ class checkXianzhiController: UIViewController {
         sender.view?.removeFromSuperview()
     }
     
+    @IBAction func chat(_ sender: UIButton) {
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        viewController.uid = uid
+        viewController.username = self.username.text!
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

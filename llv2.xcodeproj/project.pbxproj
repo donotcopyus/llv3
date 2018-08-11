@@ -22,8 +22,8 @@
 		516F7FDE210101BD001C0C55 /* llv2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FDD210101BD001C0C55 /* llv2UITests.swift */; };
 		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
 		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
-		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
-		51A7E727211E86B00022AD66 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E726211E86B00022AD66 /* chat.swift */; };
+		51A7E729211E8BE90022AD66 /* chatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E728211E8BE90022AD66 /* chatLog.swift */; };
+		51A7E72D211E8CC00022AD66 /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E72C211E8CC00022AD66 /* profileCheckController.swift */; };
 		51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */; };
 		51B562602101023200FF8D25 /* revealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624E2101022E00FF8D25 /* revealController.swift */; };
 		51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */; };
@@ -99,8 +99,8 @@
 		516F7FDF210101BD001C0C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
 		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
-		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
-		51A7E726211E86B00022AD66 /* chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
+		51A7E728211E8BE90022AD66 /* chatLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatLog.swift; sourceTree = "<group>"; };
+		51A7E72C211E8CC00022AD66 /* profileCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
 		51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePictureViewController.swift; sourceTree = "<group>"; };
 		51B5624E2101022E00FF8D25 /* revealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = revealController.swift; sourceTree = "<group>"; };
 		51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xianzhiViewController.swift; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		51A7E725211E86360022AD66 /* 私信 */ = {
 			isa = PBXGroup;
 			children = (
-				51A7E726211E86B00022AD66 /* chat.swift */,
+				51A7E728211E8BE90022AD66 /* chatLog.swift */,
 			);
 			path = "私信";
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				FA323A1321102323003066D3 /* CarVC.swift */,
 				FA270008211B41E000B6133A /* alreadySendVC.swift */,
 				FA27000A211B41F800B6133A /* likeVC.swift */,
-				519B31E8211BEBFB002850AB /* profileCheckController.swift */,
+				51A7E72C211E8CC00022AD66 /* profileCheckController.swift */,
 				518BD2C3211D464D00B56514 /* checkXianzhiController.swift */,
 				518BD2C1211D402F00B56514 /* checkCarpoolController.swift */,
 			);
@@ -596,13 +596,14 @@
 				FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */,
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
+				51A7E72D211E8CC00022AD66 /* profileCheckController.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FAA28F6921066798005529FA /* settingVC.swift in Sources */,
 				FA968179211CE830006250BD /* xianzhi.swift in Sources */,
+				51A7E729211E8BE90022AD66 /* chatLog.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
-				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
@@ -612,7 +613,6 @@
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				FA968173211CDB9B006250BD /* likePVC.swift in Sources */,
-				51A7E727211E86B00022AD66 /* chat.swift in Sources */,
 				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
 				518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,

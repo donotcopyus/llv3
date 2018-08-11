@@ -1,3 +1,4 @@
+
 //
 //  profileCheckController.swift
 //  llv2
@@ -13,7 +14,7 @@ class profileCheckController: UIViewController {
     
     
     @IBAction func back(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBOutlet weak var pidLabel: UILabel!
@@ -59,10 +60,10 @@ class profileCheckController: UIViewController {
         }
         
         
-       let postRef = Database.database().reference().child("exchange/\(pid)")
+        let postRef = Database.database().reference().child("exchange/\(pid)")
         
         postRef.observe(DataEventType.value, with:{
-          (snapshot) in
+            (snapshot) in
             let post = snapshot.value as? [String:Any]
             let author = post!["author"] as? [String:Any]
             
@@ -101,30 +102,34 @@ class profileCheckController: UIViewController {
         
         
         
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func chat(_ sender: UIButton) {
-        //chatbox
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        viewController.uid = uid
+        viewController.username = self.username.text!
+      self.navigationController?.pushViewController(viewController, animated: true)
     }
     
- 
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
