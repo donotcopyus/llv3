@@ -11,7 +11,7 @@ import Firebase
 
 class myMesController: UITableViewController {
     
-        var messages = [Message]()
+    var messages = [Message]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +25,18 @@ class myMesController: UITableViewController {
         
         messageRef.observe(.childAdded, with: { (snapshot) in
             
-            if let dict = snapshot.value as? [String: Any]{
-                let message = Message()
-                message.setValuesForKeys(dict)
-                self.messages.append(message)
-                self.tableView.reloadData()
+            if let dict = snapshot.value as? [String:AnyObject]{
+                let mes = Message()
+                mes.text = dict["text"] as? String
+                print(mes.text!)
             }
-        })
-        
+
+            }, withCancel: nil)
     }
     
     override func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style:.subtitle, reuseIdentifier:"cellid")
+        cell.textLabel?.text = "hey"
         return cell
     }
 
@@ -54,7 +54,7 @@ class myMesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return messages.count
+        return 5
     }
 
     /*
