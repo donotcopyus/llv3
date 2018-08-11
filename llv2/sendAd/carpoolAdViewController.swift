@@ -34,17 +34,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     //handle数据库行为
     @IBAction func sendBtn(_ sender: Any) {
         
-        let alert = UIAlertController(title: title, message: "Send Advertisement?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-           // self.sendData()
-            
-        } ))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        } ))
-        present(alert, animated: true, completion: nil)
-
+      
         
         
         //check出发城市和到达城市，确保field不为空
@@ -59,8 +49,15 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //如果没有输入城市名
             if dept == ""{
                 //alert
-                print("请填写具体城市")
-                return
+                
+                let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                } ))
+                
+                present(alert, animated: true, completion: nil)
+
             }
         }
         
@@ -71,15 +68,29 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //如果没有输入城市名
             if arri == ""{
                 //alert
-                print("请填写具体城市")
-                return
+                let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                } ))
+                
+                present(alert, animated: true, completion: nil)
+//                print("请填写具体城市")
+//                return
             }
         }
         
         if(dept == "出发城市" || arri == "到达城市"){
             //alert
-            print("出发或到达城市为空")
-            return
+            let alert = UIAlertController(title: title, message: "出发或到达城市不能为空", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+//            print("出发或到达城市为空")
+//            return
         }
         
         
@@ -106,8 +117,15 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         if (compare == ComparisonResult.orderedDescending) {
             //alert
-            print("啥玩意儿啊时间已经过了！")
-            return
+            let alert = UIAlertController(title: title, message: "请选择科学的时间", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+//            print("啥玩意儿啊时间已经过了！")
+//            return
         }
         
         //确保timeinterval是合理的
@@ -158,6 +176,13 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
             else{
                 //alert, error
+                let alert = UIAlertController(title: self.title, message: "出错", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                } ))
+                
+                self.present(alert, animated: true, completion: nil)
                 print("出错")
                 return
             }

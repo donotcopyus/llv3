@@ -121,10 +121,9 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         }
         
         if(price == ""){
-           //alert输入价格
+           //alert输入价格--------------------------------------------------
             
             let alert = UIAlertController(title: title, message: "Please Enter The Price", preferredStyle: .alert)
-            
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 alert.dismiss(animated: true, completion: nil)
@@ -133,9 +132,8 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             } ))
             
             present(alert, animated: true, completion: nil)
-            
-            
-           // return
+  
+           // end alert -------------------------------------------------------
         }
         
         var extraInfo = self.txtv.text
@@ -175,9 +173,21 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                 //
             }
             else{
-                //alert
-                print("error")
-                return
+                
+//alert--------------------------------------------------------------
+                
+                let alert = UIAlertController(title: self.title, message: "Please Enter The Price", preferredStyle: .alert)
+                
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                    
+                    
+                } ))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+//-------------------------------------------------------------------------
             }
         })
         
