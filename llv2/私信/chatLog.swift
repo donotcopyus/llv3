@@ -9,12 +9,20 @@
 import UIKit
 import Firebase
 
-class ChatLogController: UICollectionViewController{
+class ChatLogController: UICollectionViewController,UITextFieldDelegate{
     
     //暂时放下的功能：具体广告显示
     
     var username = String()
     var uid = String()
+    
+    lazy var inputTextField:UITextField={
+    let textField = UITextField()
+    textField.placeholder = "今天bb点啥..."
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.delegate = self
+    return textField
+    }()
 
 
     @IBAction func back(_ sender: UIButton) {
@@ -45,15 +53,14 @@ class ChatLogController: UICollectionViewController{
         let sendButton = UIButton(type: .system)
         sendButton.setTitle("发送", for: .normal)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
+        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
         containerView.addSubview(sendButton)
         sendButton.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
         sendButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         sendButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
         sendButton.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
 
-        let inputTextField = UITextField()
-        inputTextField.placeholder = "今天bb点啥..."
-        inputTextField.translatesAutoresizingMaskIntoConstraints = false
+
         containerView.addSubview(inputTextField)
         
         inputTextField.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
@@ -62,7 +69,8 @@ class ChatLogController: UICollectionViewController{
         inputTextField.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
 
         let separatorLineView = UIView()
-        separatorLineView.backgroundColor = UIColor(red: 220, green: 220, blue: 220, alpha: 1)
+        //分割线颜色
+        separatorLineView.backgroundColor = UIColor.gray
         separatorLineView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(separatorLineView)
 
@@ -70,10 +78,18 @@ class ChatLogController: UICollectionViewController{
         separatorLineView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
         separatorLineView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
         separatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+
+    }
+    
+    //handle send
+    @objc func handleSend(){
         
-        
-        
-        
+       
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        handleSend()
+        return true
     }
     
 }
