@@ -50,9 +50,9 @@ class menuController: UIViewController {
     
     @IBAction func sentBtn(sender: AnyObject) {
         
-        let sentTBC = storyboard?.instantiateViewController(withIdentifier: "sentTBC") as! sentTBC
-        sentTBC.selectedViewController = sentTBC.viewControllers?[2]
-        present(sentTBC, animated: true, completion: nil)
+        let SentTBC = storyboard?.instantiateViewController(withIdentifier: "sentTBC") as! sentTBC
+        SentTBC.selectedViewController = SentTBC.viewControllers?[2]
+        present(SentTBC, animated: true, completion: nil)
 
     }
     
