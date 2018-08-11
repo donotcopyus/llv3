@@ -34,6 +34,7 @@
 		51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562572101023000FF8D25 /* carpoolAdViewController.swift */; };
 		51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562582101023000FF8D25 /* registerViewController.swift */; };
 		51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625D2101023100FF8D25 /* otherViewController.swift */; };
+		51DE4E09211EB2D200B0DF48 /* cViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE4E08211EB2D200B0DF48 /* cViewController.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
 		FA17BE3F211E8DB20037488A /* sentXianzhiTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17BE3E211E8DB20037488A /* sentXianzhiTVC.swift */; };
@@ -112,6 +113,7 @@
 		51B562572101023000FF8D25 /* carpoolAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carpoolAdViewController.swift; sourceTree = "<group>"; };
 		51B562582101023000FF8D25 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		51B5625D2101023100FF8D25 /* otherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherViewController.swift; sourceTree = "<group>"; };
+		51DE4E08211EB2D200B0DF48 /* cViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cViewController.swift; sourceTree = "<group>"; };
 		5DCC7E38A6E9E8BCF7FC66D5 /* Pods-llv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E57A1D2C0F8FDC1089BDE4B /* Pods-llv2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2/Pods-llv2.debug.xcconfig"; sourceTree = "<group>"; };
 		7455DF52F7C9EFE395776486 /* Pods-llv2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				51A7E72E211E9C7E0022AD66 /* chatLog.swift */,
+				51DE4E08211EB2D200B0DF48 /* cViewController.swift */,
 			);
 			path = "私信";
 			sourceTree = "<group>";
@@ -539,11 +542,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-llv2/Pods-llv2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
 				"${BUILT_PRODUCTS_DIR}/Lightbox/Lightbox.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -552,11 +556,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lightbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -628,6 +633,7 @@
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,
+				51DE4E09211EB2D200B0DF48 /* cViewController.swift in Sources */,
 				51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
