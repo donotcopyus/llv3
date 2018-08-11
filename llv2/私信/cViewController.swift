@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import MessageKit
+import MessageKit
 
 class cViewController: UIViewController {
 
