@@ -85,8 +85,16 @@ class exchangeVC: UIViewController {
         
         if (want == "求币种" || have == "出币种"){
             //alert
-            print("出币种或求币种为空")
-            return
+            let alert = UIAlertController(title: title, message: "出币种或求币种为空", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+//            print("出币种或求币种为空")
+//            return
         }
         
         let extraIn = self.extraInfo.text!
@@ -122,9 +130,16 @@ class exchangeVC: UIViewController {
             }
                 
             else{
-                //alert,error
-                print("出错")
-                return
+                
+                let alert = UIAlertController(title: self.title, message: "error", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                    
+                } ))
+//                //alert,error
+//                print("出错")
+//                return
             }
             
         })
