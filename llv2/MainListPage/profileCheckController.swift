@@ -106,7 +106,14 @@ class profileCheckController: UIViewController {
     }
     
     @IBAction func chat(_ sender: UIButton) {
-        //chatbox
+
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+            
+            viewController.uid = uid
+            viewController.username = self.username.text!
+            self.navigationController?.pushViewController(viewController, animated: true)
+
+
     }
     
  

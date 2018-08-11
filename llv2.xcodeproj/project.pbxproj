@@ -23,6 +23,7 @@
 		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
 		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
 		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
+		51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E72E211E9C7E0022AD66 /* chatLog.swift */; };
 		51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */; };
 		51B562602101023200FF8D25 /* revealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624E2101022E00FF8D25 /* revealController.swift */; };
 		51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */; };
@@ -100,6 +101,7 @@
 		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
 		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
 		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
+		51A7E72E211E9C7E0022AD66 /* chatLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatLog.swift; sourceTree = "<group>"; };
 		51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePictureViewController.swift; sourceTree = "<group>"; };
 		51B5624E2101022E00FF8D25 /* revealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = revealController.swift; sourceTree = "<group>"; };
 		51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xianzhiViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		51A7E725211E86360022AD66 /* 私信 */ = {
 			isa = PBXGroup;
 			children = (
+				51A7E72E211E9C7E0022AD66 /* chatLog.swift */,
 			);
 			path = "私信";
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
+				51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */,
 				FA96817B211CE83E006250BD /* exchange.swift in Sources */,
 				FA17BE3F211E8DB20037488A /* sentXianzhiTVC.swift in Sources */,
 				FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */,

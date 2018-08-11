@@ -22,6 +22,7 @@ class checkCarpoolController: UIViewController {
     @IBOutlet weak var depTime: UILabel!
     
     @IBOutlet weak var chat: UIButton!
+    
     @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
@@ -89,6 +90,16 @@ class checkCarpoolController: UIViewController {
 
        
     }
+    
+    @IBAction func chat(_ sender: UIButton) {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        viewController.uid = uid
+        viewController.username = self.username.text!
+        self.navigationController?.pushViewController(viewController, animated: true)
+
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
