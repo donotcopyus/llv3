@@ -58,13 +58,13 @@ class ViewController: UIViewController {
     
     //click to turn to xianzhi section
     @IBAction func TurnXianzhi(_ sender: UIButton) {
-        let xianzhiView = xianzhiViewController()
+        let xianzhiView = xianzhiTVC()
   self.navigationController?.pushViewController(xianzhiView, animated: true)
     }
     
      //click to turn to other section
     @IBAction func TurnOther(_ sender: UIButton) {
-        let otherView = otherViewController()
+        let otherView = exchangeTVC()
         self.navigationController?.pushViewController(otherView, animated: true)
     }
     

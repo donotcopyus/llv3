@@ -110,7 +110,7 @@
                 <outlet property="nameLabel" destination="a2U-P0-QN9" id="cK2-pT-x6H"/>
                 <outlet property="namePrice" destination="m6u-nq-piv" id="AVO-Z2-J5m"/>
             </connections>
-            <point key="canvasLocation" x="-298.5" y="107.5"/>
+            <point key="canvasLocation" x="-223" y="-11"/>
         </tableViewCell>
     </objects>
 </document>
