@@ -90,22 +90,10 @@ class checkCarpoolController: UIViewController {
        
     }
 
-    @IBAction func chat(_ sender: UIButton) {
-        
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
-        
-        viewController.uid = uid
-        viewController.username = self.username.text!
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
 
 
