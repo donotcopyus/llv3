@@ -62,7 +62,7 @@ class exchangeTVC: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
-        //self.navigationItem.titleView = UILabel(coder: <#T##NSCoder#>)
+
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         observePost()

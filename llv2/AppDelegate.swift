@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let controller = storyboard.instantiateViewController(withIdentifier: "loginController") as! loginController
                 
                 self.window?.rootViewController = controller
-                    self.window?.makeKeyAndVisible()
+                self.window?.makeKeyAndVisible()
             }
             
         }

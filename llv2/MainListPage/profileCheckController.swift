@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MessageKit
 
 class profileCheckController: UIViewController {
     
@@ -107,12 +108,16 @@ class profileCheckController: UIViewController {
     
     @IBAction func chat(_ sender: UIButton) {
 
-            let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
-            
-            viewController.uid = uid
-            viewController.username = self.username.text!
-            self.navigationController?.pushViewController(viewController, animated: true)
-
+//        let viewController = cViewController()
+//            
+//            viewController.uid = uid
+//            viewController.username = self.username.text!
+//            self.navigationController?.pushViewController(viewController, animated: true)
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        viewController.uid = uid
+        viewController.username = self.username.text!
+        self.navigationController?.pushViewController(viewController, animated: true)
 
     }
     

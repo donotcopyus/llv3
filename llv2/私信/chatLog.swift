@@ -84,6 +84,23 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
     //handle send
     @objc func handleSend(){
         
+        let messageRef = Database.database().reference().child("messages").childByAutoId()
+        
+        let values = ["text": inputTextField.text!,
+                      "toId":uid,
+                      "fromId": Auth.auth().currentUser!.uid,
+                      "timestamp": [".sv":"timestamp"]] as [String : Any]
+        
+        messageRef.setValue(values,withCompletionBlock:
+            {
+            error, ref in
+            if error == nil{
+            //发送成功
+            }
+            else{
+            //发送错误,alert
+            }
+            })
        
     }
     

@@ -39,11 +39,9 @@ class menuController: UIViewController {
     
     @IBAction func setting(_ sender: Any) {
         let settingPage = sendAdViewContronller()
-        self.navigationController?.pushViewController(settingPage, animated: true)
-        
+   self.navigationController?.pushViewController(settingPage, animated: true)
     }
-    
-    
+
     
     @IBOutlet var sentBtn: UIButton!
     

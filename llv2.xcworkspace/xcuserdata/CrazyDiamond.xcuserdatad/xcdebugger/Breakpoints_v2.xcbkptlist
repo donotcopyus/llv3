@@ -33,6 +33,38 @@
             endingLineNumber = "39"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.profileViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
+                  timestampString = "555718372.535176"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.profileViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
+                  timestampString = "555718372.5748219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "3511">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
