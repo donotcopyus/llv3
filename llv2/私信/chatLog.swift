@@ -15,7 +15,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
     
     var username = String()
     var uid = String()
-
+    var url = String()
     
     lazy var inputTextField:UITextField={
     let textField = UITextField()
@@ -95,11 +95,15 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
             let dict = snapshot.value as? [String:Any]
             let tourl = dict!["photoURL"] as? String
             
+            
+            
             let values = ["text": self.inputTextField.text!,
                           "toId": self.uid,
                           "fromId": Auth.auth().currentUser!.uid,
                           "timestamp": [".sv":"timestamp"],
                           "toUname":self.username,
+                          "fromUname":Auth.auth().currentUser!.displayName!,
+                          "fromUrl":self.url,
                           "toUrl":tourl!
                 ] as [String : Any]
             

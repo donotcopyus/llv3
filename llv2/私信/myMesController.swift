@@ -36,16 +36,26 @@ class myMesController: UITableViewController {
             if let dict = snapshot.value as? [String:AnyObject]{
                 let mes = Message()
                 mes.text = dict["text"] as? String
-                mes.fromId = dict["formId"] as? String
+                mes.fromId = dict["fromId"] as? String
                 mes.timestamp = dict["timestamp"] as? Double
                 mes.toId = dict["toId"] as? String
                 mes.toUname = dict["toUname"] as? String
+                mes.fromUname = dict["fromUname"] as? String
                 mes.toUrl = dict["toUrl"] as? String
+                mes.fromUrl = dict["fromUrl"] as? String
                 
                 //仅显示自己收到的message提示
                 if (mes.toId == Auth.auth().currentUser?.uid){
                     
+                    //loop一遍messages,查看里面有没有同样的fromId和toId
+                    for (index,child) in self.messages.enumerated(){
+                        
+                        if child.fromId == mes.fromId && child.toId == mes.toId{
+                            self.messages.remove(at: index)                        }
+                    }
+                    
                 self.messages.append(mes)
+                    
                 }
                 
                 //仅显示最新消息，不会一次把所有消息都列出来
@@ -68,11 +78,11 @@ class myMesController: UITableViewController {
         
         let message = messages[indexPath.row]
         
-        let url = URL(string: message.toUrl!)
+        let url = URL(string: message.fromUrl!)
         let data = try? Data(contentsOf: url!)
         let image = UIImage(data:data!)
         cell.head.image = image
-        cell.username.text = message.toUname
+        cell.username.text = message.fromUname
         cell.newestMes.text = message.text
         
         return cell

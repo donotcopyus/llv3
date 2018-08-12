@@ -50,6 +50,7 @@
             <connections>
                 <outlet property="head" destination="4NI-H0-54h" id="zY5-mk-xKX"/>
                 <outlet property="newestMes" destination="7bC-q4-ouD" id="m9v-1j-tPk"/>
+                <outlet property="time" destination="cGR-93-lMX" id="2nM-fM-ewb"/>
                 <outlet property="username" destination="i2a-Al-yIH" id="Ri3-B9-DGq"/>
             </connections>
             <point key="canvasLocation" x="25" y="63"/>

@@ -22,8 +22,8 @@ class TableViewCell1: UITableViewCell {
     
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var extraInfo: UILabel!
-    
 
+    
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     

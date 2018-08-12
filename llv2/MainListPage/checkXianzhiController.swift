@@ -31,6 +31,7 @@ class checkXianzhiController: UIViewController {
     @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
+    @IBOutlet weak var imageurl: UILabel!
     
     var pid = String()
     var uid = String()
@@ -48,6 +49,7 @@ class checkXianzhiController: UIViewController {
         self.pidLabel.text = pid
         self.uidLabel.isHidden = true
         self.uidLabel.text = uid
+        self.imageurl.isHidden = true
         
         //如果是自己，没办法chat
         if (uidLabel.text == Auth.auth().currentUser!.uid){
@@ -69,6 +71,8 @@ class checkXianzhiController: UIViewController {
             let tourl = URL(string:url!)
             let data = try? Data(contentsOf: tourl!)
             self.headImage.image = UIImage(data:data!)
+            
+            self.imageurl.text = url
             
             self.username.text = author!["username"] as? String
             
@@ -147,6 +151,7 @@ class checkXianzhiController: UIViewController {
             
             viewController.uid = uid
             viewController.username = self.username.text!
+            viewController.url = self.imageurl.text!
             self.navigationController?.pushViewController(viewController, animated: true)
 
     }

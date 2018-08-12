@@ -23,6 +23,7 @@ class checkCarpoolController: UIViewController {
     
     @IBOutlet weak var chat: UIButton!
     
+    @IBOutlet weak var imageurl: UILabel!
     @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
@@ -43,6 +44,7 @@ class checkCarpoolController: UIViewController {
         self.pidLabel.text = pid
         self.uidLabel.isHidden = true
         self.uidLabel.text = uid
+        self.imageurl.isHidden = true
         
         //如果是自己，没办法chat
         if (uidLabel.text == Auth.auth().currentUser!.uid){
@@ -61,6 +63,7 @@ class checkCarpoolController: UIViewController {
             let author = post!["author"] as? [String:Any]
             
             let url = author!["photoURL"] as? String
+                        self.imageurl.text = url
             let tourl = URL(string:url!)
             let data = try? Data(contentsOf: tourl!)
             self.headImage.image = UIImage(data:data!)
@@ -96,6 +99,7 @@ class checkCarpoolController: UIViewController {
         
         viewController.uid = uid
         viewController.username = self.username.text!
+        viewController.url = self.imageurl.text!
         self.navigationController?.pushViewController(viewController, animated: true)
 
     }

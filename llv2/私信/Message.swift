@@ -15,6 +15,8 @@ class Message: NSObject {
     var timestamp: Double?
     var toId: String?
     var toUname: String?
+    var fromUrl: String?
     var toUrl: String?
+    var fromUname: String?
     
 }
