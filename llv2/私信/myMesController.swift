@@ -28,7 +28,14 @@ class myMesController: UITableViewController {
             if let dict = snapshot.value as? [String:AnyObject]{
                 let mes = Message()
                 mes.text = dict["text"] as? String
-                print(mes.text!)
+                mes.fromId = dict["formId"] as? String
+                mes.timestamp = dict["timestamp"] as? Double
+                mes.toId = dict["toId"] as? String
+                self.messages.append(mes)
+                
+                DispatchQueue.main.async {
+               self.tableView.reloadData()
+                }
             }
 
             }, withCancel: nil)
@@ -36,7 +43,8 @@ class myMesController: UITableViewController {
     
     override func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style:.subtitle, reuseIdentifier:"cellid")
-        cell.textLabel?.text = "hey"
+        let message = messages[indexPath.row]
+        cell.textLabel?.text = message.text
         return cell
     }
 
@@ -54,7 +62,7 @@ class myMesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return messages.count
     }
 
     /*
