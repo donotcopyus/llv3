@@ -12,10 +12,10 @@ import Firebase
 class myMesController: UITableViewController {
 
 
-    @IBAction func back(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+    @IBOutlet weak var back: UIButton!
+    @IBAction func goBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
-
     
     var messages = [Message]()
 
