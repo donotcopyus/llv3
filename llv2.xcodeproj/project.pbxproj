@@ -27,6 +27,8 @@
 		51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */; };
 		51B52D4C211F982400D2B9E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B52D4B211F982400D2B9E9 /* Message.swift */; };
 		51B52D5D211FA5FB00D2B9E9 /* myMesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B52D5C211FA5FB00D2B9E9 /* myMesController.swift */; };
+		51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B52D5E211FE0D200D2B9E9 /* messageRecCell.swift */; };
+		51B52D61211FE0D200D2B9E9 /* messageRecCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B52D5F211FE0D200D2B9E9 /* messageRecCell.xib */; };
 		51B562602101023200FF8D25 /* revealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624E2101022E00FF8D25 /* revealController.swift */; };
 		51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */; };
 		51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562502101022F00FF8D25 /* sendAdViewContronller.swift */; };
@@ -107,6 +109,8 @@
 		51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePictureViewController.swift; sourceTree = "<group>"; };
 		51B52D4B211F982400D2B9E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		51B52D5C211FA5FB00D2B9E9 /* myMesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myMesController.swift; sourceTree = "<group>"; };
+		51B52D5E211FE0D200D2B9E9 /* messageRecCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageRecCell.swift; sourceTree = "<group>"; };
+		51B52D5F211FE0D200D2B9E9 /* messageRecCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageRecCell.xib; sourceTree = "<group>"; };
 		51B5624E2101022E00FF8D25 /* revealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = revealController.swift; sourceTree = "<group>"; };
 		51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xianzhiViewController.swift; sourceTree = "<group>"; };
 		51B562502101022F00FF8D25 /* sendAdViewContronller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sendAdViewContronller.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				51A7E72E211E9C7E0022AD66 /* chatLog.swift */,
 				51B52D4B211F982400D2B9E9 /* Message.swift */,
 				51B52D5C211FA5FB00D2B9E9 /* myMesController.swift */,
+				51B52D5E211FE0D200D2B9E9 /* messageRecCell.swift */,
+				51B52D5F211FE0D200D2B9E9 /* messageRecCell.xib */,
 			);
 			path = "私信";
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 				FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */,
 				FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */,
 				516F7FC8210101BD001C0C55 /* LaunchScreen.storyboard in Resources */,
+				51B52D61211FE0D200D2B9E9 /* messageRecCell.xib in Resources */,
 				51626E13210108700047B303 /* GoogleService-Info.plist in Resources */,
 				516F7FC5210101BD001C0C55 /* Assets.xcassets in Resources */,
 				516F7FC3210101BB001C0C55 /* Main.storyboard in Resources */,
@@ -600,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
+				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */,

@@ -42,7 +42,7 @@
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "555718372.535176"
+                  timestampString = "555739408.461869"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -57,7 +57,7 @@
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "555718372.5748219"
+                  timestampString = "555739408.479672"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -81,6 +81,22 @@
             endingLineNumber = "16"
             landmarkName = "xainzhiVC"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "llv2/&#x79c1;&#x4fe1;/chatLog.swift"
+            timestampString = "555740455.107715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "handleSend()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

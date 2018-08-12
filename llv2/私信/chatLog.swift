@@ -15,6 +15,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
     
     var username = String()
     var uid = String()
+
     
     lazy var inputTextField:UITextField={
     let textField = UITextField()
@@ -33,6 +34,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
        super.viewDidLoad()
 
       self.navigationItem.title = username
+
       setupInputComponents()
         
     }
@@ -86,22 +88,33 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
         
         let messageRef = Database.database().reference().child("messages").childByAutoId()
         
-        let values = ["text": inputTextField.text!,
-                      "toId":uid,
-                      "fromId": Auth.auth().currentUser!.uid,
-                      "timestamp": [".sv":"timestamp"]] as [String : Any]
+        let databaseRef = Database.database().reference().child("users/profile/\(self.uid)")
         
-        messageRef.setValue(values,withCompletionBlock:
-            {
-            error, ref in
-            if error == nil{
-            //发送成功
-            }
-            else{
-            //发送错误,alert
-            }
+        databaseRef.observe(.value, with: { (snapshot) in
+            
+            let dict = snapshot.value as? [String:Any]
+            let tourl = dict!["photoURL"] as? String
+            
+            let values = ["text": self.inputTextField.text!,
+                          "toId": self.uid,
+                          "fromId": Auth.auth().currentUser!.uid,
+                          "timestamp": [".sv":"timestamp"],
+                          "toUname":self.username,
+                          "toUrl":tourl!
+                ] as [String : Any]
+            
+            messageRef.setValue(values,withCompletionBlock:
+                {
+                    error, ref in
+                    if error == nil{
+                        //发送成功
+                    }
+                    else{
+                        //发送错误,alert
+                    }
             })
-       
+        })
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
