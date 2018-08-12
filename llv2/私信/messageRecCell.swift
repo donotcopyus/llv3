@@ -14,5 +14,6 @@ class messageRecCell: UITableViewCell {
     @IBOutlet weak var head: UIImageView!
     @IBOutlet weak var username: UILabel!
 
+    @IBOutlet weak var newestMes: UILabel!
     
 }

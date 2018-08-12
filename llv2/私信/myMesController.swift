@@ -11,14 +11,18 @@ import Firebase
 
 class myMesController: UITableViewController {
 
-    @IBAction func back(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+
+    @IBAction func back(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
     }
+
     
     var messages = [Message]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = Auth.auth().currentUser?.displayName
 
        observeMessages()
     }
@@ -39,9 +43,12 @@ class myMesController: UITableViewController {
                 mes.toUrl = dict["toUrl"] as? String
                 
                 //仅显示自己收到的message提示
-                if mes.toId == Auth.auth().currentUser?.uid{
+                if (mes.toId == Auth.auth().currentUser?.uid){
+                    
                 self.messages.append(mes)
                 }
+                
+                //仅显示最新消息，不会一次把所有消息都列出来
                 
                 //从新到旧
                 self.messages = self.messages.reversed()
@@ -65,8 +72,8 @@ class myMesController: UITableViewController {
         let data = try? Data(contentsOf: url!)
         let image = UIImage(data:data!)
         cell.head.image = image
-        
         cell.username.text = message.toUname
+        cell.newestMes.text = message.text
         
         return cell
         
