@@ -892,7 +892,18 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem id="Y9G-Du-s72"/>
+                                <navigationItem id="Y9G-Du-s72">
+                                    <barButtonItem key="leftBarButtonItem" style="plain" id="qHa-pQ-2ZP">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="STw-dN-CuB">
+                                            <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="&lt; Back"/>
+                                            <connections>
+                                                <action selector="back:" destination="BFd-r1-X6P" eventType="touchUpInside" id="uts-dY-eYy"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
@@ -910,18 +921,7 @@
                             <outlet property="delegate" destination="BFd-r1-X6P" id="Rcv-lA-csD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="LEL-Ez-vJ7">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="pep-D9-Cz9">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2VE-Mx-71I">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <connections>
-                                <action selector="back:" destination="BFd-r1-X6P" id="cdw-sX-nJ8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="LEL-Ez-vJ7"/>
                     <connections>
                         <outlet property="back" destination="LMo-I9-9l0" id="aS9-L4-ogY"/>
                     </connections>
@@ -1539,7 +1539,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1566,9 +1566,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="&lt;back"/>
                                                 <connections>
-                                                    <action selector="back:" destination="SXs-Gd-2yR" eventType="touchUpInside" id="6Od-XU-VTU"/>
-                                                    <action selector="back:" destination="DYu-iB-2be" eventType="touchUpInside" id="i47-Wq-oxE"/>
-                                                    <action selector="return:" destination="DYu-iB-2be" eventType="touchUpInside" id="BUi-H7-1he"/>
                                                     <segue destination="HGJ-zl-43D" kind="showDetail" id="ivw-CZ-U9A"/>
                                                 </connections>
                                             </button>
@@ -1583,7 +1580,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -1630,9 +1627,6 @@
                         <viewLayoutGuide key="safeArea" id="OeG-4k-zAu"/>
                     </view>
                     <navigationItem key="navigationItem" id="rbb-l9-eDW"/>
-                    <connections>
-                        <outlet property="back" destination="9VE-C8-Fdd" id="Me5-ve-pMR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nv4-S2-7SI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9DG-am-WRq" userLabel="Exit" sceneMemberID="exit"/>
@@ -2863,8 +2857,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
+<<<<<<< HEAD
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="MsP-c5-dSl"/>
+=======
+        <segue reference="mmZ-63-Igj"/>
+        <segue reference="ivw-CZ-U9A"/>
+>>>>>>> 7e599f69d7ba95dbffc560df8145df5ea2c5b060
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
