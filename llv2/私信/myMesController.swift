@@ -22,6 +22,12 @@ class myMesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        tableView = UITableView()
+//        
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.reloadData()
+        
         navigationItem.title = Auth.auth().currentUser?.displayName
 
        observeMessages()
@@ -44,7 +50,7 @@ class myMesController: UITableViewController {
                 mes.toUrl = dict["toUrl"] as? String
                 mes.fromUrl = dict["fromUrl"] as? String
                 
-                //仅显示自己收到的message提示
+                //仅显示自己收到的message提示 （同时还有自己发过的）
                 if (mes.toId == Auth.auth().currentUser?.uid){
                     
                     //loop一遍messages,查看里面有没有同样的fromId和toId
@@ -81,9 +87,16 @@ class myMesController: UITableViewController {
         let url = URL(string: message.fromUrl!)
         let data = try? Data(contentsOf: url!)
         let image = UIImage(data:data!)
+        
         cell.head.image = image
         cell.username.text = message.fromUname
         cell.newestMes.text = message.text
+        
+        let timeInterval = message.timestamp! / 1000
+        let date = NSDate(timeIntervalSince1970: timeInterval)
+        let dform = DateFormatter()
+        dform.dateFormat = "HH:mm"
+        cell.time.text = dform.string(from:date as Date)
         
         return cell
         
@@ -95,15 +108,27 @@ class myMesController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return messages.count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.uid = messages[index!].fromId!
+        viewController.username = messages[index!].fromUname!
+        viewController.url = messages[index!].fromUrl!
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
 

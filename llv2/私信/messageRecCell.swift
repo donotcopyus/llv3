@@ -17,5 +17,4 @@ class messageRecCell: UITableViewCell {
     @IBOutlet weak var newestMes: UILabel!
     @IBOutlet weak var time: UILabel!
     
-    
 }
