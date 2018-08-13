@@ -12,7 +12,7 @@ import UIKit
 class likePVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     lazy var subViewControllers:[UIViewController] = {
-        return [ UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "vc1") as! vc1, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "xianzhi") as! xianzhi, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "exchange") as! exchange, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "text") as! text]
+        return [ UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "vc1") as! vc1, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "xianzhi") as! xianzhi, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "exchange") as! exchange]
     }()
     
     
