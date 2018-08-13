@@ -83,6 +83,9 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
 
     }
     
+    
+    
+    
     //handle send
     @objc func handleSend(){
         
@@ -94,8 +97,6 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
             
             let dict = snapshot.value as? [String:Any]
             let tourl = dict!["photoURL"] as? String
-            
-            
             
             let values = ["text": self.inputTextField.text!,
                           "toId": self.uid,
