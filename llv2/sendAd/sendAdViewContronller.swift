@@ -10,9 +10,6 @@ import UIKit
 
 class sendAdViewContronller: UIViewController {
 
-    @IBOutlet weak var back: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,10 +31,7 @@ class sendAdViewContronller: UIViewController {
     
 
     //button to go back to main
-    
-    @IBAction func back(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
+
     
 
 }

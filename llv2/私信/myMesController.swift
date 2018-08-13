@@ -17,8 +17,8 @@ class myMesController: UITableViewController {
 //        self.navigationController?.popViewController(animated: true)
 //    }
     
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
