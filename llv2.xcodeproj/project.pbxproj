@@ -55,7 +55,8 @@
 		FA968179211CE830006250BD /* xianzhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA968178211CE830006250BD /* xianzhi.swift */; };
 		FA96817B211CE83E006250BD /* exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96817A211CE83E006250BD /* exchange.swift */; };
 		FA96817D211CEB0A006250BD /* vc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96817C211CEB0A006250BD /* vc1.swift */; };
-		FAA2839821210E5000BB3FE9 /* draftLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839721210E5000BB3FE9 /* draftLike.swift */; };
+		FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839921212EA700BB3FE9 /* dra1.swift */; };
+		FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839B21212EB500BB3FE9 /* dra2.swift */; };
 		FAA28F6921066798005529FA /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F6821066798005529FA /* settingVC.swift */; };
 		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
 		FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */; };
@@ -147,7 +148,8 @@
 		FA968178211CE830006250BD /* xianzhi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhi.swift; sourceTree = "<group>"; };
 		FA96817A211CE83E006250BD /* exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchange.swift; sourceTree = "<group>"; };
 		FA96817C211CEB0A006250BD /* vc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc1.swift; sourceTree = "<group>"; };
-		FAA2839721210E5000BB3FE9 /* draftLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draftLike.swift; sourceTree = "<group>"; };
+		FAA2839921212EA700BB3FE9 /* dra1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra1.swift; sourceTree = "<group>"; };
+		FAA2839B21212EB500BB3FE9 /* dra2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra2.swift; sourceTree = "<group>"; };
 		FAA28F6821066798005529FA /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
 		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
@@ -340,7 +342,8 @@
 				FA17BE3E211E8DB20037488A /* sentXianzhiTVC.swift */,
 				FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */,
 				FAEB9EBC211F3513004F8DA0 /* text.swift */,
-				FAA2839721210E5000BB3FE9 /* draftLike.swift */,
+				FAA2839921212EA700BB3FE9 /* dra1.swift */,
+				FAA2839B21212EB500BB3FE9 /* dra2.swift */,
 			);
 			path = "收藏、已发";
 			sourceTree = "<group>";
@@ -612,12 +615,14 @@
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
+				FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */,
 				FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */,
 				FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */,
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
+				FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FAA28F6921066798005529FA /* settingVC.swift in Sources */,
@@ -647,7 +652,6 @@
 				FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */,
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
-				FAA2839821210E5000BB3FE9 /* draftLike.swift in Sources */,
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,
 				51B52D4C211F982400D2B9E9 /* Message.swift in Sources */,
 				51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */,
@@ -826,14 +830,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93B2NY6M8K;
+				DEVELOPMENT_TEAM = 4679M4WZH6;
 				INFOPLIST_FILE = llv2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = prototypeproject.llv3;
+				PRODUCT_BUNDLE_IDENTIFIER = prototypeproj.llv3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "llv2/llv2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -849,14 +853,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93B2NY6M8K;
+				DEVELOPMENT_TEAM = 4679M4WZH6;
 				INFOPLIST_FILE = llv2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = prototypeproject.llv3;
+				PRODUCT_BUNDLE_IDENTIFIER = prototypeproj.llv3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "llv2/llv2-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

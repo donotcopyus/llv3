@@ -10,8 +10,8 @@ import UIKit
 
 class draftLike: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    lazy var subViewControllers:[UIViewController] = {
-        return [ UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "vc1") as! vc1, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "xianzhi") as! xianzhi, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "exchange") as! exchange]
+    lazy var subViewControllers:[UITableViewController] = {
+        return [ UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "dra1") as! dra1, UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "dra2") as! dra2]
     }()
     
     
@@ -36,8 +36,8 @@ class draftLike: UIPageViewController, UIPageViewControllerDataSource, UIPageVie
     }
     
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        let currentIndex:Int = subViewControllers.index(of: viewController) ?? 0
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter TableViewController: UITableViewController) -> UITableViewController? {
+        let currentIndex:Int = subViewControllers.index(of: TableViewController) ?? 0
         
         if currentIndex <= 0 {
             return nil
@@ -45,8 +45,8 @@ class draftLike: UIPageViewController, UIPageViewControllerDataSource, UIPageVie
         return subViewControllers[currentIndex - 1]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        let currentIndex:Int = subViewControllers.index(of: viewController) ?? 0
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter TableViewController: UITableViewController) -> UITableViewController? {
+        let currentIndex:Int = subViewControllers.index(of: TableViewController) ?? 0
         
         if currentIndex >= (subViewControllers.count - 1) {
             return nil
