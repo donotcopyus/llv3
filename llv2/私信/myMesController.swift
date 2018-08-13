@@ -23,12 +23,12 @@ class myMesController: UITableViewController {
         super.viewDidLoad()
         
 //        tableView = UITableView()
-//        
+//
 //        tableView.delegate = self
 //        tableView.dataSource = self
 //        tableView.reloadData()
         
-        navigationItem.title = Auth.auth().currentUser?.displayName
+//        navigationItem.title = Auth.auth().currentUser?.displayName
 
        observeMessages()
     }
@@ -124,6 +124,7 @@ class myMesController: UITableViewController {
         let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
         
         let index = tableView.indexPathForSelectedRow?.row
+        
         viewController.uid = messages[index!].fromId!
         viewController.username = messages[index!].fromUname!
         viewController.url = messages[index!].fromUrl!
