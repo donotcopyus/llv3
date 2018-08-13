@@ -23,6 +23,8 @@ class likePVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewC
         self.delegate = self
         self.dataSource = self
 
+        
+        
         // Do any additional setup after loading the view.
         
         setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
@@ -62,7 +64,9 @@ class likePVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewC
     }
     
     
+    
 }
+
 
 
 

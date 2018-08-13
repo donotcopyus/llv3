@@ -21,6 +21,7 @@ class vc1:  UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,6 +31,11 @@ class vc1:  UIViewController {
     }
     
     //数据库提取
+    
+    
+    
+    
+    
    
     @IBAction func goback(_ sender: UIButton) {
         // self.navigationController?.popViewController(animated: true)
@@ -37,3 +43,4 @@ class vc1:  UIViewController {
     }
     
 }
+
