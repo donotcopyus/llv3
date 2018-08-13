@@ -11,11 +11,16 @@ import Firebase
 
 class myMesController: UITableViewController {
 
-
-    @IBOutlet weak var back: UIButton!
-    @IBAction func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+//
+//    @IBOutlet weak var back: UIButton!
+    //    @IBAction func goBack(_ sender: UIButton) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+    
     
     var messages = [Message]()
 
