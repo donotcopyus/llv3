@@ -2857,13 +2857,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
-<<<<<<< HEAD
-        <segue reference="f0C-Pt-C9H"/>
-        <segue reference="MsP-c5-dSl"/>
-=======
+
         <segue reference="mmZ-63-Igj"/>
         <segue reference="ivw-CZ-U9A"/>
->>>>>>> 7e599f69d7ba95dbffc560df8145df5ea2c5b060
+
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>

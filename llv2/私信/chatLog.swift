@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatLogController: UICollectionViewController,UITextFieldDelegate{
+class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollectionViewDelegateFlowLayout{
     
     //暂时放下的功能：具体广告显示
     
@@ -30,13 +30,50 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate{
                self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func observeMessages(){
+        guard let thisUid = Auth.auth().currentUser?.uid else{
+            return}
+        guard let thisUname = Auth.auth().currentUser?.displayName else{
+            return}
+        
+        let thatUid = self.uid
+        let thatUname = self.username
+        let thatUrl = self.url
+        
+    }
+    
     override func viewDidLoad() {
        super.viewDidLoad()
 
       self.navigationItem.title = username
+        
+        collectionView?.backgroundColor = UIColor.white
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
 
       setupInputComponents()
+   
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    let cellId = "cellId"
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
+        cell.backgroundColor = UIColor.blue
+        
+        return cell
+    }
+    
+    //size per cell
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.height, height: 80)
     }
     
     
