@@ -2835,21 +2835,15 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <segue reference="mmZ-63-Igj"/>
-        <segue reference="ivw-CZ-U9A"/>
-=======
-=======
->>>>>>> 757bf61cc23eb3188f02ce2341fc15ce6232458a
 
         <segue reference="mmZ-63-Igj"/>
         <segue reference="ivw-CZ-U9A"/>
 
-<<<<<<< HEAD
->>>>>>> 757bf61cc23eb3188f02ce2341fc15ce6232458a
-=======
->>>>>>> 757bf61cc23eb3188f02ce2341fc15ce6232458a
+
+        <segue reference="mmZ-63-Igj"/>
+        <segue reference="ivw-CZ-U9A"/>
+
+
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
