@@ -57,6 +57,7 @@
 		FA96817D211CEB0A006250BD /* vc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96817C211CEB0A006250BD /* vc1.swift */; };
 		FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839921212EA700BB3FE9 /* dra1.swift */; };
 		FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839B21212EB500BB3FE9 /* dra2.swift */; };
+		FAA2839E2122520000BB3FE9 /* dra3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839D2122520000BB3FE9 /* dra3.swift */; };
 		FAA28F6921066798005529FA /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F6821066798005529FA /* settingVC.swift */; };
 		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
 		FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */; };
@@ -150,6 +151,7 @@
 		FA96817C211CEB0A006250BD /* vc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc1.swift; sourceTree = "<group>"; };
 		FAA2839921212EA700BB3FE9 /* dra1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra1.swift; sourceTree = "<group>"; };
 		FAA2839B21212EB500BB3FE9 /* dra2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra2.swift; sourceTree = "<group>"; };
+		FAA2839D2122520000BB3FE9 /* dra3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra3.swift; sourceTree = "<group>"; };
 		FAA28F6821066798005529FA /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
 		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				FAEB9EBC211F3513004F8DA0 /* text.swift */,
 				FAA2839921212EA700BB3FE9 /* dra1.swift */,
 				FAA2839B21212EB500BB3FE9 /* dra2.swift */,
+				FAA2839D2122520000BB3FE9 /* dra3.swift */,
 			);
 			path = "收藏、已发";
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
 				FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */,
+				FAA2839E2122520000BB3FE9 /* dra3.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FAA28F6921066798005529FA /* settingVC.swift in Sources */,

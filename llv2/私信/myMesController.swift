@@ -55,14 +55,14 @@ class myMesController: UITableViewController {
                 mes.toUrl = dict["toUrl"] as? String
                 mes.fromUrl = dict["fromUrl"] as? String
                 
-                //仅显示自己收到的message提示 （同时还有自己发过的）
-                if (mes.toId == Auth.auth().currentUser?.uid){
+                //仅显示自己收到和发出去的message提示
+                if (mes.toId == Auth.auth().currentUser?.uid || mes.fromId == Auth.auth().currentUser?.uid){
                     
                     //loop一遍messages,查看里面有没有同样的fromId和toId
                     for (index,child) in self.messages.enumerated(){
                         
-                        if child.fromId == mes.fromId && child.toId == mes.toId{
-                            self.messages.remove(at: index)                        }
+                        if ((child.fromId == mes.fromId && child.toId == mes.toId) || (child.toId == mes.fromId && child.fromId == mes.toId)){
+                            self.messages.remove(at: index)}
                     }
                     
                 self.messages.append(mes)
@@ -82,6 +82,8 @@ class myMesController: UITableViewController {
             }, withCancel: nil)
     }
     
+    var receive = true
+    
     override func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         
@@ -89,19 +91,34 @@ class myMesController: UITableViewController {
         
         let message = messages[indexPath.row]
         
+        if (message.toId == Auth.auth().currentUser?.uid){
+        
         let url = URL(string: message.fromUrl!)
         let data = try? Data(contentsOf: url!)
         let image = UIImage(data:data!)
         
         cell.head.image = image
         cell.username.text = message.fromUname
+            }
+        else{
+            receive = false
+            let url = URL(string: message.toUrl!)
+            let data = try? Data(contentsOf: url!)
+            let image = UIImage(data:data!)
+            
+            cell.head.image = image
+            cell.username.text = message.toUname
+        }
+        
         cell.newestMes.text = message.text
         
         let timeInterval = message.timestamp! / 1000
         let date = NSDate(timeIntervalSince1970: timeInterval)
         let dform = DateFormatter()
-        dform.dateFormat = "HH:mm"
-        cell.time.text = dform.string(from:date as Date)
+        dform.dateFormat = "MM月dd日 HH:mm"
+            cell.time.text = dform.string(from:date as Date)
+        
+        
         
         return cell
         
@@ -130,9 +147,16 @@ class myMesController: UITableViewController {
         
         let index = tableView.indexPathForSelectedRow?.row
         
+        if receive == true{
         viewController.uid = messages[index!].fromId!
         viewController.username = messages[index!].fromUname!
         viewController.url = messages[index!].fromUrl!
+    }
+        else{
+            viewController.uid = messages[index!].toId!
+            viewController.username = messages[index!].toUname!
+            viewController.url = messages[index!].toUrl!
+        }
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
