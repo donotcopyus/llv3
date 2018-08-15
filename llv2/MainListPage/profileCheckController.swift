@@ -63,14 +63,6 @@ class profileCheckController: UIViewController {
             self.delete.isHidden = true
         }
         
-        let dataRef = Database.database().reference().child("users/profile/\(Auth.auth().currentUser!.uid)")
-        dataRef.observe(.value, with:{
-            snapshot in
-            let profile = snapshot.value as? [String: Any]
-            let url = profile!["photoURL"] as? String
-            self.imageurl.text = url
-        })
-        
         
        let postRef = Database.database().reference().child("exchange/\(pid)")
         
@@ -80,6 +72,7 @@ class profileCheckController: UIViewController {
             let author = post!["author"] as? [String:Any]
             
             let url = author!["photoURL"] as? String
+            self.imageurl.text = url
 
             let tourl = URL(string:url!)
             let data = try? Data(contentsOf: tourl!)

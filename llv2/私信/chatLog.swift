@@ -66,6 +66,8 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
       self.navigationItem.title = username
         observeMessages()
         
+        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 58, right: 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.alwaysBounceVertical = true
@@ -86,15 +88,55 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         let message = messages[indexPath.item]
         cell.textView.text = message.text
         
+        setUpCell(cell: cell, message: message)
+        
+        cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message.text!).width + 32
         
         return cell
+    }
+    
+    private func setUpCell(cell: CollectionViewCell, message:Message){
+        
+        let url = message.fromUrl
+        let tourl = URL(string:url!)
+        let data = try? Data(contentsOf: tourl!)
+        cell.profileImageView.image = UIImage(data:data!)
+        
+        if message.fromId == Auth.auth().currentUser?.uid{
+            //outgoing blackblue
+            cell.bubbleView.backgroundColor = UIColor.black
+            cell.profileImageView.isHidden = true
+            cell.bubbleViewRightAnchor?.isActive = true
+            cell.bubbleViewLeftAnchor?.isActive = false
+        }
+        else{
+            //ingoing gray
+            cell.bubbleView.backgroundColor = UIColor(red: 0, green: 0.0431, blue: 0.3569, alpha: 1.0)
+            cell.profileImageView.isHidden = false
+            cell.bubbleViewRightAnchor?.isActive = false
+            cell.bubbleViewLeftAnchor?.isActive = true
+        }
     }
     
     //size per cell
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 80)
+        var height:CGFloat = 80
+        
+        //get estimated height somehow??
+        if let text = messages[indexPath.item].text {
+            height = estimateFrameForText(text: text).height + 20
+        }
+        
+        return CGSize(width: view.frame.width, height: height)
+        
+    }
+    
+    private func estimateFrameForText(text:String) -> CGRect{
+        let size = CGSize(width:200, height:1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        return NSString(string:text).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 16)], context: nil)
     }
     
     
@@ -148,14 +190,14 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     @objc func handleSend(){
         
         let messageRef = Database.database().reference().child("messages").childByAutoId()
+
+        let databaseRef = Database.database().reference().child("users/profile/\(Auth.auth().currentUser!.uid)")
         
-        let databaseRef = Database.database().reference().child("users/profile/\(self.uid)")
         
         databaseRef.observe(.value, with: { (snapshot) in
             
             let dict = snapshot.value as? [String:Any]
             let tourl = dict!["photoURL"] as? String
-            
 
             let values = ["text": self.inputTextField.text!,
                           "toId": self.uid,
@@ -163,14 +205,15 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
                           "timestamp": [".sv":"timestamp"],
                           "toUname":self.username,
                           "fromUname":Auth.auth().currentUser!.displayName!,
-                          "fromUrl":self.url,
-                          "toUrl":tourl!
+                          "fromUrl":tourl!,
+                          "toUrl":self.url
                 ] as [String : Any]
                 messageRef.setValue(values,withCompletionBlock:
                     {
                         error, ref in
                         if error == nil{
                             //发送成功
+                         self.inputTextField.text = nil
                         }
                         else{
                             //发送错误,alert
@@ -180,6 +223,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
             
 
         })
+
 
     }
     

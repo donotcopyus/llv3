@@ -26,14 +26,6 @@ class myMesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView = UITableView()
-//
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.reloadData()
-        
-//        navigationItem.title = Auth.auth().currentUser?.displayName
 
        observeMessages()
     }
@@ -152,10 +144,10 @@ class myMesController: UITableViewController {
         viewController.url = messages[index!].fromUrl!
     }
         else{
-          viewController.uid = messages[index!].toId!
+           viewController.uid = messages[index!].toId!
             viewController.username = messages[index!].toUname!
-           viewController.url = messages[index!].toUrl!
-       }
+            viewController.url = messages[index!].toUrl!
+        }
 
         self.navigationController?.pushViewController(viewController, animated: true)
     }

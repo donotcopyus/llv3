@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "llv2/&#x79c1;&#x4fe1;/chatLog.swift"
-            timestampString = "555998159.2224489"
+            timestampString = "556007980.9466209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "ChatLogController"
             landmarkType = "3">
          </BreakpointContent>
