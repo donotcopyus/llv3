@@ -1321,7 +1321,7 @@
             </objects>
             <point key="canvasLocation" x="-1630" y="1078"/>
         </scene>
-        <!--Item-->
+        <!--carpool-->
         <scene sceneID="yp9-KF-FKM">
             <objects>
                 <tableViewController storyboardIdentifier="sent1" id="Xly-IE-VXj" customClass="sent1" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1344,13 +1344,13 @@
                             <outlet property="delegate" destination="Xly-IE-VXj" id="B0o-aK-EGl"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="N9A-0x-FIj"/>
+                    <tabBarItem key="tabBarItem" title="carpool" image="carpoolTab" landscapeImage="carpoolTab" id="N9A-0x-FIj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1j-NN-vam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-791.20000000000005" y="1951.5742128935533"/>
         </scene>
-        <!--Item-->
+        <!--闲置-->
         <scene sceneID="uKn-Vz-5Ve">
             <objects>
                 <tableViewController storyboardIdentifier="sent2" id="IbW-WP-ivd" customClass="sent2" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1373,13 +1373,13 @@
                             <outlet property="delegate" destination="IbW-WP-ivd" id="kJ6-VV-fy4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="pr7-OB-x75"/>
+                    <tabBarItem key="tabBarItem" title="闲置" image="xianzhiTab" landscapeImage="xianzhiTab" id="pr7-OB-x75"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtL-oF-vNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="1951.5742128935533"/>
         </scene>
-        <!--Item-->
+        <!--换汇-->
         <scene sceneID="Dmq-03-e9d">
             <objects>
                 <tableViewController storyboardIdentifier="sent3" id="K3K-oS-HwS" customClass="sent3" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1402,7 +1402,7 @@
                             <outlet property="delegate" destination="K3K-oS-HwS" id="YU4-9h-Xv4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="g1X-Mt-nk7"/>
+                    <tabBarItem key="tabBarItem" title="换汇" image="exchangeTab" landscapeImage="exchangeTab" id="g1X-Mt-nk7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvc-N2-CKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1737,7 +1737,7 @@
             </objects>
             <point key="canvasLocation" x="2646" y="-873"/>
         </scene>
-        <!--Item-->
+        <!--carpool-->
         <scene sceneID="56H-Se-rew">
             <objects>
                 <tableViewController storyboardIdentifier="dra1" id="7vb-Bu-ASz" customClass="dra1" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1760,13 +1760,13 @@
                             <outlet property="delegate" destination="7vb-Bu-ASz" id="EtD-wl-YRq"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="DGj-Ii-fBG"/>
+                    <tabBarItem key="tabBarItem" title="carpool" image="carpoolTab" landscapeImage="carpoolTab" id="DGj-Ii-fBG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgR-fF-W5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3870" y="-1835"/>
         </scene>
-        <!--Item-->
+        <!--闲置-->
         <scene sceneID="7Z1-3b-rjK">
             <objects>
                 <tableViewController storyboardIdentifier="dra2" id="TWp-Xq-gj7" customClass="dra2" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1789,13 +1789,13 @@
                             <outlet property="delegate" destination="TWp-Xq-gj7" id="6Jo-Rn-BJd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="WJq-pZ-hVF"/>
+                    <tabBarItem key="tabBarItem" title="闲置" image="xianzhiTab" landscapeImage="xianzhiTab" id="WJq-pZ-hVF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqA-2A-cE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4676" y="-1835"/>
         </scene>
-        <!--Item-->
+        <!--换汇-->
         <scene sceneID="9Gl-dh-46b">
             <objects>
                 <tableViewController storyboardIdentifier="dra3" id="tdI-EN-h30" customClass="dra3" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1818,7 +1818,7 @@
                             <outlet property="delegate" destination="tdI-EN-h30" id="AHa-Pd-NmI"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="JPJ-Rq-awx"/>
+                    <tabBarItem key="tabBarItem" title="换汇" image="exchangeTab" landscapeImage="exchangeTab" id="JPJ-Rq-awx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6d-iJ-eYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2586,12 +2586,15 @@
     </scenes>
     <resources>
         <image name="carpool" width="260" height="90"/>
+        <image name="carpoolTab" width="32" height="32"/>
+        <image name="exchangeTab" width="34" height="26"/>
         <image name="loginUI" width="375" height="812"/>
         <image name="menubutton" width="34" height="25"/>
         <image name="sidelogo" width="99" height="733"/>
         <image name="sidemenu" width="375" height="812"/>
         <image name="signup" width="172" height="14"/>
         <image name="submit" width="220" height="38"/>
+        <image name="xianzhiTab" width="34" height="31"/>
         <image name="中文logo" width="42" height="73"/>
         <image name="发送广告" width="117" height="28"/>
         <image name="已发广告" width="118" height="28"/>
