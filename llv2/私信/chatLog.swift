@@ -68,6 +68,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.alwaysBounceVertical = true
 
       setupInputComponents()
    
@@ -80,7 +81,11 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     let cellId = "cellId"
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CollectionViewCell
+        
+        let message = messages[indexPath.item]
+        cell.textView.text = message.text
+        
         
         return cell
     }
@@ -89,7 +94,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.height, height: 80)
+        return CGSize(width: view.frame.width, height: 80)
     }
     
     
