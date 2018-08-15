@@ -16,6 +16,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     var username = String()
     var uid = String()
     var url = String()
+
     var messages = [Message]()
     
     lazy var inputTextField:UITextField={
@@ -63,11 +64,10 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
        super.viewDidLoad()
 
       self.navigationItem.title = username
+        observeMessages()
         
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        
-        
 
       setupInputComponents()
    
@@ -151,6 +151,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
             let dict = snapshot.value as? [String:Any]
             let tourl = dict!["photoURL"] as? String
             
+
             let values = ["text": self.inputTextField.text!,
                           "toId": self.uid,
                           "fromId": Auth.auth().currentUser!.uid,
@@ -160,17 +161,19 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
                           "fromUrl":self.url,
                           "toUrl":tourl!
                 ] as [String : Any]
+                messageRef.setValue(values,withCompletionBlock:
+                    {
+                        error, ref in
+                        if error == nil{
+                            //发送成功
+                        }
+                        else{
+                            //发送错误,alert
+                        }
+                })
+
             
-            messageRef.setValue(values,withCompletionBlock:
-                {
-                    error, ref in
-                    if error == nil{
-                        //发送成功
-                    }
-                    else{
-                        //发送错误,alert
-                    }
-            })
+
         })
 
     }

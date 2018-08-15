@@ -127,6 +127,7 @@ class profileCheckController: UIViewController {
         viewController.uid = uid
         viewController.username = self.username.text!
         viewController.url = self.imageurl.text!
+
         self.navigationController?.pushViewController(viewController, animated: true)
 
     }

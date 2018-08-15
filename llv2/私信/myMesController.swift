@@ -101,7 +101,6 @@ class myMesController: UITableViewController {
         cell.username.text = message.fromUname
             }
         else{
-            receive = false
             let url = URL(string: message.toUrl!)
             let data = try? Data(contentsOf: url!)
             let image = UIImage(data:data!)
@@ -147,17 +146,17 @@ class myMesController: UITableViewController {
         
         let index = tableView.indexPathForSelectedRow?.row
         
-        if receive == true{
+        if (messages[index!].fromId! != Auth.auth().currentUser?.uid){
         viewController.uid = messages[index!].fromId!
         viewController.username = messages[index!].fromUname!
         viewController.url = messages[index!].fromUrl!
     }
         else{
-            viewController.uid = messages[index!].toId!
+          viewController.uid = messages[index!].toId!
             viewController.username = messages[index!].toUname!
-            viewController.url = messages[index!].toUrl!
-        }
-        
+           viewController.url = messages[index!].toUrl!
+       }
+
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
