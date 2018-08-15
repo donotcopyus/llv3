@@ -23,6 +23,7 @@
 		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
 		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
 		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
+		51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A077B82123C9AE005DC26E /* CollectionViewCell.swift */; };
 		51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E72E211E9C7E0022AD66 /* chatLog.swift */; };
 		51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */; };
 		51B52D4C211F982400D2B9E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B52D4B211F982400D2B9E9 /* Message.swift */; };
@@ -108,6 +109,7 @@
 		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
 		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
 		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
+		51A077B82123C9AE005DC26E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		51A7E72E211E9C7E0022AD66 /* chatLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatLog.swift; sourceTree = "<group>"; };
 		51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePictureViewController.swift; sourceTree = "<group>"; };
 		51B52D4B211F982400D2B9E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				51B52D5C211FA5FB00D2B9E9 /* myMesController.swift */,
 				51B52D5E211FE0D200D2B9E9 /* messageRecCell.swift */,
 				51B52D5F211FE0D200D2B9E9 /* messageRecCell.xib */,
+				51A077B82123C9AE005DC26E /* CollectionViewCell.swift */,
 			);
 			path = "私信";
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
+				51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
 				FA96817D211CEB0A006250BD /* vc1.swift in Sources */,
