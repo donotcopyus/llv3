@@ -39,7 +39,10 @@
 		51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562582101023000FF8D25 /* registerViewController.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
-		FA17BE3F211E8DB20037488A /* sentXianzhiTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17BE3E211E8DB20037488A /* sentXianzhiTVC.swift */; };
+		FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EB2123C49A00B03E1D /* LikeTab.swift */; };
+		FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454ED2123CCD300B03E1D /* sent1.swift */; };
+		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
+		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
 		FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A09210CFEC8003066D3 /* TableViewCell3.swift */; };
@@ -51,10 +54,6 @@
 		FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */; };
 		FA93FF51210900F90070DD60 /* image in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF50210900F90070DD60 /* image */; };
 		FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */; };
-		FA968173211CDB9B006250BD /* likePVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA968172211CDB9B006250BD /* likePVC.swift */; };
-		FA968179211CE830006250BD /* xianzhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA968178211CE830006250BD /* xianzhi.swift */; };
-		FA96817B211CE83E006250BD /* exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96817A211CE83E006250BD /* exchange.swift */; };
-		FA96817D211CEB0A006250BD /* vc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96817C211CEB0A006250BD /* vc1.swift */; };
 		FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839921212EA700BB3FE9 /* dra1.swift */; };
 		FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839B21212EB500BB3FE9 /* dra2.swift */; };
 		FAA2839E2122520000BB3FE9 /* dra3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839D2122520000BB3FE9 /* dra3.swift */; };
@@ -64,7 +63,6 @@
 		FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */; };
 		FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC7EB662116359500FE2FDE /* personalVC.swift */; };
 		FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */; };
-		FAEB9EBD211F3513004F8DA0 /* text.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB9EBC211F3513004F8DA0 /* text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +129,10 @@
 		D315C848D886DCBB8F607BC6 /* Pods-llv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F31EDFF509925B70133C3FB1 /* Pods-llv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_llv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA17BE3E211E8DB20037488A /* sentXianzhiTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentXianzhiTVC.swift; sourceTree = "<group>"; };
+		FA1454EB2123C49A00B03E1D /* LikeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTab.swift; sourceTree = "<group>"; };
+		FA1454ED2123CCD300B03E1D /* sent1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent1.swift; sourceTree = "<group>"; };
+		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
+		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 		FA323A09210CFEC8003066D3 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
@@ -145,10 +146,6 @@
 		FA93FF52210901020070DD60 /* IMG_2159.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2159.jpg; sourceTree = "<group>"; };
 		FA93FF532109010F0070DD60 /* IMG_5333.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5333.jpg; sourceTree = "<group>"; };
 		FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeVC.swift; sourceTree = "<group>"; };
-		FA968172211CDB9B006250BD /* likePVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likePVC.swift; sourceTree = "<group>"; };
-		FA968178211CE830006250BD /* xianzhi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhi.swift; sourceTree = "<group>"; };
-		FA96817A211CE83E006250BD /* exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchange.swift; sourceTree = "<group>"; };
-		FA96817C211CEB0A006250BD /* vc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc1.swift; sourceTree = "<group>"; };
 		FAA2839921212EA700BB3FE9 /* dra1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra1.swift; sourceTree = "<group>"; };
 		FAA2839B21212EB500BB3FE9 /* dra2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra2.swift; sourceTree = "<group>"; };
 		FAA2839D2122520000BB3FE9 /* dra3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra3.swift; sourceTree = "<group>"; };
@@ -158,7 +155,6 @@
 		FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTVC.swift; sourceTree = "<group>"; };
 		FAC7EB662116359500FE2FDE /* personalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalVC.swift; sourceTree = "<group>"; };
 		FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentTBC.swift; sourceTree = "<group>"; };
-		FAEB9EBC211F3513004F8DA0 /* text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = text.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,16 +333,14 @@
 		FA968171211CDB38006250BD /* 收藏、已发 */ = {
 			isa = PBXGroup;
 			children = (
-				FA968172211CDB9B006250BD /* likePVC.swift */,
-				FA968178211CE830006250BD /* xianzhi.swift */,
-				FA96817A211CE83E006250BD /* exchange.swift */,
-				FA96817C211CEB0A006250BD /* vc1.swift */,
-				FA17BE3E211E8DB20037488A /* sentXianzhiTVC.swift */,
-				FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */,
-				FAEB9EBC211F3513004F8DA0 /* text.swift */,
+				FA1454EB2123C49A00B03E1D /* LikeTab.swift */,
 				FAA2839921212EA700BB3FE9 /* dra1.swift */,
 				FAA2839B21212EB500BB3FE9 /* dra2.swift */,
 				FAA2839D2122520000BB3FE9 /* dra3.swift */,
+				FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */,
+				FA1454ED2123CCD300B03E1D /* sent1.swift */,
+				FA1454EF2123CCDE00B03E1D /* sent2.swift */,
+				FA1454F12123CCE800B03E1D /* sent3.swift */,
 			);
 			path = "收藏、已发";
 			sourceTree = "<group>";
@@ -626,33 +620,31 @@
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
 				FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */,
+				FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */,
 				FAA2839E2122520000BB3FE9 /* dra3.swift in Sources */,
+				FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FAA28F6921066798005529FA /* settingVC.swift in Sources */,
-				FA968179211CE830006250BD /* xianzhi.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
-				FA96817D211CEB0A006250BD /* vc1.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */,
-				FA968173211CDB9B006250BD /* likePVC.swift in Sources */,
 				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
-				FAEB9EBD211F3513004F8DA0 /* text.swift in Sources */,
+				FA1454F22123CCE800B03E1D /* sent3.swift in Sources */,
 				518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
 				51B52D5D211FA5FB00D2B9E9 /* myMesController.swift in Sources */,
 				51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */,
-				FA96817B211CE83E006250BD /* exchange.swift in Sources */,
-				FA17BE3F211E8DB20037488A /* sentXianzhiTVC.swift in Sources */,
+				FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */,
 				FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */,
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
@@ -834,7 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93B2NY6M8K;
+				DEVELOPMENT_TEAM = 4679M4WZH6;
 				INFOPLIST_FILE = llv2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -857,7 +849,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93B2NY6M8K;
+				DEVELOPMENT_TEAM = 4679M4WZH6;
 				INFOPLIST_FILE = llv2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,59 +1,49 @@
 //
-//  dra3.swift
+//  sent1.swift
 //  llv2
 //
-//  Created by 林蔼欣 on 2018-08-13.
+//  Created by 林蔼欣 on 2018-08-14.
 //  Copyright © 2018 Luna Cao. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-struct exchangeData2 {
+
+//carpool database object
+class carpoolData3{
     
     var id: String
-    var have: String
-    var want: String
-    var extra: String
+    var arrCity: String
+    var depCity: String
+    var depTime1: String
+    var depTime2: String
+    var depDate: String
+    var remainSeat: String
     var timestamp: Double
-    var isCurrency: Bool
     var author: UserProfile
     
-    init(id:String, have:String, want:String, extra:String, timestamp:Double, isCurrency:Bool,author:UserProfile){
+    init(id:String, arrCity:String, depCity:String, depTime1:String, depTime2:String, depDate:String, remainSeat:String, timestamp:Double, author:UserProfile){
         self.id = id
-        self.have = have
-        self.want = want
-        self.extra = extra
-        self.isCurrency = isCurrency
+        self.arrCity = arrCity
+        self.depCity = depCity
+        self.depTime1 = depTime1
+        self.depTime2 = depTime2
+        self.depDate = depDate
+        self.remainSeat = remainSeat
         self.timestamp = timestamp
         self.author = author
     }
     
 }
 
-class dra3: UITableViewController {
+
+
+class sent1: UITableViewController {
     
-    //*********************************************
-    var identities = [String]()
-    //****************************************
+    var arrayOfCellData = [carpoolData3]()
     
-    
-    
-    
-    
-    
-    @IBOutlet weak var nav: UINavigationItem!
-    
-    
-    
-    var arrayOfCellData = [exchangeData2]()
-    
-    //*********************************************
     override func viewDidLoad() {
-        
-        
-        identities = ["换汇"]
-        
         super.viewDidLoad()
         
         tableView = UITableView()
@@ -63,21 +53,19 @@ class dra3: UITableViewController {
         tableView.reloadData()
         
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         observePost()
-        
     }
     
     
+    //数据库提取
     func observePost(){
         
-        let postRef = Database.database().reference().child("exchange")
+        let postRef = Database.database().reference().child("carpool")
         
-        postRef.observe(.value, with:{
-            snapshot in
+        postRef.observe(.value, with: { snapshot in
             
-            var tempPosts = [exchangeData2]()
+            var tempPosts = [carpoolData3]()
             
             for child in snapshot.children{
                 
@@ -91,21 +79,21 @@ class dra3: UITableViewController {
                     
                     let url = URL(string:photoURL),
                     
-                    
-                    let have = dict["haveMoney"] as? String,
-                    let want = dict["wantMoney"] as? String,
-                    let extra = dict["extraInfo"] as? String,
-                    let timestamp = dict["timestamp"] as? Double,
-                    let isCurrency = dict["currencyBol"] as? Bool
+                    let arrCity = dict["arrCity"] as? String,
+                    let depCity = dict["depCity"] as? String,
+                    let depDate = dict["depDate"] as? String,
+                    let depTime1 = dict["depTime1"] as? String,
+                    let depTime2 = dict["depTime2"] as? String,
+                    let remainSeat = dict["remainSeat"] as? String,
+                    let timestamp = dict["timestamp"] as? Double
                 {
                     
                     let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
-                    let post = exchangeData2(id:childSnapshot.key, have:have, want:want, extra:extra, timestamp:timestamp, isCurrency:isCurrency, author:userProfile)
+                    let post = carpoolData3(id: childSnapshot.key, arrCity: arrCity, depCity: depCity, depTime1: depTime1, depTime2: depTime2, depDate:depDate, remainSeat: remainSeat, timestamp: timestamp, author: userProfile)
                     
+                    //append the array
                     tempPosts.append(post)
-                    
                 }
-                
             }
             
             self.arrayOfCellData = tempPosts.reversed()
@@ -114,25 +102,21 @@ class dra3: UITableViewController {
         
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfCellData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
+        let cell = Bundle.main.loadNibNamed("TableViewCell2", owner: self, options: nil)?.first as! TableViewCell2
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
         let image = UIImage(data:data!)
         
+        cell.headImage.image = image
         
-        cell.mainimage.image = image
+        cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
-        cell.mainlabel.text = arrayOfCellData[indexPath.row].author.username
         
         let timeInterval = arrayOfCellData[indexPath.row].timestamp / 1000
         let date = NSDate(timeIntervalSince1970: timeInterval)
@@ -140,28 +124,27 @@ class dra3: UITableViewController {
         let dform = DateFormatter()
         dform.dateFormat = "MM月dd日 HH:mm"
         
-        cell.sendtimelb.text = dform.string(from:date as Date)
+        cell.sendTimeLabel.text = dform.string(from:date as Date)
         
-        let stringTemp = "出" + arrayOfCellData[indexPath.row].have + " " + "求" + arrayOfCellData[indexPath.row].want
+        cell.depatureC.text = arrayOfCellData[indexPath.row].depCity
         
-        cell.detaillb.text = stringTemp
+        cell.arriveC.text = arrayOfCellData[indexPath.row].arrCity
         
-        cell.extraInformartion.text = arrayOfCellData[indexPath.row].extra
+        cell.date.text = arrayOfCellData[indexPath.row].depDate
         
-        if (arrayOfCellData[indexPath.row].isCurrency == true){
-            cell.isCur.isHidden = false
-        }
-        else{
-            cell.isCur.isHidden = true
-        }
+        cell.time1.text = arrayOfCellData[indexPath.row].depTime1
         
+        cell.time2.text = arrayOfCellData[indexPath.row].depTime2
+        
+        cell.seatLabel.text = arrayOfCellData[indexPath.row].remainSeat
         
         cell.id.isHidden = true
-        cell.id.text = arrayOfCellData[indexPath.row].id
-        
         cell.collectionID.isHidden = true
         
-        let likedRef = Database.database().reference().child("users/collection/exchange/")
+        cell.id.text = arrayOfCellData[indexPath.row].id
+        
+        
+        let likedRef = Database.database().reference().child("users/collection/carpool/")
         
         let uid = Auth.auth().currentUser?.uid
         
@@ -178,33 +161,27 @@ class dra3: UITableViewController {
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
+                        cell.likedButton.setTitle("❤️", for: .normal)
                         
                     }}}
             
         })
         
         
+        
         return cell
+        
     }
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 101.5
     }
     
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil);
-    }
-    
-    
-    
-    //*********************************************
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckE") as! profileCheckController
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
         
         let index = tableView.indexPathForSelectedRow?.row
         viewController.pid = arrayOfCellData[index!].id
@@ -214,16 +191,10 @@ class dra3: UITableViewController {
     }
     
     
+    
+    @IBAction func goback(_ sender: UIButton) {
+        // self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil);
+    }
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-

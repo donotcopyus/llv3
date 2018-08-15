@@ -1,14 +1,15 @@
 //
-//  sentTBC.swift
+//  mainTab.swift
 //  llv2
 //
-//  Created by 林蔼欣 on 2018-08-10.
+//  Created by 林蔼欣 on 2018-08-14.
 //  Copyright © 2018 Luna Cao. All rights reserved.
 //
 
 import UIKit
 
-class sentTBC: UITabBarController {
+class LikeTab: UITabBarController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,15 +32,15 @@ class sentTBC: UITabBarController {
         tabBarItem.selectedImage = selectedImage3
         
         self.selectedIndex = 0
-        
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+
+
 }

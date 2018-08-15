@@ -7,89 +7,197 @@
 //
 
 import UIKit
+import Firebase
 
-class dra2: UITableViewController {
+class xianzhiData3{
+    
+    var id: String
+    var name: String
+    var price: String
+    var extraInfo:String
+    var timestamp:Double
+    var imageOneUrl: String
+    var imageTwoUrl: String
+    var imageThreeUrl: String
+    var author: UserProfile
+    
+    init(id: String, name:String, price:String, extraInfo:String, timestamp:Double, imageOneUrl:String, imageTwoUrl:String,imageThreeUrl:String, author:UserProfile){
+        self.id = id
+        self.name = name
+        self.price = price
+        self.extraInfo = extraInfo
+        self.timestamp = timestamp
+        self.imageOneUrl = imageOneUrl
+        self.imageTwoUrl = imageTwoUrl
+        self.imageThreeUrl = imageThreeUrl
+        self.author = author
+    }
+    
+}
 
+class dra2: UITableViewController{
+    
+    var arrayOfCellData = [xianzhiData3]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView = UITableView()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.reloadData()
+        
+        observePost()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func observePost(){
+        
+        let postRef = Database.database().reference().child("xianzhi")
+        
+        postRef.observe(.value, with:{
+            snapshot in
+            
+            var tempPosts = [xianzhiData3]()
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let author = dict["author"] as? [String:Any],
+                    let uid = author["uid"] as? String,
+                    let username = author["username"] as? String,
+                    let photoURL = author["photoURL"] as? String,
+                    let url = URL(string:photoURL),
+                    let name = dict["name"] as? String,
+                    let price = dict["price"] as? String,
+                    let extraInfo = dict["extraInfo"] as? String,
+                    let timestamp = dict["timestamp"] as? Double,
+                    let imageOneUrl = dict["imageOneUrl"] as? String,
+                    let imageTwoUrl = dict["imageTwoUrl"] as? String,
+                    let imageThreeUrl = dict["imageThreeUrl"] as? String
+                {
+                    let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
+                    let post = xianzhiData3(id: childSnapshot.key, name: name, price: price, extraInfo: extraInfo, timestamp: timestamp, imageOneUrl: imageOneUrl, imageTwoUrl: imageTwoUrl, imageThreeUrl: imageThreeUrl, author: userProfile)
+                    
+                    tempPosts.append(post)
+                }
+            }
+            self.arrayOfCellData = tempPosts.reversed()
+            self.tableView.reloadData()
+        })
+        
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayOfCellData.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        //  if arrayOfCellData[indexPath.row].cell == 1 {
+        let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
+        
+        if(arrayOfCellData[indexPath.row].imageOneUrl != ""){
+            let url1 = URL(string:arrayOfCellData[indexPath.row].imageOneUrl)
+            let data1 = try? Data(contentsOf: url1!)
+            let image1 = UIImage(data:data1!)
+            cell.image1.image = image1
+        }
+        
+        if(arrayOfCellData[indexPath.row].imageTwoUrl != ""){
+            let url2 = URL(string:arrayOfCellData[indexPath.row].imageTwoUrl)
+            let data2 = try? Data(contentsOf: url2!)
+            let image2 = UIImage(data:data2!)
+            cell.image2.image = image2
+        }
+        
+        if(arrayOfCellData[indexPath.row].imageThreeUrl != ""){
+            let url3 = URL(string:arrayOfCellData[indexPath.row].imageThreeUrl)
+            let data3 = try? Data(contentsOf: url3!)
+            let image3 = UIImage(data:data3!)
+            cell.image3.image = image3
+        }
+        
+        let url = arrayOfCellData[indexPath.row].author.photoURL
+        let data = try? Data(contentsOf:url)
+        let image = UIImage(data:data!)
+        cell.headImage.image = image
+        
+        
+        cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
+        
+        let timeInterval = arrayOfCellData[indexPath.row].timestamp / 1000
+        let date = NSDate(timeIntervalSince1970: timeInterval)
+        let dform = DateFormatter()
+        dform.dateFormat = "MM月dd日 HH:mm"
+        cell.dateLabel.text = dform.string(from:date as Date)
+        
+        let nameprice = arrayOfCellData[indexPath.row].name + " 出价:"+arrayOfCellData[indexPath.row].price
+        cell.namePrice.text = nameprice
+        
+        cell.extraInfo.text = arrayOfCellData[indexPath.row].extraInfo
+        
+        cell.id.isHidden = true
+        cell.id.text = arrayOfCellData[indexPath.row].id
+        
+        cell.collectionID.isHidden = true
+        
+        let likedRef = Database.database().reference().child("users/collection/xianzhi/")
+        
+        let uid = Auth.auth().currentUser?.uid
+        
+        let pid = arrayOfCellData[indexPath.row].id
+        
+        likedRef.observeSingleEvent(of:.value, with:{
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let thispid = dict["pid"] as? String,
+                    let thisuid = dict["uid"] as? String{
+                    
+                    //如果已经被like
+                    if(thisuid == uid && thispid == pid){
+                        cell.likeButton.setTitle("❤️", for: .normal)
+                        
+                    }}}
+            
+        })
+        
+        cell.authorID.isHidden = true
+        cell.authorID.text = arrayOfCellData[indexPath.row].author.uid
+        
         return cell
+        // } else
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 165
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    @IBAction func goback(_ sender: UIButton) {
+        // self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil);
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
+    
 }
