@@ -16,6 +16,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     var username = String()
     var uid = String()
     var url = String()
+    var messages = [Message]()
     
     lazy var inputTextField:UITextField={
     let textField = UITextField()
@@ -34,14 +35,29 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     func observeMessages(){
         guard let thisUid = Auth.auth().currentUser?.uid else{
             return}
-        guard let thisUname = Auth.auth().currentUser?.displayName else{
-            return}
-        
         let thatUid = self.uid
-        let thatUname = self.username
-        let thatUrl = self.url
         
-    }
+        let message = Database.database().reference().child("messages")
+        message.observe(.childAdded, with: { (snapshot) in
+            
+            if let dict = snapshot.value as? [String:AnyObject]{
+                let mes = Message()
+                mes.text = dict["text"] as? String
+                mes.fromId = dict["fromId"] as? String
+                mes.timestamp = dict["timestamp"] as? Double
+                mes.toId = dict["toId"] as? String
+                mes.toUname = dict["toUname"] as? String
+                mes.fromUname = dict["fromUname"] as? String
+                mes.toUrl = dict["toUrl"] as? String
+                mes.fromUrl = dict["fromUrl"] as? String
+                
+                //消息来自
+                 if ((mes.toId == thisUid && mes.fromId == thatUid) || (mes.toId == thatUid && mes.fromId == thisUid)){
+                    self.messages.append(mes)
+                    
+                    DispatchQueue.main.async {
+                        self.collectionView?.reloadData()
+                    }}}}, withCancel: nil)}
     
     override func viewDidLoad() {
        super.viewDidLoad()
@@ -49,22 +65,22 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
       self.navigationItem.title = username
         
         collectionView?.backgroundColor = UIColor.white
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
+        
 
       setupInputComponents()
    
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return messages.count
     }
     
     let cellId = "cellId"
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        
-        cell.backgroundColor = UIColor.blue
         
         return cell
     }
