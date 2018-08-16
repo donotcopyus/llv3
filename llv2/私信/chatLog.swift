@@ -28,10 +28,12 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     }()
 
 
+
     @IBAction func back(_ sender: UIButton) {
                self.dismiss(animated: true, completion: nil)
     }
     
+        var containerViewBottomAnchor: NSLayoutConstraint?
     
     func observeMessages(){
         guard let thisUid = Auth.auth().currentUser?.uid else{
@@ -73,7 +75,30 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         collectionView?.alwaysBounceVertical = true
 
       setupInputComponents()
+      setupKeyboardObservers()
    
+    }
+    
+    func setupKeyboardObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func handleKeyboardWillShow(notification: Notification){
+        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardDuration = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! Double
+        containerViewBottomAnchor?.constant = -keyboardFrame.height
+        UIView.animate(withDuration: keyboardDuration){
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func handleKeyboardWillHide(notification: Notification){
+        let keyboardDuration = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! Double
+        containerViewBottomAnchor?.constant = 0
+        UIView.animate(withDuration: keyboardDuration){
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -147,7 +172,10 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         view.addSubview(containerView)
         
         containerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        containerViewBottomAnchor = containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        containerViewBottomAnchor?.isActive = true
+        
         containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         containerView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
