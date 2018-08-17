@@ -81,9 +81,9 @@ class dra1: UITableViewController {
                         collectionPid.append(pid)
                     }}}
             
-            //add
-            var tempPosts = [carpoolData2]()
+           var tempPosts = [carpoolData2]()
             
+            //processing这里出了问题
             for childPost in collectionPid{
                 let postRef = Database.database().reference().child("carpool/\(childPost)")
                 postRef.observe(.value, with:
@@ -93,11 +93,8 @@ class dra1: UITableViewController {
                             let author = dict["author"] as? [String:Any],
                             let uid = author["uid"] as? String,
                             let username = author["username"] as? String,
-                            
                             let photoURL = author["photoURL"] as? String,
-                            
                             let url = URL(string:photoURL),
-                            
                             let arrCity = dict["arrCity"] as? String,
                             let depCity = dict["depCity"] as? String,
                             let depDate = dict["depDate"] as? String,
@@ -105,18 +102,20 @@ class dra1: UITableViewController {
                             let depTime2 = dict["depTime2"] as? String,
                             let remainSeat = dict["remainSeat"] as? String,
                             let timestamp = dict["timestamp"] as? Double{
-                            
+
                             let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
                             let post = carpoolData2(id: childPost, arrCity: arrCity, depCity: depCity, depTime1: depTime1, depTime2: depTime2, depDate:depDate, remainSeat: remainSeat, timestamp: timestamp, author: userProfile)
+
                             //append the array
                             tempPosts.append(post)
-                        }})
+                            self.arrayOfCellData = tempPosts.reversed()
+                            self.tableView.reloadData()
+                        }}
+                )
+                
             }
-            self.arrayOfCellData = tempPosts.reversed()
-            self.tableView.reloadData()
-        }
 
-        )
+        } )
         
         
     }
