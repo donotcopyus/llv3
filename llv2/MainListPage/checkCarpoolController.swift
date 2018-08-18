@@ -89,9 +89,7 @@ class checkCarpoolController: UIViewController {
             self.depTime.text = "大致出发时间：" + (post!["depTime1"] as? String)! + " ~ " + (post!["depTime2"] as? String)!
             
         })
-        
 
-       
     }
     
     @IBAction func chat(_ sender: UIButton) {
@@ -107,7 +105,6 @@ class checkCarpoolController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
