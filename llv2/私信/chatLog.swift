@@ -68,8 +68,8 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
       self.navigationItem.title = username
         observeMessages()
         
-        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 58, right: 0)
-        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+//        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.alwaysBounceVertical = true
