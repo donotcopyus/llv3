@@ -1,4 +1,9 @@
-Interactive key
+1.Interactive key  for all
+2.search
+3.post的修改和删除
+4.sent广告
+5.把头像的上传和更改修改成lightbox + image picker
+设置闲置price只能输入数字
 
 重设密码&邮件发送：
 https://firebase.google.com/docs/auth/web/manage-users
@@ -22,9 +27,6 @@ Chatbox
 修改个人资料
 
 删除过期post
-
-把头像的上传和更改修改成lightbox + image picker
-设置闲置price只能输入数字
 
 1.因为有些需要发送广告的，含有图片的处理时间会比较久，但是我们处理的时候没有等待中的那种转圈的图标让用户知道在等待（也没有做那种如果在处理网络申请就没办法再按按钮），所以如果我们在等待数据库处理的时候如果疯狂按发送，数据库里就会出现好几个一样的post
 
