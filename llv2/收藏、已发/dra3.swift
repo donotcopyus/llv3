@@ -33,16 +33,12 @@ struct exchangeData2 {
 
 class dra3: UITableViewController {
     
-
-    var identities = [String]()
-    
     @IBOutlet weak var nav: UINavigationItem!
     
     var arrayOfCellData = [exchangeData2]()
     
     override func viewDidLoad() {
 
-        identities = ["换汇"]
         
         super.viewDidLoad()
         
@@ -64,49 +60,55 @@ class dra3: UITableViewController {
         
         //observe this user's all collection
         let thisUser = Auth.auth().currentUser?.uid
-        let collectionRef = Database.database().reference().child("users/collection/carpool")
+        let collectionRef = Database.database().reference().child("users/collection/exchange")
         
-        let postRef = Database.database().reference().child("exchange")
-        
-        postRef.observe(.value, with:{
-            snapshot in
+        collectionRef.observe(.value, with:{
+            thissnap in
             
+            var collectionPid = [String]()
+            
+            for child in thissnap.children{
+                if let cS = child as? DataSnapshot,
+                let dict = cS.value as? [String:Any],
+                let uid = dict["uid"] as? String,
+                    let pid = dict["pid"] as? String{
+                    if uid == thisUser{
+                        collectionPid.append(pid)
+                    }}}
+           
             var tempPosts = [exchangeData2]()
             
-            for child in snapshot.children{
-                
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let author = dict["author"] as? [String:Any],
-                    let uid = author["uid"] as? String,
-                    let username = author["username"] as? String,
-                    
-                    let photoURL = author["photoURL"] as? String,
-                    
-                    let url = URL(string:photoURL),
-                    
-                    
-                    let have = dict["haveMoney"] as? String,
-                    let want = dict["wantMoney"] as? String,
-                    let extra = dict["extraInfo"] as? String,
-                    let timestamp = dict["timestamp"] as? Double,
-                    let isCurrency = dict["currencyBol"] as? Bool
-                {
-                    
-                    let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
-                    let post = exchangeData2(id:childSnapshot.key, have:have, want:want, extra:extra, timestamp:timestamp, isCurrency:isCurrency, author:userProfile)
-                    
-                    tempPosts.append(post)
-                    
-                }
-                
-            }
+            for childPost in collectionPid{
+                let postRef = Database.database().reference().child("exchange/\(childPost)")
             
-            self.arrayOfCellData = tempPosts.reversed()
-            self.tableView.reloadData()
-        })
-        
-    }
+                postRef.observe(.value, with: { (snapshot) in
+                    
+                    if let dict = snapshot.value as? NSDictionary,
+                        let author = dict["author"] as? [String:Any],
+                        let uid = author["uid"] as? String,
+                        let username = author["username"] as? String,
+                        
+                        let photoURL = author["photoURL"] as? String,
+                        
+                        let url = URL(string:photoURL),
+                        
+                        
+                        let have = dict["haveMoney"] as? String,
+                        let want = dict["wantMoney"] as? String,
+                        let extra = dict["extraInfo"] as? String,
+                        let timestamp = dict["timestamp"] as? Double,
+                        let isCurrency = dict["currencyBol"] as? Bool
+                    {
+                        
+                        let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
+                        let post = exchangeData2(id:childPost, have:have, want:want, extra:extra, timestamp:timestamp, isCurrency:isCurrency, author:userProfile)
+                        
+                        tempPosts.append(post)
+                        self.arrayOfCellData = tempPosts.reversed()
+                        self.tableView.reloadData()
+                    }})
+            }})
+}
     
     
     
@@ -155,29 +157,7 @@ class dra3: UITableViewController {
         
         cell.collectionID.isHidden = true
         
-        let likedRef = Database.database().reference().child("users/collection/exchange/")
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        let pid = arrayOfCellData[indexPath.row].id
-        
-        likedRef.observeSingleEvent(of:.value, with:{
-            snapshot in
-            
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let thispid = dict["pid"] as? String,
-                    let thisuid = dict["uid"] as? String{
-                    
-                    //如果已经被like
-                    if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
-                        
-                    }}}
-            
-        })
-        
+        cell.likeButton.isHidden = true
         
         return cell
     }

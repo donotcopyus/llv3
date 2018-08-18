@@ -83,7 +83,6 @@ class dra1: UITableViewController {
             
            var tempPosts = [carpoolData2]()
             
-
             for childPost in collectionPid{
                 let postRef = Database.database().reference().child("carpool/\(childPost)")
                 postRef.observe(.value, with:
