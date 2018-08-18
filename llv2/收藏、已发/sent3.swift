@@ -201,11 +201,7 @@ class sent3: UITableViewController {
         return 100
     }
     
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil);
-    }
-    
+
     
     
     //*********************************************

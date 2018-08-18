@@ -174,12 +174,7 @@ class dra2: UITableViewController{
         return 165
     }
     
-    
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil);
-    }
-    
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

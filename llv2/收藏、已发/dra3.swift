@@ -186,12 +186,7 @@ class dra3: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil);
-    }
-    
+
     
     
     //*********************************************
