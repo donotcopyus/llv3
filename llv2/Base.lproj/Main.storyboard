@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,21 +30,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
-                                <rect key="frame" x="0.0" y="85" width="375" height="44"/>
-                                <state key="normal" title="修改密码"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-vs-x5O">
-                                <rect key="frame" x="0.0" y="137" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="修改密码"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="f90-vd-6u8" firstAttribute="trailing" secondItem="mMl-S5-fiK" secondAttribute="trailing" id="8k1-Jw-aJh"/>
-                            <constraint firstItem="mMl-S5-fiK" firstAttribute="leading" secondItem="f90-vd-6u8" secondAttribute="leading" id="rZN-ie-3cG"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="f90-vd-6u8"/>
                     </view>
                 </viewController>
@@ -149,28 +137,155 @@
         <!--View Controller-->
         <scene sceneID="uam-bY-FOE">
             <objects>
-                <viewController storyboardIdentifier="关于硬核工作室" id="iDS-VM-Eso" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="关于找啥" id="iDS-VM-Eso" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxB-zP-OhF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-ne-M7v">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-ne-M7v">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="关于硬核工作室" id="7KQ-R5-IGP">
+                                    <navigationItem title="关于找啥" id="7KQ-R5-IGP">
                                         <barButtonItem key="leftBarButtonItem" title="back" id="RbF-f0-gGj"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-EB-Qdc">
+                                <rect key="frame" x="16" y="74" width="343" height="8298"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8298" id="tjZ-z9-0Ss"/>
+                                </constraints>
+                                <mutableString key="text">欢迎使用找啥
+
+
+
+找啥使用协议
+本协议为找啥《使用协议》的修订版本，自2017年10月16日公布。
+请您务必审慎阅读、充分理解协议中相关条款内容，特别是粗体标注的内容。您一旦注册找啥，即视为您已了解并完全同意本协议各项内容，包括找啥对使用协议随时所做的任何修改。如您不同意本协议及/或随时对其的修改，请您立即停止注册及使用找啥所提供的全部服务。
+1、接受条款
+1.1 找啥网的运营者及相关关联公司（以下简称“找啥”）根据本使用协议的条款及不时发布的规则为您提供基于找啥网（包括找啥pc端、找啥及找啥相关客户端、移动网页端等）的互联网服务。本协议的条款可由找啥随时修改，修改后的使用协议在网站上一经公布即有效代替原来的使用协议。您一旦在找啥网注册，即成为找啥用户（以下简称“用户”或“您”），并受本协议的约束。
+1.2 当您使用找啥网单项服务时，您和找啥应遵守找啥随时公布的与该服务相关的指引和规则。前述所有的指引和规则，均构成本使用协议的一部分。
+1.3 您应遵守本协议的各项条款，合法合理使用找啥提供的服务，否则，找啥有权依据本协议中断或终止为您提供服务。同时，找啥保留在任何时候收回您所使用的账号的权利。
+2、服务说明
+2.1 找啥向用户提供包括但不限于如下服务：发布并分享对图书、电影、音乐等的评论；收藏图书、电影、音乐；在找啥中发布话题、日记、上传图片、视频等；在同城中发布或参加各类活动；电子商务服务；付费内容服务等。除非本协议另有其它明示规定，找啥增加或强化目前本服务的任何新功能，包括所推出的新产品，均受本使用协议之规范。
+2.2 用户了解并同意，找啥之服务、产品与资料仅依其当前所呈现的状况提供，而且找啥明确地表示拒绝对于“服务”、“资料”或“产品”等给予任何明示或暗示之担保或保证，包括但不限于，为商业使用、适合于特定目的或未侵害他人权利之担保或保证等。找啥对于因“服务”、 “产品”或“资料”等所产生之任何直接、间接、附带的或因此而导致之衍生性损失概不负责。找啥对于任何用户信息或个性化设定之时效、删除、传递错误、未予储存或其它任何问题，均不承担任何责任。
+2.3 您同意找啥有权制订关于使用本服务的一般措施及限制，包括但不限于本服务将保留所发布内容或其它发布内容之最长期间，以及一定期间内您使用本服务之次数上限（及/或每次使用时间之上限）。通过本服务发布或传送之任何信息、通讯资料和其它内容，如被删除或未予储存，您同意找啥无须承担任何责任。您也同意，找啥有权依其自行之考虑，不论通知与否，随时变更这些一般措施及限制。
+3、您的注册义务
+3.1 为了能使用本服务，按照中国法律的要求，您同意以下事项：依本服务注册提示填写您正确的注册邮箱、密码、名号、手机号码等信息，并确保今后更新的登录邮箱、名号、头像及手机号码等资料的真实性、有效性和合法性。若您提供任何违法、不道德或找啥认为不适合在找啥网上展示的资料；或者找啥有理由怀疑您的行为属于程序或恶意操作，找啥有权无须事先通知即可暂停或终止您使用账号，并拒绝您于现在和未来使用本服务之全部或任何部分。
+3.2 找啥无须对您（任何用户）的任何注册或登记资料承担任何责任，包括但不限于鉴别、核实任何注册或登记资料的真实性、正确性、完整性、适用性及/或是否为最新资料的责任。
+4、用户账号、密码及安全
+4.1 完成本服务的注册程序并成功注册之后，您可使用您的注册邮箱/手机号码和密码，登录到您在找啥网的账号（下称“账号”）。注册完成之时，您便获得了账号的使用权。保护账号安全，是您的责任。
+4.2 您应对所有使用您的账号的行为负完全的责任。您同意：
+1）您的找啥账号遭到未获授权的使用，或者发生其它任何安全问题时，您将立即通知找啥；
+2）如果您未保管好自己的账号和密码，因此而产生的任何损失或损害，找啥不承担任何责任；
+3）您要对使用账号的所有行为给您、找啥或第三方造成的损害负全责，包括您未保管好自己的账号或密码的情形。
+4.3 由于通过账号可获取到用户的个人信息，且账号的所有权归找啥所有，除法律明文规定外，未经找啥同意，用户不得将账号转让、出售或出借给他人使用。
+4.4 若您连续六个月未登录找啥平台，且不存在未到期的有效业务，找啥有权限制您对账号的使用。由此造成的不利后果由您自行承担。
+4.5 您选择将找啥账号与第三方账号进行绑定的，除您自行解除绑定关系外，如发生下列任何一种情形，您已绑定的第三方账号也有可能被解除绑定而找啥无需对您或任何第三方承担任何责任：
+1）您违反法律法规、国家政策或本协议的；
+2）您违反第三方账户用户协议或其相关规定的；
+3）其他需要解除绑定的情形。
+5、用户个人信息保护
+5.1 保护您个人信息安全既是法律要求，也是找啥长期坚持的一项基本原则。您提供的注册资料及找啥保留的有关您的其它资料将受到中国有关法律的保护。找啥将根据中国法律、本协议、《隐私声明》（网址：https://）的规定收集、存储、使用和透露您的个人信息。
+5.2 一般情况下，您可随时浏览、修改您在找啥上的信息，但出于安全性和身份识别的考虑，您可能无法修改注册时提供的初始注册信息及其他验证信息。
+6、提供者之责任
+6.1 根据有关法律法规，找啥在此郑重提请您注意，任何经由本服务而发布、上传的文字、音乐、图片、图形、视频或其他资料（以下简称“内容 ”），无论系公开还是非公开传送，均由内容提供者承担责任。找啥仅为用户提供信息存储空间服务，无法控制经由本服务传送之内容，因此不保证内容的正确性、完整性或有效性。您已预知使用本服务时，可能会接触到令人不快、不适当或令人厌恶之内容。在任何情况下，找啥均不为任何内容负责，但找啥有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停用户使用本服务的全部或部分，保存有关记录，并向有关机关报告等。
+6.2 您明确了解并同意，基于以下原因而造成的，包括但不限于经济、信誉、数据损失或其他无形损失，找啥不承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿责任：
+1）本服务之使用或无法使用；
+2）为替换从或通过本服务购买或取得之任何商品、数据、信息、服务，收到的讯息，或与第三方缔结交易而发生的成本；
+3）您的传输或数据遭到未获授权的存取或改变；
+4）任何第三方在本服务中所作之声明或行为；
+5）第三方以任何方式发布或投递欺诈性信息，或诱导用户受到经济损失；
+6）与本服务相关的其他事宜，但本使用协议有明确规定的除外。
+7、服务变更、中断或终止
+7.1 找啥可能会对服务内容进行变更、也可能会中断、终止服务。
+7.2 鉴于网络服务的特殊性（包括但不限于服务器的稳定性问题、恶意的网络攻击等行为或找啥无法控制的情形），您同意找啥有权随时中断或终止部分或全部的服务。
+7.3 您理解，找啥需要定期或不定期对提供服务的平台或相关设备进行维护、升级或其他目的暂停部分或全部服务，如因此类情况而造成服务在合理时间内的中断，找啥无需为此承担任何责任。
+7.4 如发生以下任何一种情形，找啥有权随时中断或终止向您提供本协议项下的服务而无需对您或任何第三方承担责任：
+1）您提供个人资料不真实；
+2）您违反法律、政策或违反本使用协议。
+7.5 您同意找啥基于其自行之考虑，因任何理由，包含但不限于缺乏使用，或找啥认为您已经违反本使用协议，终止您的账号或本服务之使用（或服务之任何部分），并将您在本服务内任何内容加以移除并删除。您同意依本使用协议任何规定提供之服务，无需进行事先通知即可中断或终止。您承认并同意，找啥可立即关闭或注销您的账号及删除您账号中所有相关信息及文件，及/或禁止继续使用前述文件或本服务。此外，您同意若本服务之使用被中断或终止或您的账号及相关信息和文件被关闭或注销，找啥对您或任何第三人均不承担任何责任。
+8、担保与保证
+您明确了解并同意∶
+1）本使用协议的任何规定不会免除找啥因过错而造成您人身伤害或财产损失的任何责任；
+2）找啥不保证以下事项∶
+　　· 本服务将符合您的要求；
+　　· 本服务将不受干扰、及时提供、安全可靠或不会出错；
+　　· 使用本服务取得之结果正确可靠；
+　　· 您经由本服务购买或取得之任何产品、服务、资讯或其它信息将符合您的期望；
+3）是否使用本服务下载或取得任何资料应由您自行考虑且自负风险，因任何资料之下载而导致的您电脑系统之任何损坏或数据丢失等后果，由您自行承担；
+4）您自找啥或经由本服务取得的任何建议或信息，无论是书面或口头形式，除非本使用协议有明确规定，将不构成本使用协议以外之任何保证。
+9、用户行为
+9.1 您应遵守中华人民共和国相关法律法规，并同意对以任何方式使用您的登录账号而使用本服务的任何行为及其结果承担全部责任。如您的行为违反国家法律，您将依法承担全部法律责任；如涉嫌构成犯罪，司法机关将追究您的刑事责任，找啥网将严格按照法律规定的义务及司法机关的要求进行配合。
+同时，如果找啥有理由认为您的任何行为，包括但不限于您的任何言论或其它行为违反或可能违反国家法律法规的任何规定，找啥可在任何时候不经任何事先通知终止向您提供服务。
+9.2 您同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为∶
+1）发布或以其他方式传送含有下列内容之一的信息：　
+　　· 反对宪法所确定的基本原则的；
+　　· 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+　　· 损害国家荣誉和利益的；
+　　· 煽动民族仇恨、民族歧视、破坏民族团结的；
+　　· 破坏国家宗教政策，宣扬邪教和封建迷信的；
+　　· 散布谣言，扰乱社会秩序，破坏社会稳定的；
+　　· 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+　　· 侮辱或者诽谤他人，侵害他人合法权利的；
+　　· 含有虚假、诈骗、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其他道德上令人反感的内容；
+　　· 含有中国法律、法规、（部门）规章以及任何具有法律效力之规范所限制或禁止的其他内容的；
+　　· 含有找啥认为不适合在找啥展示的内容；
+2）以任何方式危害他人的合法权益；
+3）冒充其他任何人或机构，或以虚伪不实的方式陈述或谎称与任何人或机构有关；
+4）将依据任何法律、合约或法定关系（例如由于雇佣关系和依据保密合约所得知或揭露之内部资料、专属及机密资料）而知悉但无权传送之任何内容加以发布、发送电子邮件或以其它方式传送；
+5）将侵害他人著作权、专利权、商标权、商业秘密、或其他专属权利（以下简称“专属权利”）之内容加以发布或以其他方式传送；
+6）将任何“广告信函”、“促销资料”、“垃圾邮件”、“滥发信件”、“连锁信件”、“直销”或其他任何形式的劝诱资料加以发布、发送或以其它方式传送；
+7）将设计目的在于干扰、破坏或限制任何计算机软件、硬件或通讯设备功能之计算机病毒（包括但不限于木马程序（trojan horses）、蠕虫（worms）、定时炸弹、删除蝇（cancelbots）（以下简称“病毒”）或其他计算机代码、档案和程序之任何资料，加以发布、发送或以其他方式传送；
+8）干扰或破坏本服务或与本服务相连线之服务器和网络，或违反任何关于本服务连线网络之规定、程序、政策或规范；
+9）跟踪、人肉搜索或以其他方式骚扰他人；
+10）故意或非故意地违反任何适用的当地、国家法律，以及任何具有法律效力的规则；
+11）未经合法授权而截获、篡改、收集、储存或删除您或他人的个人信息、站内邮件或其他数据资料，或将获知的此类资料用于任何非法或不正当目的。
+您已认可找啥未对用户的使用行为进行全面控制，您使用任何内容时，包括依赖前述内容之正确性、完整性或有效性时，您同意将自行加以判断并承担所有风险，而不依赖于找啥。但找啥依其自行之考虑，有权拒绝和删除经由本服务提供之违反本条款的或其他引起找啥反感的任何内容。
+9.3 由于您通过本服务提供、发布或传送之内容、您与本服务连线、您违反本使用协议、或您侵害他人任何权利因而衍生或导致任何第三人提出任何索赔或请求，包括但不限于合理的律师费、诉讼费，您同意赔偿找啥及其子公司、关联公司、高级职员、代理人、品牌共有人或其他合作伙伴及员工，并使其免受损害，并承担由此引发的全部法律责任。
+9.4 您同意不对本服务任何部分或本服务之使用或获得，进行复制、拷贝、出售、转售或用于任何其他商业目的。
+10、知识产权
+10.1 找啥在本服务中提供的内容（包括但不限于网页、界面设计、版面框架、文字、音频、视频、图片或其他资料等）等知识产权归找啥或相关权利人所有。除另有约定外，找啥提供本服务时所依托的软件、系统等的著作权、专利权及其他知识产权归找啥所有。找啥网、找啥以及其他找啥标识及产品、服务名称，均为找啥之商标。未经找啥事先书面同意，您不得擅自删除、掩盖或更改找啥的版权声明、商标或其它权利声明，不得将找啥的商标以任何方式展示或使用或作其它处理，或表示您有权展示、使用或另行处理找啥的商标。
+10.2 您在找啥网上传或发布的内容，您应保证为其著作权人或已取得合法授权，并且该内容不会侵犯任何第三方的合法权益。您点击同意本协议，即表明您同意授予找啥所有上述内容在全球范围内的、免费的、不可撤销的、无期限限制的、可再许可或转让的非独家著作财产权使用权许可，据该许可找啥将有权以展示、推广及其他不为我国法律所禁止的方式使用前述内容。同时您同意许可找啥视具体情况就任何主体侵犯您权益的事宜进行维权，包括但不限于发送侵权函件、提起诉讼、申请仲裁等，找啥无需再向您单独获得授权。本协议已经构成《著作权法》第二十五条所规定的书面协议，其效力及于用户在找啥网发布的任何受著作权法保护的内容，无论该内容形成于本协议签订前还是本协议签订后。
+10.3 您有权将您在找啥网上发布的内容授权给他人使用。找啥欢迎您优先选择找啥就相关内容进行合作。
+10.4 您了解并同意，本服务及本服务所使用之相关软件含有受到相关知识产权及其他法律保护之专有保密资料。您也了解并同意，经由本服务或广告商向您呈现之赞助广告或信息所包含之内容，亦受到著作权、商标权、专利权或其他专属权利之法律保护。未经找啥或广告商明示授权，您不得修改、出租、出借、出售、散布本服务或软件之任何部分或全部，或据以制作衍生著作，或使用擅自修改后的软件等。找啥仅授予您个人、不可移转及非专属之使用权，使您得于在单机计算机上使用其软件之目的，但您不得（且不得允许任何第三人）复制、修改、改编、翻译、创作衍生著作、进行还原工程、反向组译、传播或以其它方式发现原始码，或出售、转让、再授权或提供软件设定担保，或以其它方式移转软件之任何权利。您同意将通过由找啥所提供的界面而非任何其它途径使用本服务。
+10.5 如您违反世界版权公约、中华人民共和国著作权法、商标法、专利法、反不正当竞争法及其他与知识产权方面相关的法律法规或本协议约定，您应自行承担因此而给他人（包括找啥）造成的损害，承担相应的法律责任。
+11、用户专属权利
+11.1 找啥尊重他人合法权益（包括知识产权、名誉权、商誉权等），呼吁您也尊重他人合法权益。
+11.2 如果您违反法律法规的禁止性规定、对他人的合法权益或公众利益造成了侵害，找啥将依国家法律法规的规定，或在适当的情形下，依本协议或其相关规定，删除特定内容或以至终止您对账户的使用。
+11.3 若您认为您的合法权益遭到侵害，请您查看《找啥侵权投诉指引》（链接：https://help.），按照指引提示提交投诉，找啥将依法进行处理。
+12、国际使用之特别告知
+您已了解互联网的无国界性，同意遵守当地所有关于网上行为及内容之法律法规。您特别同意遵守有关从中国或您所在国家或地区输出信息之传输的所有适用法律法规。
+13、未成年人使用条款
+如您是未成年用户，请在法定监护人的陪同下仔细阅读本使用协议，您及法定监护人应按照法律及本协议规定承担责任。
+14、一般条款
+14.1 找啥公布的《社区指导原则》（网址：https://www.）、《版权声明》（网址：https://www.）、《隐私声明》(网址：https://www.)均是本协议的有效组成部分，本协议及与找啥服务相关的指引和规则（包括找啥单项服务指引，如：《找啥小站服务协议》《找啥原创声明》《找啥赞赏功能使用协议》等）共同规范您对于本服务之使用行为。在您使用相关服务、使用第三方提供的内容或软件时，亦应遵从所适用之附加条款及条件。
+14.2 本使用协议及您与找啥之关系，均适用中华人民共和国法律。您与找啥就本服务、本使用协议或其他有关事项发生的争议，应首先友好协商解决，协商不成时应提请找啥实际运营者所在地有管辖权的人民法院通过诉讼解决。
+14.3 找啥未行使或执行本使用协议任何权利或规定，不构成对前述权利或权利之放弃。
+14.4 倘若本使用协议之任何规定因与中华人民共和国法律抵触而无效，本使用协议其他规定仍应具有完整的效力及效果。
+14.5 本使用协议之标题仅供方便而设，不具任何法律或契约效果。
+同意协议
+同意后，再进行下一步的注册流程
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RVY-EB-Qdc" firstAttribute="top" secondItem="5kL-ne-M7v" secondAttribute="bottom" constant="10" id="9Kb-Sf-0IF"/>
+                            <constraint firstItem="RVY-EB-Qdc" firstAttribute="centerX" secondItem="5kL-ne-M7v" secondAttribute="centerX" id="Mku-RL-fYZ"/>
+                            <constraint firstItem="RVY-EB-Qdc" firstAttribute="leading" secondItem="pxB-zP-OhF" secondAttribute="leadingMargin" id="bZs-fi-03h"/>
+                            <constraint firstItem="RVY-EB-Qdc" firstAttribute="top" secondItem="pxB-zP-OhF" secondAttribute="top" constant="74" id="dmb-xc-Gn0"/>
+                            <constraint firstItem="RVY-EB-Qdc" firstAttribute="trailing" secondItem="pxB-zP-OhF" secondAttribute="trailingMargin" id="emK-9x-9uI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dGQ-48-YuB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Kh-1Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5553" y="1138"/>
+            <point key="canvasLocation" x="5552.8000000000002" y="1137.481259370315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z4E-0S-zCk">
@@ -363,6 +478,11 @@
                                     <segue destination="xuB-7a-3w3" kind="showDetail" id="WK4-md-AaI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
+                                <rect key="frame" x="0.0" y="175" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="修改密码"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7FJ-yT-CCY"/>
@@ -374,32 +494,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qW-9c-A5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3748" y="475"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ynW-hN-eL9">
-            <objects>
-                <viewController storyboardIdentifier="浏览记录" id="p0W-FW-Suv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fNy-Ml-p7z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zh-gB-MXK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="浏览记录" id="dhD-W9-7Ov">
-                                        <barButtonItem key="leftBarButtonItem" title="back" id="FPx-wI-Dca"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ixf-wP-1zL"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n9g-uW-ot5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4350" y="475"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WJj-ql-7pg">
@@ -958,23 +1052,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-mm-gzI">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-mm-gzI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="硬核工作室" id="rWP-za-6d2">
                                         <barButtonItem key="leftBarButtonItem" title="Item" id="Nv0-u2-9s9"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-hc-Agr">
+                                <rect key="frame" x="79" y="296" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="中文logo" translatesAutoresizingMaskIntoConstraints="NO" id="zKw-yV-PNH">
+                                <rect key="frame" x="166" y="107" width="43" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="WDQ-xO-mBa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="横线" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-1H-fhV">
+                                <rect key="frame" x="67" y="244" width="240" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="1gw-CN-YwF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harkore" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-9I-rEQ">
+                                <rect key="frame" x="97" y="268" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Ax2-Kt-XZL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNu-9c-7P5">
+                                <rect key="frame" x="67" y="444" width="242" height="21"/>
+                                <string key="text">承接各类iOS端, 安卓端APP开发
+网页, 微信小程序开发</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网页, 微信小程序开发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzA-yv-WGe">
+                                <rect key="frame" x="106" y="473" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-T9-nMS">
+                                <rect key="frame" x="77" y="550" width="220" height="38"/>
+                                <state key="normal" image="联系我们"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="版本：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-bv-v5G">
+                                <rect key="frame" x="167" y="187" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YrL-T9-nMS" firstAttribute="centerX" secondItem="SVu-mm-gzI" secondAttribute="centerX" id="62g-QJ-bzq"/>
+                            <constraint firstItem="Bg2-1H-fhV" firstAttribute="centerX" secondItem="SVu-mm-gzI" secondAttribute="centerX" id="9ax-x6-Wzt"/>
+                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="centerX" secondItem="SVu-mm-gzI" secondAttribute="centerX" id="Elo-fM-LfD"/>
+                            <constraint firstItem="ZNu-9c-7P5" firstAttribute="centerX" secondItem="SVu-mm-gzI" secondAttribute="centerX" id="FeQ-UN-8qi"/>
+                            <constraint firstItem="ZNu-9c-7P5" firstAttribute="centerX" secondItem="RzA-yv-WGe" secondAttribute="centerX" id="Jkf-la-jx6"/>
+                            <constraint firstItem="jNr-bv-v5G" firstAttribute="top" secondItem="zKw-yV-PNH" secondAttribute="bottom" constant="8" symbolic="YES" id="NvV-JO-uRX"/>
+                            <constraint firstItem="zKw-yV-PNH" firstAttribute="top" secondItem="mDF-S3-evP" secondAttribute="top" constant="107" id="O0R-DI-1L5"/>
+                            <constraint firstItem="Bg2-1H-fhV" firstAttribute="top" secondItem="jNr-bv-v5G" secondAttribute="bottom" constant="36" id="SAG-eK-J07"/>
+                            <constraint firstItem="zKw-yV-PNH" firstAttribute="centerX" secondItem="SVu-mm-gzI" secondAttribute="centerX" id="VV2-WG-wD1"/>
+                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="top" secondItem="Bg2-1H-fhV" secondAttribute="bottom" constant="2" id="Wa3-vc-6Ks"/>
+                            <constraint firstItem="YrL-T9-nMS" firstAttribute="top" secondItem="RzA-yv-WGe" secondAttribute="bottom" constant="56" id="WpH-4a-1xm"/>
+                            <constraint firstItem="Bg2-1H-fhV" firstAttribute="leading" secondItem="ZNu-9c-7P5" secondAttribute="leading" id="Xdj-fk-X7E"/>
+                            <constraint firstItem="zKw-yV-PNH" firstAttribute="centerX" secondItem="mDF-S3-evP" secondAttribute="centerX" id="gzQ-bm-hRs"/>
+                            <constraint firstItem="RzA-yv-WGe" firstAttribute="top" secondItem="ZNu-9c-7P5" secondAttribute="bottom" constant="8" symbolic="YES" id="irs-Nz-deh"/>
+                            <constraint firstItem="zKw-yV-PNH" firstAttribute="top" secondItem="SVu-mm-gzI" secondAttribute="bottom" constant="43" id="lDp-z8-It2"/>
+                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="leading" secondItem="oG3-sI-3ii" secondAttribute="leading" constant="97" id="s1H-Bf-o6R"/>
+                            <constraint firstItem="RzA-yv-WGe" firstAttribute="top" secondItem="tF1-9I-rEQ" secondAttribute="bottom" constant="25" id="vbU-1g-gBj"/>
+                            <constraint firstItem="zKw-yV-PNH" firstAttribute="leading" secondItem="oG3-sI-3ii" secondAttribute="leading" constant="166" id="yH1-Wf-9XL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oG3-sI-3ii"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4r-Nm-3um" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226" y="1255"/>
+            <point key="canvasLocation" x="1224.8" y="1254.4227886056972"/>
         </scene>
         <!--My Mes Controller-->
         <scene sceneID="6Kt-2R-Wkc">
@@ -1135,8 +1297,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="底部广告" translatesAutoresizingMaskIntoConstraints="NO" id="gUg-in-sle">
                                 <rect key="frame" x="176" y="587.5" width="209" height="45"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="中文logo" translatesAutoresizingMaskIntoConstraints="NO" id="Blp-mc-HQD">
-                                <rect key="frame" x="166.5" y="20" width="42" height="73"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="中文logo" translatesAutoresizingMaskIntoConstraints="NO" id="Blp-mc-HQD">
+                                <rect key="frame" x="166" y="78" width="42" height="66"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
@@ -1176,7 +1338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="-559"/>
+            <point key="canvasLocation" x="1292" y="-559.07046476761627"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -1653,7 +1815,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1694,7 +1856,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -1798,8 +1960,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="oDE-5G-2Lb">
-                                <rect key="frame" x="164" y="20" width="47" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="oDE-5G-2Lb">
+                                <rect key="frame" x="151" y="20" width="75" height="72"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部工作室名字" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-rI-DvM">
                                 <rect key="frame" x="150.5" y="623" width="74" height="24"/>
@@ -1837,7 +1999,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cec-Jd-lwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="999"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="998.95052473763121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RTB-CK-LxE">
@@ -1956,7 +2118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sp-ig-RmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4772" y="-1003"/>
+            <point key="canvasLocation" x="4882" y="-952"/>
         </scene>
         <!--Chat Log Controller-->
         <scene sceneID="iCO-JU-KAy">
@@ -2707,6 +2869,7 @@
         <image name="carpool" width="260" height="90"/>
         <image name="carpoolTab" width="32" height="32"/>
         <image name="exchangeTab" width="34" height="26"/>
+        <image name="harkore" width="200" height="200"/>
         <image name="loginUI" width="375" height="812"/>
         <image name="menubutton" width="34" height="25"/>
         <image name="sidelogo" width="99" height="733"/>
@@ -2726,6 +2889,7 @@
         <image name="换汇" width="260" height="90"/>
         <image name="横线" width="220" height="28"/>
         <image name="联系工作室" width="179" height="28"/>
+        <image name="联系我们" width="220" height="38"/>
         <image name="英文logo" width="88" height="72"/>
         <image name="设置" width="76" height="28"/>
         <image name="输入框" width="315" height="48"/>
@@ -2736,10 +2900,10 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UHY-qs-nmR"/>
+        <segue reference="Bh3-wn-Akz"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="ivw-CZ-U9A"/>
-        <segue reference="C6l-iW-G4h"/>
-        <segue reference="WK4-md-AaI"/>
+        <segue reference="Fqf-h5-z1R"/>
+        <segue reference="2bQ-Ce-pAo"/>
+        <segue reference="MSU-jl-Y3C"/>
     </inferredMetricsTieBreakers>
 </document>

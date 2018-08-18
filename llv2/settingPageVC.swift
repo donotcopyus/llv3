@@ -15,8 +15,8 @@ class TableViewController: UITableViewController {
     var identities = [String]()
     
     override func viewDidLoad() {
-        names = ["个人资料","账户与安全","浏览记录","隐私设置","新消息提醒","清除缓存","鼓励一下","关于硬核工作室","意见反馈"]
-        identities = ["个人资料","账户与安全","浏览记录","隐私设置","新消息提醒","清除缓存","鼓励一下","关于硬核工作室","意见反馈"]
+        names = ["个人资料","账户与安全","隐私设置","新消息提醒","清除缓存","鼓励一下","关于找啥","意见反馈"]
+        identities = ["个人资料","账户与安全","隐私设置","新消息提醒","清除缓存","鼓励一下","关于找啥","意见反馈"]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
