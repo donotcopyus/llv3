@@ -181,10 +181,7 @@ class sent2: UITableViewController{
     }
     
     
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil);
-    }
+
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
