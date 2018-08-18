@@ -83,7 +83,7 @@ class dra1: UITableViewController {
             
            var tempPosts = [carpoolData2]()
             
-            //processing这里出了问题
+
             for childPost in collectionPid{
                 let postRef = Database.database().reference().child("carpool/\(childPost)")
                 postRef.observe(.value, with:
@@ -158,34 +158,9 @@ class dra1: UITableViewController {
         
         cell.id.isHidden = true
         cell.collectionID.isHidden = true
+        cell.likedButton.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
-        
-        
-        let likedRef = Database.database().reference().child("users/collection/carpool/")
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        let pid = arrayOfCellData[indexPath.row].id
-        
-        likedRef.observeSingleEvent(of:.value, with:{
-            snapshot in
-            
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let thispid = dict["pid"] as? String,
-                    let thisuid = dict["uid"] as? String{
-                    
-                    //如果已经被like
-                    if(thisuid == uid && thispid == pid){
-                        cell.likedButton.setTitle("❤️", for: .normal)
-                        
-                    }}}
-            
-        })
-        
-        
         
         return cell
         

@@ -55,41 +55,57 @@ class dra2: UITableViewController{
     
     func observePost(){
         
-        let postRef = Database.database().reference().child("xianzhi")
+        let thisUser = Auth.auth().currentUser?.uid
+        let collectionRef = Database.database().reference().child("users/collection/xianzhi")
+
+        collectionRef.observe(.value, with: {thissnap in
         
-        postRef.observe(.value, with:{
-            snapshot in
+            var collectionPid = [String]()
+            
+            for child in thissnap.children{
+                if let cS = child as? DataSnapshot,
+                let dict = cS.value as? [String:Any],
+                let uid = dict["uid"] as? String,
+                let pid = dict["pid"] as? String{
+                    if uid == thisUser{
+                        collectionPid.append(pid)
+                    }}}
             
             var tempPosts = [xianzhiData3]()
             
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let author = dict["author"] as? [String:Any],
-                    let uid = author["uid"] as? String,
-                    let username = author["username"] as? String,
-                    let photoURL = author["photoURL"] as? String,
-                    let url = URL(string:photoURL),
-                    let name = dict["name"] as? String,
-                    let price = dict["price"] as? String,
-                    let extraInfo = dict["extraInfo"] as? String,
-                    let timestamp = dict["timestamp"] as? Double,
-                    let imageOneUrl = dict["imageOneUrl"] as? String,
-                    let imageTwoUrl = dict["imageTwoUrl"] as? String,
-                    let imageThreeUrl = dict["imageThreeUrl"] as? String
-                {
-                    let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
-                    let post = xianzhiData3(id: childSnapshot.key, name: name, price: price, extraInfo: extraInfo, timestamp: timestamp, imageOneUrl: imageOneUrl, imageTwoUrl: imageTwoUrl, imageThreeUrl: imageThreeUrl, author: userProfile)
-                    
-                    tempPosts.append(post)
-                }
+            for childPost in collectionPid{
+                let postRef = Database.database().reference().child("xianzhi/\(childPost)")
+                
+                postRef.observe(.value, with: {
+                    snapshot in
+
+                       if let dict = snapshot.value as? NSDictionary,
+                        let author = dict["author"] as? [String:Any],
+                        let uid = author["uid"] as? String,
+                        let username = author["username"] as? String,
+                        let photoURL = author["photoURL"] as? String,
+                        let url = URL(string:photoURL),
+                        let name = dict["name"] as? String,
+                        let price = dict["price"] as? String,
+                        let extraInfo = dict["extraInfo"] as? String,
+                        let timestamp = dict["timestamp"] as? Double,
+                        let imageOneUrl = dict["imageOneUrl"] as? String,
+                        let imageTwoUrl = dict["imageTwoUrl"] as? String,
+                        let imageThreeUrl = dict["imageThreeUrl"] as? String
+                    {
+                        let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
+                        let post = xianzhiData3(id: childPost, name: name, price: price, extraInfo: extraInfo, timestamp: timestamp, imageOneUrl: imageOneUrl, imageTwoUrl: imageTwoUrl, imageThreeUrl: imageThreeUrl, author: userProfile)
+                        
+                        tempPosts.append(post)
+                        
+                        self.arrayOfCellData = tempPosts.reversed()
+                        self.tableView.reloadData()
+                    }}
+                )
             }
-            self.arrayOfCellData = tempPosts.reversed()
-            self.tableView.reloadData()
-        })
-        
+        }
+        )
     }
-    
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -144,29 +160,7 @@ class dra2: UITableViewController{
         cell.id.text = arrayOfCellData[indexPath.row].id
         
         cell.collectionID.isHidden = true
-        
-        let likedRef = Database.database().reference().child("users/collection/xianzhi/")
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        let pid = arrayOfCellData[indexPath.row].id
-        
-        likedRef.observeSingleEvent(of:.value, with:{
-            snapshot in
-            
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let thispid = dict["pid"] as? String,
-                    let thisuid = dict["uid"] as? String{
-                    
-                    //如果已经被like
-                    if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
-                        
-                    }}}
-            
-        })
+        cell.likeButton.isHidden = true
         
         cell.authorID.isHidden = true
         cell.authorID.text = arrayOfCellData[indexPath.row].author.uid

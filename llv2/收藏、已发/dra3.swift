@@ -33,25 +33,15 @@ struct exchangeData2 {
 
 class dra3: UITableViewController {
     
-    //*********************************************
+
     var identities = [String]()
-    //****************************************
-    
-    
-    
-    
-    
     
     @IBOutlet weak var nav: UINavigationItem!
     
-    
-    
     var arrayOfCellData = [exchangeData2]()
     
-    //*********************************************
     override func viewDidLoad() {
-        
-        
+
         identities = ["换汇"]
         
         super.viewDidLoad()
@@ -71,6 +61,10 @@ class dra3: UITableViewController {
     
     
     func observePost(){
+        
+        //observe this user's all collection
+        let thisUser = Auth.auth().currentUser?.uid
+        let collectionRef = Database.database().reference().child("users/collection/carpool")
         
         let postRef = Database.database().reference().child("exchange")
         
