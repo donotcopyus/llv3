@@ -63,6 +63,8 @@ class sent1: UITableViewController {
         
         let postRef = Database.database().reference().child("carpool")
         
+        let thisUser = Auth.auth().currentUser?.uid
+        
         postRef.observe(.value, with: { snapshot in
             
             var tempPosts = [carpoolData3]()
@@ -88,11 +90,14 @@ class sent1: UITableViewController {
                     let timestamp = dict["timestamp"] as? Double
                 {
                     
+                    if (uid == thisUser){
+                    
                     let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
                     let post = carpoolData3(id: childSnapshot.key, arrCity: arrCity, depCity: depCity, depTime1: depTime1, depTime2: depTime2, depDate:depDate, remainSeat: remainSeat, timestamp: timestamp, author: userProfile)
                     
                     //append the array
                     tempPosts.append(post)
+                    }
                 }
             }
             
@@ -143,29 +148,7 @@ class sent1: UITableViewController {
         
         cell.id.text = arrayOfCellData[indexPath.row].id
         
-        
-        let likedRef = Database.database().reference().child("users/collection/carpool/")
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        let pid = arrayOfCellData[indexPath.row].id
-        
-        likedRef.observeSingleEvent(of:.value, with:{
-            snapshot in
-            
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let thispid = dict["pid"] as? String,
-                    let thisuid = dict["uid"] as? String{
-                    
-                    //如果已经被like
-                    if(thisuid == uid && thispid == pid){
-                        cell.likedButton.setTitle("❤️", for: .normal)
-                        
-                    }}}
-            
-        })
+        cell.likedButton.isHidden = true
         
         
         

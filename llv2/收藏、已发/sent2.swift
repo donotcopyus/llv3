@@ -55,6 +55,8 @@ class sent2: UITableViewController{
     
     func observePost(){
         
+      let thisUser = Auth.auth().currentUser?.uid
+        
         let postRef = Database.database().reference().child("xianzhi")
         
         postRef.observe(.value, with:{
@@ -78,10 +80,12 @@ class sent2: UITableViewController{
                     let imageTwoUrl = dict["imageTwoUrl"] as? String,
                     let imageThreeUrl = dict["imageThreeUrl"] as? String
                 {
+                    
+                    if(uid == thisUser){
                     let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
                     let post = xianzhiData4(id: childSnapshot.key, name: name, price: price, extraInfo: extraInfo, timestamp: timestamp, imageOneUrl: imageOneUrl, imageTwoUrl: imageTwoUrl, imageThreeUrl: imageThreeUrl, author: userProfile)
                     
-                    tempPosts.append(post)
+                        tempPosts.append(post)}
                 }
             }
             self.arrayOfCellData = tempPosts.reversed()
@@ -145,28 +149,7 @@ class sent2: UITableViewController{
         
         cell.collectionID.isHidden = true
         
-        let likedRef = Database.database().reference().child("users/collection/xianzhi/")
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        let pid = arrayOfCellData[indexPath.row].id
-        
-        likedRef.observeSingleEvent(of:.value, with:{
-            snapshot in
-            
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let thispid = dict["pid"] as? String,
-                    let thisuid = dict["uid"] as? String{
-                    
-                    //如果已经被like
-                    if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
-                        
-                    }}}
-            
-        })
+     cell.likeButton.isHidden = true
         
         cell.authorID.isHidden = true
         cell.authorID.text = arrayOfCellData[indexPath.row].author.uid
