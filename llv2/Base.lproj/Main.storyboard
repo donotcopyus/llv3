@@ -723,15 +723,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-7B-gaB">
-                                <rect key="frame" x="161" y="483" width="45" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="登出"/>
-                                <connections>
-                                    <action selector="handleLogout:" destination="xuB-7a-3w3" eventType="touchUpInside" id="Sae-c7-eNj"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-jn-hiK">
                                 <rect key="frame" x="102" y="100" width="171" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -752,6 +743,18 @@
                                     <segue destination="HGJ-zl-43D" kind="showDetail" id="lkz-EV-m98"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-7B-gaB">
+                                <rect key="frame" x="0.0" y="584" width="375" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="0.95686274509803926" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.81931268599999996" green="0.81440662200000002" blue="0.82421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLogout:" destination="xuB-7a-3w3" eventType="touchUpInside" id="Sae-c7-eNj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SQ2-R9-kti"/>
@@ -764,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vf-5l-Rkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1764" y="-476"/>
+            <point key="canvasLocation" x="-1764" y="-476.31184407796104"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
@@ -1792,7 +1795,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="90"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1826,13 +1829,13 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部广告" translatesAutoresizingMaskIntoConstraints="NO" id="sqd-4S-rm1">
-                                <rect key="frame" x="176" y="616.5" width="170" height="36.5"/>
+                                <rect key="frame" x="176" y="596" width="170" height="36.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sqd-4S-rm1" secondAttribute="height" multiplier="209:45" id="pff-ak-OnF"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="470.5" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2926,10 +2929,11 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0g4-zD-bWK"/>
+        <segue reference="p5X-7h-ygu"/>
+        <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="MsP-c5-dSl"/>
-        <segue reference="C6l-iW-G4h"/>
+        <segue reference="lkz-EV-m98"/>
+        <segue reference="C1I-Ic-Opq"/>
         <segue reference="Xh5-75-h7C"/>
     </inferredMetricsTieBreakers>
 </document>
