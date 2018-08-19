@@ -64,8 +64,8 @@ class checkXianzhiController: UIViewController {
         
         postRef.observe(DataEventType.value, with:{
             (snapshot) in
-            let post = snapshot.value as? [String:Any]
-            let author = post!["author"] as? [String:Any]
+            if let post = snapshot.value as? [String:Any]{
+                let author = post["author"] as? [String:Any]
             
             let url = author!["photoURL"] as? String
             let tourl = URL(string:url!)
@@ -76,14 +76,14 @@ class checkXianzhiController: UIViewController {
             
             self.username.text = author!["username"] as? String
             
-            let timeInterval = (post!["timestamp"] as? Double)! / 1000
+                let timeInterval = (post["timestamp"] as? Double)! / 1000
             let date = NSDate(timeIntervalSince1970: timeInterval)
             let dform = DateFormatter()
             dform.dateFormat = "MM月dd日 HH:mm"
             
             self.time.text = "发送于：" + dform.string(from:date as Date)
             
-            let url1 = post!["imageOneUrl"] as? String
+                let url1 = post["imageOneUrl"] as? String
             if (url1 != ""){
             let tourl1 = URL(string:url1!)
             let data1 = try?Data(contentsOf:tourl1!)
@@ -92,7 +92,7 @@ class checkXianzhiController: UIViewController {
                 self.image1.isUserInteractionEnabled = true
             }
             
-            let url2 = post!["imageTwoUrl"] as? String
+                let url2 = post["imageTwoUrl"] as? String
             if (url2 != ""){
                 let tourl2 = URL(string:url2!)
                 let data2 = try?Data(contentsOf:tourl2!)
@@ -101,7 +101,7 @@ class checkXianzhiController: UIViewController {
                 self.image2.isUserInteractionEnabled = true
             }
             
-            let url3 = post!["imageThreeUrl"] as? String
+                let url3 = post["imageThreeUrl"] as? String
             if (url3 != ""){
                 let tourl3 = URL(string:url3!)
                 let data3 = try?Data(contentsOf:tourl3!)
@@ -110,12 +110,12 @@ class checkXianzhiController: UIViewController {
                 self.image3.isUserInteractionEnabled = true
             }
             
-            self.name.text = "物品： " + (post!["name"] as? String)!
-            self.price.text = "价格： " + (post!["price"] as? String)!
+                self.name.text = "物品： " + (post["name"] as? String)!
+                self.price.text = "价格： " + (post["price"] as? String)!
             
-            self.info.text = post!["extraInfo"] as? String
+                self.info.text = post["extraInfo"] as? String
             
-            
+            }
         })
         
         
@@ -157,8 +157,46 @@ class checkXianzhiController: UIViewController {
     }
     
     
+    @IBAction func deletepost(_ sender: UIButton) {
+        
+        let postRef = Database.database().reference().child("xianzhi/\(pid)")
+        
+        let alert = UIAlertController(title: "删除广告", message: "确定删除广告吗？", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action: UIAlertAction!) in
+            postRef.removeValue()
+            
+            let likedRef = Database.database().reference().child("users/collection/xianzhi/")
+            
+            likedRef.observeSingleEvent(of: .value, with: {
+                snapshot in
+                
+                for child in snapshot.children{
+                    if let childSnapshot = child as? DataSnapshot,
+                        let dict = childSnapshot.value as? [String:Any],
+                        let thispid = dict["pid"] as? String{
+                        
+                        if (thispid == self.pid){
+                            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/\(childSnapshot.key)")
+                            userLikeRef.removeValue()
+                        }
+                        
+                    }
+                }
+                
+            })
+            
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (action: UIAlertAction!) in
+            //啥也不做！
+        }))
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
