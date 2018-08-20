@@ -59,8 +59,8 @@ class checkCarpoolController: UIViewController {
         
         postRef.observe(DataEventType.value, with:{
             (snapshot) in
-            let post = snapshot.value as? [String:Any]
-            let author = post!["author"] as? [String:Any]
+            if let post = snapshot.value as? [String:Any]{
+                let author = post["author"] as? [String:Any]
             
             let url = author!["photoURL"] as? String
                         self.imageurl.text = url
@@ -70,24 +70,24 @@ class checkCarpoolController: UIViewController {
             
             self.username.text = author!["username"] as? String
             
-            let timeInterval = (post!["timestamp"] as? Double)! / 1000
+                let timeInterval = (post["timestamp"] as? Double)! / 1000
             let date = NSDate(timeIntervalSince1970: timeInterval)
             let dform = DateFormatter()
             dform.dateFormat = "MM月dd日 HH:mm"
             
             self.time.text = "发送于：" + dform.string(from:date as Date)
             
-            let arr = post!["arrCity"] as? String
-            let dep = post!["depCity"] as? String
+                let arr = post["arrCity"] as? String
+                let dep = post["depCity"] as? String
             let fullstring = "从" + dep! + ", 到" + arr!
             self.route.text = fullstring
             
-            self.seat.text = "剩余座位：" + (post!["remainSeat"] as? String)!
+                self.seat.text = "剩余座位：" + (post["remainSeat"] as? String)!
             
-            self.date.text = "出发日期：" + (post!["depDate"] as? String)!
+                self.date.text = "出发日期：" + (post["depDate"] as? String)!
             
-            self.depTime.text = "大致出发时间：" + (post!["depTime1"] as? String)! + " ~ " + (post!["depTime2"] as? String)!
-            
+                self.depTime.text = "大致出发时间：" + (post["depTime1"] as? String)! + " ~ " + (post["depTime2"] as? String)!
+            }
         })
 
     }
@@ -101,6 +101,47 @@ class checkCarpoolController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
 
     }
+    
+    @IBAction func deletepost(_ sender: UIButton) {
+        
+        let postRef = Database.database().reference().child("carpool/\(pid)")
+        
+        let alert = UIAlertController(title: "删除广告", message: "确定删除广告吗？", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action: UIAlertAction!) in
+            postRef.removeValue()
+            
+            let likedRef = Database.database().reference().child("users/collection/carpool/")
+            
+            likedRef.observeSingleEvent(of: .value, with: {
+                snapshot in
+                
+                for child in snapshot.children{
+                    if let childSnapshot = child as? DataSnapshot,
+                        let dict = childSnapshot.value as? [String:Any],
+                        let thispid = dict["pid"] as? String{
+                        
+                        if (thispid == self.pid){
+                            let userLikeRef = Database.database().reference().child("users/collection/carpool/\(childSnapshot.key)")
+                            userLikeRef.removeValue()
+                        }
+                        
+                    }
+                }
+                
+            })
+            
+            
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (action: UIAlertAction!) in
+            //啥也不做！
+        }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     
 
     override func didReceiveMemoryWarning() {

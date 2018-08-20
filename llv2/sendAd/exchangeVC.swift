@@ -93,8 +93,17 @@ class exchangeVC: UIViewController {
             } ))
             
             present(alert, animated: true, completion: nil)
-//            print("出币种或求币种为空")
-//            return
+
+        }
+        if(want == have){
+            let alert = UIAlertController(title: title, message: "出币种与求币种相同", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                
+            } ))
+            
+            present(alert, animated: true, completion: nil)
         }
         
         let extraIn = self.extraInfo.text!

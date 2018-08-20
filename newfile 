@@ -1,9 +1,12 @@
 1.Interactive key  for all
 2.search
-3.post的修改和删除
-4.sent广告
+3.post的修改
 5.把头像的上传和更改修改成lightbox + image picker
+6.收藏里也能取消收藏的功能
 设置闲置price只能输入数字
+
+加上alert确认
+收藏功能的位置要稍微挪一下？
 
 重设密码&邮件发送：
 https://firebase.google.com/docs/auth/web/manage-users
@@ -36,7 +39,7 @@ Chatbox
 
 
 7.搜索功能
-8.已发广告/收藏
+
 9.logo/ load app界面
 
 （3最后）
@@ -61,18 +64,11 @@ https://github.com/kuangtao22/BoneImagePreview
 
 
 
-https://stackoverflow.com/questions/24777496/how-can-i-convert-string-date-to-nsdate
-STRING back to nsdate
-
 
 https://www.youtube.com/watch?v=R95eeehl8Ck&t=62s
 
 https://www.youtube.com/watch?v=csz_mFklOek&t=495s
 carpool vc
-
-
-https://www.raywenderlich.com/5359-firebase-tutorial-real-time-chat
-
 
 
 app brainstorm-
