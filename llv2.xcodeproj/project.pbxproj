@@ -45,6 +45,8 @@
 		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
 		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
 		FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F5212921FF00B03E1D /* cacheVC.swift */; };
+		FA1454F9212A764400B03E1D /* carpoolSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F8212A764400B03E1D /* carpoolSearchVC.swift */; };
+		FA1454FB212A765F00B03E1D /* xianzhiSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454FA212A765F00B03E1D /* xianzhiSearchVC.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
 		FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A09210CFEC8003066D3 /* TableViewCell3.swift */; };
@@ -136,6 +138,8 @@
 		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
 		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
 		FA1454F5212921FF00B03E1D /* cacheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheVC.swift; sourceTree = "<group>"; };
+		FA1454F8212A764400B03E1D /* carpoolSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpoolSearchVC.swift; sourceTree = "<group>"; };
+		FA1454FA212A765F00B03E1D /* xianzhiSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhiSearchVC.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 		FA323A09210CFEC8003066D3 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		516F7FBC210101BB001C0C55 /* llv2 */ = {
 			isa = PBXGroup;
 			children = (
+				FA1454F7212A75F400B03E1D /* 搜索 */,
 				51A7E725211E86360022AD66 /* 私信 */,
 				FA968171211CDB38006250BD /* 收藏、已发 */,
 				FA93FF50210900F90070DD60 /* image */,
@@ -299,6 +304,15 @@
 				51A077B82123C9AE005DC26E /* CollectionViewCell.swift */,
 			);
 			path = "私信";
+			sourceTree = "<group>";
+		};
+		FA1454F7212A75F400B03E1D /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				FA1454F8212A764400B03E1D /* carpoolSearchVC.swift */,
+				FA1454FA212A765F00B03E1D /* xianzhiSearchVC.swift */,
+			);
+			path = "搜索";
 			sourceTree = "<group>";
 		};
 		FA93FF482108ED130070DD60 /* sendAd */ = {
@@ -631,9 +645,11 @@
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
+				FA1454F9212A764400B03E1D /* carpoolSearchVC.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
+				FA1454FB212A765F00B03E1D /* xianzhiSearchVC.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
