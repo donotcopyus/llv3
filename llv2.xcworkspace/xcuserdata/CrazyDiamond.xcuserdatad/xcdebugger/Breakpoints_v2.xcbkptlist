@@ -42,12 +42,12 @@
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "556407120.59473"
+                  timestampString = "556427809.624367"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
                   endingLineNumber = "40"
-                  offsetFromSymbolStart = "119">
+                  offsetFromSymbolStart = "108">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "556407120.60427"
+                  timestampString = "556427809.628427"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
                   endingLineNumber = "40"
-                  offsetFromSymbolStart = "3511">
+                  offsetFromSymbolStart = "2672">
                </Location>
             </Locations>
          </BreakpointContent>

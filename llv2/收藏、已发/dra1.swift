@@ -38,7 +38,6 @@ class carpoolData2{
 }
 
 
-
 class dra1: UITableViewController {
     
     var arrayOfCellData = [carpoolData2]()
@@ -56,6 +55,8 @@ class dra1: UITableViewController {
         
         observePost()
     }
+    
+    var collectionId = [String]()
     
     
     //数据库提取
@@ -79,11 +80,13 @@ class dra1: UITableViewController {
                     let pid = dict["pid"] as? String{
                     if uid == thisUser{
                         collectionPid.append(pid)
+                        self.collectionId.append(cS.key)
                     }}}
             
            var tempPosts = [carpoolData2]()
             
             for childPost in collectionPid{
+                
                 let postRef = Database.database().reference().child("carpool/\(childPost)")
                 postRef.observe(.value, with:
                     {snapshot in
@@ -100,13 +103,14 @@ class dra1: UITableViewController {
                             let depTime1 = dict["depTime1"] as? String,
                             let depTime2 = dict["depTime2"] as? String,
                             let remainSeat = dict["remainSeat"] as? String,
-                            let timestamp = dict["timestamp"] as? Double{
-
+                            let timestamp = dict["timestamp"] as? Double
+                           {
                             let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
                             let post = carpoolData2(id: childPost, arrCity: arrCity, depCity: depCity, depTime1: depTime1, depTime2: depTime2, depDate:depDate, remainSeat: remainSeat, timestamp: timestamp, author: userProfile)
 
                             //append the array
                             tempPosts.append(post)
+
                             self.arrayOfCellData = tempPosts.reversed()
                             self.tableView.reloadData()
                         }}
@@ -157,9 +161,33 @@ class dra1: UITableViewController {
         
         cell.id.isHidden = true
         cell.collectionID.isHidden = true
-        cell.likedButton.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
+        cell.collectionID.text = collectionId[indexPath.row]
+      
+        let likedRef = Database.database().reference().child("users/collection/carpool/")
+        
+        let uid = Auth.auth().currentUser?.uid
+        
+        let pid = arrayOfCellData[indexPath.row].id
+        
+        likedRef.observeSingleEvent(of:.value, with:{
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let thispid = dict["pid"] as? String,
+                    let thisuid = dict["uid"] as? String{
+                    
+                    //如果已经被like
+                    if(thisuid == uid && thispid == pid){
+                        cell.likedButton.setTitle("❤️", for: .normal)
+                        
+                    }}}
+            
+        })
+        
         
         return cell
         

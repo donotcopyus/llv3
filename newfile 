@@ -1,12 +1,14 @@
 1.Interactive key  for all
 2.search
-
-5.把头像的上传和更改修改成lightbox + image picker
+3.Back gesture
+4.头像尺寸固定 imagepicker尺寸固定
 6.收藏里也能取消收藏的功能
 设置闲置price只能输入数字
-
 加上alert确认
+注册界面（返回button+alert
 收藏功能的位置要稍微挪一下？
+
+dispatch! Wait!https://www.youtube.com/watch?v=lOI0aUkeuLw
 
 重设密码&邮件发送：
 https://firebase.google.com/docs/auth/web/manage-users
@@ -34,9 +36,6 @@ Chatbox
 1.因为有些需要发送广告的，含有图片的处理时间会比较久，但是我们处理的时候没有等待中的那种转圈的图标让用户知道在等待（也没有做那种如果在处理网络申请就没办法再按按钮），所以如果我们在等待数据库处理的时候如果疯狂按发送，数据库里就会出现好几个一样的post
 
 3.现在我后端没有设置输入字符长度限制，这个需要根据我们最后前端的界面来做，比如昵称最多几个字符（取决于前端界面昵称的label多少个字符就装不下了lol），或者详情最多可以写多少个字（也取决于前端label和字体大小什么的）。这个可以最后等我们前端包括美化全都做完了再加。
-
-5.还需要一个能够删除自己的post或者修改自己的post的功能
-
 
 7.搜索功能
 
