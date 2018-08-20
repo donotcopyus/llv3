@@ -102,7 +102,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         
         if (name == ""){
            //alert输入名字
-            let alert = UIAlertController(title: title, message: "Please Enter The Name of this Ad", preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: "请输入物品名", preferredStyle: .alert)
 
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
@@ -123,7 +123,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         if(price == ""){
            //alert输入价格--------------------------------------------------
             
-            let alert = UIAlertController(title: title, message: "Please Enter The Price", preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: "请输入价格", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 alert.dismiss(animated: true, completion: nil)
@@ -176,7 +176,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                 
 //alert--------------------------------------------------------------
                 
-                let alert = UIAlertController(title: self.title, message: "Please Enter The Price", preferredStyle: .alert)
+                let alert = UIAlertController(title: self.title, message: "未知错误", preferredStyle: .alert)
                 
                 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
@@ -298,7 +298,6 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             //update三个imageurl
             self.performSegue(withIdentifier: "xianzhiB", sender: self)
         }
-        
         
     }
     
