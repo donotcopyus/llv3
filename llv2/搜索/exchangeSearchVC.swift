@@ -7,16 +7,45 @@
 //
 
 import UIKit
+import Firebase
 
 class exchangeSearchVC: UIViewController {
-
+    
+    
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     var currency = false
     
+    
+    @IBOutlet weak var extraInfo: UITextField!
+    
+    @IBOutlet weak var btnCheckBox: UIButton!
+    
+    @IBAction func checkMarkTapped(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }) { (success) in
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+                
+            }, completion: nil)
+        }
+        
+        if (currency == false){
+            currency = true
+        }
+        else if (currency == true){
+            currency = false
+        }
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         
         button = dropDownBtn.init(frame: CGRect(x:30, y:155, width: 150, height: 40))
@@ -45,6 +74,9 @@ class exchangeSearchVC: UIViewController {
     
     
     
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,7 +84,8 @@ class exchangeSearchVC: UIViewController {
     
     
     //lauren————————————————————————————————————————————————————————————
-    
+    //button to go back to main
+    @IBOutlet weak var back: UIButton!
     
     class dropDownBtn: UIButton, dropDownProtocol {
         
@@ -219,5 +252,15 @@ class exchangeSearchVC: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
     
 }
+

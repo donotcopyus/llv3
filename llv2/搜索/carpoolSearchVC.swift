@@ -7,12 +7,52 @@
 //
 
 import UIKit
+import Firebase
 
-class carpoolSearchVC: UIViewController {
-
+class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    var subm = 0
+    
     var button = dropDownBtn()
     var b2 = dropDownBtn()
-    var currency = false
+    
+    var rotationAngle: CGFloat!
+    
+    @IBOutlet weak var otherDep: UITextField!
+    @IBOutlet weak var otherArr: UITextField!
+    
+    
+    
+    @IBAction func dChanged(_ sender: UITextField) {
+        
+        if(button.currentTitle! != "其他"){
+            button.setTitle("其他", for: .normal)
+        }
+        
+        otherDep.text = sender.text
+        
+    }
+    
+    
+    @IBAction func aChanged(_ sender: UITextField) {
+        if(b2.currentTitle! != "其他"){
+            b2.setTitle("其他", for: .normal)
+        }
+        
+        otherArr.text = sender.text
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +83,20 @@ class carpoolSearchVC: UIViewController {
         
         self.view.addSubview(b2)
         
+        
+        seatNum.dataSource = self
+        seatNum.delegate = self
+        
+        rotationAngle = -90 * (.pi/180)
+        let y = seatNum.frame.origin.y
+        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        
+        seatNum.frame = CGRect(x: -100, y: y, width: view.frame.width + 100, height: 100)
+        
+        
+        
     }
     
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,173 +104,90 @@ class carpoolSearchVC: UIViewController {
     }
     
     
-    //lauren————————————————————————————————————————————————————————————
 
     
-    class dropDownBtn: UIButton, dropDownProtocol {
+    //---------剩余座位数------------------------------------------
+    @IBOutlet weak var seat: UILabel!
+    
+    @IBOutlet weak var seatNum: UIPickerView!
+    
+    private let dataSource = ["1","2","3","4","5","6"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        seat.text = "剩余座位数：\(dataSource[row])"
         
-        func dropDownPressed(string: String){
-            self.setTitle(string, for: .normal)
-            
-            // print(self.currentTitle!)
-            
-            self.dismissDropDown()
-        }
-        
-        //cannot use 'let' here, would cause error in the line 'dropView = dropDownView .....'
-        var dropView = dropDownView()
-        
-        var height = NSLayoutConstraint()
-        
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            
-            self.backgroundColor = UIColor.darkGray
-            
-            dropView = dropDownView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
-            
-            //for the protocol
-            dropView.delegate = self
-            
-            dropView.translatesAutoresizingMaskIntoConstraints = false
-            
-        }
-        
-        override func didMoveToSuperview() {
-            self.superview?.addSubview(dropView)
-            //how you want the menu to show up
-            self.superview?.bringSubview(toFront: dropView)
-            dropView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-            dropView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-            height = dropView.heightAnchor.constraint(equalToConstant: 0)
-        }
-        
-        var isOpen = false
-        
-        //if the drop menu is open or not
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            if isOpen == false{
-                
-                isOpen = true
-                
-                NSLayoutConstraint.deactivate([self.height])
-                
-                //用来消除菜单中一条白色线，blank space
-                if self.dropView.tableView.contentSize.height > 150 {
-                    self.height.constant = 150
-                }else{
-                    self.height.constant = self.dropView.tableView.contentSize.height
-                }
-                
-                self.height.constant = 150
-                
-                NSLayoutConstraint.activate([self.height])
-                
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-                    self.dropView.layoutIfNeeded()
-                    //y+= moving down; y-= moving up
-                    self.dropView.center.y += self.dropView.frame.height / 2
-                }, completion: nil)
-            }else{
-                
-                isOpen = false
-                
-                NSLayoutConstraint.deactivate([self.height])
-                self.height.constant = 0
-                
-                NSLayoutConstraint.activate([self.height])
-                
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-                    self.dropView.layoutIfNeeded()
-                    self.dropView.center.y -= self.dropView.frame.height / 2
-                }, completion: nil)
-                
-            }
-            
-        }
-        
-        //create a function to dismiss the menu
-        func dismissDropDown(){
-            isOpen = false
-            
-            NSLayoutConstraint.deactivate([self.height])
-            self.height.constant = 0
-            
-            NSLayoutConstraint.activate([self.height])
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-                self.dropView.layoutIfNeeded()
-                self.dropView.center.y -= self.dropView.frame.height / 2
-            }, completion: nil)
-        }
-        
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row]
+        //view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
     }
     
     
     
-    class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
-        var dropDownOptions = [String]()
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        var tableView = UITableView()
-        
-        var delegate : dropDownProtocol!
-        
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            
-            tableView.backgroundColor = UIColor.darkGray
-            self.backgroundColor = UIColor.darkGray
-            
-            tableView.delegate = self
-            tableView.dataSource = self
-            
-            tableView.translatesAutoresizingMaskIntoConstraints = false
-            
-            self.addSubview(tableView)
-            
-            tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-            tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-            tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        }
-        
-        
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        
-        
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return dropDownOptions.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = UITableViewCell()
-            
-            cell.textLabel?.text = dropDownOptions[indexPath.row]
-            cell.backgroundColor = UIColor.darkGray
-            
-            return cell
-        }
-        
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            
-            self.delegate.dropDownPressed(string: dropDownOptions[indexPath.row])
-            self.tableView.deselectRow(at: indexPath, animated: true)
-            
-        }
-        
-        
+        let view = UIView()
+        let label = UILabel()
+        //(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
+        label.textColor = UIColor.white
+        return view
     }
-
     
+    
+    
+    //date label
+    @IBOutlet weak var godate: UILabel!
+    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    @IBAction func datepicker(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datepicker.date)
+        godate.text = "出发日期 \(strDate)"
+    }
+    
+    
+    
+    //time label
+    @IBOutlet private weak var showGoTime: UILabel!
+    //time picker
+    @IBOutlet weak var gotime: UIDatePicker!
+    
+    @IBAction func gotime(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: gotime.date)
+        showGoTime.text = "从 \(strDate)至"
+    }
+    
+    //latest go time label
+    @IBOutlet private weak var latestGoTime: UILabel!
+    //latest go time
+    @IBOutlet weak var latestGo: UIDatePicker!
+    
+    @IBAction func latestGo(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        //    dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: latestGo.date)
+        latestGoTime.text = "至 \(strDate)之间出发"
+    }
 }
+
+

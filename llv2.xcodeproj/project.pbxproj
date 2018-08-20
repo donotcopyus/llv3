@@ -45,14 +45,14 @@
 		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
 		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
 		FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F5212921FF00B03E1D /* cacheVC.swift */; };
-		FA1454F9212A764400B03E1D /* carpoolSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F8212A764400B03E1D /* carpoolSearchVC.swift */; };
-		FA1454FB212A765F00B03E1D /* xianzhiSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454FA212A765F00B03E1D /* xianzhiSearchVC.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
 		FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A09210CFEC8003066D3 /* TableViewCell3.swift */; };
 		FA323A0C210CFEC8003066D3 /* TableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA323A0A210CFEC8003066D3 /* TableViewCell3.xib */; };
 		FA323A1421102323003066D3 /* CarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A1321102323003066D3 /* CarVC.swift */; };
-		FA3F68AF212A76A10061572E /* exchangeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68AE212A76A10061572E /* exchangeSearchVC.swift */; };
+		FA3F68B3212A83A20061572E /* xianzhiSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */; };
+		FA3F68B4212A83A20061572E /* carpoolSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */; };
+		FA3F68B5212A83A20061572E /* exchangeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */; };
 		FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF462108155E0070DD60 /* settingPageVC.swift */; };
 		FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF492108ED7B0070DD60 /* xainzhiTVC.swift */; };
 		FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF4B2108EDD40070DD60 /* TableViewCell1.swift */; };
@@ -139,14 +139,14 @@
 		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
 		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
 		FA1454F5212921FF00B03E1D /* cacheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheVC.swift; sourceTree = "<group>"; };
-		FA1454F8212A764400B03E1D /* carpoolSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpoolSearchVC.swift; sourceTree = "<group>"; };
-		FA1454FA212A765F00B03E1D /* xianzhiSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhiSearchVC.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 		FA323A09210CFEC8003066D3 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
 		FA323A0A210CFEC8003066D3 /* TableViewCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell3.xib; sourceTree = "<group>"; };
 		FA323A1321102323003066D3 /* CarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarVC.swift; sourceTree = "<group>"; };
-		FA3F68AE212A76A10061572E /* exchangeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeSearchVC.swift; sourceTree = "<group>"; };
+		FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xianzhiSearchVC.swift; sourceTree = "<group>"; };
+		FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carpoolSearchVC.swift; sourceTree = "<group>"; };
+		FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangeSearchVC.swift; sourceTree = "<group>"; };
 		FA93FF462108155E0070DD60 /* settingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageVC.swift; sourceTree = "<group>"; };
 		FA93FF492108ED7B0070DD60 /* xainzhiTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xainzhiTVC.swift; sourceTree = "<group>"; };
 		FA93FF4B2108EDD40070DD60 /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
@@ -311,9 +311,9 @@
 		FA1454F7212A75F400B03E1D /* 搜索 */ = {
 			isa = PBXGroup;
 			children = (
-				FA1454F8212A764400B03E1D /* carpoolSearchVC.swift */,
-				FA1454FA212A765F00B03E1D /* xianzhiSearchVC.swift */,
-				FA3F68AE212A76A10061572E /* exchangeSearchVC.swift */,
+				FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */,
+				FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */,
+				FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -629,12 +629,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3F68B4212A83A20061572E /* carpoolSearchVC.swift in Sources */,
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
 				FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */,
+				FA3F68B3212A83A20061572E /* xianzhiSearchVC.swift in Sources */,
 				FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */,
 				FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */,
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
@@ -648,15 +650,13 @@
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
-				FA1454F9212A764400B03E1D /* carpoolSearchVC.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
-				FA1454FB212A765F00B03E1D /* xianzhiSearchVC.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
-				FA3F68AF212A76A10061572E /* exchangeSearchVC.swift in Sources */,
+				FA3F68B5212A83A20061572E /* exchangeSearchVC.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */,
