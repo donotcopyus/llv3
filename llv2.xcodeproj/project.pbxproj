@@ -44,7 +44,7 @@
 		FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454ED2123CCD300B03E1D /* sent1.swift */; };
 		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
 		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
-		FA1454F42126218700B03E1D /* cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F32126218700B03E1D /* cache.swift */; };
+		FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F5212921FF00B03E1D /* cacheVC.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
 		FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A09210CFEC8003066D3 /* TableViewCell3.swift */; };
@@ -135,7 +135,7 @@
 		FA1454ED2123CCD300B03E1D /* sent1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent1.swift; sourceTree = "<group>"; };
 		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
 		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
-		FA1454F32126218700B03E1D /* cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cache.swift; sourceTree = "<group>"; };
+		FA1454F5212921FF00B03E1D /* cacheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheVC.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 		FA323A09210CFEC8003066D3 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 			children = (
 				FA93FF462108155E0070DD60 /* settingPageVC.swift */,
 				FAC7EB662116359500FE2FDE /* personalVC.swift */,
-				FA1454F32126218700B03E1D /* cache.swift */,
+				FA1454F5212921FF00B03E1D /* cacheVC.swift */,
 			);
 			name = "Setting Page";
 			sourceTree = "<group>";
@@ -650,7 +650,7 @@
 				FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */,
 				FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */,
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
-				FA1454F42126218700B03E1D /* cache.swift in Sources */,
+				FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,
 				51B52D4C211F982400D2B9E9 /* Message.swift in Sources */,

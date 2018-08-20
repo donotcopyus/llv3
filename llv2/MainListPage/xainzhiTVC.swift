@@ -38,13 +38,20 @@ class xianzhiData{
 
 class xianzhiTVC: UITableViewController{
     
+    @IBOutlet weak var search: UISearchBar!
+    
+
+    
+    
+    
     var arrayOfCellData = [xianzhiData]()
     
     override func viewDidLoad() {
        super.viewDidLoad()
         
-        tableView = UITableView()
+      
         
+        tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
