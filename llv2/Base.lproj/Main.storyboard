@@ -514,6 +514,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JHl-8b-Kra"/>
                     </view>
+                    <connections>
+                        <outlet property="search" destination="eYH-3r-u8b" id="lUp-ES-dOr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqF-Qp-UnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
