@@ -1,5 +1,5 @@
 //
-//  carpoolSearchVC.swift
+//  exchangeSearchVC.swift
 //  llv2
 //
 //  Created by 林蔼欣 on 2018-08-20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class carpoolSearchVC: UIViewController {
+class exchangeSearchVC: UIViewController {
 
     var button = dropDownBtn()
     var b2 = dropDownBtn()
@@ -18,34 +18,32 @@ class carpoolSearchVC: UIViewController {
         super.viewDidLoad()
         
         
-        button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))
         
-        button.setTitle("出发城市", for: .normal)
+        button = dropDownBtn.init(frame: CGRect(x:30, y:155, width: 150, height: 40))
+        
+        button.setTitle("求币种", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = true
         
         self.view.addSubview(button)
         
         
-        
-        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
-        
-        
+        button.dropView.dropDownOptions = ["RMB","加币","美金","港币","日元","英镑"]
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:210, y:55, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:210, y:155, width: 150, height: 40))
         
-        b2.setTitle("到达城市", for: .normal)
+        b2.setTitle("出币种", for: .normal)
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
-        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
+        b2.dropView.dropDownOptions = ["RMB","加币","美金","港币","日元","英镑"]
         
         self.view.addSubview(b2)
         
     }
     
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,7 +52,7 @@ class carpoolSearchVC: UIViewController {
     
     
     //lauren————————————————————————————————————————————————————————————
-
+    
     
     class dropDownBtn: UIButton, dropDownProtocol {
         
@@ -220,6 +218,6 @@ class carpoolSearchVC: UIViewController {
         
         
     }
-
+    
     
 }
