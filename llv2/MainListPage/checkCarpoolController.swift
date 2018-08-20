@@ -24,7 +24,6 @@ class checkCarpoolController: UIViewController {
     @IBOutlet weak var chat: UIButton!
     
     @IBOutlet weak var imageurl: UILabel!
-    @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
     var pid = String()
@@ -51,7 +50,7 @@ class checkCarpoolController: UIViewController {
             self.chat.isHidden = true
         }
         else{
-            self.edit.isHidden = true
+ 
             self.delete.isHidden = true
         }
         

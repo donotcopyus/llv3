@@ -37,7 +37,7 @@ class profileCheckController: UIViewController {
     
     @IBOutlet weak var chat: UIButton!
     
-    @IBOutlet weak var edit: UIButton!
+
     @IBOutlet weak var delete: UIButton!
     
     
@@ -59,7 +59,6 @@ class profileCheckController: UIViewController {
             self.chat.isHidden = true
         }
         else{
-            self.edit.isHidden = true
             self.delete.isHidden = true
         }
         

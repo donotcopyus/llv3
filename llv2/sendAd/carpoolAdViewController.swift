@@ -89,8 +89,6 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             } ))
             
             present(alert, animated: true, completion: nil)
-//            print("出发或到达城市为空")
-//            return
         }
         
         
@@ -124,8 +122,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             } ))
             
             present(alert, animated: true, completion: nil)
-//            print("啥玩意儿啊时间已经过了！")
-//            return
+
         }
         
         //确保timeinterval是合理的
