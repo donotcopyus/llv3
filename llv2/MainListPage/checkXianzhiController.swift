@@ -28,7 +28,6 @@ class checkXianzhiController: UIViewController {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var chat: UIButton!
-    @IBOutlet weak var edit: UIButton!
     @IBOutlet weak var delete: UIButton!
     
     @IBOutlet weak var imageurl: UILabel!
@@ -56,7 +55,7 @@ class checkXianzhiController: UIViewController {
             self.chat.isHidden = true
         }
         else{
-            self.edit.isHidden = true
+
             self.delete.isHidden = true
         }
         

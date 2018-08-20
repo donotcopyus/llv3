@@ -41,54 +41,6 @@
             </objects>
             <point key="canvasLocation" x="3748" y="1137.481259370315"/>
         </scene>
-        <!--Carpool Edit-->
-        <scene sceneID="91u-Ds-Rgl">
-            <objects>
-                <viewController storyboardIdentifier="carpoole" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eZi-EH-d2e" customClass="CarpoolEdit" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fZu-kn-dOu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="OB6-ZD-T2n"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1RY-JC-wNc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eyp-KG-Nsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6478" y="81"/>
-        </scene>
-        <!--Exchange Edit-->
-        <scene sceneID="aCc-hO-jOB">
-            <objects>
-                <viewController storyboardIdentifier="exchangee" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MDn-7E-KvR" customClass="ExchangeEdit" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rSb-Lo-mxj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="sRX-xw-Gzq"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nSa-wG-nSB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ybH-CT-lEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7138" y="90"/>
-        </scene>
-        <!--Xianzhi Edit-->
-        <scene sceneID="NQz-Ey-Md9">
-            <objects>
-                <viewController storyboardIdentifier="xianzhie" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rgC-VT-qKn" customClass="XianzhiEdit" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EDA-Sy-qZj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="XJF-MA-QYe"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="HYr-j9-rRz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fi0-Qm-LMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7810" y="90"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="1Vz-Jk-vYg">
             <objects>
@@ -1886,7 +1838,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1926,7 +1878,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2364,14 +2316,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSA-Zb-mvZ">
-                                <rect key="frame" x="30" y="557" width="91" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="修改广告"/>
-                                <connections>
-                                    <segue destination="rgC-VT-qKn" kind="show" id="7wb-47-Fll"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUJ-Sz-5Lb">
                                 <rect key="frame" x="30" y="590" width="91" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2436,7 +2380,6 @@
                     <connections>
                         <outlet property="chat" destination="7hU-Dm-fDB" id="RMo-FI-rcV"/>
                         <outlet property="delete" destination="TUJ-Sz-5Lb" id="seG-73-0bT"/>
-                        <outlet property="edit" destination="sSA-Zb-mvZ" id="9KA-R2-qk5"/>
                         <outlet property="headImage" destination="OxS-hf-MMU" id="Tk6-8a-lZI"/>
                         <outlet property="image1" destination="w8W-yP-xnB" id="6K6-fV-ooL"/>
                         <outlet property="image2" destination="b7s-SP-uKx" id="Zw4-a6-SjR"/>
@@ -2547,14 +2490,6 @@
                                     <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="A9r-Rw-q2m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6z-V6-ctM">
-                                <rect key="frame" x="57" y="556" width="91" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="修改广告"/>
-                                <connections>
-                                    <segue destination="MDn-7E-KvR" kind="show" id="z2y-d5-6jV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GPR-HY-1g5"/>
@@ -2563,7 +2498,6 @@
                     <connections>
                         <outlet property="chat" destination="XJn-n0-hLp" id="oFt-2t-eLB"/>
                         <outlet property="delete" destination="h0g-U6-4tn" id="A6n-Kl-NGY"/>
-                        <outlet property="edit" destination="R6z-V6-ctM" id="ZAL-GG-fhX"/>
                         <outlet property="extra" destination="f4K-jJ-2gS" id="sKl-6I-ctT"/>
                         <outlet property="headImage" destination="tPN-tx-Lrr" id="fX5-UX-BKR"/>
                         <outlet property="imageurl" destination="yZG-DA-DTD" id="fxO-AB-Izq"/>
@@ -2679,14 +2613,6 @@
                                     <action selector="chat:" destination="RIq-DG-If2" eventType="touchUpInside" id="Ok7-kN-5Ao"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-Ff-sMz">
-                                <rect key="frame" x="30" y="555" width="91" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="修改广告"/>
-                                <connections>
-                                    <segue destination="eZi-EH-d2e" kind="show" id="oHk-sw-49I"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hS5-04-89T"/>
@@ -2696,7 +2622,6 @@
                         <outlet property="date" destination="Dya-mI-LIv" id="3xd-Ok-pcl"/>
                         <outlet property="delete" destination="q7o-Tp-Tzg" id="Lb4-dy-psV"/>
                         <outlet property="depTime" destination="gOQ-04-e9P" id="JYw-cc-Bqg"/>
-                        <outlet property="edit" destination="OS0-Ff-sMz" id="jrS-2s-Ad7"/>
                         <outlet property="headImage" destination="cxQ-sU-XNf" id="kAx-Qg-WSX"/>
                         <outlet property="imageurl" destination="OCr-0v-iLr" id="Bfe-Fa-Vpj"/>
                         <outlet property="pidLabel" destination="S76-RJ-IAc" id="YXV-sk-uie"/>
@@ -3042,7 +2967,6 @@
         <image name="submit" width="220" height="38"/>
         <image name="xianzhiTab" width="34" height="31"/>
         <image name="中文logo" width="42" height="73"/>
-        <image name="修改广告" width="91" height="31"/>
         <image name="删除广告" width="91" height="31"/>
         <image name="反馈" width="333" height="407"/>
         <image name="发送" width="57" height="31"/>
@@ -3070,7 +2994,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="f0C-Pt-C9H"/>
+<<<<<<< HEAD
         <segue reference="wij-hC-xO5"/>
+=======
+        <segue reference="vVO-m1-ivf"/>
+>>>>>>> 3b1814479371beffa31a7b12ee8c835ab9975af7
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
