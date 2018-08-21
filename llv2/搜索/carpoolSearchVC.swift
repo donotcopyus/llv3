@@ -100,6 +100,8 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     //搜索
     func search(){
         
+        var pidData = [String]()
+        
         //get所有的attribute
         var dept = button.currentTitle!
         var arri = b2.currentTitle!
@@ -156,6 +158,8 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         //出发日期需要一个默认值，depDate是出发日期
         
         //排序方式，从早到晚或者从晚到早
+        
+        //pidData储存所有的pid，排序好并且符合条件，传到table里
 
     }
     
