@@ -67,7 +67,7 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         
         
-        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
+        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         
         
@@ -78,7 +78,7 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
-        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
+        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         self.view.addSubview(b2)
         
@@ -95,6 +95,19 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         
     }
+    
+    
+    //搜索
+    func search(){
+        
+        //get所有的attribute
+       var depCity = button.currentTitle!
+       var arrCity = b2.currentTitle!
+       
+       
+        
+    }
+    
     
     
     override func didReceiveMemoryWarning() {
