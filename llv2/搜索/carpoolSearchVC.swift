@@ -32,7 +32,6 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var otherArr: UITextField!
     
     
-    
     @IBAction func dChanged(_ sender: UITextField) {
         
         if(button.currentTitle! != "其他"){

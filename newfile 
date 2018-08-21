@@ -2,11 +2,17 @@
 2.search
 3.Back gesture
 4.头像尺寸固定 imagepicker尺寸固定
-6.收藏里也能取消收藏的功能
 设置闲置price只能输入数字
 加上alert确认
 注册界面（返回button+alert
-收藏功能的位置要稍微挪一下？
+
+
+1.主界面搜索button那里没办法跳转
+2.每个搜索界面需要右上角有一个确认搜索的按钮
+3.carpool search界面去掉剩余座位数和出发时间，只留下出发城市到达城市和出发日期
+4.每个search里把排序方式作成一个下拉菜单可以进行选择，具体的选择你做一个菜单然后我来设参数？
+
+
 
 dispatch! Wait!https://www.youtube.com/watch?v=lOI0aUkeuLw
 
