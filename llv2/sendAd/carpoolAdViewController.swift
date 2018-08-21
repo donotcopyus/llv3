@@ -115,7 +115,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         if (compare == ComparisonResult.orderedDescending) {
             //alert
-            let alert = UIAlertController(title: title, message: "请选择科学的时间", preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: "出发日期或时间已过！", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                 alert.dismiss(animated: true, completion: nil)

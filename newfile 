@@ -11,7 +11,7 @@
 2.每个搜索界面需要右上角有一个确认搜索的按钮
 3.carpool search界面去掉剩余座位数和出发时间，只留下出发城市到达城市和出发日期
 4.每个search里把排序方式作成一个下拉菜单可以进行选择，具体的选择你做一个菜单然后我来设参数？
-
+5.carpool那个时间里能加个任意时间吗，或者旁边加个按钮也行
 
 
 dispatch! Wait!https://www.youtube.com/watch?v=lOI0aUkeuLw
