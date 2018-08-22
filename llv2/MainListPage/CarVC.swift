@@ -197,9 +197,10 @@ class CarVC: UITableViewController {
 //
     @objc func search(_ sender: Any) {
 //        self.navigationController?.performSegue(withIdentifier: "carpoolSearchVC", sender: self)
+        performSegue(withIdentifier: "gosearch", sender: self)
         //self.(withIdentifier: "carpoolSearchVC", sender: self)
 //        let otherView = carpoolSearchVC()
-        self.navigationController?.pushViewController(carpoolSearchVC(), animated: true)
+//        self.navigationController?.pushViewController(carpoolSearchVC(), animated: true)
         
     }
 
