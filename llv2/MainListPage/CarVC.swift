@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+import Kingfisher
 
 //carpool database object
 class carpoolData{
@@ -110,13 +110,9 @@ class CarVC: UITableViewController {
         let cell = Bundle.main.loadNibNamed("TableViewCell2", owner: self, options: nil)?.first as! TableViewCell2
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
-        let data = try? Data(contentsOf:url)
-
-        
-        
+ 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
-                    let image = UIImage(data:data!)
-                    cell.headImage.image = image
+          cell.headImage.kf.setImage(with: url)
         })
 
         

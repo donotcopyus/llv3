@@ -118,28 +118,20 @@ class xianzhiTVC: UITableViewController{
 
             if(self.arrayOfCellData[indexPath.row].imageOneUrl != ""){
                 let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageOneUrl)
-//           let data1 = try? Data(contentsOf: url1!)
-//           let image1 = UIImage(data:data1!)
             cell.image1.kf.setImage(with: url1)
         }
        
             if(self.arrayOfCellData[indexPath.row].imageTwoUrl != ""){
                 let url2 = URL(string:self.arrayOfCellData[indexPath.row].imageTwoUrl)
-//          let data2 = try? Data(contentsOf: url2!)
-//          let image2 = UIImage(data:data2!)
            cell.image2.kf.setImage(with: url2)
         }
 
             if(self.arrayOfCellData[indexPath.row].imageThreeUrl != ""){
                 let url3 = URL(string:self.arrayOfCellData[indexPath.row].imageThreeUrl)
-//          let data3 = try? Data(contentsOf: url3!)
-//          let image3 = UIImage(data:data3!)
             cell.image3.kf.setImage(with: url3)
         }
         
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
-//         let data = try? Data(contentsOf:url)
-//         let image = UIImage(data:data!)
          cell.headImage.kf.setImage(with: url)
             
         })

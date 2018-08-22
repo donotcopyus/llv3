@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 struct exchangeData {
     
@@ -126,12 +127,8 @@ class exchangeTVC: UITableViewController {
         let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
-        let data = try? Data(contentsOf:url)
-
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
-           let image = UIImage(data:data!)
-           cell.mainimage.image = image
+           cell.mainimage.kf.setImage(with: url)
         })
 
         
