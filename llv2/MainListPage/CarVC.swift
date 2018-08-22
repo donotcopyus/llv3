@@ -51,6 +51,9 @@ class CarVC: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+        
+        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
+        self.navigationItem.rightBarButtonItem = searchBTN
 
 
 
@@ -189,8 +192,16 @@ class CarVC: UITableViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }
-    
-    
+
+//
+    @objc func search(_ sender: Any) {
+//        self.navigationController?.performSegue(withIdentifier: "carpoolSearchVC", sender: self)
+        //self.(withIdentifier: "carpoolSearchVC", sender: self)
+//        let otherView = carpoolSearchVC()
+        self.navigationController?.pushViewController(carpoolSearchVC(), animated: true)
+        
+    }
+
     @IBAction func goback(_ sender: UIButton) {
        // self.navigationController?.popViewController(animated: true)
          dismiss(animated: true, completion: nil);

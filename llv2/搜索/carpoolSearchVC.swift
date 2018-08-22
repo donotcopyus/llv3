@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 
-class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class carpoolSearchVC: UIViewController {
+
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -29,7 +31,21 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     var rotationAngle: CGFloat!
     
     @IBOutlet weak var otherDep: UITextField!
+    
     @IBOutlet weak var otherArr: UITextField!
+    
+    //date label
+    @IBOutlet weak var godate: UILabel!
+    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    @IBAction func datepicker(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datepicker.date)
+        godate.text = "出发日期 \(strDate)"
+    }
     
     
     @IBAction func dChanged(_ sender: UITextField) {
@@ -82,18 +98,7 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         self.view.addSubview(b2)
         
-        
-        seatNum.dataSource = self
-        seatNum.delegate = self
-        
-        rotationAngle = -90 * (.pi/180)
-        let y = seatNum.frame.origin.y
-        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        
-        seatNum.frame = CGRect(x: -100, y: y, width: view.frame.width + 100, height: 100)
-        
-        
-        
+   
     }
     
     
@@ -172,89 +177,10 @@ class carpoolSearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     
 
-    
-    //---------剩余座位数------------------------------------------
-    @IBOutlet weak var seat: UILabel!
-    
-    @IBOutlet weak var seatNum: UIPickerView!
-    
-    private let dataSource = ["1","2","3","4","5","6"]
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        seat.text = "剩余座位数：\(dataSource[row])"
-        
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataSource[row]
-        //view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
     }
     
     
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
-        let view = UIView()
-        let label = UILabel()
-        //(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
-        label.textColor = UIColor.white
-        return view
-    }
-    
-    
-    
-    //date label
-    @IBOutlet weak var godate: UILabel!
-    @IBOutlet weak var datepicker: UIDatePicker!
-    
-    @IBAction func datepicker(_ sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateStyle = DateFormatter.Style.short
-        
-        let strDate = dateFormatter.string(from: datepicker.date)
-        godate.text = "出发日期 \(strDate)"
-    }
-    
-    
-    
-    //time label
-    @IBOutlet private weak var showGoTime: UILabel!
-    //time picker
-    @IBOutlet weak var gotime: UIDatePicker!
-    
-    @IBAction func gotime(_ sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        
-        let strDate = dateFormatter.string(from: gotime.date)
-        showGoTime.text = "从 \(strDate)至"
-    }
-    
-    //latest go time label
-    @IBOutlet private weak var latestGoTime: UILabel!
-    //latest go time
-    @IBOutlet weak var latestGo: UIDatePicker!
-    
-    @IBAction func latestGo(_ sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        
-        //    dateFormatter.dateStyle = DateFormatter.Style.short
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        
-        let strDate = dateFormatter.string(from: latestGo.date)
-        latestGoTime.text = "至 \(strDate)之间出发"
-    }
-}
+
+
 
 
