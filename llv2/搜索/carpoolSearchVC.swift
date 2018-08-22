@@ -167,21 +167,16 @@ class carpoolSearchVC: UIViewController {
         //pidData储存所有的pid，排序好并且符合条件，传到table里
 
     }
-    
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
-        //dismiss(animated: true, completion: nil);
-      // performSegue(withIdentifier: "goback", sender: self)
+
+    @IBAction func goback(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 
     }
     

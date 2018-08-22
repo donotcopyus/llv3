@@ -401,32 +401,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="排序方式"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-VZ-v3K">
-                                <rect key="frame" x="313" y="26" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eKD-ll-MTG"/>
                     </view>
                     <navigationItem key="navigationItem" id="fS4-tI-Wvi">
-                        <barButtonItem key="leftBarButtonItem" image="backbtn" style="plain" id="gbr-Sr-zT2">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xRL-Wh-zJ5">
-                                <rect key="frame" x="16" y="8" width="72" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="            " image="backbtn"/>
-                                <connections>
-                                    <action selector="goback:" destination="PMF-4f-6Mo" eventType="touchUpInside" id="buI-RO-QGH"/>
-                                    <action selector="goback:" destination="NoW-Ps-XYp" eventType="touchUpInside" id="nBe-1s-idO"/>
-                                </connections>
-                            </button>
-                            <color key="tintColor" red="0.31372549020000001" green="0.41568627450000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="iIl-CX-Uf8">
+                            <connections>
+                                <action selector="goback:" destination="PMF-4f-6Mo" id="Acl-YZ-qHR"/>
+                            </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="G4j-Ns-h6t"/>
                     </navigationItem>
                     <connections>
                         <outlet property="datepicker" destination="666-ZM-xEe" id="gDz-fp-gbN"/>
-                        <outlet property="goback" destination="gbr-Sr-zT2" id="lg7-5F-tYo"/>
                         <outlet property="godate" destination="Bgp-aD-Qkc" id="qrY-uR-DrJ"/>
                         <outlet property="otherArr" destination="OJp-wj-AVj" id="LX2-Ir-nBQ"/>
                         <outlet property="otherDep" destination="WTJ-eL-RiN" id="w6y-ZP-2Mt"/>
