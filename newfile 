@@ -1,6 +1,12 @@
 优化笔记：
 需要做scroll的时候只加载当前
 
+图片加载改成King fisher！
+源：https://github.com/onevcat/Kingfisher
+
+https://www.jianshu.com/p/e025cec4197a
+
+
 1.发现问题，在scroll的时候处理会变慢，普通就还好？
 2.关于load image需要dispatch queue⬅️学习cpu处理queue
 3.一旦需要scroll的时候我们的处理就会变得很慢，我查了一下是关于cpu的处理顺序列数的原因，image处理应该单独有一个queue，然后要给cpu一个处理顺序，这样的话我们每次load一个data，数字都会先显示，图片都会慢慢等待加载（异步加载图片）
