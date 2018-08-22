@@ -123,13 +123,12 @@ class dra3: UITableViewController {
         
         let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
         
-        let url = arrayOfCellData[indexPath.row].author.photoURL
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+            let url = self.arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
         let image = UIImage(data:data!)
-        
-        
         cell.mainimage.image = image
-        
+        })
         cell.mainlabel.text = arrayOfCellData[indexPath.row].author.username
         
         let timeInterval = arrayOfCellData[indexPath.row].timestamp / 1000

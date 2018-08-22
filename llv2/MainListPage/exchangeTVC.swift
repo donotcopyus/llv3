@@ -127,10 +127,13 @@ class exchangeTVC: UITableViewController {
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
-        let image = UIImage(data:data!)
+
         
-        
-        cell.mainimage.image = image
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+           let image = UIImage(data:data!)
+           cell.mainimage.image = image
+        })
+
         
         cell.mainlabel.text = arrayOfCellData[indexPath.row].author.username
         

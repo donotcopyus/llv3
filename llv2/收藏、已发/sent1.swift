@@ -114,11 +114,12 @@ class sent1: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell2", owner: self, options: nil)?.first as! TableViewCell2
         
-        let url = arrayOfCellData[indexPath.row].author.photoURL
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+                    let url = self.arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
         let image = UIImage(data:data!)
-        
         cell.headImage.image = image
+                })
         
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         

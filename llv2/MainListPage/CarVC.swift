@@ -111,9 +111,14 @@ class CarVC: UITableViewController {
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
-        let image = UIImage(data:data!)
+
         
-        cell.headImage.image = image
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+                    let image = UIImage(data:data!)
+                    cell.headImage.image = image
+        })
+
         
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         

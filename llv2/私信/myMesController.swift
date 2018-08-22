@@ -85,11 +85,12 @@ class myMesController: UITableViewController {
         
         if (message.toId == Auth.auth().currentUser?.uid){
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
         let url = URL(string: message.fromUrl!)
         let data = try? Data(contentsOf: url!)
         let image = UIImage(data:data!)
-        
-        cell.head.image = image
+        cell.head.image = image})
+            
         cell.username.text = message.fromUname
             }
         else{

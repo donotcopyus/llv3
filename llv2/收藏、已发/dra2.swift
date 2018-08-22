@@ -118,32 +118,34 @@ class dra2: UITableViewController{
         //  if arrayOfCellData[indexPath.row].cell == 1 {
         let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
         
-        if(arrayOfCellData[indexPath.row].imageOneUrl != ""){
-            let url1 = URL(string:arrayOfCellData[indexPath.row].imageOneUrl)
+        
+       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+        if(self.arrayOfCellData[indexPath.row].imageOneUrl != ""){
+            let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageOneUrl)
             let data1 = try? Data(contentsOf: url1!)
             let image1 = UIImage(data:data1!)
             cell.image1.image = image1
         }
         
-        if(arrayOfCellData[indexPath.row].imageTwoUrl != ""){
-            let url2 = URL(string:arrayOfCellData[indexPath.row].imageTwoUrl)
+        if(self.arrayOfCellData[indexPath.row].imageTwoUrl != ""){
+            let url2 = URL(string:self.arrayOfCellData[indexPath.row].imageTwoUrl)
             let data2 = try? Data(contentsOf: url2!)
             let image2 = UIImage(data:data2!)
             cell.image2.image = image2
         }
         
-        if(arrayOfCellData[indexPath.row].imageThreeUrl != ""){
-            let url3 = URL(string:arrayOfCellData[indexPath.row].imageThreeUrl)
+        if(self.arrayOfCellData[indexPath.row].imageThreeUrl != ""){
+            let url3 = URL(string:self.self.arrayOfCellData[indexPath.row].imageThreeUrl)
             let data3 = try? Data(contentsOf: url3!)
             let image3 = UIImage(data:data3!)
             cell.image3.image = image3
         }
         
-        let url = arrayOfCellData[indexPath.row].author.photoURL
+        let url = self.arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
         let image = UIImage(data:data!)
         cell.headImage.image = image
-        
+        })
         
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
