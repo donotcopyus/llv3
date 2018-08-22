@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import MessageKit
+import Kingfisher
 
 class profileCheckController: UIViewController {
     
@@ -70,12 +70,14 @@ class profileCheckController: UIViewController {
             if let post = snapshot.value as? [String:Any]{
                 let author = post["author"] as? [String:Any]
             
+         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+            
             let url = author!["photoURL"] as? String
             self.imageurl.text = url
-
             let tourl = URL(string:url!)
             let data = try? Data(contentsOf: tourl!)
             self.headImage.image = UIImage(data:data!)
+             })
             
             self.username.text = author!["username"] as? String
             

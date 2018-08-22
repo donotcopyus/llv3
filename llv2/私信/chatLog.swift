@@ -178,10 +178,11 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     
     private func setUpCell(cell: CollectionViewCell, message:Message){
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
         let url = message.fromUrl
         let tourl = URL(string:url!)
         let data = try? Data(contentsOf: tourl!)
-        cell.profileImageView.image = UIImage(data:data!)
+        cell.profileImageView.image = UIImage(data:data!)})
         
         if message.fromId == Auth.auth().currentUser?.uid{
             //outgoing blackblue

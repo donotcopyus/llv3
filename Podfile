@@ -12,7 +12,7 @@ target 'llv2' do
   pod 'ImagePicker'
   pod 'Lightbox'
   pod 'MessageKit'
-
+  pod 'Kingfisher', '~> 4.0'
   # Pods for llv2
 
   target 'llv2Tests' do

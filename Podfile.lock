@@ -75,6 +75,7 @@ PODS:
   - ImagePicker (3.0.0)
   - Imaginary (3.0.3):
     - Cache (~> 4.0)
+  - Kingfisher (4.8.1)
   - leveldb-library (1.20)
   - Lightbox (2.1.2):
     - Hue (~> 3.0)
@@ -94,6 +95,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - ImagePicker
+  - Kingfisher (~> 4.0)
   - Lightbox
   - MessageKit
 
@@ -115,6 +117,7 @@ SPEC REPOS:
     - Hue
     - ImagePicker
     - Imaginary
+    - Kingfisher
     - leveldb-library
     - Lightbox
     - MessageKit
@@ -138,12 +141,13 @@ SPEC CHECKSUMS:
   Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
   ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
   Imaginary: 9b45836a5af881f452a86e0a1215772ae4712d00
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Lightbox: 2dc267df8be2285bc7724cb11cbbf4aaaf59dced
   MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: ef3ced4627a823deaa8efe84f3ad8eefffd38601
+PODFILE CHECKSUM: b9e4d81d25d9bfc7538d3ba741984175a5c7aa4f
 
 COCOAPODS: 1.5.3
