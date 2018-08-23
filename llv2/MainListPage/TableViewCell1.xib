@@ -68,13 +68,12 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-XV-h99">
-                        <rect key="frame" x="378" y="4" width="30" height="27"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-XV-h99">
+                        <rect key="frame" x="378" y="9" width="30" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="GJS-Ap-yfL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="💗"/>
+                        <state key="normal" image="like"/>
                         <connections>
                             <action selector="like:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="krn-ro-Cz2"/>
                         </connections>
@@ -162,4 +161,7 @@
             <point key="canvasLocation" x="-274" y="15.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="like" width="17" height="15"/>
+    </resources>
 </document>

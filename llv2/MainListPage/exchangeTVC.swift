@@ -183,6 +183,7 @@ class exchangeTVC: UITableViewController {
                     if(thisuid == uid && thispid == pid){
                         cell.likeButton.setTitle("❤️", for: .normal)
                         
+                        
                     }}}
             
         })
@@ -193,7 +194,7 @@ class exchangeTVC: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 73
     }
     
     @IBAction func goback(_ sender: UIButton) {
