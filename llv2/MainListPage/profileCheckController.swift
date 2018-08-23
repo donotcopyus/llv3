@@ -46,7 +46,8 @@ class profileCheckController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        headImage.layer.cornerRadius = headImage.frame.height / 2.0
+        headImage.layer.masksToBounds = true
         //get pid，藏起来
         self.pidLabel.isHidden = true
         self.pidLabel.text = pid

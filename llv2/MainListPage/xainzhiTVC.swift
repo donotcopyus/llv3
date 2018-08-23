@@ -58,7 +58,9 @@ class xianzhiTVC: UITableViewController{
         tableView.reloadData()
         
         observePost()
-       
+        
+        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(getter: search))
+        self.navigationItem.rightBarButtonItem = searchBTN
     }
     
     
@@ -197,6 +199,8 @@ class xianzhiTVC: UITableViewController{
     }
     
     
+
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
@@ -207,7 +211,11 @@ class xianzhiTVC: UITableViewController{
         
     }
     
+    @objc func search(_ sender: Any) {
+        
+        performSegue(withIdentifier: "gosearch", sender: self)
     
+    }
     
     
 }

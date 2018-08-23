@@ -38,6 +38,10 @@ class checkXianzhiController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        headImage.layer.cornerRadius = headImage.frame.height / 2.0
+        headImage.layer.masksToBounds = true
+        
+        
         let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
         let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
         let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
