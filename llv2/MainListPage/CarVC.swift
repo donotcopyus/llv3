@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Kingfisher
+import ESPullToRefresh
 
 //carpool database object
 class carpoolData{
@@ -58,7 +59,26 @@ class CarVC: UITableViewController {
 
 
         observePost()
+        
+        self.tableView.es.addPullToRefresh {
+            [unowned self] in
+            
+            
+            
+            self.tableView.es.stopPullToRefresh()
+        }
+        
+        self.tableView.es.addInfiniteScrolling {
+            [unowned self] in
+            self.observePost()
+            
+            self.tableView.es.stopLoadingMore()
+            /// If no more data
+            self.tableView.es.noticeNoMoreData()
+        }
     }
+    
+    
     
     
     //数据库提取
@@ -66,7 +86,7 @@ class CarVC: UITableViewController {
         
         let postRef = Database.database().reference().child("carpool")
         
-        postRef.observe(.value, with: { snapshot in
+        postRef.queryLimited(toFirst: 5).observe(.value, with: { snapshot in
             
             var tempPosts = [carpoolData]()
             
