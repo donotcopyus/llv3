@@ -42,6 +42,8 @@ class carpoolData{
 
 class CarVC: UITableViewController {
     
+    
+    var numberOfPosts: Int = 5
     var arrayOfCellData = [carpoolData]()
 
     override func viewDidLoad() {
@@ -60,22 +62,20 @@ class CarVC: UITableViewController {
 
         observePost()
         
-        self.tableView.es.addPullToRefresh {
-            [unowned self] in
-            
-            
-            
-            self.tableView.es.stopPullToRefresh()
-        }
+
         
         self.tableView.es.addInfiniteScrolling {
             [unowned self] in
+            
+            self.numberOfPosts += 5
             self.observePost()
             
             self.tableView.es.stopLoadingMore()
-            /// If no more data
-            self.tableView.es.noticeNoMoreData()
+            
+            //需要设置何时到array end？
+            //self.tableView.es.noticeNoMoreData()
         }
+        
     }
     
     
@@ -86,7 +86,7 @@ class CarVC: UITableViewController {
         
         let postRef = Database.database().reference().child("carpool")
         
-        postRef.queryLimited(toFirst: 5).observe(.value, with: { snapshot in
+        postRef.queryLimited(toLast: UInt(numberOfPosts)).observe(.value, with: { snapshot in
             
             var tempPosts = [carpoolData]()
             
@@ -119,7 +119,8 @@ class CarVC: UITableViewController {
                 }
             }
             
-            self.arrayOfCellData = tempPosts.reversed()
+          self.arrayOfCellData = tempPosts.reversed()
+
             self.tableView.reloadData()
             })
 
