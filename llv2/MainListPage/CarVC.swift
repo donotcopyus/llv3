@@ -179,7 +179,7 @@ class CarVC: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 101.5
+        return 96
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -196,9 +196,9 @@ class CarVC: UITableViewController {
 
 //
     @objc func search(_ sender: Any) {
-//        self.navigationController?.performSegue(withIdentifier: "carpoolSearchVC", sender: self)
+    
         performSegue(withIdentifier: "gosearch", sender: self)
-        //self.(withIdentifier: "carpoolSearchVC", sender: self)
+        
 //        let otherView = carpoolSearchVC()
 //        self.navigationController?.pushViewController(carpoolSearchVC(), animated: true)
         

@@ -47,8 +47,6 @@ class TableViewCell1: UITableViewCell {
         
     }
 
-    
-
 
 
     @IBAction func like(_ sender: UIButton) {

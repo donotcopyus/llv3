@@ -68,6 +68,9 @@ class exchangeTVC: UITableViewController {
         
         observePost()
         
+        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
+        self.navigationItem.rightBarButtonItem = searchBTN
+        
     }
     
     
@@ -213,6 +216,10 @@ class exchangeTVC: UITableViewController {
         
     }
   
+    @objc func search(_ sender: Any) {
+        
+        performSegue(withIdentifier: "gosearch", sender: self)
+    }
 
 }
 
