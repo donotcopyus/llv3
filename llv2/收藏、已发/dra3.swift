@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 struct exchangeData2 {
     
@@ -125,9 +126,8 @@ class dra3: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
-        let data = try? Data(contentsOf:url)
-        let image = UIImage(data:data!)
-        cell.mainimage.image = image
+
+        cell.mainimage.kf.setImage(with: url)
         })
         cell.mainlabel.text = arrayOfCellData[indexPath.row].author.username
         

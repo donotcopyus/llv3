@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class checkXianzhiController: UIViewController {
     
@@ -68,9 +69,9 @@ class checkXianzhiController: UIViewController {
             
             let url = author!["photoURL"] as? String
             let tourl = URL(string:url!)
-            let data = try? Data(contentsOf: tourl!)
-            self.headImage.image = UIImage(data:data!)
-            
+
+            self.headImage.kf.setImage(with: tourl)
+                
             self.imageurl.text = url
             
             self.username.text = author!["username"] as? String
@@ -86,8 +87,8 @@ class checkXianzhiController: UIViewController {
                 let url1 = post["imageOneUrl"] as? String
             if (url1 != ""){
             let tourl1 = URL(string:url1!)
-            let data1 = try?Data(contentsOf:tourl1!)
-                self.image1.image = UIImage(data:data1!)
+
+                self.image1.kf.setImage(with: tourl1)
                 self.image1.addGestureRecognizer(pictureTap1)
                 self.image1.isUserInteractionEnabled = true
             }
@@ -95,8 +96,8 @@ class checkXianzhiController: UIViewController {
                 let url2 = post["imageTwoUrl"] as? String
             if (url2 != ""){
                 let tourl2 = URL(string:url2!)
-                let data2 = try?Data(contentsOf:tourl2!)
-                self.image2.image = UIImage(data:data2!)
+
+                self.image2.kf.setImage(with: tourl2)
                 self.image2.addGestureRecognizer(pictureTap2)
                 self.image2.isUserInteractionEnabled = true
             }
@@ -104,8 +105,7 @@ class checkXianzhiController: UIViewController {
                 let url3 = post["imageThreeUrl"] as? String
             if (url3 != ""){
                 let tourl3 = URL(string:url3!)
-                let data3 = try?Data(contentsOf:tourl3!)
-                self.image3.image = UIImage(data:data3!)
+                self.image3.kf.setImage(with: tourl3)
                 self.image3.addGestureRecognizer(pictureTap3)
                 self.image3.isUserInteractionEnabled = true
             }

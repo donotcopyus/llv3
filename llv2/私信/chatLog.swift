@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollectionViewDelegateFlowLayout{
     
@@ -181,8 +182,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
         let url = message.fromUrl
         let tourl = URL(string:url!)
-        let data = try? Data(contentsOf: tourl!)
-        cell.profileImageView.image = UIImage(data:data!)})
+        cell.profileImageView.kf.setImage(with: tourl)})
         
         if message.fromId == Auth.auth().currentUser?.uid{
             //outgoing blackblue

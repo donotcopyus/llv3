@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 
 //carpool database object
@@ -133,9 +134,7 @@ class dra1: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
-        let data = try? Data(contentsOf:url)
-        let image = UIImage(data:data!)
-        cell.headImage.image = image
+        cell.headImage.kf.setImage(with: url)
             })
         
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username

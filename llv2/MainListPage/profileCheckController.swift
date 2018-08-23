@@ -75,8 +75,7 @@ class profileCheckController: UIViewController {
             let url = author!["photoURL"] as? String
             self.imageurl.text = url
             let tourl = URL(string:url!)
-            let data = try? Data(contentsOf: tourl!)
-            self.headImage.image = UIImage(data:data!)
+            self.headImage.kf.setImage(with: tourl)
              })
             
             self.username.text = author!["username"] as? String

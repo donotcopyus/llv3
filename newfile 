@@ -7,7 +7,7 @@
 https://www.jianshu.com/p/e025cec4197a
 
 
-已改完main list3个，缺少specific+message+收藏已发
+已改完main list3个，缺少收藏已发
 
 
 1.发现问题，在scroll的时候处理会变慢，普通就还好？
