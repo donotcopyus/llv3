@@ -17,6 +17,7 @@
 import UIKit
 import Firebase
 import Kingfisher
+import ESPullToRefresh
 
 struct exchangeData3 {
     
@@ -54,7 +55,7 @@ class sent3: UITableViewController {
     @IBOutlet weak var nav: UINavigationItem!
     
     
-    
+    var numberOfPosts:Int = 5
     var arrayOfCellData = [exchangeData3]()
     
     //*********************************************
@@ -76,6 +77,19 @@ class sent3: UITableViewController {
         
         observePost()
         
+        self.tableView.es.addInfiniteScrolling {
+            [unowned self] in
+            
+            self.numberOfPosts += 5
+            self.observePost()
+            
+            self.tableView.es.stopLoadingMore()
+            
+            //需要设置何时到array end？
+            if(self.numberOfPosts - self.arrayOfCellData.count > 10){
+                self.tableView.es.noticeNoMoreData()}
+        }
+        
     }
     
     
@@ -85,7 +99,7 @@ class sent3: UITableViewController {
         
         let postRef = Database.database().reference().child("exchange")
         
-        postRef.observe(.value, with:{
+     postRef.queryLimited(toLast:UInt(numberOfPosts)).observe(.value, with:{
             snapshot in
             
             var tempPosts = [exchangeData3]()

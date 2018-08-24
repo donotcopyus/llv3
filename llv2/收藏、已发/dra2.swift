@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Kingfisher
+import ESPullToRefresh
 
 class xianzhiData3{
     
@@ -51,8 +52,22 @@ class dra2: UITableViewController{
         
         observePost()
         
+        self.tableView.es.addInfiniteScrolling {
+            [unowned self] in
+            
+            self.numberOfPosts += 5
+            self.observePost()
+            
+            self.tableView.es.stopLoadingMore()
+            
+            //需要设置何时到array end？
+            if(self.numberOfPosts - self.arrayOfCellData.count > 10){
+                self.tableView.es.noticeNoMoreData()}
+        }
+        
     }
     
+        var numberOfPosts:Int = 5
         var collectionId = [String]()
     
     func observePost(){
@@ -63,15 +78,17 @@ class dra2: UITableViewController{
         collectionRef.observe(.value, with: {thissnap in
         
             var collectionPid = [String]()
+            var count = 0
             
             for child in thissnap.children{
                 if let cS = child as? DataSnapshot,
                 let dict = cS.value as? [String:Any],
                 let uid = dict["uid"] as? String,
                 let pid = dict["pid"] as? String{
-                    if uid == thisUser{
+                    if (uid == thisUser) && (count < self.numberOfPosts){
                         collectionPid.append(pid)
                         self.collectionId.append(cS.key)
+                        count = count + 1
                     }}}
             
             var tempPosts = [xianzhiData3]()

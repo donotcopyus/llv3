@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Kingfisher
+import ESPullToRefresh
 
 //carpool database object
 class carpoolData3{
@@ -41,6 +42,7 @@ class carpoolData3{
 
 class sent1: UITableViewController {
     
+    var numberOfPosts:Int = 5
     var arrayOfCellData = [carpoolData3]()
     
     override func viewDidLoad() {
@@ -52,9 +54,20 @@ class sent1: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
-        
-        
         observePost()
+        
+        self.tableView.es.addInfiniteScrolling {
+            [unowned self] in
+            
+            self.numberOfPosts += 5
+            self.observePost()
+            
+            self.tableView.es.stopLoadingMore()
+            
+            //需要设置何时到array end？
+            if(self.numberOfPosts - self.arrayOfCellData.count > 10){
+                self.tableView.es.noticeNoMoreData()}
+        }
     }
     
     
@@ -65,7 +78,7 @@ class sent1: UITableViewController {
         
         let thisUser = Auth.auth().currentUser?.uid
         
-        postRef.observe(.value, with: { snapshot in
+        postRef.queryLimited(toLast:UInt(numberOfPosts)).observe(.value, with: { snapshot in
             
             var tempPosts = [carpoolData3]()
             

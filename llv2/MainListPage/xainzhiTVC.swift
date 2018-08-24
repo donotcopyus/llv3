@@ -43,8 +43,6 @@ class xianzhiTVC: UITableViewController{
     @IBOutlet weak var search: UISearchBar!
     
 
-    
-    
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
     
