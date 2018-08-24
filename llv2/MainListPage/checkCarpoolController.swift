@@ -30,17 +30,17 @@ class checkCarpoolController: UIViewController {
     var pid = String()
     var uid = String()
 
-    @IBAction func back(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func back(_ sender: UIButton) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headImage.layer.cornerRadius = headImage.frame.height / 2.0
-        headImage.layer.masksToBounds = true
+//        headImage.layer.cornerRadius = headImage.frame.height / 2.0
+//        headImage.layer.masksToBounds = true
         //get pid，藏起来
         self.pidLabel.isHidden = true
         self.pidLabel.text = pid
