@@ -39,7 +39,6 @@ class carpoolData2{
 
 
 class dra1: UITableViewController {
-    
 
     var arrayOfCellData = [carpoolData2]()
     
@@ -57,6 +56,8 @@ class dra1: UITableViewController {
         observePost()
         
 
+        
+
     }
     
     var collectionId = [String]()
@@ -71,7 +72,7 @@ class dra1: UITableViewController {
         
         
         //collectionpid里储存所有的pid
-        collectionRef.observe(.value, with: {
+   collectionRef.observe(.value, with: {
             thissnap in
             
             var collectionPid = [String]()
@@ -114,7 +115,6 @@ class dra1: UITableViewController {
                             //append the array
                             tempPosts.append(post)
 
-//                            self.arrayOfCellData = tempPosts.reversed()
                             self.arrayOfCellData = tempPosts
                             self.tableView.reloadData()
                         }}
@@ -167,7 +167,6 @@ class dra1: UITableViewController {
         cell.collectionID.isHidden = true
         
        cell.id.text = arrayOfCellData[indexPath.row].id
-       print(cell.id.text)
        cell.collectionID.text = collectionId[indexPath.row]
 
 
