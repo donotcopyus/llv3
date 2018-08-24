@@ -42,12 +42,23 @@ class carpoolData{
 
 class CarVC: UITableViewController {
     
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
     
     var numberOfPosts: Int = 5
     var arrayOfCellData = [carpoolData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+//        btnMenu.target = revealViewController()
+//        btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+        
+        if self.revealViewController() != nil{
+            btnMenu.target = self.revealViewController()
+            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
         
         tableView = UITableView()
         
@@ -55,9 +66,9 @@ class CarVC: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
-        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
-        self.navigationItem.rightBarButtonItem = searchBTN
-
+//        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
+//        self.navigationItem.rightBarButtonItem = searchBTN
+//
 
 
         observePost()

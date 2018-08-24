@@ -31,9 +31,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-            carpool.layer.cornerRadius = 30
-            xianzhi.layer.cornerRadius = 30
-            other.layer.cornerRadius = 30
+
         
         if self.revealViewController() != nil{
             menuButton.target = self.revealViewController()

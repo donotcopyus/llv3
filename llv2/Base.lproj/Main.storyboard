@@ -310,6 +310,25 @@
             </objects>
             <point key="canvasLocation" x="3142" y="1138"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="8XH-dF-r2Z">
+            <objects>
+                <viewController id="zBo-s6-g1S" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZ4-oZ-RL0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nst-9z-7Dh"/>
+                    </view>
+                    <connections>
+                        <segue destination="rDY-Ay-Tzt" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ICg-37-bIV"/>
+                        <segue destination="PMF-4f-6Mo" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="pAx-Up-uoS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iF0-cD-56W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6140" y="126"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NQd-ee-2uX">
             <objects>
@@ -327,7 +346,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7D-Xq-Xmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5591" y="-980"/>
+            <point key="canvasLocation" x="7236" y="-280"/>
         </scene>
         <!--Exchange Search-->
         <scene sceneID="MTe-fY-vgJ">
@@ -410,7 +429,6 @@
                                     <action selector="back:" destination="PMF-4f-6Mo" eventType="touchUpInside" id="2dr-3L-Qup"/>
                                     <action selector="back:" destination="IFH-H1-VVg" eventType="touchUpInside" id="IsH-Wa-6BC"/>
                                     <action selector="back:" destination="xdC-th-xje" eventType="touchUpInside" id="Tp0-st-Stt"/>
-                                    <segue destination="NoW-Ps-XYp" kind="show" id="3xc-2w-oRu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -436,11 +454,12 @@
                         <outlet property="godate" destination="Bgp-aD-Qkc" id="qrY-uR-DrJ"/>
                         <outlet property="otherArr" destination="OJp-wj-AVj" id="LX2-Ir-nBQ"/>
                         <outlet property="otherDep" destination="WTJ-eL-RiN" id="w6y-ZP-2Mt"/>
+                        <segue destination="rDY-Ay-Tzt" kind="custom" id="Cp6-4y-noV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOq-ZW-Eiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6908" y="-72.413793103448285"/>
+            <point key="canvasLocation" x="7236" y="524"/>
         </scene>
         <!--Used Rent Search-->
         <scene sceneID="Ijp-yF-UeL">
@@ -539,18 +558,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <connections>
-                                <segue destination="PMF-4f-6Mo" kind="popoverPresentation" identifier="gosearch" popoverAnchorBarButtonItem="6an-pt-tyJ" id="VEb-mR-ztT">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnMenu" destination="6an-pt-tyJ" id="OVN-xC-jAj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WO-Rm-rEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5751" y="-72"/>
+            <point key="canvasLocation" x="8238" y="-280"/>
         </scene>
         <!--ExchangeTVC-->
         <scene sceneID="WFt-vb-ZTV">
@@ -1168,7 +1185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-CB-36v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="-476"/>
+            <point key="canvasLocation" x="-23" y="-441"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fzi-BE-mLR">
@@ -1347,7 +1364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heT-k4-DI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="-1338"/>
+            <point key="canvasLocation" x="500" y="-1521"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1388,7 +1405,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TurnCarpool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLb-MO-kch"/>
-                                    <segue destination="rDY-Ay-Tzt" kind="showDetail" id="goF-nv-ivj"/>
+                                    <segue destination="zBo-s6-g1S" kind="show" id="gRN-la-kF5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="the-Ct-AdR">
@@ -1479,7 +1496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="-559.07046476761627"/>
+            <point key="canvasLocation" x="1225" y="-576"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -3179,11 +3196,11 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bh3-wn-Akz"/>
-        <segue reference="mmZ-63-Igj"/>
+        <segue reference="UHY-qs-nmR"/>
+        <segue reference="f0C-Pt-C9H"/>
         <segue reference="MsP-c5-dSl"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="jvR-E7-XIn"/>
-        <segue reference="b51-sM-70U"/>
+        <segue reference="ICg-37-bIV"/>
     </inferredMetricsTieBreakers>
 </document>
