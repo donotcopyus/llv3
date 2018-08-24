@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import Kingfisher
 
-
 //carpool database object
 class carpoolData2{
     
@@ -41,6 +40,7 @@ class carpoolData2{
 
 class dra1: UITableViewController {
     
+
     var arrayOfCellData = [carpoolData2]()
     
     override func viewDidLoad() {
@@ -55,6 +55,8 @@ class dra1: UITableViewController {
         
         
         observePost()
+        
+
     }
     
     var collectionId = [String]()
@@ -112,7 +114,8 @@ class dra1: UITableViewController {
                             //append the array
                             tempPosts.append(post)
 
-                            self.arrayOfCellData = tempPosts.reversed()
+//                            self.arrayOfCellData = tempPosts.reversed()
+                            self.arrayOfCellData = tempPosts
                             self.tableView.reloadData()
                         }}
                 )
@@ -163,8 +166,11 @@ class dra1: UITableViewController {
         cell.id.isHidden = true
         cell.collectionID.isHidden = true
         
-        cell.id.text = arrayOfCellData[indexPath.row].id
-        cell.collectionID.text = collectionId[indexPath.row]
+       cell.id.text = arrayOfCellData[indexPath.row].id
+       print(cell.id.text)
+       cell.collectionID.text = collectionId[indexPath.row]
+
+
       
         let likedRef = Database.database().reference().child("users/collection/carpool/")
         

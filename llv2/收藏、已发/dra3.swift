@@ -107,7 +107,7 @@ class dra3: UITableViewController {
                         let post = exchangeData2(id:childPost, have:have, want:want, extra:extra, timestamp:timestamp, isCurrency:isCurrency, author:userProfile)
                         
                         tempPosts.append(post)
-                        self.arrayOfCellData = tempPosts.reversed()
+                        self.arrayOfCellData = tempPosts
                         self.tableView.reloadData()
                     }})
             }})

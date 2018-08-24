@@ -73,7 +73,8 @@ class CarVC: UITableViewController {
             self.tableView.es.stopLoadingMore()
             
             //需要设置何时到array end？
-            //self.tableView.es.noticeNoMoreData()
+            if(self.numberOfPosts - self.arrayOfCellData.count > 10){
+                self.tableView.es.noticeNoMoreData()}
         }
         
     }

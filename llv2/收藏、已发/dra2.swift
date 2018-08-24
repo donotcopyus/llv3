@@ -101,7 +101,7 @@ class dra2: UITableViewController{
                         
                         tempPosts.append(post)
                         
-                        self.arrayOfCellData = tempPosts.reversed()
+                        self.arrayOfCellData = tempPosts
                         self.tableView.reloadData()
                     }}
                 )

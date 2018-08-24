@@ -10,6 +10,7 @@
 import UIKit
 import Firebase
 import Kingfisher
+import ESPullToRefresh
 
 class xianzhiData{
     
@@ -44,7 +45,7 @@ class xianzhiTVC: UITableViewController{
 
     
     
-    
+    var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
     
     override func viewDidLoad() {
@@ -61,6 +62,19 @@ class xianzhiTVC: UITableViewController{
         
         let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(getter: search))
         self.navigationItem.rightBarButtonItem = searchBTN
+        
+        self.tableView.es.addInfiniteScrolling {
+            [unowned self] in
+            
+            self.numberOfPosts += 5
+            self.observePost()
+            
+            self.tableView.es.stopLoadingMore()
+            
+            //需要设置何时到array end？
+            if(self.numberOfPosts - self.arrayOfCellData.count > 10){
+                self.tableView.es.noticeNoMoreData()}
+        }
     }
     
     
@@ -68,7 +82,7 @@ class xianzhiTVC: UITableViewController{
         
         let postRef = Database.database().reference().child("xianzhi")
         
-        postRef.observe(.value, with:{
+        postRef.queryLimited(toLast:UInt(numberOfPosts)).observe(.value, with:{
             snapshot in
             
             var tempPosts = [xianzhiData]()
