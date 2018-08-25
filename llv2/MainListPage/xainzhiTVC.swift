@@ -38,9 +38,12 @@ class xianzhiData{
     
 }
 
+
+
+
 class xianzhiTVC: UITableViewController{
     
-    @IBOutlet weak var search: UISearchBar!
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
     
 
     var numberOfPosts: Int = 5
@@ -50,6 +53,13 @@ class xianzhiTVC: UITableViewController{
        super.viewDidLoad()
         
       
+        if self.revealViewController() != nil{
+            btnMenu.target = self.revealViewController()
+            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            
+        }
         
         tableView = UITableView()
         tableView.delegate = self
@@ -58,8 +68,7 @@ class xianzhiTVC: UITableViewController{
         
         observePost()
         
-        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(getter: search))
-        self.navigationItem.rightBarButtonItem = searchBTN
+       
         
         self.tableView.es.addInfiniteScrolling {
             [unowned self] in
@@ -223,11 +232,7 @@ class xianzhiTVC: UITableViewController{
         
     }
     
-    @objc func search(_ sender: Any) {
-        
-        performSegue(withIdentifier: "gosearch", sender: self)
-    
-    }
+
     
     
 }

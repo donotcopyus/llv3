@@ -27,6 +27,8 @@ class carpoolSearchVC: UIViewController {
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
+    var b3 = dropDownBtn()
+    
     
     var rotationAngle: CGFloat!
     
@@ -73,7 +75,7 @@ class carpoolSearchVC: UIViewController {
         super.viewDidLoad()
         
         
-        button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))
+        button = dropDownBtn.init(frame: CGRect(x:189, y:147, width: 150, height: 40))
         
         button.setTitle("出发城市", for: .normal)
         
@@ -88,7 +90,7 @@ class carpoolSearchVC: UIViewController {
         
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:210, y:55, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:189, y:265, width: 150, height: 40))
         
         b2.setTitle("到达城市", for: .normal)
         
@@ -98,6 +100,16 @@ class carpoolSearchVC: UIViewController {
         
         self.view.addSubview(b2)
         
+        ///---------------------------------------
+        b3 = dropDownBtn.init(frame: CGRect(x:253, y:83, width: 150, height: 40))
+        
+        b3.setTitle("排列方式", for: .normal)
+        
+        b3.translatesAutoresizingMaskIntoConstraints = true
+        
+        b3.dropView.dropDownOptions = ["最近发布","最久发布"]
+        
+        self.view.addSubview(b2)
    
     }
     
@@ -169,15 +181,6 @@ class carpoolSearchVC: UIViewController {
     }
 
 
-//    @IBOutlet weak var back: UIBarButtonItem!
-//
-//    @IBAction func back(_ sender: Any) {
-//        //dismiss(animated: true, completion: nil)
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//    @IBAction func back(_ sender: UIButton) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

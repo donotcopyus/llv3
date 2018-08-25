@@ -327,6 +327,25 @@
             </objects>
             <point key="canvasLocation" x="7236" y="-280"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eEB-Cu-HNL">
+            <objects>
+                <viewController id="iSQ-zK-lyX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WOG-hv-xdY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="li5-Ug-1RO"/>
+                    </view>
+                    <connections>
+                        <segue destination="X9j-i5-UOG" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="lO9-uI-lwN"/>
+                        <segue destination="QRQ-O9-9YS" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="owv-7z-hKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ug7-Nx-QSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4358" y="-898"/>
+        </scene>
         <!--Exchange Search-->
         <scene sceneID="MTe-fY-vgJ">
             <objects>
@@ -347,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nqb-La-rDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6520.8000000000002" y="-1083.5082458770617"/>
+            <point key="canvasLocation" x="5230" y="-922"/>
         </scene>
         <!--Carpool Search-->
         <scene sceneID="JS8-5K-1cS">
@@ -358,7 +377,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他到达城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJp-wj-AVj">
-                                <rect key="frame" x="186" y="199" width="145" height="30"/>
+                                <rect key="frame" x="189" y="201" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -368,7 +387,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他出发城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTJ-eL-RiN">
-                                <rect key="frame" x="33" y="199" width="145" height="30"/>
+                                <rect key="frame" x="189" y="319" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -378,7 +397,7 @@
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="666-ZM-xEe">
-                                <rect key="frame" x="72" y="421" width="259" height="118"/>
+                                <rect key="frame" x="134" y="506" width="241" height="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="554648203.73239005">
                                     <!--2018-07-30 12:56:43 +0000-->
@@ -388,28 +407,12 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出发日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-aD-Qkc">
-                                <rect key="frame" x="16" y="405" width="315" height="21"/>
+                                <rect key="frame" x="140" y="467" width="235" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSB-Oc-08I">
-                                <rect key="frame" x="313" y="102" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="排序方式"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hF-b1-0fb">
-                                <rect key="frame" x="16" y="104" width="40" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="     " image="backbtn"/>
-                                <connections>
-                                    <action selector="back:" destination="RIq-DG-If2" eventType="touchUpInside" id="0rL-oz-OSM"/>
-                                    <action selector="back:" destination="PMF-4f-6Mo" eventType="touchUpInside" id="2dr-3L-Qup"/>
-                                    <action selector="back:" destination="IFH-H1-VVg" eventType="touchUpInside" id="IsH-Wa-6BC"/>
-                                    <action selector="back:" destination="xdC-th-xje" eventType="touchUpInside" id="Tp0-st-Stt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eKD-ll-MTG"/>
@@ -437,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOq-ZW-Eiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7236" y="524"/>
+            <point key="canvasLocation" x="7236" y="523.89162561576359"/>
         </scene>
         <!--Used Rent Search-->
         <scene sceneID="Ijp-yF-UeL">
@@ -453,32 +456,32 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oe-Yp-847">
-                                <rect key="frame" x="41" y="183" width="46" height="30"/>
+                                <rect key="frame" x="252" y="192" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="二手书"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5Z-xO-5LU">
-                                <rect key="frame" x="49" y="210" width="31" height="30"/>
+                                <rect key="frame" x="260" y="219" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="药妆"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrM-Co-7oe">
-                                <rect key="frame" x="49" y="238" width="31" height="30"/>
+                                <rect key="frame" x="260" y="247" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="家具"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bch-Ob-IF3">
-                                <rect key="frame" x="49" y="267" width="31" height="30"/>
+                                <rect key="frame" x="260" y="276" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="租房"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V27-Ap-42t">
-                                <rect key="frame" x="49" y="295" width="31" height="30"/>
+                                <rect key="frame" x="260" y="304" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="服饰"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18H-aZ-EV4">
-                                <rect key="frame" x="33" y="346" width="62" height="30"/>
+                                <rect key="frame" x="244" y="355" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="排序方式"/>
                             </button>
@@ -492,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqF-Qp-UnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7892" y="-1084"/>
+            <point key="canvasLocation" x="3484" y="-197"/>
         </scene>
         <!--CarVC-->
         <scene sceneID="3lp-VP-KAH">
@@ -530,7 +533,9 @@
                             </button>
                             <color key="tintColor" red="0.31372549020000001" green="0.41568627450000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="menubutton" landscapeImage="menubutton" id="Ixu-lP-DK0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" landscapeImage="search" id="Ixu-lP-DK0">
+                            <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -575,14 +580,15 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" landscapeImage="search" id="eE9-A7-Pzx"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="QRQ-O9-9YS" kind="show" identifier="gosearch" id="6bp-i5-QfU"/>
+                        <outlet property="btnMenu" destination="eE9-A7-Pzx" id="0m1-y2-iIG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-Ap-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4883" y="-196"/>
+            <point key="canvasLocation" x="5231" y="-197"/>
         </scene>
         <!--个人资料-->
         <scene sceneID="Pxn-pJ-Xer">
@@ -1353,7 +1359,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TurnXianzhi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRa-aJ-HV3"/>
-                                    <segue destination="Pg3-UQ-G3W" kind="show" id="dPx-77-PnP"/>
+                                    <segue destination="tZ4-hA-jjB" kind="show" id="db7-6W-fYs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar2-bt-oQC">
@@ -1366,7 +1372,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TurnOther:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W45-1N-oxf"/>
-                                    <segue destination="X9j-i5-UOG" kind="show" id="gFu-oB-NhU"/>
+                                    <segue destination="iSQ-zK-lyX" kind="show" id="faa-aq-vzz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-io-hxB">
@@ -2114,6 +2120,25 @@
             </objects>
             <point key="canvasLocation" x="2646" y="-922"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="34s-Xd-NnR">
+            <objects>
+                <viewController id="tZ4-hA-jjB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tK0-z6-RuE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NUJ-kD-JdG"/>
+                    </view>
+                    <connections>
+                        <segue destination="Pg3-UQ-G3W" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="rdg-YD-Vf7"/>
+                        <segue destination="JvU-mo-C98" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="osK-Be-Sgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UfH-uX-5ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3485" y="-909"/>
+        </scene>
         <!--carpool-->
         <scene sceneID="56H-Se-rew">
             <objects>
@@ -2215,7 +2240,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sp-ig-RmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4983" y="-980"/>
+            <point key="canvasLocation" x="4484" y="-197"/>
         </scene>
         <!--Chat Log Controller-->
         <scene sceneID="iCO-JU-KAy">
@@ -2295,15 +2320,16 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="2kH-1b-QSq"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnMenu" destination="2kH-1b-QSq" id="Qfo-rB-5VS"/>
                         <segue destination="IFH-H1-VVg" kind="showDetail" identifier="checkProf" id="hiX-3v-nsz"/>
-                        <segue destination="JvU-mo-C98" kind="show" identifier="gosearch" id="QHT-7a-kou"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgZ-Ql-qgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2530" y="-197"/>
+            <point key="canvasLocation" x="2646" y="-197"/>
         </scene>
         <!--Check Xianzhi Controller-->
         <scene sceneID="Y1t-nD-gXQ">
@@ -2491,7 +2517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5np-qQ-ykv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3869.5999999999999" y="-980.05997001499259"/>
+            <point key="canvasLocation" x="7311" y="-1835"/>
         </scene>
         <!--Profile Check Controller-->
         <scene sceneID="INd-4Y-oQm">
@@ -2649,7 +2675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtN-Sk-Zjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3530.4000000000001" y="-196.55172413793105"/>
+            <point key="canvasLocation" x="6666" y="-1835"/>
         </scene>
         <!--Check Carpool Controller-->
         <scene sceneID="EQT-n0-gth">
@@ -2776,7 +2802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozO-S4-xp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4184.8000000000002" y="-197.45127436281859"/>
+            <point key="canvasLocation" x="7977" y="-1835"/>
         </scene>
         <!--Carpool Ad View Controller-->
         <scene sceneID="kOQ-ba-K59">
@@ -3123,6 +3149,7 @@
         <image name="harkore" width="200" height="200"/>
         <image name="loginUI" width="375" height="812"/>
         <image name="menubutton" width="33" height="25"/>
+        <image name="search" width="16" height="16"/>
         <image name="sidelogo" width="99" height="733"/>
         <image name="sidemenu" width="375" height="812"/>
         <image name="submit" width="220" height="38"/>
