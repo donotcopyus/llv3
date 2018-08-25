@@ -109,10 +109,10 @@ class carpoolSearchVC: UIViewController {
         
         b3.dropView.dropDownOptions = ["最近发布","最久发布"]
         
-        self.view.addSubview(b2)
+        self.view.addSubview(b3)
    
     }
-    
+
     
     //搜索
     func search(){

@@ -11,38 +11,16 @@ import Firebase
 
 class exchangeSearchVC: UIViewController {
     
+    @IBOutlet weak var submit: UIButton!
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
+    var b3 = dropDownBtn()
+    
     var currency = false
     
-    
-    @IBOutlet weak var extraInfo: UITextField!
-    
-    @IBOutlet weak var btnCheckBox: UIButton!
-    
-    @IBAction func checkMarkTapped(_ sender: UIButton) {
-        
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        }) { (success) in
-            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-                sender.isSelected = !sender.isSelected
-                sender.transform = .identity
-                
-            }, completion: nil)
-        }
-        
-        if (currency == false){
-            currency = true
-        }
-        else if (currency == true){
-            currency = false
-        }
-        
-    }
-    
-    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +38,7 @@ class exchangeSearchVC: UIViewController {
         button.dropView.dropDownOptions = ["RMB","加币","美金","港币","日元","英镑"]
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:210, y:155, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:210, y:147, width: 150, height: 40))
         
         b2.setTitle("出币种", for: .normal)
         
@@ -69,6 +47,18 @@ class exchangeSearchVC: UIViewController {
         b2.dropView.dropDownOptions = ["RMB","加币","美金","港币","日元","英镑"]
         
         self.view.addSubview(b2)
+        
+        //----------------------------------
+        b3 = dropDownBtn.init(frame: CGRect(x:253, y:185, width: 150, height: 40))
+        
+        b3.setTitle("排列方式", for: .normal)
+        
+        b3.translatesAutoresizingMaskIntoConstraints = true
+        
+        b3.dropView.dropDownOptions = ["最近发布","最久发布"]
+        
+        self.view.addSubview(b3)
+        
         
     }
     
@@ -85,7 +75,7 @@ class exchangeSearchVC: UIViewController {
     
     //lauren————————————————————————————————————————————————————————————
     //button to go back to main
-    @IBOutlet weak var back: UIButton!
+    
     
     class dropDownBtn: UIButton, dropDownProtocol {
         
