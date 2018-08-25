@@ -968,7 +968,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="R9V-Rw-r1N">
-                                <rect key="frame" x="145" y="113" width="86" height="72"/>
+                                <rect key="frame" x="145.66666666666666" y="113" width="86" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="QOy-aG-g2k"/>
                                 </constraints>
@@ -1537,6 +1537,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="67M-3i-XTK">
+                                <rect key="frame" x="176" y="371" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SAz-xO-Mp8"/>
@@ -1548,6 +1552,7 @@
                         <outlet property="name" destination="FwC-za-CfP" id="aDs-J6-XS3"/>
                         <outlet property="price" destination="p33-8S-l96" id="GQZ-Zk-NOK"/>
                         <outlet property="txtv" destination="G7J-bn-ygn" id="qa7-4Y-BCM"/>
+                        <outlet property="wait" destination="67M-3i-XTK" id="RjF-g9-6iT"/>
                         <segue destination="HGJ-zl-43D" kind="showDetail" identifier="xianzhiB" id="Jss-ka-Uac"/>
                     </connections>
                 </viewController>
@@ -1876,6 +1881,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="443-UO-yBx">
+                                <rect key="frame" x="174" y="396" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1883,9 +1891,11 @@
                             <constraint firstItem="QJV-fD-H3D" firstAttribute="leading" secondItem="YPP-C2-nBv" secondAttribute="leading" constant="59" id="Iys-Ni-nX8"/>
                             <constraint firstItem="QJV-fD-H3D" firstAttribute="leading" secondItem="gA6-7Y-OAe" secondAttribute="leading" id="V4P-Ig-IgP"/>
                             <constraint firstItem="YPP-C2-nBv" firstAttribute="trailing" secondItem="QJV-fD-H3D" secondAttribute="trailing" constant="66" id="aAN-1T-KIA"/>
+                            <constraint firstItem="443-UO-yBx" firstAttribute="centerY" secondItem="T9q-EW-dtz" secondAttribute="centerY" id="bBa-pk-69z"/>
                             <constraint firstItem="YPP-C2-nBv" firstAttribute="bottom" secondItem="QJV-fD-H3D" secondAttribute="bottom" constant="287" id="e0c-XE-Q7G"/>
                             <constraint firstItem="Nx8-dH-5pA" firstAttribute="leading" secondItem="T9q-EW-dtz" secondAttribute="leading" id="ish-NS-SyR"/>
                             <constraint firstAttribute="trailing" secondItem="Nx8-dH-5pA" secondAttribute="trailing" id="vt3-kx-ers"/>
+                            <constraint firstItem="443-UO-yBx" firstAttribute="centerX" secondItem="QJV-fD-H3D" secondAttribute="centerX" id="wUL-2F-xxl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YPP-C2-nBv"/>
                     </view>
@@ -1893,6 +1903,7 @@
                         <outlet property="back" destination="T4r-ck-rcy" id="Jx0-dg-fnf"/>
                         <outlet property="btnCheckBox" destination="Vai-DJ-ruD" id="HdT-sc-IfR"/>
                         <outlet property="extraInfo" destination="QJV-fD-H3D" id="hEJ-k4-g6j"/>
+                        <outlet property="wait" destination="443-UO-yBx" id="lNU-DG-Tgu"/>
                         <segue destination="HGJ-zl-43D" kind="showDetail" identifier="eB" id="Fqf-h5-z1R"/>
                     </connections>
                 </viewController>
@@ -2942,6 +2953,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="V4W-NG-hMR">
+                                <rect key="frame" x="177" y="216" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2966,13 +2981,14 @@
                         <outlet property="seat" destination="1fT-0a-PJQ" id="ImK-IZ-hLh"/>
                         <outlet property="seatNum" destination="v1s-KO-diy" id="q8M-av-fzV"/>
                         <outlet property="showGoTime" destination="xSm-JM-hUm" id="bmV-ZS-R1o"/>
+                        <outlet property="wait" destination="V4W-NG-hMR" id="Gxj-nB-E7k"/>
                         <segue destination="HGJ-zl-43D" kind="showDetail" identifier="goB" id="vVO-m1-ivf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCd-mn-HlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SXs-Gd-2yR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="316"/>
+            <point key="canvasLocation" x="-23.199999999999999" y="315.51724137931035"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="00r-9a-AMB">
@@ -3184,8 +3200,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="f0C-Pt-C9H"/>
-        <segue reference="wij-hC-xO5"/>
-        <segue reference="C1I-Ic-Opq"/>
+        <segue reference="Fqf-h5-z1R"/>
+        <segue reference="2bQ-Ce-pAo"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
 </document>

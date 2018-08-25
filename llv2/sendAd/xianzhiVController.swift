@@ -83,17 +83,12 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
 
     }
     
-    
+    @IBOutlet weak var wait: UIActivityIndicatorView!
     
 
     
-    
     @IBAction func send(_ sender: Any) {
-        
-        
-        
-        
-        
+
         
         //数据库其他行为
         guard let name = self.name.text else{
@@ -141,6 +136,12 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         if extraInfo == "在这里填写详细信息"{
             extraInfo = ""
         }
+        
+        
+        //点击发送时出现的圆圈等待标识
+        wait.isHidden = false
+        wait.startAnimating()
+        
         
         guard let userProfile = UserService.currentUserProfile
             else{
@@ -342,6 +343,8 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        wait.isHidden = true
 
           txtv.text = "在这里填写详细信息"
           txtv.textColor = UIColor.lightGray

@@ -31,11 +31,11 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var otherDep: UITextField!
     @IBOutlet weak var otherArr: UITextField!
     
+    @IBOutlet weak var wait: UIActivityIndicatorView!
+    
+    
     //handle数据库行为
     @IBAction func sendBtn(_ sender: Any) {
-        
-      
-        
         
         //check出发城市和到达城市，确保field不为空
         var dept = button.currentTitle!
@@ -133,14 +133,18 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
+        //点击发送时出现的圆圈等待标识
+        wait.isHidden = false
+        wait.startAnimating()
+        
+        
         
         //获取当前用户profile
         guard let userProfile = UserService.currentUserProfile
             else{
                 return
         }
-        
-        
+      
         //handle数据库
         let postRef = Database.database().reference().child("carpool").childByAutoId()
         
@@ -161,8 +165,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             ] as [String:Any]
         
-        
-        
+ 
         //  func sendData() {
         postRef.setValue(postObj, withCompletionBlock: {error, ref in
             if error == nil && (self.subm == 1) {
@@ -209,30 +212,15 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         otherArr.text = sender.text
     }
-    
-    //alert
-    
-    //    override func viewDidAppear(_ animated: Bool) {
-    //        createAlert(title: "Send Advertisement", message: "you sure?")
-    //    }
-    //
-    //    func createAlert (title: String, message: String) {
-    //        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    //            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-    //
-    //        } ))
-    //            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-    //        } ))
-    //    }
-    //
-    
-    
-    //end alert
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //隐藏等待的圆圈loading
+        wait.isHidden = true
         
         
         button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))

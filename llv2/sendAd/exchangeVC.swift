@@ -16,7 +16,9 @@ class exchangeVC: UIViewController {
     var b2 = dropDownBtn()
     var currency = false
     
-   
+    @IBOutlet weak var wait: UIActivityIndicatorView!
+    
+    
     @IBOutlet weak var extraInfo: UITextField!
 
     @IBOutlet weak var btnCheckBox: UIButton!
@@ -47,6 +49,7 @@ class exchangeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        wait.isHidden = true
         btnCheckBox.setImage(UIImage(named:"Checkmarkempty"), for: .normal)
         btnCheckBox.setImage(UIImage(named:"Checkmark"), for: .selected)
         
@@ -106,6 +109,12 @@ class exchangeVC: UIViewController {
             present(alert, animated: true, completion: nil)
         }
         
+        
+        //点击发送时出现的圆圈等待标识
+        wait.isHidden = false
+        wait.startAnimating()
+        
+        
         let extraIn = self.extraInfo.text!
         let isCurrency = currency
         
@@ -133,6 +142,8 @@ class exchangeVC: UIViewController {
         
         postRef.setValue(postObj,withCompletionBlock:{
             error, ref in
+            
+            
             
             if error == nil{
                 self.performSegue(withIdentifier: "eB", sender: self)
