@@ -82,6 +82,7 @@ class dra3: UITableViewController {
         collectionRef.observe(.value, with:{
             thissnap in
             
+            var count = 0
             var collectionPid = [String]()
             
             for child in thissnap.children{
