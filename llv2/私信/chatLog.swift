@@ -61,26 +61,30 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
                     
                     DispatchQueue.main.async {
                         self.collectionView?.reloadData()
+                        //auto scroll to the end
+                        self.collectionView?.scrollToItem(at: NSIndexPath(row: self.messages.count - 1, section: 0) as IndexPath, at: .bottom, animated: false)
                     }}}}, withCancel: nil)}
     
     override func viewDidLoad() {
        super.viewDidLoad()
 
       self.navigationItem.title = username
+        
         observeMessages()
         
         collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-//        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(CollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.alwaysBounceVertical = true
         
         collectionView?.keyboardDismissMode = .interactive
 
-//      setupInputComponents()
-//      setupKeyboardObservers()
    
     }
+    
+    
+
     
     lazy var inputContainerView:UIView = {
         let containerView = UIView()

@@ -52,8 +52,6 @@ class dra1: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
-        
-        
         observePost()
         
         self.tableView.es.addInfiniteScrolling {
@@ -68,9 +66,10 @@ class dra1: UITableViewController {
             if(self.numberOfPosts - self.arrayOfCellData.count > 10){
                 self.tableView.es.noticeNoMoreData()}
         }
-        
+
 
     }
+
     
     var numberOfPosts:Int = 5
     var collectionId = [String]()
@@ -130,8 +129,10 @@ class dra1: UITableViewController {
                             tempPosts.append(post)
 
                             self.arrayOfCellData = tempPosts
+                            
+                         
                             self.tableView.reloadData()
-                        }}
+                             }}
                 )
                 
             }
