@@ -13,16 +13,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--账户与安全-->
         <scene sceneID="ADk-68-vBK">
             <objects>
-                <viewController storyboardIdentifier="账户与安全" id="Yr1-Cb-Nbo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="账户与安全" title="账户与安全" id="Yr1-Cb-Nbo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d77-81-MkD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hV-eJ-316">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="227" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="账户与安全" id="orw-Ui-4hG">
@@ -41,25 +41,14 @@
             </objects>
             <point key="canvasLocation" x="3748" y="1137.481259370315"/>
         </scene>
-        <!--View Controller-->
+        <!--意见反馈-->
         <scene sceneID="1Vz-Jk-vYg">
             <objects>
-                <viewController storyboardIdentifier="意见反馈" id="vhh-BY-Pzs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="意见反馈" title="意见反馈" id="vhh-BY-Pzs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EXz-MJ-5cx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PSx-rG-gxY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="意见反馈" id="jfM-qK-q8x">
-                                        <barButtonItem key="leftBarButtonItem" title="back" image="backbtn" id="Y1Y-Wl-Rn4">
-                                            <color key="tintColor" red="0.31372549020000001" green="0.41568627450000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
                                 <rect key="frame" x="16" y="93" width="343" height="382"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,16 +70,16 @@
             </objects>
             <point key="canvasLocation" x="5553" y="1137"/>
         </scene>
-        <!--View Controller-->
+        <!--鼓励一下-->
         <scene sceneID="oq1-w5-zhR">
             <objects>
-                <viewController storyboardIdentifier="鼓励一下" id="COF-NG-KZs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="鼓励一下" title="鼓励一下" id="COF-NG-KZs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zV9-Aq-mVF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuC-D8-uSr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="6" y="265" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="鼓励一下" id="YJU-Xw-tmO">
@@ -601,35 +590,14 @@
             </objects>
             <point key="canvasLocation" x="4883" y="-196"/>
         </scene>
-        <!--PersonalVC-->
+        <!--个人资料-->
         <scene sceneID="Pxn-pJ-Xer">
             <objects>
-                <viewController storyboardIdentifier="个人资料" id="koZ-gF-A5s" customClass="personalVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="个人资料" title="个人资料" id="koZ-gF-A5s" customClass="personalVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Thu-54-9Sp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-iR-hUL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem id="boh-CD-Go8">
-                                        <barButtonItem key="leftBarButtonItem" title="back" image="backbtn" id="lTi-CV-bJQ">
-                                            <color key="tintColor" red="0.31372549020000001" green="0.41568627450000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-LY-kfK">
-                                <rect key="frame" x="152" y="32" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivz-Zj-xao">
                                 <rect key="frame" x="132" y="128" width="90" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -656,10 +624,10 @@
             </objects>
             <point key="canvasLocation" x="3748" y="475"/>
         </scene>
-        <!--CacheVC-->
+        <!--隐私设置-->
         <scene sceneID="WJj-ql-7pg">
             <objects>
-                <viewController storyboardIdentifier="隐私设置" id="iOP-kl-m6w" customClass="cacheVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="隐私设置" title="隐私设置" id="iOP-kl-m6w" customClass="cacheVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PK2-dC-Lcr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -745,17 +713,6 @@
                                     <action selector="clearCache:" destination="iOP-kl-m6w" eventType="touchUpInside" id="doU-W7-Bp2"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDy-TW-XDv">
-                                <rect key="frame" x="0.0" y="27" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="隐私设置" id="iU5-69-ETS">
-                                        <barButtonItem key="leftBarButtonItem" title="back" image="backbtn" id="fP3-Sl-EcA">
-                                            <color key="tintColor" red="0.31372549019607843" green="0.41568627450980394" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.94509803921568625" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5dT-zF-mMB"/>
@@ -765,25 +722,14 @@
             </objects>
             <point key="canvasLocation" x="4350" y="475"/>
         </scene>
-        <!--View Controller-->
+        <!--新消息提醒-->
         <scene sceneID="GPi-MX-cOM">
             <objects>
-                <viewController storyboardIdentifier="新消息提醒" id="5j7-yq-AjM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="新消息提醒" title="新消息提醒" id="5j7-yq-AjM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0VL-0F-gOX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-Jm-X7j">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="新消息提醒" id="Yr6-B5-hPt">
-                                        <barButtonItem key="leftBarButtonItem" title="back" image="backbtn" id="1JC-PV-DDC">
-                                            <color key="tintColor" red="0.31372549019607843" green="0.41568627450980394" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwz-Sx-ulM">
                                 <rect key="frame" x="0.0" y="83" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2078,14 +2024,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-7i-FbU">
-                                <rect key="frame" x="76.666666666666686" y="406" width="220" height="38"/>
+                                <rect key="frame" x="77.666666666666686" y="406" width="220" height="38"/>
                                 <state key="normal" image="submit"/>
                                 <connections>
                                     <action selector="clickYes:" destination="zqW-eF-9Gq" eventType="touchUpInside" id="cT4-Kr-Ec2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="1nE-Ha-el8">
-                                <rect key="frame" x="76.666666666666686" y="341" width="220" height="30"/>
+                                <rect key="frame" x="77.666666666666686" y="341" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ICh-zb-6SG"/>
                                 </constraints>
@@ -2099,7 +2045,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="找回密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TN-rC-kkz">
-                                <rect key="frame" x="151.66666666666666" y="256" width="70" height="21"/>
+                                <rect key="frame" x="152.66666666666666" y="256" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
@@ -2121,7 +2067,7 @@
                                 <rect key="frame" x="151" y="20" width="75" height="72"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部工作室名字" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-rI-DvM">
-                                <rect key="frame" x="149.66666666666666" y="768" width="74" height="24"/>
+                                <rect key="frame" x="150.66666666666666" y="768" width="74" height="24"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3216,6 +3162,6 @@
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="wij-hC-xO5"/>
         <segue reference="C1I-Ic-Opq"/>
-        <segue reference="jvR-E7-XIn"/>
+        <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
 </document>
