@@ -68,6 +68,7 @@
 		FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */; };
 		FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC7EB662116359500FE2FDE /* personalVC.swift */; };
 		FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */; };
+		FAFBA01B2131253500A90A58 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBA01A2131253500A90A58 /* testViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTVC.swift; sourceTree = "<group>"; };
 		FAC7EB662116359500FE2FDE /* personalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalVC.swift; sourceTree = "<group>"; };
 		FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentTBC.swift; sourceTree = "<group>"; };
+		FAFBA01A2131253500A90A58 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 				516F7FC6210101BD001C0C55 /* LaunchScreen.storyboard */,
 				516F7FC9210101BD001C0C55 /* Info.plist */,
 				512FE162210F666F00B40223 /* UserService.swift */,
+				FAFBA01A2131253500A90A58 /* testViewController.swift */,
 			);
 			path = llv2;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
+				FAFBA01B2131253500A90A58 /* testViewController.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,

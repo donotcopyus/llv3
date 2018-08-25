@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         //这里加跳转就行
     }
    
+    @IBOutlet weak var rightBtn: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -38,8 +39,14 @@ class ViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
  self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
-            
+ 
         }
+        
+        if self.revealViewController() != nil{
+            rightBtn.target = self.revealViewController()
+            rightBtn.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     }
 
     override func didReceiveMemoryWarning() {

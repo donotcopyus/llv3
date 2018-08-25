@@ -46,18 +46,24 @@ class CarVC: UITableViewController {
     
     var numberOfPosts: Int = 5
     var arrayOfCellData = [carpoolData]()
+    
+    func addSideBarMenu(leftMenuButton: UIBarButtonItem?, rightMenuButton: UIBarButtonItem? = nil) {
+        revealViewController()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        btnMenu.target = revealViewController()
-//        btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+//        if self.revealViewController() != nil{
+//            btnMenu.target = self.revealViewController()
+//            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//
+//
+//        }
         
-        if self.revealViewController() != nil{
-            btnMenu.target = self.revealViewController()
-            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        
+
         
         
         tableView = UITableView()
