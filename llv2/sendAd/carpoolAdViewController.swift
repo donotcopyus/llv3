@@ -258,7 +258,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let y = seatNum.frame.origin.y
         seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
         
-        seatNum.frame = CGRect(x: -100, y: y, width: view.frame.width + 100, height: 100)
+        seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
         
         
         

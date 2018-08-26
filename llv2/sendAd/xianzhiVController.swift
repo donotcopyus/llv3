@@ -13,6 +13,8 @@ import Firebase
 
 class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegate {
     
+    
+    
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         guard images.count > 0 else{
             return
@@ -339,6 +341,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     }
     
     
+    var b2 = dropDownBtn()
     
     
     override func viewDidLoad() {
@@ -351,7 +354,15 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
           txtv.returnKeyType = .done
           txtv.delegate = self
         
+        b2 = dropDownBtn.init(frame: CGRect(x:210, y:70, width: 150, height: 40))
         
+        b2.setTitle("选择类型", for: .normal)
+        
+        b2.translatesAutoresizingMaskIntoConstraints = true
+        
+        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+        
+        self.view.addSubview(b2)
         
     }
 
