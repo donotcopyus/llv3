@@ -149,7 +149,7 @@ class exchangeTVC: UITableViewController {
         let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
            cell.mainimage.kf.setImage(with: url)
         })
 

@@ -87,7 +87,7 @@ class checkXianzhiController: UIViewController {
             
             self.time.text = "发送于：" + dform.string(from:date as Date)
             
-       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
                 let url1 = post["imageOneUrl"] as? String
             if (url1 != ""){
             let tourl1 = URL(string:url1!)

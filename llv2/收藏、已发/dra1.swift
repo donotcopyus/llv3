@@ -150,7 +150,7 @@ class dra1: UITableViewController {
         let cell = Bundle.main.loadNibNamed("TableViewCell2", owner: self, options: nil)?.first as! TableViewCell2
         
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
         cell.headImage.kf.setImage(with: url)
             })

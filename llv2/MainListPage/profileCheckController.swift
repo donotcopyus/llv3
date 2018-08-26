@@ -71,7 +71,7 @@ class profileCheckController: UIViewController {
             if let post = snapshot.value as? [String:Any]{
                 let author = post["author"] as? [String:Any]
             
-         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
             
             let url = author!["photoURL"] as? String
             self.imageurl.text = url

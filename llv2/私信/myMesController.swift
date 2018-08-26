@@ -86,7 +86,7 @@ class myMesController: UITableViewController {
         
         if (message.toId == Auth.auth().currentUser?.uid){
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
         let url = URL(string: message.fromUrl!)
         cell.head.kf.setImage(with: url)}
             )

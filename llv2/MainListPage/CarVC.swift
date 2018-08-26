@@ -146,7 +146,7 @@ class CarVC: UITableViewController {
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
  
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
           cell.headImage.kf.setImage(with: url)
         })
 
