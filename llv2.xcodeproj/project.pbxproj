@@ -67,6 +67,8 @@
 		FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */; };
 		FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */; };
 		FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC7EB662116359500FE2FDE /* personalVC.swift */; };
+		FACFFB6B213269980021564C /* search3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFFB69213269980021564C /* search3.swift */; };
+		FACFFB6C213269980021564C /* search2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFFB6A213269980021564C /* search2.swift */; };
 		FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */; };
 		FAFBA01B2131253500A90A58 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBA01A2131253500A90A58 /* testViewController.swift */; };
 /* End PBXBuildFile section */
@@ -165,6 +167,8 @@
 		FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
 		FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTVC.swift; sourceTree = "<group>"; };
 		FAC7EB662116359500FE2FDE /* personalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalVC.swift; sourceTree = "<group>"; };
+		FACFFB69213269980021564C /* search3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = search3.swift; sourceTree = "<group>"; };
+		FACFFB6A213269980021564C /* search2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = search2.swift; sourceTree = "<group>"; };
 		FAEB9EBA211E9661004F8DA0 /* sentTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sentTBC.swift; sourceTree = "<group>"; };
 		FAFBA01A2131253500A90A58 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +323,8 @@
 				FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */,
 				FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */,
 				FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */,
+				FACFFB6A213269980021564C /* search2.swift */,
+				FACFFB69213269980021564C /* search3.swift */,
 				FA3F68B62130A9180061572E /* searchSide.swift */,
 			);
 			path = "搜索";
@@ -641,6 +647,7 @@
 			files = (
 				FA3F68B4212A83A20061572E /* carpoolSearchVC.swift in Sources */,
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
+				FACFFB6C213269980021564C /* search2.swift in Sources */,
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
 				FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */,
@@ -667,6 +674,7 @@
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
+				FACFFB6B213269980021564C /* search3.swift in Sources */,
 				FA3F68B5212A83A20061572E /* exchangeSearchVC.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,

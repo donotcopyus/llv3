@@ -26,6 +26,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     
+    
+    //横向pickerview 角度：
     var rotationAngle: CGFloat!
     
     @IBOutlet weak var otherDep: UITextField!
@@ -223,7 +225,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         wait.isHidden = true
         
         
-        button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))
+        button = dropDownBtn.init(frame: CGRect(x:30, y:70, width: 150, height: 40))
         
         button.setTitle("出发城市", for: .normal)
         
@@ -238,7 +240,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:210, y:55, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:210, y:70, width: 150, height: 40))
         
         b2.setTitle("到达城市", for: .normal)
         
@@ -300,7 +302,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
-        //view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
+        view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
     }
     
     
