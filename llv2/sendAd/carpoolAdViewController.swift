@@ -275,9 +275,9 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     //button to go back to main
     @IBOutlet weak var back: UIButton!
     
-    @IBAction func goback(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
+//    @IBAction func goback(_ sender: UIButton) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
     
     
     //---------剩余座位数------------------------------------------
