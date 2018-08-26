@@ -454,7 +454,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYH-3r-u8b">
-                                <rect key="frame" x="0.0" y="97" width="375" height="56"/>
+                                <rect key="frame" x="164" y="97" width="211" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -498,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqF-Qp-UnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="-197"/>
+            <point key="canvasLocation" x="3484" y="-197.29064039408868"/>
         </scene>
         <!--CarVC-->
         <scene sceneID="3lp-VP-KAH">
@@ -873,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vf-5l-Rkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1870" y="-476"/>
+            <point key="canvasLocation" x="2204" y="1242"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
@@ -968,7 +968,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="R9V-Rw-r1N">
-                                <rect key="frame" x="145.66666666666666" y="113" width="86" height="72"/>
+                                <rect key="frame" x="146" y="113" width="86" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="QOy-aG-g2k"/>
                                 </constraints>
@@ -1400,8 +1400,13 @@
                                 <rect key="frame" x="176" y="732.66666666666663" width="209" height="45"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="中文logo" translatesAutoresizingMaskIntoConstraints="NO" id="Blp-mc-HQD">
-                                <rect key="frame" x="166" y="78" width="42" height="66"/>
+                                <rect key="frame" x="164" y="597" width="42" height="66"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nc-cD-YZA">
+                                <rect key="frame" x="-2" y="84" width="377" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
@@ -1441,7 +1446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-570"/>
+            <point key="canvasLocation" x="1180" y="-570.44334975369463"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -2180,7 +2185,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgR-fF-W5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="-1835"/>
+            <point key="canvasLocation" x="3839" y="-1836"/>
         </scene>
         <!--闲置-->
         <scene sceneID="7Z1-3b-rjK">
@@ -3200,8 +3205,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="f0C-Pt-C9H"/>
-        <segue reference="Fqf-h5-z1R"/>
-        <segue reference="2bQ-Ce-pAo"/>
-        <segue reference="WK4-md-AaI"/>
+        <segue reference="MsP-c5-dSl"/>
+        <segue reference="C1I-Ic-Opq"/>
+        <segue reference="Xh5-75-h7C"/>
     </inferredMetricsTieBreakers>
 </document>
