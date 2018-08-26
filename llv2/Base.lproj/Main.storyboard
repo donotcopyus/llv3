@@ -968,11 +968,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="R9V-Rw-r1N">
-<<<<<<< HEAD
+
                                 <rect key="frame" x="146" y="113" width="86" height="72"/>
-=======
+
                                 <rect key="frame" x="145" y="89" width="86" height="72"/>
->>>>>>> 7dbe6a64f9e540b0962e5722ac7cd8660283ef6f
+
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="QOy-aG-g2k"/>
                                 </constraints>
@@ -3202,14 +3202,14 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="f0C-Pt-C9H"/>
-<<<<<<< HEAD
+
         <segue reference="MsP-c5-dSl"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="Xh5-75-h7C"/>
-=======
+
         <segue reference="vVO-m1-ivf"/>
         <segue reference="2bQ-Ce-pAo"/>
         <segue reference="WK4-md-AaI"/>
->>>>>>> 7dbe6a64f9e540b0962e5722ac7cd8660283ef6f
+
     </inferredMetricsTieBreakers>
 </document>
