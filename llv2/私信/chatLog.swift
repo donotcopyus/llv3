@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import Kingfisher
 
+
 class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollectionViewDelegateFlowLayout{
     
     //暂时放下的功能：具体广告显示
@@ -19,6 +20,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     var url = String()
 
     var messages = [Message]()
+    
     
     lazy var inputTextField:UITextField={
     let textField = UITextField()
@@ -42,6 +44,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         let thatUid = self.uid
         
         let message = Database.database().reference().child("messages")
+
         message.observe(.childAdded, with: { (snapshot) in
             
             if let dict = snapshot.value as? [String:AnyObject]{
@@ -56,14 +59,16 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
                 mes.fromUrl = dict["fromUrl"] as? String
                 
                 //消息来自
-                 if ((mes.toId == thisUid && mes.fromId == thatUid) || (mes.toId == thatUid && mes.fromId == thisUid)){
+                 if ((mes.toId == thisUid && mes.fromId == thatUid) || (mes.toId == thatUid && mes.fromId == thisUid) ){
                     self.messages.append(mes)
-                    
+
                     DispatchQueue.main.async {
                         self.collectionView?.reloadData()
                         //auto scroll to the end
                         self.collectionView?.scrollToItem(at: NSIndexPath(row: self.messages.count - 1, section: 0) as IndexPath, at: .bottom, animated: false)
                     }}}}, withCancel: nil)}
+    
+    
     
     override func viewDidLoad() {
        super.viewDidLoad()
@@ -79,7 +84,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         collectionView?.alwaysBounceVertical = true
         
         collectionView?.keyboardDismissMode = .interactive
-
+        
    
     }
     
@@ -237,6 +242,11 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
     
     //handle send
     @objc func handleSend(){
+        
+        if self.inputTextField.text! == ""{
+            //alert,发送信息不能为空！
+            return
+        }
         
         let messageRef = Database.database().reference().child("messages").childByAutoId()
 
