@@ -168,7 +168,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
  
         //  func sendData() {
         postRef.setValue(postObj, withCompletionBlock: {error, ref in
-            if error == nil && (self.subm == 1) {
+            if error == nil {
                 //发送得太快了？
                 
                 self.performSegue(withIdentifier: "goB", sender: self)
@@ -182,9 +182,9 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                     alert.dismiss(animated: true, completion: nil)
                 } ))
                 
-                self.present(alert, animated: true, completion: nil)
-                print("出错")
-                return
+//                self.present(alert, animated: true, completion: nil)
+//                print("出错")
+//                return
             }
         })
         // }
