@@ -137,7 +137,7 @@ class xianzhiTVC: UITableViewController{
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
         
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
 
             if(self.arrayOfCellData[indexPath.row].imageOneUrl != ""){
                 let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageOneUrl)

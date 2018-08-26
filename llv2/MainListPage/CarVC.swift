@@ -47,9 +47,6 @@ class CarVC: UITableViewController {
     var numberOfPosts: Int = 5
     var arrayOfCellData = [carpoolData]()
     
-//    func addSideBarMenu(leftMenuButton: UIBarButtonItem?, rightMenuButton: UIBarButtonItem? = nil) {
-//        revealViewController()
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,10 +69,6 @@ class CarVC: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
-//        let searchBTN = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
-//        self.navigationItem.rightBarButtonItem = searchBTN
-//
-
 
         observePost()
         
@@ -237,9 +230,7 @@ class CarVC: UITableViewController {
     @objc func search(_ sender: Any) {
     
         performSegue(withIdentifier: "gosearch", sender: self)
-        
-//        let otherView = carpoolSearchVC()
-//        self.navigationController?.pushViewController(carpoolSearchVC(), animated: true)
+
         
     }
 

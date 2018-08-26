@@ -1296,7 +1296,6 @@
                     <connections>
                         <segue destination="Sr3-Md-37M" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="326-Wu-2Gg"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="f0C-Pt-C9H"/>
-                        <segue destination="TeA-5E-rNH" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="7ki-dZ-ZSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heT-k4-DI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1941,7 +1940,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1981,7 +1980,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -3114,21 +3113,6 @@
                 <exit id="SXs-Gd-2yR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="315.51724137931035"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="00r-9a-AMB">
-            <objects>
-                <viewController id="TeA-5E-rNH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gF2-3j-4HR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ALg-8X-Bpp"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjy-1c-gMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1374" y="-1372"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4XU-iy-lFz">
