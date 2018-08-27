@@ -55,7 +55,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+//                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 
                 present(alert, animated: true, completion: nil)
@@ -73,12 +74,12 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+//                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 
                 present(alert, animated: true, completion: nil)
-//                print("请填写具体城市")
-//                return
+
             }
         }
         
@@ -87,7 +88,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             let alert = UIAlertController(title: title, message: "出发或到达城市不能为空", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
+                //                    alert.dismiss(animated: true, completion: nil)
+                return
             } ))
             
             present(alert, animated: true, completion: nil)
@@ -120,7 +122,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             let alert = UIAlertController(title: title, message: "出发日期或时间已过！", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
+                //                    alert.dismiss(animated: true, completion: nil)
+                return
             } ))
             
             present(alert, animated: true, completion: nil)
@@ -181,7 +184,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 let alert = UIAlertController(title: self.title, message: "出错", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+                    //                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 
 //                self.present(alert, animated: true, completion: nil)
@@ -317,18 +321,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return view
     }
     
-    
-    //    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-    //
-    //
-    //        let titleLb = dataSource[row]
-    //        return NSAttributedString(string: titleLb, attributes: [NSFontAttributeName:UIFont(name: "Helvetica",size: 14!, NSForegroundColorAttributeName: UIColor.white)]?)
-    //    }
-    
-    
-    
-    
-    //-------------------------------------------------
+
     
     
     

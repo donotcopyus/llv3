@@ -114,15 +114,14 @@ class carpoolSearchVC: UIViewController {
     }
 
     
-    //搜索
-    func search(){
+    @IBAction func search(_ sender: UIButton) {
         
-        var pidData = [String]()
+       var pidDatan = [String]()
         
-        //get所有的attribute
         var dept = button.currentTitle!
         var arri = b2.currentTitle!
-       
+        
+        
         //如果选择了其他，则变为其他出发城市
         if(dept == "其他"){
             dept = self.otherDep.text!
@@ -171,13 +170,14 @@ class carpoolSearchVC: UIViewController {
                 alert.dismiss(animated: true, completion: nil)} ))
             present(alert, animated: true, completion: nil)}
         
+        
         //dept是出发城市，arri是到达城市，“任意”为没有限制
         //出发日期需要一个默认值，depDate是出发日期
         
         //排序方式，从早到晚或者从晚到早
         
         //pidData储存所有的pid，排序好并且符合条件，传到table里
-
+        
     }
 
 
