@@ -172,11 +172,24 @@ class carpoolSearchVC: UIViewController {
                 return} ))
             present(alert, animated: true, completion: nil)}
         
+        //排序方式，从早到晚或者从晚到早，最新发布最晚发布
+        //根据排序方式reorder
+        let order = b3.currentTitle!
+        if(order == "排序方式"){
+            //alert
+            let alert = UIAlertController(title: title, message: "请选择排序方式", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                return
+            } ))
+            present(alert, animated: true, completion: nil)
+        }
         
         //dept是出发城市，arri是到达城市，“任意”为没有限制
         //出发日期需要一个默认值，depDate是出发日期
         
-        //排序方式，从早到晚或者从晚到早
+        //搜索具体！
+        
         
         //pidData储存所有的pid，排序好并且符合条件，传到table里
         
