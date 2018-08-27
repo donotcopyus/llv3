@@ -107,7 +107,7 @@ class carpoolSearchVC: UIViewController {
         
         b3.translatesAutoresizingMaskIntoConstraints = true
         
-        b3.dropView.dropDownOptions = ["最近发布","最久发布"]
+        b3.dropView.dropDownOptions = ["最近发布","最久发布","出发时间从早到晚","出发时间从晚到早"]
         
         self.view.addSubview(b3)
    
