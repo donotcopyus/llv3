@@ -33,7 +33,6 @@ class carpoolSearchVC: UIViewController {
     var rotationAngle: CGFloat!
     
     @IBOutlet weak var otherDep: UITextField!
-    
     @IBOutlet weak var otherArr: UITextField!
     
     //date label
@@ -49,6 +48,7 @@ class carpoolSearchVC: UIViewController {
         godate.text = "出发日期 \(strDate)"
     }
     
+
     
     @IBAction func dChanged(_ sender: UITextField) {
         
@@ -62,12 +62,14 @@ class carpoolSearchVC: UIViewController {
     
     
     @IBAction func aChanged(_ sender: UITextField) {
+        
         if(b2.currentTitle! != "其他"){
             b2.setTitle("其他", for: .normal)
         }
         
         otherArr.text = sender.text
     }
+    
     
     
     
@@ -130,7 +132,7 @@ class carpoolSearchVC: UIViewController {
                 //alert
                 let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 present(alert, animated: true, completion: nil)}}
         if(arri == "其他"){
@@ -141,7 +143,7 @@ class carpoolSearchVC: UIViewController {
                 let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 present(alert, animated: true, completion: nil)}}
         
@@ -150,7 +152,7 @@ class carpoolSearchVC: UIViewController {
             let alert = UIAlertController(title: title, message: "出发或到达城市不能为空（tips:如果不需要设置出发或到达城市限制，请选择‘任意’）", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
+                return
             } ))
             present(alert, animated: true, completion: nil)
         }
@@ -167,7 +169,7 @@ class carpoolSearchVC: UIViewController {
             //alert
             let alert = UIAlertController(title: title, message: "出发日期或时间已过！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)} ))
+                return} ))
             present(alert, animated: true, completion: nil)}
         
         

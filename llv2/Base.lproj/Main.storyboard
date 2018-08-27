@@ -2111,6 +2111,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他出发城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKw-Zn-HMe">
+                                <rect key="frame" x="48" y="140" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dChanged:" destination="sd9-kb-b2R" eventType="editingChanged" id="qQI-Ls-xLo"/>
+                                </connections>
+                            </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-vA-uCV">
                                 <rect key="frame" x="64" y="376" width="241" height="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -2128,16 +2138,6 @@
                                 <color key="textColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他到达城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viP-IO-5sz">
-                                <rect key="frame" x="55" y="112" width="145" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="aChanged:" destination="PMF-4f-6Mo" eventType="editingDidEnd" id="b6v-qw-M8M"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKv-yJ-0VB">
                                 <rect key="frame" x="169" y="530" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2151,14 +2151,14 @@
                                     <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="Xbm-dZ-Vgz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他出发城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKw-Zn-HMe">
-                                <rect key="frame" x="55" y="198" width="145" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他到达城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viP-IO-5sz">
+                                <rect key="frame" x="48" y="220" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="dChanged:" destination="PMF-4f-6Mo" eventType="editingDidEnd" id="pfL-1P-qQo"/>
+                                    <action selector="aChanged:" destination="sd9-kb-b2R" eventType="editingChanged" id="Alv-3j-jyD"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -2166,6 +2166,12 @@
                         <viewLayoutGuide key="safeArea" id="8wC-ZT-ihR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="EKe-62-P0F"/>
+                    <connections>
+                        <outlet property="datepicker" destination="7A9-vA-uCV" id="xmZ-5Q-dNF"/>
+                        <outlet property="godate" destination="Z75-Wa-sIl" id="9Bg-E2-aib"/>
+                        <outlet property="otherArr" destination="viP-IO-5sz" id="Zg6-BL-WiH"/>
+                        <outlet property="otherDep" destination="HKw-Zn-HMe" id="FZB-LV-xLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKh-sT-ycr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
