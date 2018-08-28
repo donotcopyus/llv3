@@ -21,6 +21,8 @@
 		516F7FD3210101BD001C0C55 /* llv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FD2210101BD001C0C55 /* llv2Tests.swift */; };
 		516F7FDE210101BD001C0C55 /* llv2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FDD210101BD001C0C55 /* llv2UITests.swift */; };
 		51768089213525CC003A8F39 /* carpoolSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51768088213525CC003A8F39 /* carpoolSearch.swift */; };
+		5176808B21352728003A8F39 /* exchangeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176808A21352728003A8F39 /* exchangeSearch.swift */; };
+		5176808D21352735003A8F39 /* xianzhiSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176808C21352735003A8F39 /* xianzhiSearch.swift */; };
 		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
 		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
 		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
@@ -110,6 +112,8 @@
 		516F7FDD210101BD001C0C55 /* llv2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llv2UITests.swift; sourceTree = "<group>"; };
 		516F7FDF210101BD001C0C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51768088213525CC003A8F39 /* carpoolSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpoolSearch.swift; sourceTree = "<group>"; };
+		5176808A21352728003A8F39 /* exchangeSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeSearch.swift; sourceTree = "<group>"; };
+		5176808C21352735003A8F39 /* xianzhiSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhiSearch.swift; sourceTree = "<group>"; };
 		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
 		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
 		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
@@ -320,6 +324,8 @@
 				FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */,
 				FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */,
 				51768088213525CC003A8F39 /* carpoolSearch.swift */,
+				5176808A21352728003A8F39 /* exchangeSearch.swift */,
+				5176808C21352735003A8F39 /* xianzhiSearch.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -642,6 +648,7 @@
 				FA3F68B4212A83A20061572E /* carpoolSearchVC.swift in Sources */,
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
+				5176808D21352735003A8F39 /* xianzhiSearch.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
 				FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
@@ -684,6 +691,7 @@
 				FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,
+				5176808B21352728003A8F39 /* exchangeSearch.swift in Sources */,
 				51D52D8E2131017A00AA706F /* dra3.swift in Sources */,
 				51B52D4C211F982400D2B9E9 /* Message.swift in Sources */,
 				51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */,
