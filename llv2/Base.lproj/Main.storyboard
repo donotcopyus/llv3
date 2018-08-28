@@ -1942,11 +1942,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-<<<<<<< HEAD
-                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
-=======
+
                                 <rect key="frame" x="77" y="457" width="221" height="90"/>
->>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
+
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -3023,29 +3021,19 @@
                                 <rect key="frame" x="0.0" y="15" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Carpool" id="KTC-Sh-5CH">
-<<<<<<< HEAD
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="PhQ-fL-vTm">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gQA-v5-71A">
-=======
+
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="4Rd-fa-fEf">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P9N-aX-vcH">
->>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
+
                                                 <rect key="frame" x="16" y="8" width="72" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="     " image="backbtn"/>
                                                 <connections>
-<<<<<<< HEAD
-                                                    <action selector="goback:" destination="bSy-bC-x5m" eventType="touchUpInside" id="tE7-dq-jXZ"/>
-                                                </connections>
-                                            </button>
-                                            <connections>
-                                                <segue destination="DYu-iB-2be" kind="showDetail" id="zaA-se-SOZ"/>
-                                            </connections>
-=======
+
                                                     <segue destination="DYu-iB-2be" kind="showDetail" id="xxP-AD-O1c"/>
                                                 </connections>
                                             </button>
->>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
+
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="ZeZ-6m-yxL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xaw-3k-tt1">
@@ -3073,10 +3061,7 @@
                         <viewLayoutGuide key="safeArea" id="AOZ-4f-SiR"/>
                     </view>
                     <connections>
-<<<<<<< HEAD
-                        <outlet property="back" destination="gQA-v5-71A" id="q5g-7I-b3n"/>
-=======
->>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
+
                         <outlet property="datepicker" destination="N5k-E1-5tE" id="z3y-lj-tpm"/>
                         <outlet property="godate" destination="1Y6-yT-10Z" id="7aa-fH-hPC"/>
                         <outlet property="gotime" destination="ccj-7c-IZJ" id="DqS-ey-brg"/>
@@ -3277,11 +3262,9 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="zaA-se-SOZ"/>
-=======
+
         <segue reference="xxP-AD-O1c"/>
->>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
+
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="wij-hC-xO5"/>
         <segue reference="2bQ-Ce-pAo"/>
