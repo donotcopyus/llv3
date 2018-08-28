@@ -77,7 +77,7 @@ class carpoolSearchVC: UIViewController {
         super.viewDidLoad()
         
         
-        button = dropDownBtn.init(frame: CGRect(x:189, y:147, width: 150, height: 40))
+        button = dropDownBtn.init(frame: CGRect(x:70, y:205, width: 100, height: 30))
         
         button.setTitle("出发城市", for: .normal)
         
@@ -92,7 +92,7 @@ class carpoolSearchVC: UIViewController {
         
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:189, y:265, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:205, y:205, width: 100, height: 30))
         
         b2.setTitle("到达城市", for: .normal)
         
@@ -103,7 +103,7 @@ class carpoolSearchVC: UIViewController {
         self.view.addSubview(b2)
         
         ///---------------------------------------
-        b3 = dropDownBtn.init(frame: CGRect(x:253, y:83, width: 150, height: 40))
+        b3 = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 30))
         
         b3.setTitle("排列方式", for: .normal)
         
@@ -118,7 +118,7 @@ class carpoolSearchVC: UIViewController {
     
     @IBAction func search(_ sender: UIButton) {
         
-       var pidDatan = [String]()
+        var pidDatan = [String]()
         
         var dept = button.currentTitle!
         var arri = b2.currentTitle!
