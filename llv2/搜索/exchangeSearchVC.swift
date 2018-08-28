@@ -55,7 +55,7 @@ class exchangeSearchVC: UIViewController {
         
         b3.translatesAutoresizingMaskIntoConstraints = true
         
-        b3.dropView.dropDownOptions = ["最近发布","最久发布"]
+        b3.dropView.dropDownOptions = ["最近发布","最久发布","最新发布（仅实时汇率）"，"最久发布（仅实时汇率)"]
         
         self.view.addSubview(b3)
         
@@ -72,9 +72,7 @@ class exchangeSearchVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    //lauren————————————————————————————————————————————————————————————
-    //button to go back to main
+
     
     
     class dropDownBtn: UIButton, dropDownProtocol {

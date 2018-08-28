@@ -9,6 +9,16 @@
 import UIKit
 import Firebase
 
+class pidSort{
+    var pid: String
+    var depTime: Date
+    
+    init (pid:String, depTime:Date){
+        self.pid = pid
+        self.depTime = depTime
+    }
+}
+
 class carpoolSearchVC: UIViewController {
 
     
@@ -118,7 +128,8 @@ class carpoolSearchVC: UIViewController {
     
     @IBAction func search(_ sender: UIButton) {
         
-        var pidDatan = [String]()
+        var pidData = [String]()
+        var pidSortArray = [pidSort]()
         
         var dept = button.currentTitle!
         var arri = b2.currentTitle!
@@ -189,9 +200,75 @@ class carpoolSearchVC: UIViewController {
         //出发日期需要一个默认值，depDate是出发日期
         
         //搜索具体！
+        let searchRef = Database.database().reference().child("carpool")
         
-        
-        //pidData储存所有的pid，排序好并且符合条件，传到table里
+        searchRef.observe(.value, with:{
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                let dict = childSnapshot.value as? [String:Any],
+                let arrCity = dict["arrCity"] as? String,
+                let depCity = dict["depCity"] as? String,
+                let departureDate = dict["depDate"] as? String,
+                let depTime1 = dict["depTime1"] as? String{
+                
+                  //check 出发和到达城市
+                    if( (arri == arrCity && dept == depCity && departureDate == depDate) || (arri == "任意" && dept == depCity && departureDate == depDate) || (dept == "任意" && arri == arrCity && departureDate == depDate) || (arri == "任意" && dept == "任意" && departureDate == depDate)) {
+                        
+                        let form = DateFormatter()
+                        form.timeStyle = DateFormatter.Style.short
+                        let time = form.date(from: depTime1)
+
+                        
+                        let currentPost = pidSort(pid:childSnapshot.key,depTime: time!)
+                        pidSortArray.append(currentPost)
+                    }
+                }
+            }
+            
+            //排序
+            if (order == "最近发布"){
+                pidSortArray = pidSortArray.reversed()}
+                
+            else if (order == "最久发布"){
+                //顺序不变
+            }
+            else if(order == "出发时间从早到晚"){
+                
+                pidSortArray.sort(by:{
+                    $0.depTime.compare($1.depTime) == .orderedAscending
+                }
+                )
+            }
+            
+            else if (order == "出发时间从晚到早"){
+                
+                pidSortArray.sort(by:{
+                    $0.depTime.compare($1.depTime) == .orderedDescending
+                }
+                )
+            }
+            
+            for element in pidSortArray{
+                pidData.append(element.pid)
+            }
+            
+            if(pidData.isEmpty){
+                let alert = UIAlertController(title: self.title, message: "没有找到任何符合条件的项目", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    return
+                } ))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                
+                //跳转，传值
+                
+            }
+
+        })
         
     }
 
