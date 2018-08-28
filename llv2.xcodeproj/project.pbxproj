@@ -46,6 +46,7 @@
 		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
 		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
 		FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F5212921FF00B03E1D /* cacheVC.swift */; };
+		FA165DE92135C6450073FCE6 /* xs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA165DE82135C6450073FCE6 /* xs.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
 		FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A09210CFEC8003066D3 /* TableViewCell3.swift */; };
@@ -141,6 +142,7 @@
 		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
 		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
 		FA1454F5212921FF00B03E1D /* cacheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheVC.swift; sourceTree = "<group>"; };
+		FA165DE82135C6450073FCE6 /* xs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xs.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 		FA323A09210CFEC8003066D3 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */,
 				FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */,
 				FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */,
+				FA165DE82135C6450073FCE6 /* xs.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,
 				51D52D8E2131017A00AA706F /* dra3.swift in Sources */,
 				51B52D4C211F982400D2B9E9 /* Message.swift in Sources */,
+				FA165DE92135C6450073FCE6 /* xs.swift in Sources */,
 				51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
