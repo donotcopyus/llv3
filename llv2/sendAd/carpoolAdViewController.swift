@@ -259,12 +259,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
         
         seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
-        
-        
-        
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -275,9 +271,10 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     //button to go back to main
     @IBOutlet weak var back: UIButton!
     
-//    @IBAction func goback(_ sender: UIButton) {
+    @IBAction func goback(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
 //        self.navigationController?.popViewController(animated: true)
-//    }
+    }
     
     
     //---------剩余座位数------------------------------------------
@@ -311,7 +308,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         let view = UIView()
         let label = UILabel()
-        //(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//       (frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
         label.textColor = UIColor.white
         return view
