@@ -42,12 +42,12 @@
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "556427809.624367"
+                  timestampString = "557104730.6143889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
                   endingLineNumber = "40"
-                  offsetFromSymbolStart = "108">
+                  offsetFromSymbolStart = "119">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "556427809.628427"
+                  timestampString = "557104730.61892"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
                   endingLineNumber = "40"
-                  offsetFromSymbolStart = "2672">
+                  offsetFromSymbolStart = "3511">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "llv2/&#x79c1;&#x4fe1;/chatLog.swift"
-            timestampString = "556956086.668632"
+            timestampString = "557099224.543112"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "225"
@@ -106,13 +106,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "llv2/&#x641c;&#x7d22;/carpoolSearchVC.swift"
-            timestampString = "556956086.7155401"
+            timestampString = "557104729.4570709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "carpoolSearchVC"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "llv2/&#x641c;&#x7d22;/carpoolSearchVC.swift"
+            timestampString = "557104729.457743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "carpoolSearchVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.carpoolSearchVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; llv2.carpoolSearchVC"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/%E6%90%9C%E7%B4%A2/carpoolSearchVC.swift"
+                  timestampString = "557104261.93277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "962">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.carpoolSearchVC.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;llv2.carpoolSearchVC&gt;"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/%E6%90%9C%E7%B4%A2/carpoolSearchVC.swift"
+                  timestampString = "557104261.938414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "882">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

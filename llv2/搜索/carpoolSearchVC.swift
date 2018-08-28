@@ -33,7 +33,6 @@ class carpoolSearchVC: UIViewController {
     var rotationAngle: CGFloat!
     
     @IBOutlet weak var otherDep: UITextField!
-    
     @IBOutlet weak var otherArr: UITextField!
     
     //date label
@@ -49,6 +48,7 @@ class carpoolSearchVC: UIViewController {
         godate.text = "出发日期 \(strDate)"
     }
     
+
     
     @IBAction func dChanged(_ sender: UITextField) {
         
@@ -62,12 +62,14 @@ class carpoolSearchVC: UIViewController {
     
     
     @IBAction func aChanged(_ sender: UITextField) {
+        
         if(b2.currentTitle! != "其他"){
             b2.setTitle("其他", for: .normal)
         }
         
         otherArr.text = sender.text
     }
+    
     
     
     
@@ -107,22 +109,21 @@ class carpoolSearchVC: UIViewController {
         
         b3.translatesAutoresizingMaskIntoConstraints = true
         
-        b3.dropView.dropDownOptions = ["最近发布","最久发布"]
+        b3.dropView.dropDownOptions = ["最近发布","最久发布","出发时间从早到晚","出发时间从晚到早"]
         
         self.view.addSubview(b3)
    
     }
 
     
-    //搜索
-    func search(){
+    @IBAction func search(_ sender: UIButton) {
         
-        var pidData = [String]()
+       var pidDatan = [String]()
         
-        //get所有的attribute
         var dept = button.currentTitle!
         var arri = b2.currentTitle!
-       
+        
+        
         //如果选择了其他，则变为其他出发城市
         if(dept == "其他"){
             dept = self.otherDep.text!
@@ -131,7 +132,7 @@ class carpoolSearchVC: UIViewController {
                 //alert
                 let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 present(alert, animated: true, completion: nil)}}
         if(arri == "其他"){
@@ -142,7 +143,7 @@ class carpoolSearchVC: UIViewController {
                 let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
                 present(alert, animated: true, completion: nil)}}
         
@@ -151,7 +152,7 @@ class carpoolSearchVC: UIViewController {
             let alert = UIAlertController(title: title, message: "出发或到达城市不能为空（tips:如果不需要设置出发或到达城市限制，请选择‘任意’）", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
+                return
             } ))
             present(alert, animated: true, completion: nil)
         }
@@ -168,16 +169,30 @@ class carpoolSearchVC: UIViewController {
             //alert
             let alert = UIAlertController(title: title, message: "出发日期或时间已过！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)} ))
+                return} ))
             present(alert, animated: true, completion: nil)}
+        
+        //排序方式，从早到晚或者从晚到早，最新发布最晚发布
+        //根据排序方式reorder
+        let order = b3.currentTitle!
+        if(order == "排序方式"){
+            //alert
+            let alert = UIAlertController(title: title, message: "请选择排序方式", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                return
+            } ))
+            present(alert, animated: true, completion: nil)
+        }
         
         //dept是出发城市，arri是到达城市，“任意”为没有限制
         //出发日期需要一个默认值，depDate是出发日期
         
-        //排序方式，从早到晚或者从晚到早
+        //搜索具体！
+        
         
         //pidData储存所有的pid，排序好并且符合条件，传到table里
-
+        
     }
 
 

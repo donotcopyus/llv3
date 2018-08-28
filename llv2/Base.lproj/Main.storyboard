@@ -1942,7 +1942,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
+<<<<<<< HEAD
                                 <rect key="frame" x="77" y="457" width="221" height="69.5"/>
+=======
+                                <rect key="frame" x="77" y="457" width="221" height="90"/>
+>>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2106,19 +2110,19 @@
         <!--Item-->
         <scene sceneID="uEb-RE-d8i">
             <objects>
-                <viewController id="sd9-kb-b2R" sceneMemberID="viewController">
+                <viewController id="sd9-kb-b2R" customClass="carpoolSearchVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="05M-hI-pFa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他出发城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKw-Zn-HMe">
-                                <rect key="frame" x="119" y="189" width="145" height="30"/>
+                                <rect key="frame" x="48" y="140" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="dChanged:" destination="PMF-4f-6Mo" eventType="editingDidEnd" id="pfL-1P-qQo"/>
+                                    <action selector="dChanged:" destination="sd9-kb-b2R" eventType="editingChanged" id="qQI-Ls-xLo"/>
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-vA-uCV">
@@ -2138,14 +2142,27 @@
                                 <color key="textColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKv-yJ-0VB">
+                                <rect key="frame" x="169" y="530" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="搜索"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7H-Gb-UCn">
+                                <rect key="frame" x="169" y="530" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="搜索"/>
+                                <connections>
+                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="Xbm-dZ-Vgz"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他到达城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viP-IO-5sz">
-                                <rect key="frame" x="119" y="112" width="145" height="30"/>
+                                <rect key="frame" x="48" y="220" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="aChanged:" destination="PMF-4f-6Mo" eventType="editingDidEnd" id="b6v-qw-M8M"/>
+                                    <action selector="aChanged:" destination="sd9-kb-b2R" eventType="editingChanged" id="Alv-3j-jyD"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -2153,6 +2170,12 @@
                         <viewLayoutGuide key="safeArea" id="8wC-ZT-ihR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="EKe-62-P0F"/>
+                    <connections>
+                        <outlet property="datepicker" destination="7A9-vA-uCV" id="xmZ-5Q-dNF"/>
+                        <outlet property="godate" destination="Z75-Wa-sIl" id="9Bg-E2-aib"/>
+                        <outlet property="otherArr" destination="viP-IO-5sz" id="Zg6-BL-WiH"/>
+                        <outlet property="otherDep" destination="HKw-Zn-HMe" id="FZB-LV-xLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKh-sT-ycr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3000,18 +3023,29 @@
                                 <rect key="frame" x="0.0" y="15" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Carpool" id="KTC-Sh-5CH">
+<<<<<<< HEAD
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="PhQ-fL-vTm">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gQA-v5-71A">
+=======
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="4Rd-fa-fEf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P9N-aX-vcH">
+>>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
                                                 <rect key="frame" x="16" y="8" width="72" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="     " image="backbtn"/>
                                                 <connections>
+<<<<<<< HEAD
                                                     <action selector="goback:" destination="bSy-bC-x5m" eventType="touchUpInside" id="tE7-dq-jXZ"/>
                                                 </connections>
                                             </button>
                                             <connections>
                                                 <segue destination="DYu-iB-2be" kind="showDetail" id="zaA-se-SOZ"/>
                                             </connections>
+=======
+                                                    <segue destination="DYu-iB-2be" kind="showDetail" id="xxP-AD-O1c"/>
+                                                </connections>
+                                            </button>
+>>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="ZeZ-6m-yxL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xaw-3k-tt1">
@@ -3039,7 +3073,10 @@
                         <viewLayoutGuide key="safeArea" id="AOZ-4f-SiR"/>
                     </view>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="back" destination="gQA-v5-71A" id="q5g-7I-b3n"/>
+=======
+>>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
                         <outlet property="datepicker" destination="N5k-E1-5tE" id="z3y-lj-tpm"/>
                         <outlet property="godate" destination="1Y6-yT-10Z" id="7aa-fH-hPC"/>
                         <outlet property="gotime" destination="ccj-7c-IZJ" id="DqS-ey-brg"/>
@@ -3240,7 +3277,11 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="zaA-se-SOZ"/>
+=======
+        <segue reference="xxP-AD-O1c"/>
+>>>>>>> 2e6fb8c5a42d6aa35ca13701d398b208e149378c
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="wij-hC-xO5"/>
         <segue reference="2bQ-Ce-pAo"/>
