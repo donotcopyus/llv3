@@ -2012,6 +2012,7 @@
                                 <state key="normal" image="searchbtn"/>
                                 <connections>
                                     <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="Xbm-dZ-Vgz"/>
+                                    <segue destination="vyf-0T-dZD" kind="show" id="Ok5-Cu-ZOu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2149,6 +2150,7 @@
                                 <state key="normal" image="searchbtn"/>
                                 <connections>
                                     <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="3P0-Dx-Vy8"/>
+                                    <segue destination="Op7-JO-gEt" kind="show" id="xy3-fD-mcQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2182,6 +2184,7 @@
                                 <state key="normal" image="searchbtn"/>
                                 <connections>
                                     <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="EVp-Pm-qbN"/>
+                                    <segue destination="hwg-Uy-V39" kind="show" id="xvd-Wj-q8X"/>
                                 </connections>
                             </button>
                         </subviews>
