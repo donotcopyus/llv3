@@ -150,16 +150,18 @@ class exchangeVC: UIViewController {
             }
                 
             else{
+                //alert, error
+                let alert = UIAlertController(title: self.title, message: "出错", preferredStyle: .alert)
                 
-                let alert = UIAlertController(title: self.title, message: "error", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
-                    
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    //                    alert.dismiss(animated: true, completion: nil)
+                    return
                 } ))
-//                //alert,error
-//                print("出错")
-//                return
+                
+                //                self.present(alert, animated: true, completion: nil)
+                //                print("出错")
+                //                return
+                
             }
             
         })
