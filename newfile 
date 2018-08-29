@@ -4,6 +4,11 @@ alert里需要RETURN，都加上
 
 圈圈加在哪里？
 
+·搜索部分nav问题待解决
+·闲置加上genre
+·搜索显示出来的加上上拉加载功能
+·下拉菜单前需要一个LABel
+
 数量调整
 
 https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
