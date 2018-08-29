@@ -12,8 +12,16 @@ import Kingfisher
 
 class profileCheckController: UIViewController {
     
+
     
-   
+    @IBAction func share(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "", withExtension: "pdf") else {
+            return
+        }
+        let controller = UIDocumentInteractionController(url: url)
+        controller.delegate = self
+        controller.presentPreview(animated: true)
+    }
     
     @IBOutlet weak var pidLabel: UILabel!
     @IBOutlet weak var headImage: UIImageView!
@@ -37,6 +45,8 @@ class profileCheckController: UIViewController {
     
 
     @IBOutlet weak var delete: UIButton!
+    
+
     
     
     var pid = String()
