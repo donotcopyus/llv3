@@ -9,15 +9,25 @@
 import UIKit
 import Firebase
 
+class pidSortExchange{
+    var pid:String
+    var currencyBol:Bool
+    
+    init(pid:String,currencyBol:Bool){
+        self.pid = pid
+        self.currencyBol = currencyBol
+    }
+}
+
 class exchangeSearchVC: UIViewController {
     
-    @IBOutlet weak var submit: UIButton!
+    
+    var pidData = [String]()
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     var b3 = dropDownBtn()
-    
-    var currency = false
+
     
     
     override func viewDidLoad() {
@@ -60,7 +70,113 @@ class exchangeSearchVC: UIViewController {
         
     }
     
-
+    @IBAction func search(_ sender: UIButton) {
+        
+        var pidSortArray = [pidSortExchange]()
+        
+        let want = button.currentTitle!
+        let have = b2.currentTitle!
+        let order = b3.currentTitle!
+        
+        
+        if (want == "求币种" || have == "出币种"){
+            //alert
+            let alert = UIAlertController(title: title, message: "出币种或求币种为空", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                return
+                
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+        }
+        if(want == have){
+            let alert = UIAlertController(title: title, message: "出币种与求币种相同", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                
+                return
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+        }
+        
+        if(order == "排列方式"){
+            //alert
+            let alert = UIAlertController(title: title, message: "请选择排序方式", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                return
+            } ))
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
+        let searchRef = Database.database().reference().child("exchange")
+        
+        searchRef.observe(.value, with: {
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                let dict = childSnapshot.value as? [String:Any],
+                let haveM = dict["haveMoney"] as? String,
+                let wantM = dict["wantMoney"] as? String,
+                    let isCurrency = dict["currencyBol"] as? Bool{
+                    
+                    if(haveM == have && wantM == want){
+                        let currentPost = pidSortExchange(pid:childSnapshot.key, currencyBol: isCurrency)
+                        pidSortArray.append(currentPost)
+                    }
+                }
+            }
+            
+            if (order == "最近发布"){
+                pidSortArray = pidSortArray.reversed()
+                for element in pidSortArray{
+                    self.pidData.append(element.pid)
+                }
+            }
+                
+            else if (order == "最久发布"){
+                for element in pidSortArray{
+                    self.pidData.append(element.pid)
+                }
+            }
+            else if(order == "最新发布（仅实时汇率）"){
+                for element in pidSortArray{
+                    if element.currencyBol == true{
+                        self.pidData.append(element.pid)}}
+                self.pidData = self.pidData.reversed()
+            }
+            else if (order == "最久发布（仅实时汇率)"){
+                for element in pidSortArray{
+                    if element.currencyBol == true{
+                        self.pidData.append(element.pid)}}
+            }
+            
+            if(self.pidData.isEmpty){
+                let alert = UIAlertController(title: self.title, message: "没有找到任何符合条件的项目", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    return
+                } ))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "exchangeSearch") as! exchangeSearch
+                
+                viewController.pidSearchData = self.pidData
+                
+                self.present(viewController, animated: true)
+                
+            }
+            
+        })
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
