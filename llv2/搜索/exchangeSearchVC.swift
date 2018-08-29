@@ -9,26 +9,18 @@
 import UIKit
 import Firebase
 
-class pidSortExchange{
-    var pid:String
-    var currencyBol:Bool
-    
-    init(pid:String,currencyBol:Bool){
-        self.pid = pid
-        self.currencyBol = currencyBol
-    }
-}
-
 class exchangeSearchVC: UIViewController {
     
-    
-    var pidData = [String]()
+    @IBOutlet weak var submit: UIButton!
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     var b3 = dropDownBtn()
-
     
+    var currency = false
+    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,125 +49,22 @@ class exchangeSearchVC: UIViewController {
         self.view.addSubview(b2)
         
         //----------------------------------
-        b3 = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 30))
+        b3 = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 100, height: 30))
         
         b3.setTitle("排列方式", for: .normal)
         
         b3.translatesAutoresizingMaskIntoConstraints = true
         
-        b3.dropView.dropDownOptions = ["最近发布",  "最久发布", "最新发布（仅实时汇率）", "最久发布（仅实时汇率)"]
+        b3.dropView.dropDownOptions = ["最近发布","最久发布","最新发布（仅实时汇率）","最久发布（仅实时汇率)"]
         
         self.view.addSubview(b3)
         
         
     }
     
-    @IBAction func search(_ sender: UIButton) {
-        
-        var pidSortArray = [pidSortExchange]()
-        
-        let want = button.currentTitle!
-        let have = b2.currentTitle!
-        let order = b3.currentTitle!
-        
-        
-        if (want == "求币种" || have == "出币种"){
-            //alert
-            let alert = UIAlertController(title: title, message: "出币种或求币种为空", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                return
-                
-            } ))
-            
-            present(alert, animated: true, completion: nil)
-        }
-        if(want == have){
-            let alert = UIAlertController(title: title, message: "出币种与求币种相同", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                
-                return
-            } ))
-            
-            present(alert, animated: true, completion: nil)
-        }
-        
-        if(order == "排列方式"){
-            //alert
-            let alert = UIAlertController(title: title, message: "请选择排序方式", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                return
-            } ))
-            present(alert, animated: true, completion: nil)
-        }
-        
-        
-        let searchRef = Database.database().reference().child("exchange")
-        
-        searchRef.observe(.value, with: {
-            snapshot in
-            
-            for child in snapshot.children{
-                if let childSnapshot = child as? DataSnapshot,
-                let dict = childSnapshot.value as? [String:Any],
-                let haveM = dict["haveMoney"] as? String,
-                let wantM = dict["wantMoney"] as? String,
-                    let isCurrency = dict["currencyBol"] as? Bool{
-                    
-                    if(haveM == have && wantM == want){
-                        let currentPost = pidSortExchange(pid:childSnapshot.key, currencyBol: isCurrency)
-                        pidSortArray.append(currentPost)
-                    }
-                }
-            }
-            
-            if (order == "最近发布"){
-                pidSortArray = pidSortArray.reversed()
-                for element in pidSortArray{
-                    self.pidData.append(element.pid)
-                }
-            }
-                
-            else if (order == "最久发布"){
-                for element in pidSortArray{
-                    self.pidData.append(element.pid)
-                }
-            }
-            else if(order == "最新发布（仅实时汇率）"){
-                for element in pidSortArray{
-                    if element.currencyBol == true{
-                        self.pidData.append(element.pid)}}
-                self.pidData = self.pidData.reversed()
-            }
-            else if (order == "最久发布（仅实时汇率)"){
-                for element in pidSortArray{
-                    if element.currencyBol == true{
-                        self.pidData.append(element.pid)}}
-            }
-            
-            if(self.pidData.isEmpty){
-                let alert = UIAlertController(title: self.title, message: "没有找到任何符合条件的项目", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    return
-                } ))
-                self.present(alert, animated: true, completion: nil)
-            }
-            else{
-                
-                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "exchangeSearch") as! exchangeSearch
-                
-                viewController.pidSearchData = self.pidData
-                
-                self.present(viewController, animated: true)
-                
-            }
-            
-        })
-        
-    }
+    
+    
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -185,6 +74,171 @@ class exchangeSearchVC: UIViewController {
     
 
     
+    
+    class dropDownBtn: UIButton, dropDownProtocol {
+        
+        func dropDownPressed(string: String){
+            self.setTitle(string, for: .normal)
+            
+            // print(self.currentTitle!)
+            
+            self.dismissDropDown()
+        }
+        
+        //cannot use 'let' here, would cause error in the line 'dropView = dropDownView .....'
+        var dropView = dropDownView()
+        
+        var height = NSLayoutConstraint()
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            
+            self.backgroundColor = UIColor.darkGray
+            
+            dropView = dropDownView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
+            
+            //for the protocol
+            dropView.delegate = self
+            
+            dropView.translatesAutoresizingMaskIntoConstraints = false
+            
+        }
+        
+        override func didMoveToSuperview() {
+            self.superview?.addSubview(dropView)
+            //how you want the menu to show up
+            self.superview?.bringSubview(toFront: dropView)
+            dropView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            dropView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+            height = dropView.heightAnchor.constraint(equalToConstant: 0)
+        }
+        
+        var isOpen = false
+        
+        //if the drop menu is open or not
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            if isOpen == false{
+                
+                isOpen = true
+                
+                NSLayoutConstraint.deactivate([self.height])
+                
+                //用来消除菜单中一条白色线，blank space
+                if self.dropView.tableView.contentSize.height > 150 {
+                    self.height.constant = 150
+                }else{
+                    self.height.constant = self.dropView.tableView.contentSize.height
+                }
+                
+                self.height.constant = 150
+                
+                NSLayoutConstraint.activate([self.height])
+                
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                    self.dropView.layoutIfNeeded()
+                    //y+= moving down; y-= moving up
+                    self.dropView.center.y += self.dropView.frame.height / 2
+                }, completion: nil)
+            }else{
+                
+                isOpen = false
+                
+                NSLayoutConstraint.deactivate([self.height])
+                self.height.constant = 0
+                
+                NSLayoutConstraint.activate([self.height])
+                
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                    self.dropView.layoutIfNeeded()
+                    self.dropView.center.y -= self.dropView.frame.height / 2
+                }, completion: nil)
+                
+            }
+            
+        }
+        
+        //create a function to dismiss the menu
+        func dismissDropDown(){
+            isOpen = false
+            
+            NSLayoutConstraint.deactivate([self.height])
+            self.height.constant = 0
+            
+            NSLayoutConstraint.activate([self.height])
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                self.dropView.layoutIfNeeded()
+                self.dropView.center.y -= self.dropView.frame.height / 2
+            }, completion: nil)
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    
+    
+    
+    class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
+        var dropDownOptions = [String]()
+        
+        var tableView = UITableView()
+        
+        var delegate : dropDownProtocol!
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            
+            tableView.backgroundColor = UIColor.darkGray
+            self.backgroundColor = UIColor.darkGray
+            
+            tableView.delegate = self
+            tableView.dataSource = self
+            
+            tableView.translatesAutoresizingMaskIntoConstraints = false
+            
+            self.addSubview(tableView)
+            
+            tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+            tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+            tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        }
+        
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        
+        
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return dropDownOptions.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = UITableViewCell()
+            
+            cell.textLabel?.text = dropDownOptions[indexPath.row]
+            cell.backgroundColor = UIColor.darkGray
+            
+            return cell
+        }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+            self.delegate.dropDownPressed(string: dropDownOptions[indexPath.row])
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            
+        }
+        
+        
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

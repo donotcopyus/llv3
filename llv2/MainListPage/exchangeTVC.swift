@@ -213,7 +213,7 @@ class exchangeTVC: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 93
+        return 73
     }
     
     @IBAction func goback(_ sender: UIButton) {

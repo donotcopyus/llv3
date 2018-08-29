@@ -175,18 +175,22 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             if error == nil{
                 //
             }
-                
             else{
-                //alert, error
-                let alert = UIAlertController(title: self.title, message: "出错", preferredStyle: .alert)
                 
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    //                    alert.dismiss(animated: true, completion: nil)
-                    return
+//alert--------------------------------------------------------------
+                
+                let alert = UIAlertController(title: self.title, message: "未知错误", preferredStyle: .alert)
+                
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                    
+                    
                 } ))
                 
- 
-
+                self.present(alert, animated: true, completion: nil)
+                
+//-------------------------------------------------------------------------
             }
         })
         

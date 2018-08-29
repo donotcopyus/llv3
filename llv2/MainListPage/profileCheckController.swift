@@ -12,15 +12,9 @@ import Kingfisher
 
 class profileCheckController: UIViewController {
     
-
     
-    @IBAction func share(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "", withExtension: "pdf") else {
-            return
-        }
-        let controller = UIDocumentInteractionController(url: url)
-        controller.delegate = self
-        controller.presentPreview(animated: true)
+    @IBAction func back(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
     }
     
     @IBOutlet weak var pidLabel: UILabel!
@@ -46,16 +40,14 @@ class profileCheckController: UIViewController {
 
     @IBOutlet weak var delete: UIButton!
     
-
-    
     
     var pid = String()
     var uid = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        headImage.layer.cornerRadius = headImage.frame.height / 2.0
-//        headImage.layer.masksToBounds = true
+        headImage.layer.cornerRadius = headImage.frame.height / 2.0
+        headImage.layer.masksToBounds = true
         //get pid，藏起来
         self.pidLabel.isHidden = true
         self.pidLabel.text = pid

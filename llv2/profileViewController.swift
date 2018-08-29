@@ -24,7 +24,10 @@ class profileViewController: UIViewController {
 
     @IBOutlet weak var labelText: UILabel!
     
-
+    @IBAction func handleLogout(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        self.performSegue(withIdentifier: "logoutSegue", sender: self)
+    }
     
     @IBOutlet weak var profileImageView: UIImageView!
     
