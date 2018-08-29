@@ -18,11 +18,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
-    @IBAction func handleLogout(_ sender: UIButton) {
-        try! Auth.auth().signOut()
-        //这里加跳转就行
-    }
+
    
     @IBOutlet weak var rightBtn: UIBarButtonItem!
     

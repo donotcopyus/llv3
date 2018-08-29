@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class personalVC: UIViewController {
 
@@ -22,6 +23,11 @@ class personalVC: UIViewController {
     }
     
  @IBOutlet weak var profileButton: UIButton!
+    
+    @IBAction func handleLogout(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        self.performSegue(withIdentifier: "logoutSegue", sender: self)
+    }
     /*
     // MARK: - Navigation
 

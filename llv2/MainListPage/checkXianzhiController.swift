@@ -12,9 +12,6 @@ import Kingfisher
 
 class checkXianzhiController: UIViewController {
     
-    @IBAction func back(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @IBOutlet weak var pidLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
@@ -39,8 +36,8 @@ class checkXianzhiController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headImage.layer.cornerRadius = headImage.frame.height / 2.0
-        headImage.layer.masksToBounds = true
+//        headImage.layer.cornerRadius = headImage.frame.height / 2.0
+//        headImage.layer.masksToBounds = true
         
         
         let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))

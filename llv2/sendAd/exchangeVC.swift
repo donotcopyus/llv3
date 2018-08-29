@@ -157,11 +157,7 @@ class exchangeVC: UIViewController {
                     //                    alert.dismiss(animated: true, completion: nil)
                     return
                 } ))
-                
-                //                self.present(alert, animated: true, completion: nil)
-                //                print("出错")
-                //                return
-                
+            
             }
             
         })
