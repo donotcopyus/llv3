@@ -406,21 +406,10 @@
                                 <state key="normal" title="修改密码"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csP-jp-CdT">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-                                <rect key="frame" x="0.0" y="608" width="375" height="39"/>
 
-=======
                                 <rect key="frame" x="0.0" y="719" width="375" height="39"/>
-<<<<<<< HEAD
-                                <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
->>>>>>> parent of 60216d5... ui
-=======
-                                <rect key="frame" x="0.0" y="719" width="375" height="39"/>
->>>>>>> parent of bede86e... search完成
+
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="csP-jp-CdT" secondAttribute="height" multiplier="125:13" id="t0o-bj-3md"/>
                                 </constraints>
@@ -443,11 +432,7 @@
                                     <segue destination="xuB-7a-3w3" kind="showDetail" id="WK4-md-AaI"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 60216d5... ui
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -470,22 +455,16 @@
             <objects>
                 <viewController storyboardIdentifier="隐私设置" title="隐私设置" id="iOP-kl-m6w" customClass="cacheVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PK2-dC-Lcr">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-=======
+
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
->>>>>>> parent of bede86e... search完成
+
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
->>>>>>> bede86ebe28a76557790f8707236047e9d551cbe
-=======
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
+
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
->>>>>>> parent of 60216d5... ui
+
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-6x-7Ix">
                                 <rect key="frame" x="0.0" y="81" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -568,8 +547,7 @@
                                 </connections>
                             </button>
                         </subviews>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                         <color key="backgroundColor" red="0.95294117647058818" green="0.94509803921568625" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5dT-zF-mMB"/>
@@ -2522,19 +2500,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUJ-Sz-5Lb">
-<<<<<<< HEAD
-                                <rect key="frame" x="22" y="590" width="91" height="31"/>
-=======
+
+
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUJ-Sz-5Lb">
+
                                 <rect key="frame" x="22" y="701" width="91" height="31"/>
->>>>>>> parent of 60216d5... ui
-=======
-                                <rect key="frame" x="22" y="701" width="91" height="31"/>
->>>>>>> parent of bede86e... search完成
+
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="tiL-hj-h53"/>
                                 </constraints>
@@ -2543,12 +2517,7 @@
                                     <action selector="deletepost:" destination="xdC-th-xje" eventType="touchUpInside" id="uQ0-Dt-TWw"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
->>>>>>> bede86ebe28a76557790f8707236047e9d551cbe
-=======
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
->>>>>>> parent of 60216d5... ui
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spx-y8-GcW">
                                 <rect key="frame" x="259" y="50" width="24" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2562,8 +2531,7 @@
                                 <color key="textColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2PH-eJ-UKN">
                                 <rect key="frame" x="249" y="215" width="118" height="118"/>
@@ -2572,47 +2540,33 @@
                                 <rect key="frame" x="134" y="215" width="118" height="118"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-yP-xnB">
-<<<<<<< HEAD
-                                <rect key="frame" x="16" y="191" width="118" height="118"/>
 
-=======
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PH-eJ-UKN">
-=======
+
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2PH-eJ-UKN">
->>>>>>> parent of 60216d5... ui
+
                                 <rect key="frame" x="249" y="215" width="118" height="118"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-SP-uKx">
                                 <rect key="frame" x="134" y="215" width="118" height="118"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-yP-xnB">
+
                                 <rect key="frame" x="16" y="215" width="118" height="118"/>
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
-                                <rect key="frame" x="16" y="215" width="118" height="118"/>
->>>>>>> parent of bede86e... search完成
+
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="VCD-qV-qIt"/>
                                     <constraint firstAttribute="width" constant="118" id="q36-hR-YHY"/>
                                 </constraints>
                             </imageView>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-7H-ZTK">
-<<<<<<< HEAD
-                                <rect key="frame" x="22" y="312" width="316" height="21"/>
 
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-7H-ZTK">
-=======
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-7H-ZTK">
->>>>>>> parent of 60216d5... ui
+
                                 <rect key="frame" x="22" y="336" width="316" height="21"/>
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
-                                <rect key="frame" x="22" y="336" width="316" height="21"/>
->>>>>>> parent of bede86e... search完成
+
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5Ja-sB-9ho"/>
                                 </constraints>
@@ -2620,23 +2574,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-DB-oAS">
-<<<<<<< HEAD
-                                <rect key="frame" x="22" y="334" width="316" height="21"/>
 
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="价格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-DB-oAS">
-=======
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-DB-oAS">
->>>>>>> parent of 60216d5... ui
-                                <rect key="frame" x="22" y="358" width="316" height="21"/>
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
-                                <rect key="frame" x="22" y="358" width="316" height="21"/>
->>>>>>> parent of bede86e... search完成
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FE4-DE-fY3"/>
                                 </constraints>
@@ -2644,18 +2587,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-xZ-ra3">
-<<<<<<< HEAD
-                                <rect key="frame" x="22" y="363" width="326" height="158"/>
-
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-xZ-ra3">
-                                <rect key="frame" x="22" y="387" width="326" height="20.333333333333314"/>
->>>>>>> parent of acfe8a3... Merge branch 'master' of https://github.com/donotcopyus/llv3
-=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-xZ-ra3">
                                 <rect key="frame" x="22" y="387" width="326" height="245"/>
 >>>>>>> parent of 60216d5... ui
