@@ -63,9 +63,6 @@
 		FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */; };
 		FA93FF51210900F90070DD60 /* image in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF50210900F90070DD60 /* image */; };
 		FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */; };
-		FA9532F221361B3E003FDF38 /* xs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9532EF21361B3D003FDF38 /* xs.swift */; };
-		FA9532F321361B3E003FDF38 /* es.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9532F021361B3D003FDF38 /* es.swift */; };
-		FA9532F421361B3E003FDF38 /* cs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9532F121361B3E003FDF38 /* cs.swift */; };
 		FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839921212EA700BB3FE9 /* dra1.swift */; };
 		FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839B21212EB500BB3FE9 /* dra2.swift */; };
 		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
@@ -166,9 +163,6 @@
 		FA93FF52210901020070DD60 /* IMG_2159.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2159.jpg; sourceTree = "<group>"; };
 		FA93FF532109010F0070DD60 /* IMG_5333.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5333.jpg; sourceTree = "<group>"; };
 		FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeVC.swift; sourceTree = "<group>"; };
-		FA9532EF21361B3D003FDF38 /* xs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xs.swift; sourceTree = "<group>"; };
-		FA9532F021361B3D003FDF38 /* es.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = es.swift; sourceTree = "<group>"; };
-		FA9532F121361B3E003FDF38 /* cs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cs.swift; sourceTree = "<group>"; };
 		FAA2839921212EA700BB3FE9 /* dra1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra1.swift; sourceTree = "<group>"; };
 		FAA2839B21212EB500BB3FE9 /* dra2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra2.swift; sourceTree = "<group>"; };
 		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
@@ -332,9 +326,6 @@
 				51768088213525CC003A8F39 /* carpoolSearch.swift */,
 				5176808A21352728003A8F39 /* exchangeSearch.swift */,
 				5176808C21352735003A8F39 /* xianzhiSearch.swift */,
-				FA9532F121361B3E003FDF38 /* cs.swift */,
-				FA9532F021361B3D003FDF38 /* es.swift */,
-				FA9532EF21361B3D003FDF38 /* xs.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -654,7 +645,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9532F421361B3E003FDF38 /* cs.swift in Sources */,
 				FA3F68B4212A83A20061572E /* carpoolSearchVC.swift in Sources */,
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
@@ -690,7 +680,6 @@
 				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
 				FA1454F22123CCE800B03E1D /* sent3.swift in Sources */,
 				518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */,
-				FA9532F321361B3E003FDF38 /* es.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
 				51768089213525CC003A8F39 /* carpoolSearch.swift in Sources */,
@@ -705,7 +694,6 @@
 				5176808B21352728003A8F39 /* exchangeSearch.swift in Sources */,
 				51D52D8E2131017A00AA706F /* dra3.swift in Sources */,
 				51B52D4C211F982400D2B9E9 /* Message.swift in Sources */,
-				FA9532F221361B3E003FDF38 /* xs.swift in Sources */,
 				51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
