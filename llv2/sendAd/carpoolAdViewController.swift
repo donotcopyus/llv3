@@ -220,6 +220,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
 
     
+//    var dateModelPikcer: DataModelPicker!
     
     
     override func viewDidLoad() {
@@ -255,30 +256,27 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.view.addSubview(b2)
         
         
+//        dateModelPicker = DataModelPicker()
+//        dataModelPicker.modelData = Data.getData()
+        
+        
+        
+ //---------------------
         seatNum.dataSource = self
         seatNum.delegate = self
         
-        rotationAngle = -90 * (.pi/180)
-        let y = seatNum.frame.origin.y
-        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        
-        seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
+//        rotationAngle = -90 * (.pi/180)
+//        let y = seatNum.frame.origin.y
+//        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
+//
+//        seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    //lauren————————————————————————————————————————————————————————————
-    //button to go back to main
-    
-    @IBAction func goback(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-//        self.navigationController?.popViewController(animated: true)
-    }
-    
+
     
     //---------剩余座位数------------------------------------------
     @IBOutlet weak var seat: UILabel!
@@ -287,35 +285,49 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     private let dataSource = ["1","2","3","4","5","6"]
     
+        //原来的剩余座位picker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return dataSource.count
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         seat.text = "剩余座位数：\(dataSource[row])"
-        
+
     }
-    
+
+//    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+//        return 20
+//    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+//        return 20
+//    }
+
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        let view = UIView(frame: CGRect(x: 0, y:0, width: 100, height: 100))
+//
+//        return view
+//    }
+//
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
-        view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
+        //view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
     }
-    
-    
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
-        let view = UIView()
-        let label = UILabel()
-//       (frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
-        label.textColor = UIColor.white
-        return view
-    }
+//
+  
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//
+//        let view = UIView()
+//        let label = UILabel()
+////       (frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
+//        label.textColor = UIColor.black
+//        return view
+//    }
     
 
     
@@ -539,8 +551,27 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
 }
 
 
-
-
+//
+//extension seatNum: UIPickerViewDataSource {
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return dataSource.count
+//    }
+//}
+//
+//extension seatNum: UIPickerViewDelegate {
+//    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+//        return 100
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        let view = UIView(frame: CGRect(x: 0, y:0, width: 100, height: 100))
+//
+//        return view
+//    }
+//}
 
 
 

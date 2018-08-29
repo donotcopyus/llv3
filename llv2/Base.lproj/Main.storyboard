@@ -2901,16 +2901,8 @@
                                     <action selector="aChanged:" destination="bSy-bC-x5m" eventType="editingChanged" id="0Yb-Sr-iej"/>
                                 </connections>
                             </textField>
-                            <pickerView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-KO-diy">
-                                <rect key="frame" x="0.0" y="273" width="375" height="70"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="bSy-bC-x5m" id="sgN-1k-FD6"/>
-                                    <outlet property="delegate" destination="bSy-bC-x5m" id="Kiv-i5-dOP"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="剩余座位数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-0a-PJQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="剩余座位数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-0a-PJQ">
                                 <rect key="frame" x="16" y="244" width="309" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2942,9 +2934,8 @@
                                     <action selector="datepicker:" destination="bSy-bC-x5m" eventType="valueChanged" id="Yr2-PS-QD2"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出发日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y6-yT-10Z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="出发日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y6-yT-10Z">
                                 <rect key="frame" x="16" y="376" width="315" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2997,6 +2988,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCx-y9-0KL">
+                                <rect key="frame" x="0.0" y="273" width="375" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="PFz-aJ-hfZ"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3004,8 +3001,11 @@
                             <constraint firstItem="faF-sK-drs" firstAttribute="top" secondItem="PX7-0z-WWC" secondAttribute="topMargin" constant="-5" id="8me-Ng-pl4"/>
                             <constraint firstAttribute="trailing" secondItem="faF-sK-drs" secondAttribute="trailing" id="LdO-4R-u0b"/>
                             <constraint firstItem="faF-sK-drs" firstAttribute="centerX" secondItem="V4W-NG-hMR" secondAttribute="centerX" id="fmO-FY-O3D"/>
-                            <constraint firstItem="faF-sK-drs" firstAttribute="leading" secondItem="v1s-KO-diy" secondAttribute="leading" id="uOt-6g-ZzO"/>
-                            <constraint firstItem="faF-sK-drs" firstAttribute="trailing" secondItem="v1s-KO-diy" secondAttribute="trailing" id="vDa-FM-aeI"/>
+                            <constraint firstItem="LCx-y9-0KL" firstAttribute="leading" secondItem="faF-sK-drs" secondAttribute="leading" id="lSg-K7-uN7"/>
+                            <constraint firstItem="1Y6-yT-10Z" firstAttribute="top" secondItem="LCx-y9-0KL" secondAttribute="bottom" constant="8" symbolic="YES" id="nBt-vg-I5h"/>
+                            <constraint firstItem="LCx-y9-0KL" firstAttribute="top" secondItem="PX7-0z-WWC" secondAttribute="top" constant="273" id="rvw-Rw-h9E"/>
+                            <constraint firstItem="LCx-y9-0KL" firstAttribute="top" secondItem="1fT-0a-PJQ" secondAttribute="bottom" constant="8" symbolic="YES" id="v9Y-ON-RUw"/>
+                            <constraint firstItem="LCx-y9-0KL" firstAttribute="trailing" secondItem="faF-sK-drs" secondAttribute="trailing" id="xMa-dD-my5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AOZ-4f-SiR"/>
                     </view>
@@ -3018,7 +3018,7 @@
                         <outlet property="otherArr" destination="BS8-u8-a3R" id="0O0-x4-W2M"/>
                         <outlet property="otherDep" destination="nMK-lE-bc6" id="Ury-8k-EcX"/>
                         <outlet property="seat" destination="1fT-0a-PJQ" id="ImK-IZ-hLh"/>
-                        <outlet property="seatNum" destination="v1s-KO-diy" id="q8M-av-fzV"/>
+                        <outlet property="seatNum" destination="LCx-y9-0KL" id="d3b-O5-08J"/>
                         <outlet property="showGoTime" destination="xSm-JM-hUm" id="bmV-ZS-R1o"/>
                         <outlet property="wait" destination="V4W-NG-hMR" id="Gxj-nB-E7k"/>
                         <segue destination="HGJ-zl-43D" kind="showDetail" identifier="goB" id="vVO-m1-ivf"/>
@@ -3303,7 +3303,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xxP-AD-O1c"/>
         <segue reference="f0C-Pt-C9H"/>
-        <segue reference="MsP-c5-dSl"/>
+        <segue reference="vVO-m1-ivf"/>
         <segue reference="2bQ-Ce-pAo"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
