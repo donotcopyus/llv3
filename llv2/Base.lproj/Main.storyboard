@@ -692,7 +692,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginUI" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-Ez-E8b">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="647"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-wO-041">
                                 <rect key="frame" x="77" y="349" width="220" height="25"/>
@@ -1218,7 +1218,7 @@
                                 </constraints>
                                 <state key="normal" image="searchbar"/>
                                 <connections>
-                                    <segue destination="K7a-v9-8op" kind="show" id="ggn-5P-XTc"/>
+                                    <segue destination="NFd-tc-I1h" kind="show" id="fYA-ox-QP4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1268,7 +1268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-570.44334975369463"/>
+            <point key="canvasLocation" x="5230" y="-2036"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -1760,7 +1760,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1800,7 +1800,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2003,24 +2003,37 @@
                                     <!--2018-07-30 12:56:43 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7H-Gb-UCn">
-                                <rect key="frame" x="302" y="571" width="57" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="6eW-y1-hWr"/>
-                                    <constraint firstAttribute="height" constant="31" id="USM-3d-Wc8"/>
-                                </constraints>
-                                <state key="normal" image="searchbtn"/>
-                                <connections>
-                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="Xbm-dZ-Vgz"/>
-                                    <segue destination="vyf-0T-dZD" kind="show" id="Ok5-Cu-ZOu"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vCV-Xz-9cn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Yg1-b8-ilW">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" landscapeImage="backbtn" id="fgv-se-Cc3">
+                                            <connections>
+                                                <action selector="back:" destination="sd9-kb-b2R" id="2aw-bz-sOP"/>
+                                                <segue destination="BYZ-38-t0r" kind="showDetail" id="cnc-I6-p7L"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="HXb-tN-qMm">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w7H-Gb-UCn">
+                                                <rect key="frame" x="302" y="6.5" width="57" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="57" id="6eW-y1-hWr"/>
+                                                    <constraint firstAttribute="height" constant="31" id="USM-3d-Wc8"/>
+                                                </constraints>
+                                                <state key="normal" image="searchbtn"/>
+                                                <connections>
+                                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="Xbm-dZ-Vgz"/>
+                                                    <segue destination="vyf-0T-dZD" kind="show" id="Ok5-Cu-ZOu"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="8wC-ZT-ihR" firstAttribute="trailing" secondItem="w7H-Gb-UCn" secondAttribute="trailing" constant="16" id="OTp-hn-0Nl"/>
-                            <constraint firstItem="8wC-ZT-ihR" firstAttribute="bottom" secondItem="w7H-Gb-UCn" secondAttribute="bottom" constant="16" id="Pre-6D-GEx"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8wC-ZT-ihR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="carpoolTab" id="EKe-62-P0F">
@@ -2098,7 +2111,7 @@
         <!--闲置搜索-->
         <scene sceneID="Y7V-Vw-VbF">
             <objects>
-                <viewController title="闲置搜索" id="MW5-68-o0D" sceneMemberID="viewController">
+                <viewController title="闲置搜索" id="MW5-68-o0D" customClass="xianzhiSearchVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y06-2y-vYw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2139,26 +2152,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="排序方式"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-ab-Yfc">
-                                <rect key="frame" x="302" y="571" width="57" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="AX1-y8-tKi"/>
-                                    <constraint firstAttribute="height" constant="31" id="Ec2-CD-qEk"/>
-                                    <constraint firstAttribute="width" constant="57" id="F5W-TM-q28"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="zMK-w8-hNM"/>
-                                </constraints>
-                                <state key="normal" image="searchbtn"/>
-                                <connections>
-                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="3P0-Dx-Vy8"/>
-                                    <segue destination="Op7-JO-gEt" kind="show" id="xy3-fD-mcQ"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOs-Pz-Euo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="tyq-O0-GJz">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" landscapeImage="backbtn" id="Mxe-aL-KQR">
+                                            <connections>
+                                                <action selector="back:" destination="MW5-68-o0D" id="mPO-dM-p4m"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="k9J-BM-Poe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="EhW-55-ygb">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mca-ab-Yfc">
+                                                <rect key="frame" x="302" y="6.5" width="57" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="AX1-y8-tKi"/>
+                                                    <constraint firstAttribute="height" constant="31" id="Ec2-CD-qEk"/>
+                                                    <constraint firstAttribute="width" constant="57" id="F5W-TM-q28"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="zMK-w8-hNM"/>
+                                                </constraints>
+                                                <state key="normal" image="searchbtn"/>
+                                                <connections>
+                                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="3P0-Dx-Vy8"/>
+                                                    <segue destination="Op7-JO-gEt" kind="show" id="xy3-fD-mcQ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="DYJ-aZ-mkZ" firstAttribute="trailing" secondItem="Mca-ab-Yfc" secondAttribute="trailing" constant="16" id="Wu3-gT-RIn"/>
-                            <constraint firstItem="DYJ-aZ-mkZ" firstAttribute="bottom" secondItem="Mca-ab-Yfc" secondAttribute="bottom" constant="16" id="edT-ZX-33P"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DYJ-aZ-mkZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="xianzhiTab" id="Dxi-az-8Sf"/>
@@ -2175,24 +2201,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-nC-Wf8">
-                                <rect key="frame" x="302" y="571" width="57" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="3Oy-GR-yFP"/>
-                                    <constraint firstAttribute="width" constant="57" id="ssB-OG-cW2"/>
-                                </constraints>
-                                <state key="normal" image="searchbtn"/>
-                                <connections>
-                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="EVp-Pm-qbN"/>
-                                    <segue destination="hwg-Uy-V39" kind="show" id="xvd-Wj-q8X"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weX-c3-9ee">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Fd2-6x-lMf">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" landscapeImage="backbtn" id="7yp-0J-bLa">
+                                            <connections>
+                                                <action selector="back:" destination="eXf-5R-VMu" id="lye-Bs-iVW"/>
+                                                <segue destination="BYZ-38-t0r" kind="showDetail" id="Af0-k9-iD9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Bux-Xb-42i">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ocg-nC-Wf8">
+                                                <rect key="frame" x="302" y="6.5" width="57" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="3Oy-GR-yFP"/>
+                                                    <constraint firstAttribute="width" constant="57" id="ssB-OG-cW2"/>
+                                                </constraints>
+                                                <state key="normal" image="searchbtn"/>
+                                                <connections>
+                                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="EVp-Pm-qbN"/>
+                                                    <segue destination="hwg-Uy-V39" kind="show" id="xvd-Wj-q8X"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dDB-gM-nSg" firstAttribute="bottom" secondItem="Ocg-nC-Wf8" secondAttribute="bottom" constant="16" id="ghT-av-l91"/>
-                            <constraint firstItem="dDB-gM-nSg" firstAttribute="trailing" secondItem="Ocg-nC-Wf8" secondAttribute="trailing" constant="16" id="qhC-3H-wzJ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dDB-gM-nSg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="exchangeTab" id="sD4-Mk-BXa"/>
@@ -3132,21 +3171,54 @@
             </objects>
             <point key="canvasLocation" x="-1764" y="1929"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zhs-9N-NXk">
+        <!--Item-->
+        <scene sceneID="gFV-kb-r3R">
             <objects>
-                <navigationController id="K7a-v9-8op" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="backbtn" id="6mt-Jh-16B">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="NFd-tc-I1h" kind="relationship" relationship="rootViewController" id="WuL-35-iO7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ws8-mo-Uax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="FvY-1r-cDc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yxw-d9-CCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sLa-6z-DfA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="aD1-yb-klb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htD-Oo-egy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="-2786"/>
+            <point key="canvasLocation" x="5583.1999999999998" y="-4519.7901049475267"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="jZb-Ye-sKh">
+            <objects>
+                <viewController id="QUs-qf-MWV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xeT-US-8lS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gVJ-Bt-KYr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ymv-kF-Ils"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpy-qb-mjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6304.8000000000002" y="-4518.8905547226386"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="IAP-td-aaa">
+            <objects>
+                <viewController id="098-ct-lk6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yhB-UB-7Ee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5sE-gc-Kk7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="DYg-2z-5EB"/>
+                    <navigationItem key="navigationItem" id="mLG-j3-LNj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rx-3R-x5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6992.8000000000002" y="-4519.7901049475267"/>
         </scene>
         <!--Carpool Search-->
         <scene sceneID="aLi-j1-9JV">
@@ -3197,8 +3269,8 @@
                         <color key="selectedImageTintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MW5-68-o0D" kind="relationship" relationship="viewControllers" id="tpZ-WZ-qh5"/>
                         <segue destination="sd9-kb-b2R" kind="relationship" relationship="viewControllers" id="Jd8-rq-1W0"/>
+                        <segue destination="MW5-68-o0D" kind="relationship" relationship="viewControllers" id="tpZ-WZ-qh5"/>
                         <segue destination="eXf-5R-VMu" kind="relationship" relationship="viewControllers" id="P20-zl-nxh"/>
                     </connections>
                 </tabBarController>
@@ -3260,6 +3332,25 @@
             </objects>
             <point key="canvasLocation" x="7669.6000000000004" y="-2799.8500749625191"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="082-2v-7Mx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B7s-Ue-p9b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4s5-pX-orC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FvY-1r-cDc" kind="relationship" relationship="viewControllers" id="hEz-OK-SUn"/>
+                        <segue destination="098-ct-lk6" kind="relationship" relationship="viewControllers" id="Egs-nN-8qz"/>
+                        <segue destination="QUs-qf-MWV" kind="relationship" relationship="viewControllers" id="cm9-Yb-a1X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofj-0i-tjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4644" y="-4519.7901049475267"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backbtn" width="16" height="28"/>
@@ -3301,9 +3392,9 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xxP-AD-O1c"/>
-        <segue reference="f0C-Pt-C9H"/>
-        <segue reference="vVO-m1-ivf"/>
+        <segue reference="Bh3-wn-Akz"/>
+        <segue reference="Af0-k9-iD9"/>
+        <segue reference="aaP-2F-Y6x"/>
         <segue reference="2bQ-Ce-pAo"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>

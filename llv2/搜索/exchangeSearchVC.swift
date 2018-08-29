@@ -19,8 +19,6 @@ class exchangeSearchVC: UIViewController {
     
     var currency = false
     
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
