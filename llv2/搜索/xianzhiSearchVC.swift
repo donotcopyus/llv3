@@ -24,7 +24,7 @@ class xianzhiSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 40))
+        button = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 30))
         
         button.setTitle("请选择类型", for: .normal)
         
@@ -35,7 +35,7 @@ class xianzhiSearchVC: UIViewController {
         
         button.dropView.dropDownOptions = ["二手书","药妆","家具","租房","服饰","其他"]
 
-        b2 = dropDownBtn.init(frame: CGRect(x:70, y:205, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:70, y:205, width: 150, height: 30))
         
         b2.setTitle("排列方式", for: .normal)
         
