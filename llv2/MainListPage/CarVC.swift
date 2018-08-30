@@ -197,7 +197,7 @@ class CarVC: UITableViewController {
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likedButton.setTitle("❤️", for: .normal)
+                        cell.likedButton.setImage(UIImage(named:"liked"), for: .normal)
                         
                     }}}
             
