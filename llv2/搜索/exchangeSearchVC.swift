@@ -9,15 +9,24 @@
 import UIKit
 import Firebase
 
+class pidSortExchange{
+    var pid:String
+    var currencyBol:Bool
+    
+    init(pid:String,currencyBol:Bool){
+        self.pid = pid
+        self.currencyBol = currencyBol
+    }
+}
+
 class exchangeSearchVC: UIViewController {
     
-    @IBOutlet weak var submit: UIButton!
+    var pidData = [String]()
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     var b3 = dropDownBtn()
     
-    var currency = false
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
