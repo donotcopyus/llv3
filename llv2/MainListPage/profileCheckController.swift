@@ -19,7 +19,7 @@ class profileCheckController: UIViewController {
             return
         }
         let controller = UIDocumentInteractionController(url: url)
-        controller.delegate = self
+        controller.delegate = self as! UIDocumentInteractionControllerDelegate
         controller.presentPreview(animated: true)
     }
     
