@@ -195,13 +195,9 @@ class xianzhiTVC: UITableViewController{
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setImage(UIImage(named: "liked"), for: .selected)
-                                   }
-//                    else{
-//                        cell.likeButton.setImage(UIImage(named:"liked"), for: .normal)
-//                    }
-                    
-                }}
+                        cell.likeButton.setTitle("❤️", for: .normal)
+                        
+                    }}}
 
         })
         

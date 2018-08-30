@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,21 +46,16 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A0f-m5-kIW">
                         <rect key="frame" x="122" y="112" width="103" height="103"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="A0f-m5-kIW" secondAttribute="height" multiplier="1:1" id="I6O-7v-gvn"/>
                             <constraint firstAttribute="width" constant="103" id="cTe-9h-saI"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8aD-gg-hoj">
                         <rect key="frame" x="233" y="112" width="103" height="103"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="8aD-gg-hoj" secondAttribute="height" multiplier="1:1" id="LxR-UY-dIV"/>
-                        </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyZ-Zf-WgN">
                         <rect key="frame" x="11" y="112" width="103" height="103"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="103" id="rf4-2S-Gwa"/>
-                            <constraint firstAttribute="width" secondItem="ZyZ-Zf-WgN" secondAttribute="height" multiplier="1:1" id="un2-kU-uSS"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-sl-MB8">
@@ -168,6 +162,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="like" width="20" height="18"/>
+        <image name="like" width="17" height="15"/>
     </resources>
 </document>
