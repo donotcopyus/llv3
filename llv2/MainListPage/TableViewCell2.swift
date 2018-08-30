@@ -60,7 +60,8 @@ class TableViewCell2: UITableViewCell {
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
                         //删除收藏
-                        self.likedButton.setTitle("💗", for: .normal)
+                        self.likedButton.setImage(UIImage(named:"like"), for: .normal)
+                        
                         
                         guard let cid = self.collectionID.text else{
                             return}
@@ -91,7 +92,8 @@ class TableViewCell2: UITableViewCell {
                         //alert
                         return}})
                 
-                self.likedButton.setTitle("❤️", for: .normal)
+                self.likedButton.setImage(UIImage(named:"liked"), for: .normal)
+                
             }
         })
         

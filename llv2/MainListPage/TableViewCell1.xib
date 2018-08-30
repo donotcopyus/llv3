@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,14 +48,19 @@
                         <rect key="frame" x="122" y="112" width="103" height="103"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="103" id="cTe-9h-saI"/>
+                            <constraint firstAttribute="width" secondItem="A0f-m5-kIW" secondAttribute="height" multiplier="1:1" id="l3j-nV-Q9C"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8aD-gg-hoj">
                         <rect key="frame" x="233" y="112" width="103" height="103"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8aD-gg-hoj" secondAttribute="height" multiplier="1:1" id="HBF-dI-VKc"/>
+                        </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyZ-Zf-WgN">
                         <rect key="frame" x="11" y="112" width="103" height="103"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="ZyZ-Zf-WgN" secondAttribute="height" multiplier="1:1" id="Irw-jw-fJ6"/>
                             <constraint firstAttribute="width" constant="103" id="rf4-2S-Gwa"/>
                         </constraints>
                     </imageView>
@@ -71,6 +77,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-XV-h99">
                         <rect key="frame" x="378" y="9" width="30" height="22"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="vbn-XV-h99" secondAttribute="height" multiplier="15:11" id="BH7-Ne-lXF"/>
                             <constraint firstAttribute="width" constant="30" id="GJS-Ap-yfL"/>
                         </constraints>
                         <state key="normal" image="like"/>
@@ -122,6 +129,7 @@
                     <constraint firstItem="ZyZ-Zf-WgN" firstAttribute="leading" secondItem="lVj-z0-mri" secondAttribute="leading" id="J9D-up-3kd"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ZyZ-Zf-WgN" secondAttribute="bottom" constant="-7" id="LJ5-31-64m"/>
                     <constraint firstItem="m6u-nq-piv" firstAttribute="leading" secondItem="lVj-z0-mri" secondAttribute="trailing" constant="8" id="Ld2-XA-n67"/>
+                    <constraint firstItem="m6u-nq-piv" firstAttribute="top" secondItem="vbn-XV-h99" secondAttribute="bottom" constant="3" id="MPe-R7-jnV"/>
                     <constraint firstItem="A0f-m5-kIW" firstAttribute="leading" secondItem="ZyZ-Zf-WgN" secondAttribute="trailing" constant="8" symbolic="YES" id="Mru-K2-uKw"/>
                     <constraint firstItem="lVj-z0-mri" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="QV6-9N-PWT"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vbn-XV-h99" secondAttribute="trailing" constant="-14" id="Uo2-3H-ZbP"/>
@@ -137,6 +145,8 @@
                     <constraint firstItem="Yca-wp-gnB" firstAttribute="top" secondItem="m6u-nq-piv" secondAttribute="bottom" constant="1" id="nSJ-iS-3OJ"/>
                     <constraint firstItem="vbn-XV-h99" firstAttribute="trailing" secondItem="m6u-nq-piv" secondAttribute="trailing" id="nTf-nj-hmA"/>
                     <constraint firstItem="lVj-z0-mri" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="rgn-Lu-nhF"/>
+                    <constraint firstItem="vbn-XV-h99" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="vBf-CM-m3J"/>
+                    <constraint firstAttribute="trailing" secondItem="vbn-XV-h99" secondAttribute="trailing" constant="6" id="vIF-fn-tcJ"/>
                     <constraint firstItem="m6u-nq-piv" firstAttribute="top" secondItem="vbn-XV-h99" secondAttribute="bottom" constant="3" id="wQo-Zt-xqr"/>
                     <constraint firstItem="Lp4-m1-dHu" firstAttribute="top" secondItem="a2U-P0-QN9" secondAttribute="bottom" id="xbc-C0-BnP"/>
                     <constraint firstItem="8aD-gg-hoj" firstAttribute="leading" secondItem="A0f-m5-kIW" secondAttribute="trailing" constant="8" symbolic="YES" id="z3t-HP-jta"/>
@@ -162,6 +172,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="like" width="17" height="15"/>
+        <image name="like" width="20" height="18"/>
     </resources>
 </document>

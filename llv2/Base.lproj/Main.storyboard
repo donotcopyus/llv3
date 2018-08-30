@@ -1217,6 +1217,9 @@
                                     <constraint firstAttribute="width" secondItem="6Nc-cD-YZA" secondAttribute="height" multiplier="188:29" id="vNi-ZB-n83"/>
                                 </constraints>
                                 <state key="normal" image="searchbar"/>
+                                <connections>
+                                    <segue destination="NFd-tc-I1h" kind="show" id="Qje-py-OLT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
@@ -3553,8 +3556,8 @@ AAAAAAAAWQAAAAAAAAAAAAAAAAAAMl0
     <inferredMetricsTieBreakers>
         <segue reference="xxP-AD-O1c"/>
         <segue reference="f0C-Pt-C9H"/>
-        <segue reference="aaP-2F-Y6x"/>
-        <segue reference="2bQ-Ce-pAo"/>
+        <segue reference="lkz-EV-m98"/>
+        <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
 </document>
