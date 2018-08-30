@@ -15,16 +15,42 @@ class xianzhiSearchVC: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
+    var b2 = dropDownBtn()
+    var button = dropDownBtn()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        button = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 40))
+        
+        button.setTitle("请选择类型", for: .normal)
+        
+        button.translatesAutoresizingMaskIntoConstraints = true
+        
+        self.view.addSubview(button)
+        
+        
+        button.dropView.dropDownOptions = ["二手书","药妆","家具","租房","服饰","其他"]
 
-        // Do any additional setup after loading the view.
+        b2 = dropDownBtn.init(frame: CGRect(x:70, y:205, width: 150, height: 40))
+        
+        b2.setTitle("排列方式", for: .normal)
+        
+        b2.translatesAutoresizingMaskIntoConstraints = true
+        
+        b2.dropView.dropDownOptions = ["发布时间从早到晚","发布时间从晚到早"]
+        
+        self.view.addSubview(b2)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
-    
+ 
 }
+
+
