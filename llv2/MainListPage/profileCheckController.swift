@@ -13,18 +13,8 @@ import Kingfisher
 class profileCheckController: UIViewController {
     
     
-<<<<<<< HEAD
-    @IBAction func share(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "", withExtension: "pdf") else {
-            return
-        }
-        let controller = UIDocumentInteractionController(url: url)
-        controller.delegate = self as! UIDocumentInteractionControllerDelegate
-        controller.presentPreview(animated: true)
-=======
     @IBAction func back(_ sender: UIButton) {
     self.dismiss(animated: true, completion: nil)
->>>>>>> 2d4d4dd7ffca0f37ab54cf1658cf99edb7f68cdc
     }
     
     @IBOutlet weak var pidLabel: UILabel!
