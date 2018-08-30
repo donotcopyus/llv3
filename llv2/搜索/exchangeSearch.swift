@@ -29,6 +29,10 @@ class exchangeSearch: UITableViewController {
     
     var pidSearchData = [String]()
     
+    @IBOutlet weak var back: UIBarButtonItem!
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     var arrayOfCellData = [exchangeSearchData]()
     
