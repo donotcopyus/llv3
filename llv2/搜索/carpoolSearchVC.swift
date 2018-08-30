@@ -21,6 +21,8 @@ class pidSort{
 
 class carpoolSearchVC: UIViewController {
 
+    var pidData = [String]()
+    
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     
@@ -130,8 +132,7 @@ class carpoolSearchVC: UIViewController {
 
     
     @IBAction func search(_ sender: UIButton) {
-        
-        var pidData = [String]()
+
         var pidSortArray = [pidSort]()
         
         var dept = button.currentTitle!
@@ -189,7 +190,7 @@ class carpoolSearchVC: UIViewController {
         //排序方式，从早到晚或者从晚到早，最新发布最晚发布
         //根据排序方式reorder
         let order = b3.currentTitle!
-        if(order == "排序方式"){
+        if(order == "排列方式"){
             //alert
             let alert = UIAlertController(title: title, message: "请选择排序方式", preferredStyle: .alert)
             
@@ -254,10 +255,10 @@ class carpoolSearchVC: UIViewController {
             }
             
             for element in pidSortArray{
-                pidData.append(element.pid)
+                self.pidData.append(element.pid)
             }
             
-            if(pidData.isEmpty){
+            if(self.pidData.isEmpty){
                 let alert = UIAlertController(title: self.title, message: "没有找到任何符合条件的项目", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
@@ -268,6 +269,11 @@ class carpoolSearchVC: UIViewController {
             else{
                 
                 //跳转，传值
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "carpoolSearch") as! carpoolSearch
+                
+                viewController.pidSearchData = self.pidData
+                
+                self.navigationController?.pushViewController(viewController, animated: true)
                 
             }
 
