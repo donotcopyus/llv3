@@ -11,7 +11,10 @@ import UIKit
 class xianzhiSearchVC: UIViewController {
 
     @IBOutlet weak var search: UISearchBar!
-    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -21,6 +21,10 @@ class pidSort{
 
 class carpoolSearchVC: UIViewController {
 
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

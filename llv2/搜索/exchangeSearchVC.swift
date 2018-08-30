@@ -19,7 +19,10 @@ class exchangeSearchVC: UIViewController {
     
     var currency = false
     
-
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
 
     
     override func viewDidLoad() {
