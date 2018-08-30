@@ -271,9 +271,11 @@ class carpoolSearchVC: UIViewController {
                 //跳转，传值
                 let viewController = self.storyboard?.instantiateViewController(withIdentifier: "carpoolSearch") as! carpoolSearch
                 
+//                let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+//
                 viewController.pidSearchData = self.pidData
                 
-                //self.navigationController?.pushViewController(viewController, animated: true)
+//                self.navigationController!.pushViewController(viewController, animated: true)
                 self.present(viewController, animated:true)
                 
             }

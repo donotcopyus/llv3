@@ -187,7 +187,10 @@ class carpoolSearch: UITableViewController {
         let index = tableView.indexPathForSelectedRow?.row
         viewController.pid = arrayOfCellData[index!].id
         viewController.uid = arrayOfCellData[index!].author.uid
-        self.present(viewController, animated: true)
+        
+         let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+        
+        self.present(navC, animated: true)
         
     }
     
