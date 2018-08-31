@@ -2143,6 +2143,7 @@
                                             <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="sd9-kb-b2R" id="8tS-x5-zEg"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="2FW-DI-Yov"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="iHi-aZ-Eo5">
@@ -2203,6 +2204,7 @@
                                             <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="MW5-68-o0D" id="eVv-t2-qSE"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="YvM-yO-RdV"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="zeO-gg-F48">
@@ -2251,6 +2253,7 @@
                                             <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="eXf-5R-VMu" id="SJg-Dk-QOK"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="MBy-Bn-arR"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="M4a-Fg-RcV">
@@ -3575,7 +3578,7 @@ AAAAAAAAWQAAAAAAAAAAAAAAAAAAMl0
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xxP-AD-O1c"/>
-        <segue reference="f0C-Pt-C9H"/>
+        <segue reference="MBy-Bn-arR"/>
         <segue reference="vVO-m1-ivf"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
