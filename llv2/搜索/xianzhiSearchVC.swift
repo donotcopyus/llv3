@@ -10,13 +10,13 @@ import UIKit
 
 class xianzhiSearchVC: UIViewController {
 
-    @IBOutlet weak var search: UISearchBar!
 
     
     var b2 = dropDownBtn()
     var button = dropDownBtn()
     
     
+    @IBOutlet weak var searchTitle: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,11 @@ class xianzhiSearchVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func search(_ sender: UIButton) {
+    }
+    
+    
  
 }
 
