@@ -24,6 +24,7 @@ class carpoolSearchVC: UIViewController {
     var pidData = [String]()
     
 
+
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -104,7 +105,7 @@ class carpoolSearchVC: UIViewController {
         
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:205, y:205, width: 150, height: 30))
+        b2 = dropDownBtn.init(frame: CGRect(x:225, y:205, width: 150, height: 30))
         
         b2.setTitle("到达城市", for: .normal)
         
@@ -115,7 +116,7 @@ class carpoolSearchVC: UIViewController {
         self.view.addSubview(b2)
         
         ///---------------------------------------
-        b3 = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 30))
+        b3 = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 200, height: 30))
         
         b3.setTitle("排列方式", for: .normal)
         
