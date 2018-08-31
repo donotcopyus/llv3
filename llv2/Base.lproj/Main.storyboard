@@ -1777,7 +1777,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1817,7 +1817,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2207,7 +2207,6 @@
                                                 </constraints>
                                                 <state key="normal" image="button:Mca-ab-Yfc:image"/>
                                                 <connections>
-                                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="3P0-Dx-Vy8"/>
                                                     <action selector="search:" destination="MW5-68-o0D" eventType="touchUpInside" id="XOW-8K-UWi"/>
                                                 </connections>
                                             </button>
@@ -2265,7 +2264,6 @@
                                                 </constraints>
                                                 <state key="normal" image="searchbtn"/>
                                                 <connections>
-                                                    <action selector="search:" destination="sd9-kb-b2R" eventType="touchUpInside" id="EVp-Pm-qbN"/>
                                                     <action selector="search:" destination="eXf-5R-VMu" eventType="touchUpInside" id="LtF-8v-U9g"/>
                                                 </connections>
                                             </button>
@@ -3577,11 +3575,7 @@ AAAAAAAAWQAAAAAAAAAAAAAAAAAAMl0
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xxP-AD-O1c"/>
-
         <segue reference="2FW-DI-Yov"/>
-
-        <segue reference="YvM-yO-RdV"/>
-
         <segue reference="aaP-2F-Y6x"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>

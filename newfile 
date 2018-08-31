@@ -2,7 +2,7 @@
 
 alert里需要RETURN，都加上
 
-圈圈加在哪里？
+圈圈加在哪里？等待还需要强化
 
 数量调整
 
@@ -20,6 +20,7 @@ https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
 设置闲置price只能输入数字
 加上alert确认
 注册界面（返回button+alert
+图片改回picker的图片。。普通微信图片选择方式
 
 
 1.主界面搜索button那里没办法跳转
