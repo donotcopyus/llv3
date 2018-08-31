@@ -11,10 +11,7 @@ import UIKit
 class xianzhiSearchVC: UIViewController {
 
     @IBOutlet weak var search: UISearchBar!
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
-    }
+
     
     var b2 = dropDownBtn()
     var button = dropDownBtn()

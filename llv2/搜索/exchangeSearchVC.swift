@@ -28,10 +28,6 @@ class exchangeSearchVC: UIViewController {
     var b3 = dropDownBtn()
     
     
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
-    }
 
     
     override func viewDidLoad() {
