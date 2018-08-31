@@ -139,6 +139,12 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             extraInfo = ""
         }
         
+        let genre = b2.currentTitle
+        
+        if(genre == "选择类型"){
+            print("请选择类型")
+            return
+        }
         
         //点击发送时出现的圆圈等待标识
         wait.isHidden = false
@@ -161,6 +167,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             "imageOneUrl":"",
             "imageTwoUrl":"",
             "imageThreeUrl":"",
+            "genre":genre,
             "author":[
                 "uid":userProfile.uid,
                 "username":userProfile.username,
