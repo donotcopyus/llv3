@@ -108,12 +108,14 @@ class xianzhiSearchVC: UIViewController {
                 let thisPrice = dict["price"] as? String,
                     let objName = dict["name"] as? String{
                     
-                    if ( (type == genre && self.searchTitle.text! == objName) || (genre == "任意" && self.searchTitle.text! == objName)){
-                        
-                        let priceInt:Int? = Int(thisPrice)
-                        let currentPost = pidSortXianzhi(pid: childSnapshot.key, price: priceInt!)
-                        pidSortArray.append(currentPost)
+                    if (type == genre || genre == "不限类型"){
+                        if objName.range(of: self.searchTitle.text!) != nil{
+                            let priceInt:Int? = Int(thisPrice)
+                            let currentPost = pidSortXianzhi(pid: childSnapshot.key, price: priceInt!)
+                            pidSortArray.append(currentPost)
+                        }
                     }
+
                 }
             }
             
