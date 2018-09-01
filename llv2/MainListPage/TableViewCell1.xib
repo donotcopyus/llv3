@@ -40,6 +40,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lVj-z0-mri">
                         <rect key="frame" x="11" y="6" width="43" height="43"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="lVj-z0-mri" secondAttribute="height" multiplier="1:1" id="PMv-vj-ur3"/>
                             <constraint firstAttribute="width" constant="43" id="cEv-Xt-MbR"/>
                             <constraint firstAttribute="height" constant="43" id="nXP-8Z-hdf"/>
                         </constraints>

@@ -26,6 +26,7 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Ft8-1Q-fXb" secondAttribute="height" multiplier="1:1" id="7gl-NY-gqY"/>
                             <constraint firstAttribute="width" constant="43" id="CJA-hS-qcI"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="NLR-cq-gkg"/>
                             <constraint firstAttribute="height" constant="43" id="fmz-aN-sdQ"/>
                         </constraints>
                     </imageView>

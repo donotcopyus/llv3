@@ -38,6 +38,7 @@ class exchangeSearch: UITableViewController {
     
     override func viewDidLoad() {
         
+
         
         super.viewDidLoad()
         
