@@ -11,9 +11,9 @@ import Firebase
 
 class pidSortXianzhi{
     var pid:String
-    var price:String
+    var price:Int
     
-    init(pid:String, price:String){
+    init(pid:String, price:Int){
         self.pid = pid
         self.price = price
     }
@@ -49,7 +49,7 @@ class xianzhiSearchVC: UIViewController {
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
-        b2.dropView.dropDownOptions = ["发布时间从早到晚","发布时间从晚到早"]
+        b2.dropView.dropDownOptions = ["最近发布","最久发布","价格从低到高","价格从高到低"]
         
         self.view.addSubview(b2)
     }
@@ -87,11 +87,73 @@ class xianzhiSearchVC: UIViewController {
             present(alert, animated: true, completion: nil)
         }
         
+        if (self.searchTitle.text == ""){
+            let alert = UIAlertController(title: title, message: "请输入搜索名称", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                return
+            } ))
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
         let searchRef = Database.database().reference().child("xianzhi")
         
         searchRef.observe(.value, with: {snapshot in
             
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                let dict = childSnapshot.value as? [String:Any],
+                let type = dict["genre"] as? String,
+                let thisPrice = dict["price"] as? String,
+                    let objName = dict["name"] as? String{
+                    
+                    if ( (type == genre && self.searchTitle.text! == objName) || (genre == "任意" && self.searchTitle.text! == objName)){
+                        
+                        let priceInt:Int? = Int(thisPrice)
+                        let currentPost = pidSortXianzhi(pid: childSnapshot.key, price: priceInt!)
+                        pidSortArray.append(currentPost)
+                    }
+                }
+            }
             
+            if (order == "最近发布"){
+                pidSortArray = pidSortArray.reversed()
+            }
+            else if(order == "最久发布"){
+            }
+            else if (order == "价格从低到高"){
+                
+                pidSortArray.sort{
+                    $0.price < $1.price
+                }
+                
+            }
+            else if (order == "价格从高到低"){
+                pidSortArray.sort{
+                    $0.price > $1.price
+                }
+            }
+            
+            for element in pidSortArray{
+                self.pidData.append(element.pid)
+            }
+            
+            if(self.pidData.isEmpty){
+                let alert = UIAlertController(title: self.title, message: "没有找到任何符合条件的项目", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    return
+                } ))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            else{
+                
+                for element in self.pidData {
+                    print(element)
+                }
+            }
             
         })
         
