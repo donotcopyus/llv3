@@ -149,10 +149,11 @@ class xianzhiSearchVC: UIViewController {
             }
             
             else{
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "xianzhiSearch") as! xianzhiSearch
                 
-                for element in self.pidData {
-                    print(element)
-                }
+                viewController.pidSearchData = self.pidData
+                
+                self.present(viewController, animated: true)
             }
             
         })
