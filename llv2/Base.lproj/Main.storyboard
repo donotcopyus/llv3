@@ -1233,9 +1233,10 @@
                                 <rect key="frame" x="185.5" y="126" width="42" height="66"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nc-cD-YZA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="GKd-n1-ViX"/>
+                                    <constraint firstAttribute="width" secondItem="6Nc-cD-YZA" secondAttribute="height" multiplier="375:58" id="hv0-CF-A9Y"/>
                                 </constraints>
                                 <state key="normal" image="searchbar"/>
                                 <connections>
@@ -1250,6 +1251,7 @@
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ba-oS-pPI"/>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="5Xl-2M-HC8"/>
                             <constraint firstItem="gUg-in-sle" firstAttribute="leading" secondItem="qGc-sP-hMt" secondAttribute="trailing" constant="103" id="6kA-qE-Zs6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Nc-cD-YZA" secondAttribute="trailing" id="70T-vz-6jh"/>
                             <constraint firstItem="gUg-in-sle" firstAttribute="leading" secondItem="qGc-sP-hMt" secondAttribute="trailing" constant="103" id="DQg-3P-kDv"/>
                             <constraint firstAttribute="bottom" secondItem="gUg-in-sle" secondAttribute="bottom" constant="34.329999999999998" id="IMJ-N7-TqG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="the-Ct-AdR" secondAttribute="trailing" constant="77" id="IMe-s4-gGu"/>
@@ -1263,6 +1265,8 @@
                             <constraint firstItem="Blp-mc-HQD" firstAttribute="centerX" secondItem="a7a-EC-RL8" secondAttribute="centerX" id="VAq-Nf-62W"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="a7a-EC-RL8" secondAttribute="leading" id="Y0U-3I-v6y"/>
                             <constraint firstItem="Blp-mc-HQD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="126" id="ZYh-FI-iAh"/>
+                            <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cbk-Ed-9BE"/>
+                            <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" constant="4" id="hmr-Wv-H10"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBg-Ik-XeL" secondAttribute="trailing" constant="77" id="lQX-Bw-WUU"/>
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pVf-If-aAF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ar2-bt-oQC" secondAttribute="trailing" constant="77" id="v9i-Z1-HOE"/>
@@ -3577,11 +3581,7 @@ AAAAAAAAWQAAAAAAAAAAAAAAAAAAMl0
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xxP-AD-O1c"/>
-
-        <segue reference="2FW-DI-Yov"/>
-
         <segue reference="YvM-yO-RdV"/>
-
         <segue reference="aaP-2F-Y6x"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
