@@ -167,7 +167,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             "imageOneUrl":"",
             "imageTwoUrl":"",
             "imageThreeUrl":"",
-            "genre":genre,
+            "genre":genre!,
             "author":[
                 "uid":userProfile.uid,
                 "username":userProfile.username,
