@@ -33,7 +33,7 @@ struct exchangeData {
     
 }
 
-class exchangeTVC: UITableViewController {
+class exchangeTVC: UITableViewController, UIGestureRecognizerDelegate {
     
 //*********************************************
     var identities = [String]()
@@ -50,15 +50,20 @@ class exchangeTVC: UITableViewController {
     //*********************************************
     override func viewDidLoad() {
         
+    //右滑返回
+//        let swipe = self.navigationController?.interactivePopGestureRecognizer!.delegate
+//        let pan = UIPanGestureRecognizer(target: swipe, action: Selector("handleNavigationTransition:"))
+//        pan.delegate = self as! UIGestureRecognizerDelegate
+//        self.view.addGestureRecognizer(pan)
+//        self.navigationController?.interactivePopGestureRecognizer!.isEnabled = true
+        let target = self.navigationController?.interactivePopGestureRecognizer?.delegate
+        let pan:UIPanGestureRecognizer = UIPanGestureRecognizer.init(target: target!, action: Selector(("handleNavigationTransition:")))
+        self.view.addGestureRecognizer(pan)
         
-        
-        if self.revealViewController() != nil{
-            btnMenu.target = self.revealViewController()
-            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-            
-        }
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        pan.delegate = self
+    
+
         
         identities = ["换汇"]
         
@@ -219,6 +224,7 @@ class exchangeTVC: UITableViewController {
     @IBAction func goback(_ sender: UIButton) {
         // self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil);
+//    self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
     
@@ -235,10 +241,29 @@ class exchangeTVC: UITableViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }
+    
+    
+//    fileprivate func openSwipe(){
+//        if(self.navigationController != nil){
+//            self.navigationController!.interactivePopGestureRecognizer!.delegate = self;
+//        }
+//
+//    }
+//
+//    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//
+//        if self.navigationController?.viewControllers.count == 1{
+//            return false;
+//        }
+//        return true;
+//    }
+
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return self.childViewControllers.count > 1
+    }
   
 
 }
-
 
 
 

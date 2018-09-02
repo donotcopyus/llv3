@@ -265,38 +265,27 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
         
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
-        
+
         view.addGestureRecognizer(rightSwipe)
         
     }
     
     @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .right) {
-//             dismiss(animated: true, completion: nil)
-            self.navigationController?.popViewController(animated: true)
-//            self.navigationController?.pushViewController(sendAdViewContronller, animated: true)
-        }
+        performSegue(withIdentifier: "goRight", sender: self)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    
     
     
     //lauren————————————————————————————————————————————————————————————
     //button to go back to main
 
-    
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-   
-        
-//        self.navigationController?.popViewController(animated: true)
-
-    
     
     //---------剩余座位数------------------------------------------
     @IBOutlet weak var seat: UILabel!
@@ -555,8 +544,6 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     
 }
-
-
 
 
 
