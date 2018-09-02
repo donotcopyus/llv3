@@ -110,7 +110,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             
             present(alert, animated: true, completion: nil)
             
-            //return
+            return
         }
         
         guard let price = self.price.text else{
@@ -123,13 +123,10 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             let alert = UIAlertController(title: title, message: "请输入价格", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-                
-                
             } ))
             
             present(alert, animated: true, completion: nil)
-  
+             return
            // end alert -------------------------------------------------------
         }
         
@@ -147,8 +144,6 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         }
         
         //点击发送时出现的圆圈等待标识
-        wait.isHidden = false
-        wait.startAnimating()
         
         
         guard let userProfile = UserService.currentUserProfile
@@ -190,19 +185,27 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                 
                 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    alert.dismiss(animated: true, completion: nil)
-                    
-                    
                 } ))
                 
                 self.present(alert, animated: true, completion: nil)
-                
+                return
 //-------------------------------------------------------------------------
             }
         })
         
         //第一种情况，只有一张图片（image2)
         if (self.image.image == nil && self.image2.image != nil && self.image3.image == nil){
+            
+            let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+            loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+            
+            alert.view.addSubview(loadingIndicator)
+            loadingIndicator.isUserInteractionEnabled = false
+            loadingIndicator.startAnimating()
+            
+            self.present(alert, animated: true, completion: nil)
             
             guard let imageTwo = self.image2.image else{
                 return
@@ -225,6 +228,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                 postRef.updateChildValues(newObj){
                     error, ref in
                     self.performSegue(withIdentifier: "xianzhiB", sender: self)
+                    
                 }
                 
             }
@@ -234,6 +238,17 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             
             //第二种情况，两张图片(image1 和image3）
         else if (self.image.image != nil && self.image2.image == nil && self.image3.image != nil){
+            
+        let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+            loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+            
+            alert.view.addSubview(loadingIndicator)
+            loadingIndicator.isUserInteractionEnabled = false
+            loadingIndicator.startAnimating()
+            
+            self.present(alert, animated: true, completion: nil)
             
             guard let imageOne = self.image.image else{
                 return
@@ -257,6 +272,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                     postRef.updateChildValues(newObj){
                         error, ref in
                         self.performSegue(withIdentifier: "xianzhiB", sender: self)
+
                     }
                     
                     
@@ -266,6 +282,17 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             
             //第三种情况，三个image都存在
         else if(self.image.image != nil && self.image2.image != nil && self.image3.image != nil){
+            
+            let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+            loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+            
+            alert.view.addSubview(loadingIndicator)
+            loadingIndicator.isUserInteractionEnabled = false
+            loadingIndicator.startAnimating()
+            
+            self.present(alert, animated: true, completion: nil)
             
             guard let imageOne = self.image.image else{
                 return
@@ -297,6 +324,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                         postRef.updateChildValues(newObj){
                             error, ref in
                             self.performSegue(withIdentifier: "xianzhiB", sender: self)
+
                         }
                         
                     }
@@ -306,6 +334,16 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             
         else if (self.image.image == nil && self.image2.image == nil && self.image3.image == nil){
             //update三个imageurl
+            let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
+            
+            let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+            loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+            
+            alert.view.addSubview(loadingIndicator)
+            loadingIndicator.isUserInteractionEnabled = false
+            loadingIndicator.startAnimating()
+            
+            self.present(alert, animated: true, completion: nil)
             self.performSegue(withIdentifier: "xianzhiB", sender: self)
         }
         
@@ -314,6 +352,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     
     func uploadProfileImage(_ image:UIImage, completion: @escaping((_ url:URL?)->())){
         
+
         let uuid = UUID().uuidString
         
         let storageRef = Storage.storage().reference().child("post/\(uuid)")
@@ -339,6 +378,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
                         return
                     }
                     completion(downloadURL)
+
                 }
             }
             else{

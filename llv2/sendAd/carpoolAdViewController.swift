@@ -56,11 +56,11 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
 //                    alert.dismiss(animated: true, completion: nil)
-                    return
+                   
                 } ))
                 
                 present(alert, animated: true, completion: nil)
-
+               return
             }
         }
         
@@ -75,11 +75,11 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
 //                    alert.dismiss(animated: true, completion: nil)
-                    return
+                   
                 } ))
                 
                 present(alert, animated: true, completion: nil)
-
+               return
             }
         }
         
@@ -89,12 +89,24 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 //                    alert.dismiss(animated: true, completion: nil)
-                return
+               
             } ))
             
             present(alert, animated: true, completion: nil)
+             return
         }
         
+        if (dept == arri){
+            let alert = UIAlertController(title: title, message: "出发城市与到达城市相同", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                //                    alert.dismiss(animated: true, completion: nil)
+                
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
         //check剩余座位数和时间，确保field不为空
         let remainSeat = dataSource[seatNum.selectedRow(inComponent: 0)]
@@ -122,27 +134,37 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             let alert = UIAlertController(title: title, message: "出发日期或时间已过！", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                //                    alert.dismiss(animated: true, completion: nil)
-                return
             } ))
             
             present(alert, animated: true, completion: nil)
-
+                return
         }
         
         //确保timeinterval是合理的
         let checkInterval = gotime.date.compare(latestGo.date)
         if (checkInterval == ComparisonResult.orderedDescending){
             //alert
-            print("出发时间时间轴不合理")
-            return
+            let alert = UIAlertController(title: title, message: "出发时间轴不合理", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+                            return
         }
         
         //点击发送时出现的圆圈等待标识
-        wait.isHidden = false
-        wait.startAnimating()
+  
+        let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
         
+        let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+        loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
+        alert.view.addSubview(loadingIndicator)
+        loadingIndicator.isUserInteractionEnabled = false
+        loadingIndicator.startAnimating()
+        
+        self.present(alert, animated: true, completion: nil)
         
         //获取当前用户profile
         guard let userProfile = UserService.currentUserProfile
@@ -173,10 +195,12 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
  
         //  func sendData() {
         postRef.setValue(postObj, withCompletionBlock: {error, ref in
+
             if error == nil {
-                //发送得太快了？
-                
+            
+
                 self.performSegue(withIdentifier: "goB", sender: self)
+
                 
             }
             else{
@@ -185,15 +209,13 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                     //                    alert.dismiss(animated: true, completion: nil)
-                    return
+
                 } ))
-                
-//                self.present(alert, animated: true, completion: nil)
-//                print("出错")
-//                return
+                 self.present(alert, animated: true, completion: nil)
+                 return
             }
         })
-        // }
+
         
     }
     
