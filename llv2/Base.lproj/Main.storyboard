@@ -627,7 +627,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-nb-2dX">
-                                <rect key="frame" x="150" y="291" width="74" height="34"/>
+                                <rect key="frame" x="150" y="389" width="74" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="选择头像">
@@ -637,14 +637,24 @@
                                     <action selector="upload:" destination="JhQ-ng-Hhc" eventType="touchUpInside" id="GTg-Fk-SV0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYq-Yw-qGI">
-                                <rect key="frame" x="19" y="21" width="40" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="     " image="backbtn"/>
-                                <connections>
-                                    <action selector="back:" destination="JhQ-ng-Hhc" eventType="touchUpInside" id="qpI-O2-ZMM"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53z-a8-3bb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="选择头像" id="ncy-ju-vi1">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="LR5-fb-XFc">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FYq-Yw-qGI">
+                                                <rect key="frame" x="16" y="8" width="40" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="     " image="backbtn"/>
+                                                <connections>
+                                                    <action selector="back:" destination="JhQ-ng-Hhc" eventType="touchUpInside" id="qpI-O2-ZMM"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="at0-iu-eE4"/>
@@ -658,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7u-IZ-Rry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="1597"/>
+            <point key="canvasLocation" x="1270" y="1273"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="V4T-ic-EXe">
@@ -668,38 +678,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-jn-hiK">
-                                <rect key="frame" x="0.0" y="71" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-jn-hiK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fVL-jn-hiK" secondAttribute="height" multiplier="1:1" id="dqZ-1e-5Tr"/>
+                                    <constraint firstAttribute="height" constant="375" id="mkh-7T-1bL"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb8-Ew-hNd">
-                                <rect key="frame" x="16" y="35" width="40" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="     " image="backbtn"/>
-                                <connections>
-                                    <segue destination="kpS-wi-Uo9" kind="showDetail" id="eWV-nJ-ofo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba4-gh-ZhH">
-                                <rect key="frame" x="152" y="471" width="70" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba4-gh-ZhH">
+                                <rect key="frame" x="135" y="471" width="104" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="更改头像">
+                                <state key="normal" title="点击更改头像">
                                     <color key="titleColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="JhQ-ng-Hhc" kind="showDetail" id="p5X-7h-ygu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74g-Sw-KFt">
-                                <rect key="frame" x="60" y="512" width="254" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74g-Sw-KFt">
+                                <rect key="frame" x="60" y="501" width="254" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzR-ob-8Lx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="更改头像" id="xWb-ta-oHD">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="bxg-t5-icy">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gb8-Ew-hNd">
+                                                <rect key="frame" x="16" y="8" width="40" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="     " image="backbtn"/>
+                                                <connections>
+                                                    <segue destination="kpS-wi-Uo9" kind="showDetail" id="eWV-nJ-ofo"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="top" secondItem="qzR-ob-8Lx" secondAttribute="bottom" id="2LT-rb-MwY"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="leading" secondItem="zYk-Cc-l3y" secondAttribute="leading" id="8bm-FQ-kH1"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="top" secondItem="qzR-ob-8Lx" secondAttribute="bottom" id="DL0-iL-cR2"/>
+                            <constraint firstItem="SQ2-R9-kti" firstAttribute="bottom" secondItem="ba4-gh-ZhH" secondAttribute="bottom" constant="163" id="HFo-Tg-pGv"/>
+                            <constraint firstItem="74g-Sw-KFt" firstAttribute="leading" secondItem="SQ2-R9-kti" secondAttribute="leading" constant="60" id="IIO-KR-Vkx"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="trailing" secondItem="qzR-ob-8Lx" secondAttribute="trailing" id="KVE-Ry-bgW"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="trailing" secondItem="SQ2-R9-kti" secondAttribute="trailing" id="TGh-dZ-LMQ"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="leading" secondItem="qzR-ob-8Lx" secondAttribute="leading" id="TT7-oC-iHp"/>
+                            <constraint firstItem="74g-Sw-KFt" firstAttribute="top" secondItem="fVL-jn-hiK" secondAttribute="bottom" constant="62" id="W0c-Z5-8qV"/>
+                            <constraint firstItem="ba4-gh-ZhH" firstAttribute="top" secondItem="fVL-jn-hiK" secondAttribute="bottom" constant="32" id="WoC-9a-olG"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="centerX" secondItem="ba4-gh-ZhH" secondAttribute="centerX" id="Xq3-Sx-H6E"/>
+                            <constraint firstItem="fVL-jn-hiK" firstAttribute="leading" secondItem="SQ2-R9-kti" secondAttribute="leading" id="aDj-Uv-YmY"/>
+                            <constraint firstAttribute="trailing" secondItem="fVL-jn-hiK" secondAttribute="trailing" id="rAT-kI-XY7"/>
+                            <constraint firstItem="SQ2-R9-kti" firstAttribute="bottom" secondItem="74g-Sw-KFt" secondAttribute="bottom" constant="87" id="unh-Ck-LCB"/>
+                            <constraint firstItem="ba4-gh-ZhH" firstAttribute="centerX" secondItem="74g-Sw-KFt" secondAttribute="centerX" id="xvL-8b-idh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SQ2-R9-kti"/>
                     </view>
                     <connections>
@@ -710,7 +747,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vf-5l-Rkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="1274"/>
+            <point key="canvasLocation" x="2008.8" y="1273.313343328336"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
