@@ -133,7 +133,6 @@ class checkXianzhiController: UIViewController {
     @objc func imageTapped(_ sender: UITapGestureRecognizer) {
         let imageView = sender.view as! UIImageView
         let newImageView = UIImageView(image: imageView.image)
-        
 
         newImageView.frame = UIScreen.main.bounds
         newImageView.backgroundColor = .black
