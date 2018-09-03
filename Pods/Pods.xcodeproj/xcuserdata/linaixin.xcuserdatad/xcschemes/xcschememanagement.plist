@@ -14,12 +14,12 @@
 		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>20</integer>
 		</dict>
 		<key>ESPullToRefresh.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>19</integer>
 		</dict>
 		<key>FirebaseAuth.xcscheme</key>
 		<dict>
@@ -73,7 +73,7 @@
 		<key>GoogleUtilities.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>21</integer>
 		</dict>
 		<key>Hue.xcscheme</key>
 		<dict>
@@ -106,7 +106,7 @@
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>22</integer>
 		</dict>
 		<key>Lightbox.xcscheme</key>
 		<dict>
@@ -118,12 +118,12 @@
 		<key>MessageKit-MessageKitAssets.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>24</integer>
 		</dict>
 		<key>MessageKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>23</integer>
 		</dict>
 		<key>Pods-llv2.xcscheme</key>
 		<dict>
