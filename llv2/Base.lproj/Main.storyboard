@@ -658,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7u-IZ-Rry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2601" y="358"/>
+            <point key="canvasLocation" x="1246" y="1645"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="V4T-ic-EXe">
@@ -710,7 +710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vf-5l-Rkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="1241.8290854572715"/>
+            <point key="canvasLocation" x="2300" y="1315"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
@@ -738,14 +738,14 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFe-eH-avf">
-                                <rect key="frame" x="101" y="661" width="172" height="14"/>
+                                <rect key="frame" x="59" y="657" width="256" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="98q-S6-Tlq"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="9sC-0p-xrK"/>
                                     <constraint firstAttribute="width" constant="172" id="neu-OC-Og2"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="vqn-8b-orK"/>
                                 </constraints>
-                                <state key="normal" title="Forget Password">
+                                <state key="normal" image="忘记密码">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -768,7 +768,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b17-pu-ez2">
-                                <rect key="frame" x="72" y="617" width="230" height="14"/>
+                                <rect key="frame" x="7" y="613" width="361" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="Z5w-KF-CwR"/>
                                     <constraint firstAttribute="width" constant="172" id="cuz-BS-5V1"/>
@@ -776,7 +776,7 @@
                                     <constraint firstAttribute="width" secondItem="b17-pu-ez2" secondAttribute="height" multiplier="86:7" id="mwk-0E-ZG8"/>
                                     <constraint firstAttribute="width" secondItem="b17-pu-ez2" secondAttribute="height" multiplier="86:7" id="nUl-Eh-EHP"/>
                                 </constraints>
-                                <state key="normal" title="Don't have an account?">
+                                <state key="normal" image="signup">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -974,7 +974,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yp2-sg-BRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="524"/>
+            <point key="canvasLocation" x="802" y="524"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ajS-N3-0Dw">
@@ -1068,10 +1068,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oG3-sI-3ii"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goRight" id="ljE-ht-r2G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4r-Nm-3um" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="1850"/>
+            <point key="canvasLocation" x="212" y="1276"/>
         </scene>
         <!--My Mes Controller-->
         <scene sceneID="6Kt-2R-Wkc">
@@ -1409,11 +1412,12 @@
                         <outlet property="txtv" destination="G7J-bn-ygn" id="qa7-4Y-BCM"/>
                         <outlet property="wait" destination="67M-3i-XTK" id="RjF-g9-6iT"/>
                         <segue destination="HGJ-zl-43D" kind="showDetail" identifier="xianzhiB" id="Jss-ka-Uac"/>
+                        <segue destination="DYu-iB-2be" kind="showDetail" identifier="goRight" id="WjZ-qt-QJW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEb-Cg-iVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3068" y="1098"/>
+            <point key="canvasLocation" x="-2722" y="261"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="y5a-R7-tVw">
@@ -1562,7 +1566,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAl-BQ-1yw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1631.2" y="1077.2113943028487"/>
+            <point key="canvasLocation" x="-2602" y="-675"/>
         </scene>
         <!--carpool-->
         <scene sceneID="yp9-KF-FKM">
@@ -1760,11 +1764,12 @@
                         <outlet property="extraInfo" destination="QJV-fD-H3D" id="hEJ-k4-g6j"/>
                         <outlet property="wait" destination="443-UO-yBx" id="lNU-DG-Tgu"/>
                         <segue destination="HGJ-zl-43D" kind="showDetail" identifier="eB" id="Fqf-h5-z1R"/>
+                        <segue destination="DYu-iB-2be" kind="showDetail" identifier="goRight" id="cHM-cJ-fr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnO-GN-Soz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-946" y="1207"/>
+            <point key="canvasLocation" x="-1764" y="1275"/>
         </scene>
         <!--Send Ad View Contronller-->
         <scene sceneID="WDc-TF-2vN">
@@ -1788,7 +1793,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1822,13 +1827,13 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底部广告" translatesAutoresizingMaskIntoConstraints="NO" id="sqd-4S-rm1">
-                                <rect key="frame" x="176" y="596" width="170" height="36.5"/>
+                                <rect key="frame" x="176" y="616.5" width="170" height="36.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sqd-4S-rm1" secondAttribute="height" multiplier="209:45" id="pff-ak-OnF"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="457" width="221" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -1875,11 +1880,14 @@
                         <viewLayoutGuide key="safeArea" id="OeG-4k-zAu"/>
                     </view>
                     <navigationItem key="navigationItem" id="rbb-l9-eDW"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goRight2" id="uJp-nh-C7I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nv4-S2-7SI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9DG-am-WRq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-946.39999999999998" y="211.84407796101951"/>
+            <point key="canvasLocation" x="-1449" y="368"/>
         </scene>
         <!--Forget Pass View Controller-->
         <scene sceneID="1Sj-7K-0UM">
@@ -1967,11 +1975,12 @@
                     <connections>
                         <outlet property="email" destination="1nE-Ha-el8" id="qqD-u2-o1n"/>
                         <outlet property="message" destination="7SO-LH-UUn" id="qdW-9H-N5H"/>
+                        <segue destination="Eq6-Q5-sGv" kind="showDetail" identifier="goRight" id="mcL-Vv-BI8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cec-Jd-lwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.200000000000003" y="998.95052473763121"/>
+            <point key="canvasLocation" x="41" y="524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RTB-CK-LxE">
@@ -3132,7 +3141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCd-mn-HlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SXs-Gd-2yR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="262.21889055472263"/>
+            <point key="canvasLocation" x="-2849" y="1061"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4XU-iy-lFz">
@@ -3335,6 +3344,7 @@
         <image name="searchbtn" width="57" height="31"/>
         <image name="sidelogo" width="99" height="733"/>
         <image name="sidemenu" width="375" height="812"/>
+        <image name="signup" width="172" height="14"/>
         <image name="submit" width="220" height="38"/>
         <image name="xianzhiTab" width="34" height="31"/>
         <image name="中文logo" width="42" height="73"/>
@@ -3345,6 +3355,7 @@
         <image name="已发广告" width="118" height="28"/>
         <image name="底部工作室名字" width="74" height="24"/>
         <image name="底部广告" width="209" height="45"/>
+        <image name="忘记密码" width="120" height="15"/>
         <image name="我的收藏" width="118" height="28"/>
         <image name="我的私信" width="116" height="28"/>
         <image name="换汇" width="260" height="90"/>
@@ -3362,10 +3373,11 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0g4-zD-bWK"/>
-        <segue reference="YvM-yO-RdV"/>
-        <segue reference="Jss-ka-Uac"/>
+        <segue reference="BX5-SO-Qtr"/>
+        <segue reference="Bh3-wn-Akz"/>
+        <segue reference="uJp-nh-C7I"/>
+        <segue reference="lkz-EV-m98"/>
         <segue reference="C1I-Ic-Opq"/>
-        <segue reference="WK4-md-AaI"/>
+        <segue reference="Xh5-75-h7C"/>
     </inferredMetricsTieBreakers>
 </document>

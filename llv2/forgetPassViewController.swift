@@ -19,6 +19,15 @@ class forgetPassViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        
+        view.addGestureRecognizer(rightSwipe)
+        
+    }
+    
+    @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
+        performSegue(withIdentifier: "goRight", sender: self)
+        
     }
 
     override func didReceiveMemoryWarning() {

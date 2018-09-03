@@ -47,6 +47,16 @@ class ViewController: UIViewController {
             rightBtn.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        
+        view.addGestureRecognizer(rightSwipe)
+        
+    }
+    
+    @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
+        performSegue(withIdentifier: "goRight2", sender: self)
+        
     }
 
     override func didReceiveMemoryWarning() {

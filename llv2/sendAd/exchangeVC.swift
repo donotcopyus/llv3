@@ -76,6 +76,15 @@ class exchangeVC: UIViewController {
         
         self.view.addSubview(b2)
  
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        
+        view.addGestureRecognizer(rightSwipe)
+        
+    }
+    
+    @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
+        performSegue(withIdentifier: "goRight", sender: self)
+        
     }
    
     //数据库行为

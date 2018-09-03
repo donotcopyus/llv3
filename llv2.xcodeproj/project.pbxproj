@@ -49,6 +49,7 @@
 		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
 		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
 		FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F5212921FF00B03E1D /* cacheVC.swift */; };
+		FA19E116213CCBD9005E6B2B /* contactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19E115213CCBD9005E6B2B /* contactUs.swift */; };
 		FA1DE45F213900DB00489425 /* carnav.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE45E213900DB00489425 /* carnav.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
@@ -148,6 +149,7 @@
 		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
 		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
 		FA1454F5212921FF00B03E1D /* cacheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheVC.swift; sourceTree = "<group>"; };
+		FA19E115213CCBD9005E6B2B /* contactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactUs.swift; sourceTree = "<group>"; };
 		FA1DE45E213900DB00489425 /* carnav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carnav.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				FA93FF462108155E0070DD60 /* settingPageVC.swift */,
 				FAC7EB662116359500FE2FDE /* personalVC.swift */,
 				FA1454F5212921FF00B03E1D /* cacheVC.swift */,
+				FA19E115213CCBD9005E6B2B /* contactUs.swift */,
 			);
 			name = "Setting Page";
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */,
 				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
+				FA19E116213CCBD9005E6B2B /* contactUs.swift in Sources */,
 				FA1454F22123CCE800B03E1D /* sent3.swift in Sources */,
 				518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
