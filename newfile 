@@ -1,8 +1,10 @@
 优化笔记：
 
+carpool发送的座位+exchange的实时汇率label
+
 alert里需要RETURN，都加上
 
-圈圈加在哪里？等待还需要强化
+
 
 数量调整
 
@@ -10,7 +12,8 @@ https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
 
 收藏部分需要小修改：需要刷新后自动跳到最下面 (或者做上拉……？)
 私信调整 （和收藏部分一样，做成上拉，并且需要一开始直接跳到最新消息里！）
-
+有时候主界面侧拉菜单出不来
+nav栏
 
 
 1.Interactive key  for all

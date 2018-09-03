@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "llv2/profileViewController.swift"
-            timestampString = "556255872.0737441"
+            timestampString = "557565374.154501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -22,11 +22,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "llv2/profileViewController.swift"
-            timestampString = "556255872.0828249"
+            timestampString = "557565374.1554151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -35,14 +35,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "llv2.profileViewController.viewDidLoad() -&gt; ()"
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "557473189.062917"
+                  timestampString = "557565221.122354"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -50,14 +50,14 @@
                   offsetFromSymbolStart = "119">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "llv2.profileViewController.viewDidLoad() -&gt; ()"
                   moduleName = "llv2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/profileViewController.swift"
-                  timestampString = "557473189.069597"
+                  timestampString = "557565221.126732"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"

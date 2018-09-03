@@ -100,29 +100,34 @@ class exchangeVC: UIViewController {
             let alert = UIAlertController(title: title, message: "出币种或求币种为空", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                return
-
+               
             } ))
             
             present(alert, animated: true, completion: nil)
+            return
 
         }
         if(want == have){
             let alert = UIAlertController(title: title, message: "出币种与求币种相同", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-           
-                return
             } ))
             
             present(alert, animated: true, completion: nil)
+                            return
         }
         
+        let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
         
-        //点击发送时出现的圆圈等待标识
-        wait.isHidden = false
-        wait.startAnimating()
+        let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+        loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
+        alert.view.addSubview(loadingIndicator)
+        loadingIndicator.isUserInteractionEnabled = false
+        loadingIndicator.startAnimating()
+        
+        self.present(alert, animated: true, completion: nil)
+   
         
         let extraIn = self.extraInfo.text!
         let isCurrency = currency
@@ -152,10 +157,10 @@ class exchangeVC: UIViewController {
         postRef.setValue(postObj,withCompletionBlock:{
             error, ref in
             
-            
-            
             if error == nil{
+                
                 self.performSegue(withIdentifier: "eB", sender: self)
+
             }
                 
             else{
@@ -163,10 +168,10 @@ class exchangeVC: UIViewController {
                 let alert = UIAlertController(title: self.title, message: "出错", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    //                    alert.dismiss(animated: true, completion: nil)
                     return
                 } ))
-            
+                self.present(alert,animated:true, completion:nil)
+               return
             }
             
         })

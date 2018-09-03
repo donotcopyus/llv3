@@ -137,6 +137,17 @@ class changePictureViewController: UIViewController {
     
     
     func uploadProfileImage (_ image:UIImage, completion:@escaping((_ url:URL?) -> ())){
+        
+        let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
+        loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        
+        alert.view.addSubview(loadingIndicator)
+        loadingIndicator.isUserInteractionEnabled = false
+        loadingIndicator.startAnimating()
+        
+        self.present(alert, animated: true, completion: nil)
     
         guard let uid = Auth.auth().currentUser?.uid else{
             return
