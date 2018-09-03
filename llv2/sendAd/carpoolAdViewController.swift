@@ -280,11 +280,11 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         seatNum.dataSource = self
         seatNum.delegate = self
         
-        rotationAngle = -90 * (.pi/180)
-        let y = seatNum.frame.origin.y
-        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        
-        seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
+//        rotationAngle = -90 * (.pi/180)
+//        let y = seatNum.frame.origin.y
+//        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
+//
+//        seatNum.frame = CGRect(x: 0, y: y, width: 20, height: 20)
         
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
 
@@ -329,20 +329,20 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
     }
     
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return dataSource[row]
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row]
 //        view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
-//    }
+    }
 //
 //
-//
+
 //    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
 //
 //        let view = UIView()
 //        let label = UILabel()
 ////       (frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
-//        label.textColor = UIColor.white
+////        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
+//        label.textColor = UIColor.black
 //        return view
 //    }
     
