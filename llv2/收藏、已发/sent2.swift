@@ -125,24 +125,24 @@ class sent2: UITableViewController{
         
         if(self.arrayOfCellData[indexPath.row].imageOneUrl != ""){
             let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageOneUrl)
-
+           cell.image1.kf.indicatorType = .activity
             cell.image1.kf.setImage(with: url1)
         }
         
         if(self.arrayOfCellData[indexPath.row].imageTwoUrl != ""){
             let url2 = URL(string:self.arrayOfCellData[indexPath.row].imageTwoUrl)
-
+        cell.image2.kf.indicatorType = .activity
             cell.image2.kf.setImage(with: url2)
         }
         
         if(self.arrayOfCellData[indexPath.row].imageThreeUrl != ""){
             let url3 = URL(string:self.arrayOfCellData[indexPath.row].imageThreeUrl)
- 
+            cell.image3.kf.indicatorType = .activity
             cell.image3.kf.setImage(with: url3)
         }
         
         let url = self.arrayOfCellData[indexPath.row].author.photoURL
-
+        cell.headImage.kf.indicatorType = .activity
         cell.headImage.kf.setImage(with: url)
       })
         

@@ -154,7 +154,7 @@ class sent3: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute:{
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
-
+        cell.mainimage.kf.indicatorType = .activity
         cell.mainimage.kf.setImage(with: url)
     })
         

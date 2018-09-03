@@ -73,6 +73,7 @@ class profileCheckController: UIViewController {
             let url = author!["photoURL"] as? String
             self.imageurl.text = url
             let tourl = URL(string:url!)
+             self.headImage.kf.indicatorType = .activity
             self.headImage.kf.setImage(with: tourl)
              })
             

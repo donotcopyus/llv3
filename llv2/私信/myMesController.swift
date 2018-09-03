@@ -88,6 +88,7 @@ class myMesController: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
         let url = URL(string: message.fromUrl!)
+            cell.head.kf.indicatorType = .activity
         cell.head.kf.setImage(with: url)}
             )
             
@@ -97,6 +98,7 @@ class myMesController: UITableViewController {
             
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
             let url = URL(string: message.toUrl!)
+                        cell.head.kf.indicatorType = .activity
                         cell.head.kf.setImage(with: url)}
             )
                         
