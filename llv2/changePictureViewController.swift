@@ -25,7 +25,11 @@ class changePictureViewController: UIViewController {
         self.present(imagePicker,animated:true,completion:nil)
     }
     
-
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func ensure(_ sender: UIButton) {
         
         guard let image = profilePic.image else{
