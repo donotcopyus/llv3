@@ -415,11 +415,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-Do-o56">
+                                <rect key="frame" x="16" y="62" width="202" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivz-Zj-xao">
                                 <rect key="frame" x="16" y="62" width="343" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="修改头像"/>
                                 <connections>
                                     <segue destination="xuB-7a-3w3" kind="showDetail" id="WK4-md-AaI"/>
                                 </connections>
@@ -434,7 +440,7 @@
                                     <color key="titleShadowColor" red="0.81931268599999996" green="0.81440662200000002" blue="0.82421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleLogout:" destination="xuB-7a-3w3" eventType="touchUpInside" id="IQI-1x-nId"/>
+                                    <action selector="handleLogout:" destination="koZ-gF-A5s" eventType="touchUpInside" id="Djw-DV-Y1g"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doA-kc-dS5">
@@ -454,19 +460,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="修改密码"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-c8-mxU">
-                                <rect key="frame" x="81" y="323" width="235" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7FJ-yT-CCY"/>
                     </view>
                     <connections>
-                        <outlet property="profileButton" destination="ivz-Zj-xao" id="1yl-qj-Ayk"/>
+                        <outlet property="labelText" destination="Dmi-Do-o56" id="r0r-wc-GVK"/>
+                        <outlet property="profileImageView" destination="doA-kc-dS5" id="MWn-Cf-u1M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qW-9c-A5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -668,23 +668,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74g-Sw-KFt">
-                                <rect key="frame" x="60" y="351" width="254" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-jn-hiK">
                                 <rect key="frame" x="0.0" y="71" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb8-Ew-hNd">
-                                <rect key="frame" x="20" y="21" width="40" height="28"/>
+                                <rect key="frame" x="16" y="35" width="40" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="     " image="backbtn"/>
                                 <connections>
-                                    <segue destination="HGJ-zl-43D" kind="showDetail" id="lkz-EV-m98"/>
+                                    <segue destination="koZ-gF-A5s" kind="showDetail" id="Yoq-mZ-FEe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba4-gh-ZhH">
@@ -698,6 +691,13 @@
                                     <segue destination="JhQ-ng-Hhc" kind="showDetail" id="p5X-7h-ygu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74g-Sw-KFt">
+                                <rect key="frame" x="60" y="512" width="254" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SQ2-R9-kti"/>
@@ -710,7 +710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vf-5l-Rkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="1315"/>
+            <point key="canvasLocation" x="2218" y="1228"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
@@ -1091,18 +1091,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem id="Y9G-Du-s72">
-                                    <barButtonItem key="leftBarButtonItem" style="plain" id="qHa-pQ-2ZP">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="STw-dN-CuB">
-                                            <rect key="frame" x="16" y="8" width="40" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="     " image="backbtn"/>
-                                            <connections>
-                                                <action selector="back:" destination="BFd-r1-X6P" eventType="touchUpInside" id="uts-dY-eYy"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </navigationItem>
+                                <navigationItem id="Y9G-Du-s72"/>
                             </items>
                         </navigationBar>
                         <prototypes>
@@ -1120,7 +1109,18 @@
                             <outlet property="delegate" destination="BFd-r1-X6P" id="Rcv-lA-csD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="LEL-Ez-vJ7"/>
+                    <navigationItem key="navigationItem" id="LEL-Ez-vJ7">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="qHa-pQ-2ZP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="STw-dN-CuB">
+                                <rect key="frame" x="16" y="8" width="40" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="     " image="backbtn"/>
+                                <connections>
+                                    <action selector="back:" destination="BFd-r1-X6P" eventType="touchUpInside" id="uts-dY-eYy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eff-XL-U8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1295,7 +1295,6 @@
                         <outlet property="carpool" destination="gBg-Ik-XeL" id="qU0-LL-xYR"/>
                         <outlet property="menuButton" destination="pKc-6h-K1k" id="oBR-EU-UYM"/>
                         <outlet property="other" destination="ar2-bt-oQC" id="Cfh-ff-51a"/>
-                        <outlet property="profileButton" destination="ivz-Zj-xao" id="wdQ-I4-GES"/>
                         <outlet property="rightBtn" destination="YHh-qX-prT" id="Cpd-JJ-UH9"/>
                         <outlet property="xianzhi" destination="the-Ct-AdR" id="tcc-Bp-Vc0"/>
                     </connections>
