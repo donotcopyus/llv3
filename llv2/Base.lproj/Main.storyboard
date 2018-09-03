@@ -1833,11 +1833,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-<<<<<<< HEAD
-                                <rect key="frame" x="77" y="457" width="221" height="90"/>
-=======
+
                                 <rect key="frame" x="77" y="457" width="221" height="69.5"/>
->>>>>>> 02fd97846ef3f20d2cfdccbc92229aedd702aa85
+
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
