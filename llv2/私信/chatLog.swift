@@ -191,6 +191,7 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
         let url = message.fromUrl
         let tourl = URL(string:url!)
+        cell.profileImageView.kf.indicatorType = .activity
         cell.profileImageView.kf.setImage(with: tourl)})
         
         if message.fromId == Auth.auth().currentUser?.uid{

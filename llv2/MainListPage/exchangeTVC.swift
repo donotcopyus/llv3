@@ -155,6 +155,7 @@ class exchangeTVC: UITableViewController, UIGestureRecognizerDelegate {
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+          cell.mainimage.kf.indicatorType = .activity
            cell.mainimage.kf.setImage(with: url)
         })
 
@@ -243,20 +244,7 @@ class exchangeTVC: UITableViewController, UIGestureRecognizerDelegate {
     }
     
     
-//    fileprivate func openSwipe(){
-//        if(self.navigationController != nil){
-//            self.navigationController!.interactivePopGestureRecognizer!.delegate = self;
-//        }
-//
-//    }
-//
-//    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-//
-//        if self.navigationController?.viewControllers.count == 1{
-//            return false;
-//        }
-//        return true;
-//    }
+
 
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return self.childViewControllers.count > 1

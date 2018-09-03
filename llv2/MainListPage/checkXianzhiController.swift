@@ -65,6 +65,7 @@ class checkXianzhiController: UIViewController {
         }
         
          let postRef = Database.database().reference().child("xianzhi/\(pid)")
+         let image = UIImage(named:"default_profile_icon")
         
         postRef.observe(DataEventType.value, with:{
             (snapshot) in
@@ -74,13 +75,14 @@ class checkXianzhiController: UIViewController {
             let url = author!["photoURL"] as? String
             let tourl = URL(string:url!)
 
-            self.headImage.kf.setImage(with: tourl)
+            self.headImage.kf.indicatorType = .activity
+            self.headImage.kf.setImage(with: tourl, placeholder:image)
                 
             self.imageurl.text = url
             
             self.username.text = author!["username"] as? String
             
-                let timeInterval = (post["timestamp"] as? Double)! / 1000
+            let timeInterval = (post["timestamp"] as? Double)! / 1000
             let date = NSDate(timeIntervalSince1970: timeInterval)
             let dform = DateFormatter()
             dform.dateFormat = "MM月dd日 HH:mm"
@@ -91,7 +93,7 @@ class checkXianzhiController: UIViewController {
                 let url1 = post["imageOneUrl"] as? String
             if (url1 != ""){
             let tourl1 = URL(string:url1!)
-
+                self.image1.kf.indicatorType = .activity
                 self.image1.kf.setImage(with: tourl1)
                 self.image1.addGestureRecognizer(pictureTap1)
                 self.image1.isUserInteractionEnabled = true
@@ -100,7 +102,7 @@ class checkXianzhiController: UIViewController {
                 let url2 = post["imageTwoUrl"] as? String
             if (url2 != ""){
                 let tourl2 = URL(string:url2!)
-
+                self.image2.kf.indicatorType = .activity
                 self.image2.kf.setImage(with: tourl2)
                 self.image2.addGestureRecognizer(pictureTap2)
                 self.image2.isUserInteractionEnabled = true
@@ -109,6 +111,7 @@ class checkXianzhiController: UIViewController {
                 let url3 = post["imageThreeUrl"] as? String
             if (url3 != ""){
                 let tourl3 = URL(string:url3!)
+                self.image3.kf.indicatorType = .activity
                 self.image3.kf.setImage(with: tourl3)
                 self.image3.addGestureRecognizer(pictureTap3)
                 self.image3.isUserInteractionEnabled = true
