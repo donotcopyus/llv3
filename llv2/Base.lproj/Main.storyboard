@@ -990,6 +990,9 @@
                                     <navigationItem title="硬核工作室" id="rWP-za-6d2">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" id="Nv0-u2-9s9">
                                             <color key="tintColor" red="0.31372549020000001" green="0.41568627450000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="showDetail" id="5xl-1u-ky4"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1074,7 +1077,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4r-Nm-3um" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="1276"/>
+            <point key="canvasLocation" x="-151" y="1274"/>
         </scene>
         <!--My Mes Controller-->
         <scene sceneID="6Kt-2R-Wkc">
@@ -2513,10 +2516,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6R-Ar-W6F">
                                 <rect key="frame" x="0.0" y="621" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="5pz-wE-G1M"/>
                                     <barButtonItem style="plain" id="yvM-IA-lbb">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TUJ-Sz-5Lb">
-                                            <rect key="frame" x="61" y="6.5" width="91" height="31"/>
+                                            <rect key="frame" x="16" y="6.5" width="91" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="删除广告"/>
                                             <connections>
@@ -2526,12 +2528,22 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="ndj-T2-Wic">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7hU-Dm-fDB">
-                                            <rect key="frame" x="152" y="0.0" width="100" height="44"/>
+                                            <rect key="frame" x="107" y="0.0" width="100" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="私聊"/>
                                             <connections>
                                                 <action selector="chat:" destination="xdC-th-xje" eventType="touchUpInside" id="FTD-St-sdG"/>
                                                 <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="Wbc-G6-Mnr"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="J77-iL-WVX">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pf0-PN-y2P">
+                                            <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="share:" destination="xdC-th-xje" eventType="touchUpInside" id="Mg0-8X-mJT"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -2605,17 +2617,12 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf0-PN-y2P">
-                                <rect key="frame" x="194" y="502" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OxS-hf-MMU" firstAttribute="leading" secondItem="w8W-yP-xnB" secondAttribute="leading" id="1i7-yT-cjI"/>
                             <constraint firstItem="c6n-yQ-psf" firstAttribute="top" secondItem="HoO-DB-oAS" secondAttribute="bottom" constant="57" id="1qA-Uo-Eyq"/>
                             <constraint firstItem="w8W-yP-xnB" firstAttribute="top" secondItem="b7s-SP-uKx" secondAttribute="top" id="444-pE-a0q"/>
-                            <constraint firstItem="NIG-X5-jOd" firstAttribute="centerX" secondItem="pf0-PN-y2P" secondAttribute="centerX" id="91P-8L-rlg"/>
                             <constraint firstItem="OxS-hf-MMU" firstAttribute="top" secondItem="Lnh-wE-caC" secondAttribute="bottom" constant="75" id="Aat-bM-y47"/>
                             <constraint firstItem="Hzq-vc-01R" firstAttribute="trailing" secondItem="h0B-1N-5TI" secondAttribute="trailing" constant="56" id="Aph-Xc-UjU"/>
                             <constraint firstItem="h0B-1N-5TI" firstAttribute="leading" secondItem="NIG-X5-jOd" secondAttribute="leading" id="Ayh-6v-s4S"/>
@@ -2639,7 +2646,6 @@
                             <constraint firstItem="4Of-xZ-ra3" firstAttribute="bottom" secondItem="y6R-Ar-W6F" secondAttribute="top" id="k2W-Ou-WOu"/>
                             <constraint firstItem="OxS-hf-MMU" firstAttribute="top" secondItem="h0B-1N-5TI" secondAttribute="top" id="os6-9f-13K"/>
                             <constraint firstItem="b7s-SP-uKx" firstAttribute="top" secondItem="NIG-X5-jOd" secondAttribute="bottom" constant="68" id="rv2-c7-LoV"/>
-                            <constraint firstItem="pf0-PN-y2P" firstAttribute="top" secondItem="c6n-yQ-psf" secondAttribute="bottom" constant="56" id="sNu-iJ-ddI"/>
                             <constraint firstItem="b7s-SP-uKx" firstAttribute="bottom" secondItem="2PH-eJ-UKN" secondAttribute="bottom" id="ta7-It-fTG"/>
                             <constraint firstItem="zn9-7H-ZTK" firstAttribute="trailing" secondItem="HoO-DB-oAS" secondAttribute="trailing" id="uBF-SA-h4u"/>
                             <constraint firstItem="2PH-eJ-UKN" firstAttribute="top" secondItem="h0B-1N-5TI" secondAttribute="bottom" constant="87" id="v08-0l-XiG"/>
@@ -2688,10 +2694,9 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="eyf-Be-agX"/>
                                     <barButtonItem style="plain" id="FLv-Ob-vYg">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h0g-U6-4tn">
-                                            <rect key="frame" x="61" y="6.5" width="91" height="31"/>
+                                            <rect key="frame" x="16" y="6.5" width="91" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="h0g-U6-4tn" secondAttribute="height" multiplier="91:31" id="SrQ-nX-AbX"/>
@@ -2704,7 +2709,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="Ctn-aV-gQj">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XJn-n0-hLp">
-                                            <rect key="frame" x="152" y="0.0" width="100" height="44"/>
+                                            <rect key="frame" x="107" y="0.0" width="100" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="XJn-n0-hLp" secondAttribute="height" multiplier="57:31" id="LGw-iK-RBs"/>
@@ -2715,12 +2720,18 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" id="N2F-7K-rD4">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Cs-X2-Xum">
+                                            <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="share:" destination="IFH-H1-VVg" eventType="touchUpInside" id="eLV-wx-h9H"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-X2-Xum">
-                                <rect key="frame" x="189" y="498" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsp-pG-OSX">
                                 <rect key="frame" x="124" y="110" width="235" height="21"/>
                                 <constraints>
@@ -2784,7 +2795,6 @@
                             <constraint firstItem="f4K-jJ-2gS" firstAttribute="top" secondItem="5aE-0w-DRi" secondAttribute="bottom" constant="7" id="DVU-P4-M5q"/>
                             <constraint firstItem="tPN-tx-Lrr" firstAttribute="leading" secondItem="ayI-gC-IKN" secondAttribute="leadingMargin" id="DfM-hE-Pcc"/>
                             <constraint firstItem="o5N-xx-Eu0" firstAttribute="leading" secondItem="GPR-HY-1g5" secondAttribute="leading" constant="181" id="E0c-G3-ETc"/>
-                            <constraint firstItem="7Cs-X2-Xum" firstAttribute="top" secondItem="f4K-jJ-2gS" secondAttribute="bottom" constant="69" id="GYl-Pl-r3D"/>
                             <constraint firstItem="tPN-tx-Lrr" firstAttribute="leading" secondItem="5aE-0w-DRi" secondAttribute="leading" id="I6R-M7-X9E"/>
                             <constraint firstItem="dsp-pG-OSX" firstAttribute="trailing" secondItem="ayI-gC-IKN" secondAttribute="trailingMargin" id="OjE-yw-PIS"/>
                             <constraint firstItem="dMp-Fq-AS6" firstAttribute="top" secondItem="GPR-HY-1g5" secondAttribute="top" constant="65" id="Stk-qR-YOv"/>
@@ -2844,19 +2854,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-gn-3Qg">
-                                <rect key="frame" x="91" y="456" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-Ki-M4v">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="WeF-MN-0v7"/>
                                     <barButtonItem style="plain" id="S2B-LJ-Jgw">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q7o-Tp-Tzg">
-                                            <rect key="frame" x="61" y="6.5" width="91" height="31"/>
+                                            <rect key="frame" x="16" y="6.5" width="91" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="删除广告"/>
                                             <connections>
@@ -2866,11 +2870,21 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="9Zu-fS-0sf">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mZg-tD-Lop">
-                                            <rect key="frame" x="152" y="0.0" width="100" height="44"/>
+                                            <rect key="frame" x="107" y="0.0" width="100" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="私聊"/>
                                             <connections>
                                                 <action selector="chat:" destination="RIq-DG-If2" eventType="touchUpInside" id="Ok7-kN-5Ao"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="VvI-jk-zeZ">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aZ5-gn-3Qg">
+                                            <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="share:" destination="RIq-DG-If2" eventType="touchUpInside" id="tky-mo-05y"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3416,7 +3430,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xxP-AD-O1c"/>
-        <segue reference="uJp-nh-C7I"/>
+        <segue reference="ljE-ht-r2G"/>
         <segue reference="vVO-m1-ivf"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="Xh5-75-h7C"/>

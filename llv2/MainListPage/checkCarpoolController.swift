@@ -151,6 +151,11 @@ class checkCarpoolController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
+    @IBAction func share(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["www.google.ca"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
 
 }

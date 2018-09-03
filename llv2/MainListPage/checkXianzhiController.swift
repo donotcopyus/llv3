@@ -208,6 +208,12 @@ class checkXianzhiController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func share(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["www.google.ca"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
 
 
 }
