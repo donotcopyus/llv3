@@ -146,6 +146,9 @@ class checkXianzhiController: UIViewController {
         newImageView.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
         newImageView.addGestureRecognizer(tap)
+        
+        //加左拉右拉的gesture，触发，同时里面需要连接dismiss
+        
         self.view.addSubview(newImageView)
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
