@@ -35,6 +35,7 @@ class checkXianzhiController: UIViewController {
     
     var pid = String()
     var uid = String()
+    var photoArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,9 @@ class checkXianzhiController: UIViewController {
         headImage.layer.masksToBounds = true
         
         
-//        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
-//        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
-//        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
+        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex1))
+        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex2))
+        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex3))
 
         
         //get pid，藏起来
@@ -66,6 +67,7 @@ class checkXianzhiController: UIViewController {
         
          let postRef = Database.database().reference().child("xianzhi/\(pid)")
          let image = UIImage(named:"default_profile_icon")
+
         
         postRef.observe(DataEventType.value, with:{
             (snapshot) in
@@ -95,7 +97,8 @@ class checkXianzhiController: UIViewController {
             let tourl1 = URL(string:url1!)
                 self.image1.kf.indicatorType = .activity
                 self.image1.kf.setImage(with: tourl1)
-//                self.image1.addGestureRecognizer(pictureTap1)
+                self.photoArray.append(url1!)
+                self.image1.addGestureRecognizer(pictureTap1)
                 self.image1.isUserInteractionEnabled = true
             }
             
@@ -104,7 +107,8 @@ class checkXianzhiController: UIViewController {
                 let tourl2 = URL(string:url2!)
                 self.image2.kf.indicatorType = .activity
                 self.image2.kf.setImage(with: tourl2)
-//                self.image2.addGestureRecognizer(pictureTap2)
+                self.photoArray.append(url2!)
+                self.image2.addGestureRecognizer(pictureTap2)
                 self.image2.isUserInteractionEnabled = true
             }
             
@@ -113,7 +117,8 @@ class checkXianzhiController: UIViewController {
                 let tourl3 = URL(string:url3!)
                 self.image3.kf.indicatorType = .activity
                 self.image3.kf.setImage(with: tourl3)
-//                self.image3.addGestureRecognizer(pictureTap3)
+                self.photoArray.append(url3!)
+                self.image3.addGestureRecognizer(pictureTap3)
                 self.image3.isUserInteractionEnabled = true
             }
         })
@@ -130,7 +135,7 @@ class checkXianzhiController: UIViewController {
         
     }
     
-//    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
+    @objc func imageTappedIndex1(_ sender: UITapGestureRecognizer) {
 //        let imageView = sender.view as! UIImageView
 //        let newImageView = UIImageView(image: imageView.image)
 //
@@ -143,15 +148,29 @@ class checkXianzhiController: UIViewController {
 //        self.view.addSubview(newImageView)
 //        self.navigationController?.isNavigationBarHidden = true
 //        self.tabBarController?.tabBar.isHidden = true
-//
-//    }
-//
+    
+
+
+    }
+
+    @objc func imageTappedIndex2(_ sender: UITapGestureRecognizer) {
+
+
+        
+    }
+    
+    @objc func imageTappedIndex3(_ sender: UITapGestureRecognizer) {
+
+
+        
+    }
+    
 //    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
 //        self.navigationController?.isNavigationBarHidden = false
 //        self.tabBarController?.tabBar.isHidden = false
 //        sender.view?.removeFromSuperview()
 //    }
-    
+//
     
     @IBAction func chat(_ sender: UIButton) {
         
@@ -205,6 +224,8 @@ class checkXianzhiController: UIViewController {
         
     }
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -219,3 +240,7 @@ class checkXianzhiController: UIViewController {
 
 
 }
+
+
+
+

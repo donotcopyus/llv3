@@ -49,6 +49,7 @@ PODS:
   - FirebaseStorage (3.0.0):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FLAnimatedImage (1.0.12)
   - GoogleAppMeasurement (5.1.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2.0)
     - GoogleUtilities/MethodSwizzler (~> 5.2.0)
@@ -76,12 +77,6 @@ PODS:
   - ImagePicker (3.0.0)
   - Imaginary (3.0.3):
     - Cache (~> 4.0)
-  - JXPhotoBrowser (1.4.0):
-    - JXPhotoBrowser/Kingfisher (= 1.4.0)
-  - JXPhotoBrowser/Core (1.4.0)
-  - JXPhotoBrowser/Kingfisher (1.4.0):
-    - JXPhotoBrowser/Core
-    - Kingfisher
   - Kingfisher (4.8.1)
   - leveldb-library (1.20)
   - Lightbox (2.1.2):
@@ -93,6 +88,13 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NYTPhotoViewer (2.0.0):
+    - NYTPhotoViewer/AnimatedGifSupport (= 2.0.0)
+    - NYTPhotoViewer/Core (= 2.0.0)
+  - NYTPhotoViewer/AnimatedGifSupport (2.0.0):
+    - FLAnimatedImage (~> 1.0.12)
+    - NYTPhotoViewer/Core
+  - NYTPhotoViewer/Core (2.0.0)
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
@@ -103,10 +105,10 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - ImagePicker
-  - JXPhotoBrowser
   - Kingfisher (~> 4.0)
   - Lightbox
   - MessageKit
+  - NYTPhotoViewer
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -121,18 +123,19 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseStorage
+    - FLAnimatedImage
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
     - Hue
     - ImagePicker
     - Imaginary
-    - JXPhotoBrowser
     - Kingfisher
     - leveldb-library
     - Lightbox
     - MessageKit
     - nanopb
+    - NYTPhotoViewer
     - Protobuf
 
 SPEC CHECKSUMS:
@@ -147,20 +150,21 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 8cd2c6cfe7b9ab65ce7e248f6da7f26f6775b9be
   FirebaseMessaging: f67b3719f520ee200da0e20ce577fe2bce0c01d0
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   GoogleAppMeasurement: e785bdb86d3d280abc778156cec323a975f11d1d
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
   ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
   Imaginary: 9b45836a5af881f452a86e0a1215772ae4712d00
-  JXPhotoBrowser: b014aef984f69b4d52e846c5bc682cad4ff4d156
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Lightbox: 2dc267df8be2285bc7724cb11cbbf4aaaf59dced
   MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NYTPhotoViewer: 34b8bd6bcc297466adec1668f9a01249d73c90e6
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 9d41143b884529b8c19f8a2628ce4f265cd24367
+PODFILE CHECKSUM: b8123b140abbc0c407d72d0b16b3ed88d2088fa8
 
 COCOAPODS: 1.5.3
