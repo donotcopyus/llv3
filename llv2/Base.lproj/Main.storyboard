@@ -1229,7 +1229,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGc-sP-hMt">
-                                <rect key="frame" x="12" y="643" width="61" height="39"/>
+                                <rect key="frame" x="12" y="594" width="61" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="logout">
                                     <color key="titleColor" red="0.30588235294117649" green="0.41568627450980394" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1249,6 +1249,8 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="GKd-n1-ViX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="58" id="bRk-qM-VTM"/>
+                                    <constraint firstAttribute="width" secondItem="6Nc-cD-YZA" secondAttribute="height" multiplier="182:29" id="cTz-NA-jgX"/>
                                     <constraint firstAttribute="width" secondItem="6Nc-cD-YZA" secondAttribute="height" multiplier="375:58" id="hv0-CF-A9Y"/>
                                 </constraints>
                                 <state key="normal" image="searchbar"/>
@@ -1265,6 +1267,8 @@
                             <constraint firstItem="the-Ct-AdR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="5Xl-2M-HC8"/>
                             <constraint firstItem="gUg-in-sle" firstAttribute="leading" secondItem="qGc-sP-hMt" secondAttribute="trailing" constant="103" id="6kA-qE-Zs6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Nc-cD-YZA" secondAttribute="trailing" id="70T-vz-6jh"/>
+                            <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" id="9ZV-dh-Ldg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Nc-cD-YZA" secondAttribute="trailing" id="9ac-G6-gS8"/>
                             <constraint firstItem="gUg-in-sle" firstAttribute="leading" secondItem="qGc-sP-hMt" secondAttribute="trailing" constant="103" id="DQg-3P-kDv"/>
                             <constraint firstAttribute="bottom" secondItem="gUg-in-sle" secondAttribute="bottom" constant="34.329999999999998" id="IMJ-N7-TqG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="the-Ct-AdR" secondAttribute="trailing" constant="77" id="IMe-s4-gGu"/>
@@ -1279,6 +1283,7 @@
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="a7a-EC-RL8" secondAttribute="leading" id="Y0U-3I-v6y"/>
                             <constraint firstItem="Blp-mc-HQD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="126" id="ZYh-FI-iAh"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cbk-Ed-9BE"/>
+                            <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="euK-4h-3Ip"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" constant="4" id="hmr-Wv-H10"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBg-Ik-XeL" secondAttribute="trailing" constant="77" id="lQX-Bw-WUU"/>
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pVf-If-aAF"/>
@@ -1301,7 +1306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-570.76461769115451"/>
+            <point key="canvasLocation" x="1179.7101449275362" y="-571.46739130434787"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -3420,6 +3425,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Qje-py-OLT"/>
         <segue reference="xxP-AD-O1c"/>
         <segue reference="2FW-DI-Yov"/>
         <segue reference="vVO-m1-ivf"/>
