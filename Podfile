@@ -14,6 +14,7 @@ target 'llv2' do
   pod 'MessageKit'
   pod 'Kingfisher', '~> 4.0'
   pod "ESPullToRefresh"
+  pod 'JXPhotoBrowser'
 
   # Pods for llv2
 

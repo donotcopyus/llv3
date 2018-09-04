@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4CE584C1BB68BAC4F59C7A13FECE4E3"
-               BlueprintName = "Kingfisher"
+               BlueprintIdentifier = "F9B2B8446CF383C030D88C87DDC7BACF"
+               BlueprintName = "JXPhotoBrowser"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Kingfisher.framework">
+               BuildableName = "JXPhotoBrowser.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

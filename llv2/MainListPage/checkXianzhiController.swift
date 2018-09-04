@@ -43,9 +43,9 @@ class checkXianzhiController: UIViewController {
         headImage.layer.masksToBounds = true
         
         
-        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
-        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
-        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
+//        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
+//        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
+//        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTapped))
 
         
         //get pid，藏起来
@@ -95,7 +95,7 @@ class checkXianzhiController: UIViewController {
             let tourl1 = URL(string:url1!)
                 self.image1.kf.indicatorType = .activity
                 self.image1.kf.setImage(with: tourl1)
-                self.image1.addGestureRecognizer(pictureTap1)
+//                self.image1.addGestureRecognizer(pictureTap1)
                 self.image1.isUserInteractionEnabled = true
             }
             
@@ -104,7 +104,7 @@ class checkXianzhiController: UIViewController {
                 let tourl2 = URL(string:url2!)
                 self.image2.kf.indicatorType = .activity
                 self.image2.kf.setImage(with: tourl2)
-                self.image2.addGestureRecognizer(pictureTap2)
+//                self.image2.addGestureRecognizer(pictureTap2)
                 self.image2.isUserInteractionEnabled = true
             }
             
@@ -113,7 +113,7 @@ class checkXianzhiController: UIViewController {
                 let tourl3 = URL(string:url3!)
                 self.image3.kf.indicatorType = .activity
                 self.image3.kf.setImage(with: tourl3)
-                self.image3.addGestureRecognizer(pictureTap3)
+//                self.image3.addGestureRecognizer(pictureTap3)
                 self.image3.isUserInteractionEnabled = true
             }
         })
@@ -130,27 +130,27 @@ class checkXianzhiController: UIViewController {
         
     }
     
-    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
-        let imageView = sender.view as! UIImageView
-        let newImageView = UIImageView(image: imageView.image)
-
-        newImageView.frame = UIScreen.main.bounds
-        newImageView.backgroundColor = .black
-        newImageView.contentMode = .scaleAspectFit
-        newImageView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
-        newImageView.addGestureRecognizer(tap)
-        self.view.addSubview(newImageView)
-        self.navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = true
-
-    }
-    
-    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
-        self.navigationController?.isNavigationBarHidden = false
-        self.tabBarController?.tabBar.isHidden = false
-        sender.view?.removeFromSuperview()
-    }
+//    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
+//        let imageView = sender.view as! UIImageView
+//        let newImageView = UIImageView(image: imageView.image)
+//
+//        newImageView.frame = UIScreen.main.bounds
+//        newImageView.backgroundColor = .black
+//        newImageView.contentMode = .scaleAspectFit
+//        newImageView.isUserInteractionEnabled = true
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+//        newImageView.addGestureRecognizer(tap)
+//        self.view.addSubview(newImageView)
+//        self.navigationController?.isNavigationBarHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
+//
+//    }
+//
+//    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+//        self.navigationController?.isNavigationBarHidden = false
+//        self.tabBarController?.tabBar.isHidden = false
+//        sender.view?.removeFromSuperview()
+//    }
     
     
     @IBAction func chat(_ sender: UIButton) {

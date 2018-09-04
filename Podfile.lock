@@ -76,6 +76,12 @@ PODS:
   - ImagePicker (3.0.0)
   - Imaginary (3.0.3):
     - Cache (~> 4.0)
+  - JXPhotoBrowser (1.4.0):
+    - JXPhotoBrowser/Kingfisher (= 1.4.0)
+  - JXPhotoBrowser/Core (1.4.0)
+  - JXPhotoBrowser/Kingfisher (1.4.0):
+    - JXPhotoBrowser/Core
+    - Kingfisher
   - Kingfisher (4.8.1)
   - leveldb-library (1.20)
   - Lightbox (2.1.2):
@@ -97,6 +103,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - ImagePicker
+  - JXPhotoBrowser
   - Kingfisher (~> 4.0)
   - Lightbox
   - MessageKit
@@ -120,6 +127,7 @@ SPEC REPOS:
     - Hue
     - ImagePicker
     - Imaginary
+    - JXPhotoBrowser
     - Kingfisher
     - leveldb-library
     - Lightbox
@@ -145,6 +153,7 @@ SPEC CHECKSUMS:
   Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
   ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
   Imaginary: 9b45836a5af881f452a86e0a1215772ae4712d00
+  JXPhotoBrowser: b014aef984f69b4d52e846c5bc682cad4ff4d156
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Lightbox: 2dc267df8be2285bc7724cb11cbbf4aaaf59dced
@@ -152,6 +161,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: d95c3115286ed791cf6fb632ae1b325cfc08c79f
+PODFILE CHECKSUM: 9d41143b884529b8c19f8a2628ce4f265cd24367
 
 COCOAPODS: 1.5.3
