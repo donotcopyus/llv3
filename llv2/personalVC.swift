@@ -29,18 +29,18 @@ class personalVC: UIViewController {
         }
         
         //handle showing the profile image
-//        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-//        let refHandle = databaseRef.observe(DataEventType.value, with:{
-//            (snapshot) in
-//            let curUser = snapshot.value as? NSDictionary
-//            let urlString = curUser?["photoURL"] as? String ?? ""
-//            
-//            let url = URL(string:urlString)
-//            let data = try? Data(contentsOf:url!)
-//            self.profileImageView.image = UIImage(data:data!)
-//            
-//            
-//        })
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        let refHandle = databaseRef.observe(DataEventType.value, with:{
+            (snapshot) in
+            let curUser = snapshot.value as? NSDictionary
+            let urlString = curUser?["photoURL"] as? String ?? ""
+            
+            let url = URL(string:urlString)
+            let data = try? Data(contentsOf:url!)
+            self.profileImageView.image = UIImage(data:data!)
+
+            
+        })
         
 
 
