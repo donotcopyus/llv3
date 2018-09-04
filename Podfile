@@ -14,7 +14,6 @@ target 'llv2' do
   pod 'MessageKit'
   pod 'Kingfisher', '~> 4.0'
   pod "ESPullToRefresh"
-  pod 'NYTPhotoViewer'
 
   # Pods for llv2
 
