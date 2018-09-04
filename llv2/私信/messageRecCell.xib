@@ -6,45 +6,75 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="messageRecCell" customModule="llv2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="messageRecCell" customModule="llv2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-H0-54h">
-                        <rect key="frame" x="8" y="-1" width="77" height="66"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-H0-54h">
+                        <rect key="frame" x="5" y="5" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4NI-H0-54h" secondAttribute="height" multiplier="1:1" id="Mhn-Zz-OAJ"/>
+                            <constraint firstAttribute="width" constant="52" id="VOj-1W-sbN"/>
+                            <constraint firstAttribute="height" constant="52" id="tod-Gb-SSF"/>
+                            <constraint firstAttribute="width" secondItem="4NI-H0-54h" secondAttribute="height" multiplier="1:1" id="zeQ-n1-W9C"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-Al-yIH">
-                        <rect key="frame" x="93" y="-1" width="193" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-q4-ouD">
+                        <rect key="frame" x="60" y="27" width="334" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="334" id="70K-bQ-c6h"/>
+                            <constraint firstAttribute="height" constant="31" id="BSj-lw-EEr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最新消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-q4-ouD">
-                        <rect key="frame" x="106" y="18" width="192" height="37"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收到的时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGR-93-lMX">
+                        <rect key="frame" x="328" y="8" width="86" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="收到的时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGR-93-lMX">
-                        <rect key="frame" x="247" y="5" width="87" height="12"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-Al-yIH">
+                        <rect key="frame" x="60" y="3" width="244" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="244" id="oCI-Pt-pUw"/>
+                            <constraint firstAttribute="height" constant="20" id="xce-WT-2bH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4NI-H0-54h" secondAttribute="bottom" constant="4.5" id="1ln-pA-7wC"/>
+                    <constraint firstItem="4NI-H0-54h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="46f-Hd-OkN"/>
+                    <constraint firstAttribute="bottom" secondItem="7bC-q4-ouD" secondAttribute="bottom" constant="3.5" id="7h4-3X-bKu"/>
+                    <constraint firstItem="7bC-q4-ouD" firstAttribute="leading" secondItem="4NI-H0-54h" secondAttribute="trailing" constant="3" id="IGb-oZ-udz"/>
+                    <constraint firstItem="cGR-93-lMX" firstAttribute="leading" secondItem="i2a-Al-yIH" secondAttribute="trailing" constant="24" id="IxM-u6-WFs"/>
+                    <constraint firstItem="i2a-Al-yIH" firstAttribute="leading" secondItem="4NI-H0-54h" secondAttribute="trailing" constant="3" id="JzA-ER-2jU"/>
+                    <constraint firstItem="cGR-93-lMX" firstAttribute="baseline" secondItem="i2a-Al-yIH" secondAttribute="firstBaseline" id="KfW-5h-ZRg"/>
+                    <constraint firstItem="7bC-q4-ouD" firstAttribute="top" secondItem="i2a-Al-yIH" secondAttribute="bottom" constant="4" id="UZ7-Uv-OBR"/>
+                    <constraint firstItem="4NI-H0-54h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ZZw-Kp-AZd"/>
+                    <constraint firstItem="i2a-Al-yIH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="bLk-GQ-MAx"/>
+                    <constraint firstItem="i2a-Al-yIH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="cFw-g0-tvY"/>
+                    <constraint firstAttribute="trailing" secondItem="7bC-q4-ouD" secondAttribute="trailing" constant="20" id="gO5-6r-3Un"/>
+                    <constraint firstItem="cGR-93-lMX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="hHt-NU-1Ab"/>
+                    <constraint firstItem="i2a-Al-yIH" firstAttribute="leading" secondItem="4NI-H0-54h" secondAttribute="trailing" constant="3" id="nmn-t0-Ng6"/>
+                    <constraint firstAttribute="trailing" secondItem="cGR-93-lMX" secondAttribute="trailing" id="taH-wa-yd1"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
@@ -53,7 +83,7 @@
                 <outlet property="time" destination="cGR-93-lMX" id="2nM-fM-ewb"/>
                 <outlet property="username" destination="i2a-Al-yIH" id="Ri3-B9-DGq"/>
             </connections>
-            <point key="canvasLocation" x="25" y="63"/>
+            <point key="canvasLocation" x="-22" y="65"/>
         </tableViewCell>
     </objects>
 </document>

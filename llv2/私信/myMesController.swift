@@ -128,7 +128,8 @@ class myMesController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 62
+    
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

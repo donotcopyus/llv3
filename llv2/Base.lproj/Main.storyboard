@@ -1102,20 +1102,7 @@
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="IdD-tf-b87">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem id="Y9G-Du-s72"/>
-                            </items>
                         </navigationBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="i7a-EW-162">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i7a-EW-162" id="ojp-S1-bkH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="BFd-r1-X6P" id="ghF-VC-OTY"/>
                             <outlet property="delegate" destination="BFd-r1-X6P" id="Rcv-lA-csD"/>
@@ -1133,6 +1120,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eff-XL-U8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
