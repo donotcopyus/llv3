@@ -42,11 +42,11 @@ class ViewController: UIViewController {
  
         }
         
-        if self.revealViewController() != nil{
-            rightBtn.target = self.revealViewController()
-            rightBtn.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
+//        if self.revealViewController() != nil{
+//            rightBtn.target = self.revealViewController()
+//            rightBtn.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//    }
         
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
         
