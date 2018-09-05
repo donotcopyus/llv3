@@ -50,26 +50,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
-                                <rect key="frame" x="16" y="93" width="343" height="382"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
+                                <rect key="frame" x="16" y="93" width="378" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gq8-fi-jWK" secondAttribute="height" multiplier="189:191" id="8zk-CW-qdo"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
-                                <rect key="frame" x="77" y="549" width="220" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
+                                <rect key="frame" x="97" y="548" width="220" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="dDK-K1-PsJ"/>
+                                </constraints>
                                 <state key="normal" image="submit"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BAa-jO-X7u" firstAttribute="bottom" secondItem="PaE-Gm-FYc" secondAttribute="bottom" constant="150" id="N1I-Fo-B9D"/>
+                            <constraint firstItem="gq8-fi-jWK" firstAttribute="leading" secondItem="BAa-jO-X7u" secondAttribute="leading" constant="16" id="U9r-vb-sy4"/>
+                            <constraint firstItem="PaE-Gm-FYc" firstAttribute="centerX" secondItem="EXz-MJ-5cx" secondAttribute="centerX" id="WAz-V1-hPy"/>
+                            <constraint firstItem="gq8-fi-jWK" firstAttribute="trailing" secondItem="EXz-MJ-5cx" secondAttribute="trailingMargin" id="iSU-vG-2OS"/>
+                            <constraint firstItem="PaE-Gm-FYc" firstAttribute="top" secondItem="gq8-fi-jWK" secondAttribute="bottom" constant="73" id="xZz-7v-hOZ"/>
+                            <constraint firstItem="gq8-fi-jWK" firstAttribute="top" secondItem="BAa-jO-X7u" secondAttribute="top" constant="73" id="yDZ-cj-qkY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BAa-jO-X7u"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zue-K2-qre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5553" y="1137"/>
+            <point key="canvasLocation" x="5552.1739130434789" y="1136.413043478261"/>
         </scene>
         <!--鼓励一下-->
         <scene sceneID="oq1-w5-zhR">

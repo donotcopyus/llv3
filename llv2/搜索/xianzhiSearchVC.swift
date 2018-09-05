@@ -26,25 +26,24 @@ class xianzhiSearchVC: UIViewController {
 
     var button = dropDownBtn()
     var b2 = dropDownBtn()
-    
-    
+ 
     @IBOutlet weak var searchTitle: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button = dropDownBtn.init(frame: CGRect(x:50, y:140, width: 150, height: 30))
+        button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 150, height: 30))
         
         button.setTitle("请选择类型", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = true
+ 
+        button.dropView.dropDownOptions = ["二手书","药妆","家具","租房","服饰","其他","不限类型"]
         
         self.view.addSubview(button)
         
-        
-        button.dropView.dropDownOptions = ["二手书","药妆","家具","租房","服饰","其他","不限类型"]
 
-        b2 = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 150, height: 30))
+        b2 = dropDownBtn.init(frame: CGRect(x:50, y:140, width: 150, height: 30))
         
         b2.setTitle("排列方式", for: .normal)
         
