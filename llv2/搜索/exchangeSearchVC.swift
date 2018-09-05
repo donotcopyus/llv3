@@ -173,8 +173,9 @@ class exchangeSearchVC: UIViewController {
                 let navC:UINavigationController = UINavigationController(rootViewController: viewController)
 
                 //navC.popViewController(animated: true)
- viewController.navigationItem.leftItemsSupplementBackButton = true
- viewController.navigationItem.leftBarButtonItem?.title = "<Back"
+                viewController.navigationItem.leftItemsSupplementBackButton = true
+                viewController.navigationItem.title = "搜索结果"
+                viewController.navigationItem.leftBarButtonItem?.image = UIImage(named:"backbtn")
                 
                 self.present(navC, animated: true)
                 self.pidData.removeAll()

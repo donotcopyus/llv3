@@ -198,8 +198,8 @@ class xianzhiSearch: UITableViewController {
         viewController.uid = arrayOfCellData[index!].author.uid
         
        let navC:UINavigationController = UINavigationController(rootViewController: viewController)
-        let backbutton = UIBarButtonItem(title: "<Back", style: .plain, target: self, action: #selector(goback))
-        
+        let backbutton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(goback))
+        backbutton.image = UIImage(named: "backbtn")
         viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
         
         self.present(navC,animated:true)
