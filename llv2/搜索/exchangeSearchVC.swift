@@ -34,7 +34,7 @@ class exchangeSearchVC: UIViewController {
         super.viewDidLoad()
         
         
-        button = dropDownBtn.init(frame: CGRect(x:70, y:205, width: 100, height: 30))
+        button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 100, height: 30))
         
         button.setTitle("求币种", for: .normal)
         
@@ -46,7 +46,7 @@ class exchangeSearchVC: UIViewController {
         button.dropView.dropDownOptions = ["RMB","加币","美金","港币","日元","英镑"]
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:205, y:205, width: 100, height: 30))
+        b2 = dropDownBtn.init(frame: CGRect(x:185, y:205, width: 100, height: 30))
         
         b2.setTitle("出币种", for: .normal)
         
@@ -57,7 +57,7 @@ class exchangeSearchVC: UIViewController {
         self.view.addSubview(b2)
         
         //----------------------------------
-        b3 = dropDownBtn.init(frame: CGRect(x:70, y:140, width: 150, height: 30))
+        b3 = dropDownBtn.init(frame: CGRect(x:50, y:140, width: 200, height: 30))
         
         b3.setTitle("排列方式", for: .normal)
         
