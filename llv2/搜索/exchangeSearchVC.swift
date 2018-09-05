@@ -57,7 +57,7 @@ class exchangeSearchVC: UIViewController {
         self.view.addSubview(b2)
         
         //----------------------------------
-        b3 = dropDownBtn.init(frame: CGRect(x:50, y:140, width: 200, height: 30))
+        b3 = dropDownBtn.init(frame: CGRect(x:50, y:140, width: 250, height: 30))
         
         b3.setTitle("排列方式", for: .normal)
         
