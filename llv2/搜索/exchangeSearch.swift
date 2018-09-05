@@ -185,6 +185,7 @@ class exchangeSearch: UITableViewController {
         viewController.uid = arrayOfCellData[index!].author.uid
         
         let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+        navC.popViewController(animated: true)
         
         self.present(navC, animated: true)
     }
