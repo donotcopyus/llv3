@@ -269,13 +269,16 @@ class carpoolSearchVC: UIViewController {
                 //跳转f，传值
                 let viewController = self.storyboard?.instantiateViewController(withIdentifier: "carpoolSearch") as! carpoolSearch
                 
-//                let navC:UINavigationController = UINavigationController(rootViewController: viewController)
-//
                 viewController.pidSearchData = self.pidData
                 
-//                self.navigationController!.pushViewController(viewController, animated: true)
-                self.present(viewController, animated:true)
+                let navC:UINavigationController = UINavigationController(rootViewController: viewController)
                 
+                //navC.popViewController(animated: true)
+                viewController.navigationItem.leftItemsSupplementBackButton = true
+                viewController.navigationItem.leftBarButtonItem?.title = "<Back"
+                
+                self.present(navC, animated:true)
+                 self.pidData.removeAll()
             }
 
         })

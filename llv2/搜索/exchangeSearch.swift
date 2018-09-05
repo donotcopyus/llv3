@@ -48,8 +48,7 @@ class exchangeSearch: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+      
         
         observePost()
         
@@ -185,7 +184,11 @@ class exchangeSearch: UITableViewController {
         viewController.uid = arrayOfCellData[index!].author.uid
         
         let navC:UINavigationController = UINavigationController(rootViewController: viewController)
-        navC.popViewController(animated: true)
+       
+        let backbutton = UIBarButtonItem()
+        viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
+        viewController.navigationItem.leftItemsSupplementBackButton = true
+        viewController.navigationItem.leftBarButtonItem?.title = "<Back"
         
         self.present(navC, animated: true)
     }

@@ -156,7 +156,14 @@ class xianzhiSearchVC: UIViewController {
                 
                 viewController.pidSearchData = self.pidData
                 
-                self.present(viewController, animated: true)
+                let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+                
+                //navC.popViewController(animated: true)
+                viewController.navigationItem.leftItemsSupplementBackButton = true
+                viewController.navigationItem.leftBarButtonItem?.title = "<Back"
+                
+                self.present(navC, animated: true)
+                self.pidData.removeAll()
             }
             
         })

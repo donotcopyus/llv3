@@ -173,9 +173,8 @@ class exchangeSearchVC: UIViewController {
                 let navC:UINavigationController = UINavigationController(rootViewController: viewController)
 
                 //navC.popViewController(animated: true)
-                let backButton = UIBarButtonItem()
-                backButton.title = "<"
-                navC.navigationBar.topItem?.backBarButtonItem = backButton
+ viewController.navigationItem.leftItemsSupplementBackButton = true
+ viewController.navigationItem.leftBarButtonItem?.title = "<Back"
                 
                 self.present(navC, animated: true)
                 self.pidData.removeAll()
