@@ -159,8 +159,8 @@ class xianzhiSearchVC: UIViewController {
                 
                 //navC.popViewController(animated: true)
                 viewController.navigationItem.leftItemsSupplementBackButton = true
-                viewController.navigationItem.leftBarButtonItem?.title = "<Back"
-                
+                viewController.navigationItem.title = "搜索结果"
+                viewController.navigationItem.leftBarButtonItem?.image = UIImage(named:"backbtn")
                 self.present(navC, animated: true)
                 self.pidData.removeAll()
             }
