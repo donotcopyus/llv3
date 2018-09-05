@@ -12,11 +12,6 @@ import Kingfisher
 
 class myMesController: UITableViewController {
 
-//
-//    @IBOutlet weak var back: UIButton!
-    //    @IBAction func goBack(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
     
     @IBAction func back(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
