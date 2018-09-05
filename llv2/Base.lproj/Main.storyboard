@@ -680,10 +680,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fVL-jn-hiK">
-                                <rect key="frame" x="-1" y="64" width="414" height="414"/>
+                                <rect key="frame" x="1" y="64" width="412" height="414"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzR-ob-8Lx">
-                                <rect key="frame" x="-1" y="20" width="414" height="44"/>
+                                <rect key="frame" x="1" y="20" width="412" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="vQM-Fz-vdN"/>
                                 </constraints>
@@ -710,9 +710,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba4-gh-ZhH">
-                                <rect key="frame" x="154" y="503" width="104" height="33"/>
+                                <rect key="frame" x="154" y="503" width="106" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="SYy-eg-b5B"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="106" id="c0C-95-Hgn"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="shr-Hs-oM0"/>
                                     <constraint firstAttribute="height" constant="33" id="uoX-Iw-1vT"/>
                                 </constraints>
@@ -740,6 +741,7 @@
                             <constraint firstItem="qzR-ob-8Lx" firstAttribute="top" secondItem="SQ2-R9-kti" secondAttribute="top" id="adL-1s-ZNi"/>
                             <constraint firstItem="qzR-ob-8Lx" firstAttribute="leading" secondItem="zYk-Cc-l3y" secondAttribute="leading" constant="-1" id="bxh-hK-q13"/>
                             <constraint firstItem="SQ2-R9-kti" firstAttribute="bottom" secondItem="qFe-VK-iUo" secondAttribute="bottom" constant="117" id="eCZ-4D-uE2"/>
+                            <constraint firstItem="ba4-gh-ZhH" firstAttribute="centerX" secondItem="SQ2-R9-kti" secondAttribute="centerX" id="i7Q-nD-yCA"/>
                             <constraint firstItem="qFe-VK-iUo" firstAttribute="top" secondItem="ba4-gh-ZhH" secondAttribute="bottom" constant="45" id="owr-ub-fy2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SQ2-R9-kti"/>
@@ -3498,6 +3500,6 @@
         <segue reference="xxP-AD-O1c"/>
         <segue reference="5xl-1u-ky4"/>
         <segue reference="wij-hC-xO5"/>
-        <segue reference="C6l-iW-G4h"/>
+        <segue reference="C1I-Ic-Opq"/>
     </inferredMetricsTieBreakers>
 </document>
