@@ -1,13 +1,17 @@
+下拉菜单的长度调整
+主界面多余的button
+实时汇率图标美化
+搜索界面的label
+闲置搜索界面的button？
+
+搜索居然会叠加
+跳转有问题，到main会拉不出侧拉菜单
+
+
 优化笔记：
 
 carpool发送的座位+exchange的实时汇率label
 
-alert里需要RETURN，都加上
-
-个人资料图片的kingfisher
-
-
-https://github.com/JiongXing/PhotoBrowser
 
 
 数量调整
@@ -21,20 +25,10 @@ nav栏
 
 
 1.Interactive key  for all
-2.search
-3.Back gesture
-4.头像尺寸固定 imagepicker尺寸固定
 设置闲置price只能输入数字
-加上alert确认
 注册界面（返回button+alert
-图片改回picker的图片。。普通微信图片选择方式
 
 
-1.主界面搜索button那里没办法跳转
-2.每个搜索界面需要右上角有一个确认搜索的按钮
-3.carpool search界面去掉剩余座位数和出发时间，只留下出发城市到达城市和出发日期
-4.每个search里把排序方式作成一个下拉菜单可以进行选择，具体的选择你做一个菜单然后我来设参数？
-5.carpool那个时间里能加个任意时间吗，或者旁边加个按钮也行
 
 
 重设密码&邮件发送：

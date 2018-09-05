@@ -170,8 +170,15 @@ class exchangeSearchVC: UIViewController {
                 
                 viewController.pidSearchData = self.pidData
                 
-                self.present(viewController, animated: true)
+                let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+
+                //navC.popViewController(animated: true)
+                let backButton = UIBarButtonItem()
+                backButton.title = "<"
+                navC.navigationBar.topItem?.backBarButtonItem = backButton
                 
+                self.present(navC, animated: true)
+                self.pidData.removeAll()
             }
             
         })
