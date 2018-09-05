@@ -194,10 +194,18 @@ class carpoolSearch: UITableViewController {
         viewController.pid = arrayOfCellData[index!].id
         viewController.uid = arrayOfCellData[index!].author.uid
         
+        let backbutton = UIBarButtonItem(title: "<Back", style: .plain, target: self, action: #selector(goback))
+        
+        viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
+        
          let navC:UINavigationController = UINavigationController(rootViewController: viewController)
         
         self.present(navC, animated: true)
         
+    }
+    
+    @objc func goback(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

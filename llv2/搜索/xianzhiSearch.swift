@@ -197,11 +197,18 @@ class xianzhiSearch: UITableViewController {
         viewController.pid = arrayOfCellData[index!].id
         viewController.uid = arrayOfCellData[index!].author.uid
         
-        self.present(viewController,animated:true)
+       let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+        let backbutton = UIBarButtonItem(title: "<Back", style: .plain, target: self, action: #selector(goback))
+        
+        viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
+        
+        self.present(navC,animated:true)
         
     }
 
-
+    @objc func goback(){
+        self.dismiss(animated: true, completion: nil)
+    }
 
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)

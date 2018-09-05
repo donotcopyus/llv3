@@ -185,12 +185,16 @@ class exchangeSearch: UITableViewController {
         
         let navC:UINavigationController = UINavigationController(rootViewController: viewController)
        
-        let backbutton = UIBarButtonItem()
+        let backbutton = UIBarButtonItem(title: "<Back", style: .plain, target: self, action: #selector(goback))
+        
         viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
-        viewController.navigationItem.leftItemsSupplementBackButton = true
-        viewController.navigationItem.leftBarButtonItem?.title = "<Back"
+
         
         self.present(navC, animated: true)
+    }
+    
+    @objc func goback(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     
