@@ -1009,9 +1009,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-hc-Agr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-hc-Agr">
                                 <rect key="frame" x="79" y="296" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1023,19 +1022,16 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="横线" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-1H-fhV">
-                                <rect key="frame" x="86.666666666666686" y="244" width="240" height="22"/>
+                                <rect key="frame" x="86" y="244" width="242" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="1gw-CN-YwF"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harkore" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-9I-rEQ">
-                                <rect key="frame" x="97" y="268" width="219" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Ax2-Kt-XZL"/>
-                                </constraints>
+                                <rect key="frame" x="97" y="296" width="218" height="146"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNu-9c-7P5">
-                                <rect key="frame" x="86.666666666666686" y="444" width="242" height="21"/>
+                                <rect key="frame" x="86" y="444" width="242" height="21"/>
                                 <string key="text">承接各类iOS端, 安卓端APP开发
 网页, 微信小程序开发</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1043,13 +1039,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网页, 微信小程序开发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzA-yv-WGe">
-                                <rect key="frame" x="125.66666666666669" y="473" width="165" height="21"/>
+                                <rect key="frame" x="125" y="473" width="165" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-T9-nMS">
-                                <rect key="frame" x="96.666666666666686" y="550" width="220" height="38"/>
+                                <rect key="frame" x="97" y="550" width="220" height="38"/>
                                 <state key="normal" image="联系我们"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="版本：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-bv-v5G">
@@ -1061,23 +1057,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZNu-9c-7P5" firstAttribute="top" secondItem="tF1-9I-rEQ" secondAttribute="bottom" constant="2" id="BOV-Wy-BXY"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="Bg2-1H-fhV" secondAttribute="centerX" id="DJ5-Fz-fbl"/>
                             <constraint firstItem="ZNu-9c-7P5" firstAttribute="centerX" secondItem="RzA-yv-WGe" secondAttribute="centerX" id="Jkf-la-jx6"/>
                             <constraint firstItem="jNr-bv-v5G" firstAttribute="top" secondItem="zKw-yV-PNH" secondAttribute="bottom" constant="8" symbolic="YES" id="NvV-JO-uRX"/>
                             <constraint firstItem="zKw-yV-PNH" firstAttribute="top" secondItem="mDF-S3-evP" secondAttribute="top" constant="107" id="O0R-DI-1L5"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="ZNu-9c-7P5" secondAttribute="centerX" id="PAl-To-sah"/>
+                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="leading" secondItem="YrL-T9-nMS" secondAttribute="leading" id="PdG-UE-DWu"/>
                             <constraint firstItem="Bg2-1H-fhV" firstAttribute="top" secondItem="jNr-bv-v5G" secondAttribute="bottom" constant="36" id="SAG-eK-J07"/>
-                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="top" secondItem="Bg2-1H-fhV" secondAttribute="bottom" constant="2" id="Wa3-vc-6Ks"/>
                             <constraint firstItem="YrL-T9-nMS" firstAttribute="top" secondItem="RzA-yv-WGe" secondAttribute="bottom" constant="56" id="WpH-4a-1xm"/>
                             <constraint firstItem="Bg2-1H-fhV" firstAttribute="leading" secondItem="ZNu-9c-7P5" secondAttribute="leading" id="Xdj-fk-X7E"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="top" secondItem="oG3-sI-3ii" secondAttribute="top" id="Y1d-7X-DxG"/>
-                            <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="tF1-9I-rEQ" secondAttribute="centerX" id="b9A-IB-QPJ"/>
+                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="top" secondItem="Bg2-1H-fhV" secondAttribute="bottom" constant="30" id="fi1-Ac-wZO"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="zKw-yV-PNH" secondAttribute="centerX" id="gvJ-r5-oPd"/>
                             <constraint firstItem="zKw-yV-PNH" firstAttribute="centerX" secondItem="mDF-S3-evP" secondAttribute="centerX" id="gzQ-bm-hRs"/>
                             <constraint firstItem="RzA-yv-WGe" firstAttribute="top" secondItem="ZNu-9c-7P5" secondAttribute="bottom" constant="8" symbolic="YES" id="irs-Nz-deh"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="YrL-T9-nMS" secondAttribute="centerX" id="loQ-3l-ibv"/>
-                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="leading" secondItem="oG3-sI-3ii" secondAttribute="leading" constant="97" id="s1H-Bf-o6R"/>
-                            <constraint firstItem="RzA-yv-WGe" firstAttribute="top" secondItem="tF1-9I-rEQ" secondAttribute="bottom" constant="25" id="vbU-1g-gBj"/>
+                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="top" secondItem="gaV-hc-Agr" secondAttribute="top" id="vHi-a1-RE1"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="leading" secondItem="mDF-S3-evP" secondAttribute="leading" id="vhM-9c-ZAd"/>
                             <constraint firstItem="zKw-yV-PNH" firstAttribute="leading" secondItem="oG3-sI-3ii" secondAttribute="leading" constant="166" id="yH1-Wf-9XL"/>
                         </constraints>
@@ -1089,7 +1085,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4r-Nm-3um" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="1274"/>
+            <point key="canvasLocation" x="-152.17391304347828" y="1273.3695652173915"/>
         </scene>
         <!--My Mes Controller-->
         <scene sceneID="6Kt-2R-Wkc">
@@ -1239,7 +1235,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGc-sP-hMt">
-                                <rect key="frame" x="12" y="594" width="61" height="39"/>
+                                <rect key="frame" x="12" y="643" width="61" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="logout">
                                     <color key="titleColor" red="0.30588235294117649" green="0.41568627450980394" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2527,42 +2523,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6R-Ar-W6F">
-                                <rect key="frame" x="0.0" y="621" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" id="yvM-IA-lbb">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TUJ-Sz-5Lb">
-                                            <rect key="frame" x="20" y="6.6666666666666679" width="91" height="31.000000000000004"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="删除广告"/>
-                                            <connections>
-                                                <action selector="deletepost:" destination="xdC-th-xje" eventType="touchUpInside" id="uQ0-Dt-TWw"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="ndj-T2-Wic">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7hU-Dm-fDB">
-                                            <rect key="frame" x="111" y="0.0" width="100" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="私聊"/>
-                                            <connections>
-                                                <action selector="chat:" destination="xdC-th-xje" eventType="touchUpInside" id="FTD-St-sdG"/>
-                                                <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="Wbc-G6-Mnr"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="J77-iL-WVX">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pf0-PN-y2P">
-                                            <rect key="frame" x="309" y="7" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="share:" destination="xdC-th-xje" eventType="touchUpInside" id="Mg0-8X-mJT"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0B-1N-5TI">
                                 <rect key="frame" x="120" y="96" width="238" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -2631,6 +2591,42 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6R-Ar-W6F">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="yvM-IA-lbb">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TUJ-Sz-5Lb">
+                                            <rect key="frame" x="20" y="6.6666666666666679" width="91" height="31.000000000000004"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="删除广告"/>
+                                            <connections>
+                                                <action selector="deletepost:" destination="xdC-th-xje" eventType="touchUpInside" id="uQ0-Dt-TWw"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="ndj-T2-Wic">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7hU-Dm-fDB">
+                                            <rect key="frame" x="111" y="0.0" width="100" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="私聊"/>
+                                            <connections>
+                                                <action selector="chat:" destination="xdC-th-xje" eventType="touchUpInside" id="FTD-St-sdG"/>
+                                                <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="Wbc-G6-Mnr"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="J77-iL-WVX">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pf0-PN-y2P">
+                                            <rect key="frame" x="348" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="share:" destination="xdC-th-xje" eventType="touchUpInside" id="Mg0-8X-mJT"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2687,7 +2683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5np-qQ-ykv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7318" y="-1836"/>
+            <point key="canvasLocation" x="7317.3913043478269" y="-1836.6847826086957"/>
         </scene>
         <!--Profile Check Controller-->
         <scene sceneID="INd-4Y-oQm">
@@ -2697,52 +2693,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCJ-4f-8oQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCJ-4f-8oQ">
                                 <rect key="frame" x="98" y="0.0" width="24" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fx-R2-4qG">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" id="FLv-Ob-vYg">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h0g-U6-4tn">
-                                            <rect key="frame" x="20" y="6.6666666666666679" width="91" height="31.000000000000004"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="删除广告"/>
-                                            <connections>
-                                                <action selector="deletePost:" destination="IFH-H1-VVg" eventType="touchUpInside" id="BOr-q2-P4y"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="Ctn-aV-gQj">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XJn-n0-hLp">
-                                            <rect key="frame" x="111" y="0.0" width="100" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="私聊"/>
-                                            <connections>
-                                                <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="A9r-Rw-q2m"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="N2F-7K-rD4">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Cs-X2-Xum">
-                                            <rect key="frame" x="348" y="7" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="share:" destination="IFH-H1-VVg" eventType="touchUpInside" id="eLV-wx-h9H"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsp-pG-OSX">
                                 <rect key="frame" x="128" y="110" width="266" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="YFN-qT-oKR"/>
+                                    <constraint firstAttribute="height" constant="21" id="8cd-py-lb3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2781,44 +2741,82 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-tx-Lrr">
                                 <rect key="frame" x="20" y="93" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="tPN-tx-Lrr" secondAttribute="height" multiplier="1:1" id="Blz-7m-mii"/>
-                                    <constraint firstAttribute="width" constant="100" id="m6Z-1V-W4W"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ddp-PO-aDV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="反正要bb一堆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4K-jJ-2gS">
                                 <rect key="frame" x="20" y="254" width="361" height="175"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="MQW-cG-L1j"/>
+                                    <constraint firstAttribute="height" constant="175" id="2vs-Qt-qcD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fx-R2-4qG">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="FLv-Ob-vYg">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h0g-U6-4tn">
+                                            <rect key="frame" x="20" y="6.6666666666666679" width="91" height="31.000000000000004"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="删除广告"/>
+                                            <connections>
+                                                <action selector="deletePost:" destination="IFH-H1-VVg" eventType="touchUpInside" id="BOr-q2-P4y"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="Ctn-aV-gQj">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XJn-n0-hLp">
+                                            <rect key="frame" x="111" y="0.0" width="100" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="私聊"/>
+                                            <connections>
+                                                <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="A9r-Rw-q2m"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="N2F-7K-rD4">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Cs-X2-Xum">
+                                            <rect key="frame" x="348" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="share:" destination="IFH-H1-VVg" eventType="touchUpInside" id="eLV-wx-h9H"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="trailing" secondItem="o5N-xx-Eu0" secondAttribute="trailing" id="6nc-e6-eN9"/>
-                            <constraint firstItem="yZG-DA-DTD" firstAttribute="leading" secondItem="GPR-HY-1g5" secondAttribute="leading" constant="277" id="7Rf-Qc-J21"/>
-                            <constraint firstItem="f4K-jJ-2gS" firstAttribute="top" secondItem="5aE-0w-DRi" secondAttribute="bottom" constant="7" id="DVU-P4-M5q"/>
-                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="leading" secondItem="ayI-gC-IKN" secondAttribute="leadingMargin" id="DfM-hE-Pcc"/>
-                            <constraint firstItem="o5N-xx-Eu0" firstAttribute="leading" secondItem="GPR-HY-1g5" secondAttribute="leading" constant="181" id="E0c-G3-ETc"/>
-                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="leading" secondItem="5aE-0w-DRi" secondAttribute="leading" id="I6R-M7-X9E"/>
-                            <constraint firstItem="dsp-pG-OSX" firstAttribute="trailing" secondItem="ayI-gC-IKN" secondAttribute="trailingMargin" id="OjE-yw-PIS"/>
-                            <constraint firstItem="dMp-Fq-AS6" firstAttribute="top" secondItem="GPR-HY-1g5" secondAttribute="top" constant="65" id="Stk-qR-YOv"/>
-                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="leading" secondItem="tPN-tx-Lrr" secondAttribute="trailing" constant="8" symbolic="YES" id="YkW-86-aGc"/>
-                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="top" secondItem="GPR-HY-1g5" secondAttribute="top" constant="73" id="eGI-qO-6GF"/>
-                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="leading" secondItem="dsp-pG-OSX" secondAttribute="leading" id="eQm-Dh-hXA"/>
-                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="top" secondItem="YCJ-4f-8oQ" secondAttribute="bottom" constant="72" id="eln-PS-jJ5"/>
-                            <constraint firstAttribute="bottom" secondItem="yZG-DA-DTD" secondAttribute="bottom" constant="275" id="jgW-X8-FQf"/>
-                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="top" secondItem="eCf-Hb-ZjG" secondAttribute="top" id="jqf-gG-mcz"/>
-                            <constraint firstItem="5aE-0w-DRi" firstAttribute="top" secondItem="tPN-tx-Lrr" secondAttribute="bottom" constant="33" id="jrh-kT-CDl"/>
-                            <constraint firstItem="5aE-0w-DRi" firstAttribute="leading" secondItem="f4K-jJ-2gS" secondAttribute="leading" id="lk5-cz-qxV"/>
-                            <constraint firstItem="f4K-jJ-2gS" firstAttribute="top" secondItem="o5N-xx-Eu0" secondAttribute="bottom" constant="8" symbolic="YES" id="mpQ-J5-9Cn"/>
-                            <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="dMp-Fq-AS6" secondAttribute="trailing" constant="56" id="skg-zd-k50"/>
-                            <constraint firstItem="dsp-pG-OSX" firstAttribute="top" secondItem="dMp-Fq-AS6" secondAttribute="bottom" constant="4" id="trE-3K-eMJ"/>
-                            <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="f4K-jJ-2gS" secondAttribute="trailing" constant="33" id="tru-tE-Blx"/>
-                            <constraint firstItem="o5N-xx-Eu0" firstAttribute="top" secondItem="dsp-pG-OSX" secondAttribute="bottom" constant="94" id="wD0-ZD-Ifr"/>
-                            <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="5aE-0w-DRi" secondAttribute="trailing" constant="54" id="wfK-dW-xF8"/>
+                            <constraint firstItem="dMp-Fq-AS6" firstAttribute="top" secondItem="GPR-HY-1g5" secondAttribute="top" constant="65" id="0or-HO-EnQ"/>
+                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="leading" secondItem="ayI-gC-IKN" secondAttribute="leadingMargin" id="7JO-58-ZQZ"/>
+                            <constraint firstItem="dsp-pG-OSX" firstAttribute="trailing" secondItem="ayI-gC-IKN" secondAttribute="trailingMargin" id="7x2-6r-cmm"/>
+                            <constraint firstItem="dsp-pG-OSX" firstAttribute="top" secondItem="dMp-Fq-AS6" secondAttribute="bottom" constant="4" id="B6I-zg-WuA"/>
+                            <constraint firstItem="o5N-xx-Eu0" firstAttribute="leading" secondItem="GPR-HY-1g5" secondAttribute="leading" constant="181" id="CZC-qj-20x"/>
+                            <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="dMp-Fq-AS6" secondAttribute="trailing" constant="56" id="EiX-vR-hhU"/>
+                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="top" secondItem="GPR-HY-1g5" secondAttribute="top" constant="73" id="Kr5-QV-M48"/>
+                            <constraint firstItem="YCJ-4f-8oQ" firstAttribute="top" secondItem="ayI-gC-IKN" secondAttribute="top" id="NGl-fS-WSh"/>
+                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="leading" secondItem="tPN-tx-Lrr" secondAttribute="trailing" constant="8" symbolic="YES" id="NtT-Pt-NvR"/>
+                            <constraint firstItem="o5N-xx-Eu0" firstAttribute="top" secondItem="dsp-pG-OSX" secondAttribute="bottom" constant="94" id="OEJ-8U-Za0"/>
+                            <constraint firstItem="yZG-DA-DTD" firstAttribute="top" secondItem="f4K-jJ-2gS" secondAttribute="bottom" constant="11" id="WKs-r9-dkU"/>
+                            <constraint firstAttribute="trailing" secondItem="9fx-R2-4qG" secondAttribute="trailing" id="XxG-Qh-flp"/>
+                            <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="f4K-jJ-2gS" secondAttribute="trailing" constant="33" id="Yq6-1K-RAK"/>
+                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="trailing" secondItem="o5N-xx-Eu0" secondAttribute="trailing" id="bCa-65-E2D"/>
+                            <constraint firstItem="eCf-Hb-ZjG" firstAttribute="leading" secondItem="dsp-pG-OSX" secondAttribute="leading" id="cXT-4Z-its"/>
+                            <constraint firstItem="5aE-0w-DRi" firstAttribute="leading" secondItem="f4K-jJ-2gS" secondAttribute="leading" id="eNo-ui-OMs"/>
+                            <constraint firstItem="9fx-R2-4qG" firstAttribute="bottom" secondItem="GPR-HY-1g5" secondAttribute="bottom" id="gwB-Nu-zEM"/>
+                            <constraint firstItem="YCJ-4f-8oQ" firstAttribute="leading" secondItem="ayI-gC-IKN" secondAttribute="leadingMargin" constant="78" id="lZ0-eM-rkN"/>
+                            <constraint firstItem="f4K-jJ-2gS" firstAttribute="top" secondItem="o5N-xx-Eu0" secondAttribute="bottom" constant="8" symbolic="YES" id="lpF-Or-f7H"/>
+                            <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="5aE-0w-DRi" secondAttribute="trailing" constant="54" id="noc-Vu-FoG"/>
+                            <constraint firstItem="yZG-DA-DTD" firstAttribute="leading" secondItem="GPR-HY-1g5" secondAttribute="leading" constant="277" id="qAR-31-1BY"/>
+                            <constraint firstItem="5aE-0w-DRi" firstAttribute="top" secondItem="tPN-tx-Lrr" secondAttribute="bottom" constant="33" id="rTb-RZ-MOO"/>
+                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="leading" secondItem="5aE-0w-DRi" secondAttribute="leading" id="uYi-9i-KQp"/>
+                            <constraint firstItem="f4K-jJ-2gS" firstAttribute="top" secondItem="5aE-0w-DRi" secondAttribute="bottom" constant="7" id="wuR-My-31L"/>
+                            <constraint firstItem="9fx-R2-4qG" firstAttribute="leading" secondItem="ayI-gC-IKN" secondAttribute="leading" id="xa3-qR-fyU"/>
+                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="top" secondItem="eCf-Hb-ZjG" secondAttribute="top" id="zWW-Qg-bo6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GPR-HY-1g5"/>
                     </view>
@@ -3399,7 +3397,7 @@
         <image name="carpool" width="260" height="90"/>
         <image name="carpoolTab" width="31" height="31"/>
         <image name="exchangeTab" width="34" height="26"/>
-        <image name="harkore" width="200" height="200"/>
+        <image name="harkore" width="218" height="146"/>
         <image name="loginUI" width="375" height="812"/>
         <image name="menubutton" width="33" height="25"/>
         <image name="search" width="16" height="16"/>
@@ -3436,9 +3434,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qje-py-OLT"/>
         <segue reference="xxP-AD-O1c"/>
-        <segue reference="2FW-DI-Yov"/>
+        <segue reference="5xl-1u-ky4"/>
         <segue reference="vVO-m1-ivf"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="eWV-nJ-ofo"/>
