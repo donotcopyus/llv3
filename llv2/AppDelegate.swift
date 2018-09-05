@@ -76,20 +76,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        return true
 //    }
 //
-    private func splashScreen() {
-        let launchScreenVC = UIStoryboard.init(name: "LaunchSreen", bundle: nil)
-        let rootVC = launchScreenVC.instantiateInitialViewController(withIdentifier: "splashController")
-        self.window?.rootViewController = rootVC
-        self.window?.makeKeyAndVisible()
-        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(dismissSplashController), userInfo: nil, repeats: false)
-    }
     
-    @objc func dismissSplashController() {
-        let mainVC = UIStoryboard.init(name: "Main", bundle: nil)
-        let rootVC = mainVC.instantiateViewController(withIdentifier: "loginController")
-        self.window?.rootViewController = rootVC
-        self.window?.makeKeyAndVisible()
-    }
+    
+//    private func splashScreen() {
+//        let launchScreenVC = UIStoryboard.init(name: "LaunchSreen", bundle: nil)
+//        let rootVC = launchScreenVC.instantiateInitialViewController(withIdentifier: "splashController")
+//        self.window?.rootViewController = rootVC
+//        self.window?.makeKeyAndVisible()
+//        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(dismissSplashController), userInfo: nil, repeats: false)
+//    }
+//
+//    @objc func dismissSplashController() {
+//        let mainVC = UIStoryboard.init(name: "Main", bundle: nil)
+//        let rootVC = mainVC.instantiateViewController(withIdentifier: "loginController")
+//        self.window?.rootViewController = rootVC
+//        self.window?.makeKeyAndVisible()
+//    }
 
 
 }

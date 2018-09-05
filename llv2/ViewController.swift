@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import RevealingSplashView
 
 class ViewController: UIViewController {
 
@@ -24,11 +25,12 @@ class ViewController: UIViewController {
         //这里加跳转就行
     }
    
-    @IBOutlet weak var rightBtn: UIBarButtonItem!
+   
     
     
     override func viewDidLoad() {
         
+        setupViews()
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -83,9 +85,15 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(otherView, animated: true)
     }
     
+    func setupViews() {
+        view.addSubview(revealingSplashView)
+        
+        revealingSplashView.startAnimation()
+    }
+    
     
 
-    
+    let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "harkore"), iconInitialSize: CGSize(width: 123, height: 123), backgroundColor: UIColor.white)
     
     
     

@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import RevealingSplashView
+
 
 class loginController: UIViewController {
     
@@ -60,6 +62,8 @@ class loginController: UIViewController {
             }
             
         }
+        setupViews()
+
         
     }
     
@@ -72,6 +76,19 @@ class loginController: UIViewController {
         
         return true
     }
+
+    func setupViews() {
+        view.addSubview(revealingSplashView)
+        
+        revealingSplashView.startAnimation()
+    }
+    
+    
+    
+    let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "harkore"), iconInitialSize: CGSize(width: 123, height: 123), backgroundColor: UIColor.white)
+    
+ 
+
 
 
     override func didReceiveMemoryWarning() {
