@@ -87,7 +87,8 @@ class carpoolSearchVC: UIViewController {
     @IBOutlet weak var lab: UILabel!
     
     func showlab(_ sender: Any) {
-        if(button.currentTitle == "出发城市") {
+        lab.isHidden = true
+        if(button.currentTitle != "出发城市") {
             lab.isHidden = false
         }
     }
@@ -95,12 +96,12 @@ class carpoolSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lab.isHidden = true
+
 
         
         button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 150, height: 30))
         
-        button.setTitle("出发城市", for: .normal)
+        button.setTitle("选择城市", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = true
         
@@ -114,7 +115,7 @@ class carpoolSearchVC: UIViewController {
         //---------------------------------
         b2 = dropDownBtn.init(frame: CGRect(x:205, y:205, width: 150, height: 30))
         
-        b2.setTitle("到达城市", for: .normal)
+        b2.setTitle("选择城市", for: .normal)
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
@@ -132,6 +133,10 @@ class carpoolSearchVC: UIViewController {
         b3.dropView.dropDownOptions = ["最近发布","最久发布","出发时间从早到晚","出发时间从晚到早"]
         
         self.view.addSubview(b3)
+        
+        if(button.currentTitle != "出发城市") {
+            lab.isHidden = false
+        }
    
     }
 

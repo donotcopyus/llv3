@@ -2201,11 +2201,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-Fs-4hO">
-                                <rect key="frame" x="70" y="120" width="42" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-0m-gMB">
+                                <rect key="frame" x="70" y="185" width="42" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="到达" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-8G-aa5">
+                                <rect key="frame" x="225" y="185" width="42" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2218,7 +2225,6 @@
                     <connections>
                         <outlet property="datepicker" destination="7A9-vA-uCV" id="xmZ-5Q-dNF"/>
                         <outlet property="godate" destination="Z75-Wa-sIl" id="9Bg-E2-aib"/>
-                        <outlet property="lab" destination="qPL-Fs-4hO" id="UsT-L2-Pt8"/>
                         <outlet property="otherArr" destination="viP-IO-5sz" id="Zg6-BL-WiH"/>
                         <outlet property="otherDep" destination="HKw-Zn-HMe" id="FZB-LV-xLp"/>
                     </connections>
@@ -2319,6 +2325,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="求币种" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUh-CG-eY2">
+                                <rect key="frame" x="70" y="185" width="42" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出币种" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQX-1j-EWs">
+                                <rect key="frame" x="205" y="185" width="42" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dDB-gM-nSg"/>
@@ -2327,7 +2347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYU-79-1HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6360.8000000000002" y="-2786.3568215892055"/>
+            <point key="canvasLocation" x="6359.420289855073" y="-2786.413043478261"/>
         </scene>
         <!--carpool-->
         <scene sceneID="56H-Se-rew">
@@ -3479,7 +3499,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="uJp-nh-C7I"/>
-        <segue reference="wYX-fP-eqP"/>
+        <segue reference="65C-YE-aWy"/>
         <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
 </document>

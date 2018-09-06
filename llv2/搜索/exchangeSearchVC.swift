@@ -36,7 +36,7 @@ class exchangeSearchVC: UIViewController {
         
         button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 100, height: 30))
         
-        button.setTitle("求币种", for: .normal)
+        button.setTitle("选择币种", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = true
         
@@ -48,7 +48,7 @@ class exchangeSearchVC: UIViewController {
         //---------------------------------
         b2 = dropDownBtn.init(frame: CGRect(x:185, y:205, width: 100, height: 30))
         
-        b2.setTitle("出币种", for: .normal)
+        b2.setTitle("选择币种", for: .normal)
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
