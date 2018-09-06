@@ -84,12 +84,19 @@ class carpoolSearchVC: UIViewController {
         otherArr.text = sender.text
     }
     
+    @IBOutlet weak var lab: UILabel!
     
-    
+    func showlab(_ sender: Any) {
+        if(button.currentTitle == "出发城市") {
+            lab.isHidden = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        lab.isHidden = true
+
         
         button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 150, height: 30))
         
