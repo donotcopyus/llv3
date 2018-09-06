@@ -44,6 +44,7 @@
 		51D52D8E2131017A00AA706F /* dra3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D52D8D2131017A00AA706F /* dra3.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
+		FA01DB6B2140F9BE001D57E2 /* 鼓励.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */; };
 		FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EB2123C49A00B03E1D /* LikeTab.swift */; };
 		FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454ED2123CCD300B03E1D /* sent1.swift */; };
 		FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EF2123CCDE00B03E1D /* sent2.swift */; };
@@ -144,6 +145,7 @@
 		D315C848D886DCBB8F607BC6 /* Pods-llv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F31EDFF509925B70133C3FB1 /* Pods-llv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_llv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "鼓励.swift"; sourceTree = "<group>"; };
 		FA1454EB2123C49A00B03E1D /* LikeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTab.swift; sourceTree = "<group>"; };
 		FA1454ED2123CCD300B03E1D /* sent1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent1.swift; sourceTree = "<group>"; };
 		FA1454EF2123CCDE00B03E1D /* sent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent2.swift; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 				FAC7EB662116359500FE2FDE /* personalVC.swift */,
 				FA1454F5212921FF00B03E1D /* cacheVC.swift */,
 				FA19E115213CCBD9005E6B2B /* contactUs.swift */,
+				FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */,
 			);
 			name = "Setting Page";
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
 				5176808D21352735003A8F39 /* xianzhiSearch.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
+				FA01DB6B2140F9BE001D57E2 /* 鼓励.swift in Sources */,
 				FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */,
