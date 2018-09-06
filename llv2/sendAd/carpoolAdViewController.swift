@@ -62,6 +62,24 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 present(alert, animated: true, completion: nil)
                return
             }
+            
+            var length = 0
+            for char in dept{
+                length += "\(char)".lengthOfBytes(using: String.Encoding.utf8) == 3 ? 2: 1
+            }
+            
+            if(length > 8){
+                let alert = UIAlertController(title: title, message: "出发城市字符过长，请控制在四个汉字以内", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                    
+                    
+                } ))
+                
+                present(alert, animated: true, completion: nil)
+                
+                return
+            }
         }
         
         if(arri == "其他"){
@@ -80,6 +98,24 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 
                 present(alert, animated: true, completion: nil)
                return
+            }
+            
+            var length = 0
+            for char in dept{
+                length += "\(char)".lengthOfBytes(using: String.Encoding.utf8) == 3 ? 2: 1
+            }
+            
+            if(length > 8){
+                let alert = UIAlertController(title: title, message: "到达城市字符过长，请控制在四个汉字以内", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                    
+                    
+                } ))
+                
+                present(alert, animated: true, completion: nil)
+                
+                return
             }
         }
         

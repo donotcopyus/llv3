@@ -36,7 +36,14 @@ class loginController: UIViewController {
                 self.performSegue(withIdentifier: "loggedin", sender: self)
             }
             else{
-                self.labelText.text = "登录失败，用户名或密码错误"
+                let alert = UIAlertController(title: self.title, message: "登录失败，用户名或密码错误", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                } ))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+                return
             }
         }
     }

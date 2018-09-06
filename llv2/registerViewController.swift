@@ -48,27 +48,60 @@ class registerViewController: UIViewController {
     //user signup
     @IBAction func handleSignUp(_ sender: UIButton) {
         
+        
+        
         guard let username = usernameField.text else {
             //加alert
-            print("填写用户名")
+                let alert = UIAlertController(title: title, message: "请填写用户名", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    alert.dismiss(animated: true, completion: nil)
+                } ))
+                present(alert, animated: true, completion: nil)
+                return
+            
+        }
+
+        var length = 0
+        for char in username{
+            length += "\(char)".lengthOfBytes(using: String.Encoding.utf8) == 3 ? 2: 1
+        }
+        
+        if(length > 18){
+            let alert = UIAlertController(title: title, message: "用户名过长", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            
             return
         }
         
         guard let email = emailField.text else{
-            //加alert
-            print("填写邮箱")
+            let alert = UIAlertController(title: title, message: "请填写邮箱", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            present(alert, animated: true, completion: nil)
             return
         }
         
         guard let pass = passwordField.text else{
-            //加alert
-            print("填写密码")
+            let alert = UIAlertController(title: title, message: "请填写密码", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            present(alert, animated: true, completion: nil)
             return
         }
+
         
         guard let image = profileImageView.image else{
-            //加alert
-            print("请先上传图片")
+            let alert = UIAlertController(title: title, message: "请上传头像", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            present(alert, animated: true, completion: nil)
             return
         }
         
@@ -78,10 +111,7 @@ class registerViewController: UIViewController {
             user,error in
             if error == nil && user != nil {
                 
-                //加alert
-                self.labelText.text = "成功创建！"
-                
-                
+ 
                 self.uploadProfileImage(image) {
                     url in
                     
@@ -100,7 +130,7 @@ class registerViewController: UIViewController {
                                 self.saveProfile(username: username, profileImageURL: url!){
                                     success in
                                     if success{
-                                        //self.performSegue(withIdentifier: "registerComplete", sender: self)
+                                       
                                     }
                                     else{
                                         print("出问题")
@@ -121,9 +151,16 @@ class registerViewController: UIViewController {
 
             }
             else{
-                
-                //加alert
-                self.labelText.text = "用户已经存在"
+
+                    let alert = UIAlertController(title: self.title, message: "注册失败", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                        alert.dismiss(animated: true, completion: nil)
+                    } ))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+        
             }
         }
         

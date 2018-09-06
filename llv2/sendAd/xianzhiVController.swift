@@ -11,7 +11,7 @@ import ImagePicker
 import Lightbox
 import Firebase
 
-class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegate {
+class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegate,UITextFieldDelegate {
     
     
     
@@ -113,6 +113,24 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
             return
         }
         
+       var length = 0
+        for char in name{
+            length += "\(char)".lengthOfBytes(using: String.Encoding.utf8) == 3 ? 2: 1
+        }
+        
+        if(length > 20){
+          let alert = UIAlertController(title: title, message: "名称字符过长，请控制在十个汉字以内", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                
+                
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
         guard let price = self.price.text else{
             return
         }
@@ -130,6 +148,15 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
            // end alert -------------------------------------------------------
         }
         
+        let checkint = Int(price)
+        if (checkint == nil){
+            let alert = UIAlertController(title: title, message: "价格只能为数字", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            } ))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         var extraInfo = self.txtv.text
         
         if extraInfo == "在这里填写详细信息"{
@@ -139,7 +166,12 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         let genre = b2.currentTitle
         
         if(genre == "选择类型"){
-            print("请选择类型")
+            let alert = UIAlertController(title: title, message: "请选择类型", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            } ))
+            
+            present(alert, animated: true, completion: nil)
             return
         }
         
@@ -333,17 +365,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         }
             
         else if (self.image.image == nil && self.image2.image == nil && self.image3.image == nil){
-            //update三个imageurl
-            let alert = UIAlertController(title: "上传", message: "请等待...", preferredStyle: .alert)
-            
-            let loadingIndicator = UIActivityIndicatorView(frame:alert.view.bounds)
-            loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-            
-            alert.view.addSubview(loadingIndicator)
-            loadingIndicator.isUserInteractionEnabled = false
-            loadingIndicator.startAnimating()
-            
-            self.present(alert, animated: true, completion: nil)
+ 
             self.performSegue(withIdentifier: "xianzhiB", sender: self)
         }
         
@@ -415,6 +437,10 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         
         view.addGestureRecognizer(rightSwipe)
         
+        self.price.delegate = self
+        self.price.keyboardType = UIKeyboardType.numberPad
+        
+        
     }
     
     @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
@@ -453,6 +479,8 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         
         return true
     }
+    
+
 
 
 }
