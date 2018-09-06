@@ -16,10 +16,10 @@ class goodgood: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //弹出消息框
-        let alertController = UIAlertController(title: "觉得好用的话，给我个评价吧！",
+        let alertController = UIAlertController(title: "帮忙点个赞憋",
                                                 message: nil, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "暂不评价", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "好的", style: .default,
+        let okAction = UIAlertAction(title: "好哇(点这个)", style: .default,
                                      handler: {
                                         action in
                                         self.gotoAppStore()
