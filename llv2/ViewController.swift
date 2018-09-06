@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        setupViews()
+//        setupViews()
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -85,15 +85,12 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(otherView, animated: true)
     }
     
-    func setupViews() {
-        view.addSubview(revealingSplashView)
-        
-        revealingSplashView.startAnimation()
-    }
-    
-    
-
-    let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "harkore"), iconInitialSize: CGSize(width: 123, height: 123), backgroundColor: UIColor.white)
+//    func setupViews() {
+//        view.addSubview(revealingSplashView)
+//        
+//        revealingSplashView.startAnimation()
+//    }
+//    let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "harkore"), iconInitialSize: CGSize(width: 123, height: 123), backgroundColor: UIColor.white)
     
     
     
