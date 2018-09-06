@@ -74,12 +74,6 @@ class carpoolSearchVC: UIViewController {
         
     }
     
-//    @IBOutlet weak var label1: UILabel!
-//    func showlabel() {
-//        if (button.currentTitle! != nil){
-//            label1.isHidden = false
-//        }
-//    }
     
     @IBAction func aChanged(_ sender: UITextField) {
         
@@ -95,8 +89,6 @@ class carpoolSearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        label1.isHidden = true
         
         
         button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 150, height: 30))
