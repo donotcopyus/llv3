@@ -84,14 +84,14 @@ class carpoolSearchVC: UIViewController {
         otherArr.text = sender.text
     }
     
-    @IBOutlet weak var lab: UILabel!
+//    @IBOutlet weak var lab: UILabel!
     
-    func showlab(_ sender: Any) {
-        lab.isHidden = true
-        if(button.currentTitle != "出发城市") {
-            lab.isHidden = false
-        }
-    }
+//    func showlab(_ sender: Any) {
+//        lab.isHidden = true
+//        if(button.currentTitle != "出发城市") {
+//            lab.isHidden = false
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,10 +134,10 @@ class carpoolSearchVC: UIViewController {
         
         self.view.addSubview(b3)
         
-        if(button.currentTitle != "出发城市") {
-            lab.isHidden = false
-        }
-   
+//        if(button.currentTitle != "出发城市") {
+//            lab.isHidden = false
+//        }
+//
     }
 
     
@@ -306,7 +306,6 @@ class carpoolSearchVC: UIViewController {
     }
 
     }
-    
     
 
 
