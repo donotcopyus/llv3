@@ -541,11 +541,12 @@
                     <connections>
                         <outlet property="labelText" destination="Dmi-Do-o56" id="r0r-wc-GVK"/>
                         <outlet property="profileImageView" destination="doA-kc-dS5" id="MWn-Cf-u1M"/>
+                        <segue destination="Eq6-Q5-sGv" kind="showDetail" identifier="logoutSegue" id="3A1-YK-hyk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qW-9c-A5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3747.826086956522" y="474.45652173913049"/>
+            <point key="canvasLocation" x="-835" y="-113"/>
         </scene>
         <!--隐私设置-->
         <scene sceneID="WJj-ql-7pg">
@@ -3584,6 +3585,6 @@
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
         <segue reference="Jss-ka-Uac"/>
-        <segue reference="C6l-iW-G4h"/>
+        <segue reference="3A1-YK-hyk"/>
     </inferredMetricsTieBreakers>
 </document>
