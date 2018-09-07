@@ -17,6 +17,11 @@ class personalVC: UIViewController {
     @IBOutlet weak var labelText: UILabel!
     
    
+    @IBAction func nicknameChange(_ sender: UIButton) {
+    }
+    
+    @IBAction func passwordChange(_ sender: UIButton) {
+    }
     
     
     override func viewDidLoad() {

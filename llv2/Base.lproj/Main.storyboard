@@ -472,6 +472,9 @@
                                 <state key="normal" title="     修改密码">
                                     <color key="titleColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="passwordChange:" destination="koZ-gF-A5s" eventType="touchUpInside" id="Mxi-Lj-0fu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-81-hRT">
                                 <rect key="frame" x="0.0" y="188" width="182" height="39"/>
@@ -483,6 +486,9 @@
                                 <state key="normal" title="     修改昵称">
                                     <color key="titleColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nicknameChange:" destination="koZ-gF-A5s" eventType="touchUpInside" id="ZbV-E8-lWW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivz-Zj-xao">
                                 <rect key="frame" x="0.0" y="61" width="398" height="100"/>
