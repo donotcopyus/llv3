@@ -102,6 +102,11 @@ class checkXianzhiController: UIViewController {
                 self.image1.addGestureRecognizer(pictureTap1)
                 self.image1.isUserInteractionEnabled = true
             }
+            else if (url1 == ""){
+                self.image1.autoresizingMask = []
+                self.image1.frame.size.height = 0
+                self.image1.frame.size.width = 0
+        }
             
                 let url2 = post["imageTwoUrl"] as? String
             if (url2 != ""){
@@ -112,6 +117,11 @@ class checkXianzhiController: UIViewController {
                 self.image2.addGestureRecognizer(pictureTap2)
                 self.image2.isUserInteractionEnabled = true
             }
+            else if (url2 == ""){
+                self.image2.autoresizingMask = []
+                self.image2.frame.size.height = 0
+                self.image2.frame.size.width = 0
+        }
             
                 let url3 = post["imageThreeUrl"] as? String
             if (url3 != ""){
@@ -122,6 +132,11 @@ class checkXianzhiController: UIViewController {
                 self.image3.addGestureRecognizer(pictureTap3)
                 self.image3.isUserInteractionEnabled = true
             }
+            else if (url3 == ""){
+                self.image3.autoresizingMask = []
+                self.image3.frame.size.height = 0
+                self.image3.frame.size.width = 0
+        }
         })
         
             

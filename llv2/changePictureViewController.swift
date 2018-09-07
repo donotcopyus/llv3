@@ -136,6 +136,29 @@ class changePictureViewController: UIViewController {
             }
         })
         
+        let messageRef = Database.database().reference().child("messages")
+        let fromObj = ["fromUrl":profileImageURL.absoluteString]
+        let toObj = ["toUrl":profileImageURL.absoluteString]
+
+        messageRef.observe(.value, with:{
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let curFrom = dict["fromId"] as? String,
+                    let curTo = dict["toId"] as? String{
+                    if(curFrom == uid){
+                        messageRef.child(childSnapshot.key).updateChildValues(fromObj)
+                    }
+                    if(curTo == uid){
+                        messageRef.child(childSnapshot.key).updateChildValues(toObj)
+                    }
+                }
+            }
+        })
+        
+        
     }
     
     
