@@ -287,7 +287,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         wait.isHidden = true
         
         
-        button = dropDownBtn.init(frame: CGRect(x:30, y:70, width: 150, height: 40))
+        button = dropDownBtn.init(frame: CGRect(x:30, y:90, width: 150, height: 40))
         
         button.setTitle("出发城市", for: .normal)
         
@@ -302,7 +302,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         
         //---------------------------------
-        b2 = dropDownBtn.init(frame: CGRect(x:210, y:70, width: 150, height: 40))
+        b2 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 40))
         
         b2.setTitle("到达城市", for: .normal)
         
