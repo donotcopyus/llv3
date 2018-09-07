@@ -8,16 +8,36 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
+    //消息推送在手机上显示
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandle completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive reponse: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if reponse.notification.request.identifier == "testIdentifier" {
+            //点击消息推送后的动作
+            print("打开相应的页面，比如私信")
+        }
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+            //消息推送请求
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {
+            (granted, error) in print("granted:\(granted)")}
+        
+        
         
         let storyboard = UIStoryboard(name:"Main",bundle:nil)
         
