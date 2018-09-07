@@ -423,21 +423,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBg-pH-Ael">
-                                <rect key="frame" x="16" y="62" width="176" height="100"/>
+                                <rect key="frame" x="16" y="62" width="408" height="100"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CBg-pH-Ael" secondAttribute="height" multiplier="207:50" id="8FE-vL-GMV"/>
                                     <constraint firstAttribute="height" constant="100" id="WMD-3j-h9S"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-Do-o56">
-                                <rect key="frame" x="16" y="62" width="202" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doA-kc-dS5">
-                                <rect key="frame" x="92" y="62" width="100" height="100"/>
+                                <rect key="frame" x="324" y="62" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="3vB-cX-tIp"/>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="V6m-an-GtQ"/>
@@ -447,7 +441,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-kg-LQG">
-                                <rect key="frame" x="0.0" y="660" width="182" height="39"/>
+                                <rect key="frame" x="0.0" y="660" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fyK-xU-6CA"/>
@@ -463,7 +457,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
-                                <rect key="frame" x="0.0" y="235" width="182" height="39"/>
+                                <rect key="frame" x="0.0" y="235" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="u71-zb-kPf"/>
@@ -476,8 +470,14 @@
                                     <action selector="passwordChange:" destination="koZ-gF-A5s" eventType="touchUpInside" id="Mxi-Lj-0fu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-Do-o56">
+                                <rect key="frame" x="16" y="62" width="308" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-81-hRT">
-                                <rect key="frame" x="0.0" y="188" width="182" height="39"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="rUc-JZ-RtM"/>
@@ -546,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qW-9c-A5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-835" y="-113"/>
+            <point key="canvasLocation" x="-836.23188405797111" y="-113.31521739130436"/>
         </scene>
         <!--隐私设置-->
         <scene sceneID="WJj-ql-7pg">
@@ -763,7 +763,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vf-5l-Rkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="1273.313343328336"/>
+            <point key="canvasLocation" x="1541" y="1207"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
@@ -2595,6 +2595,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="FPZ-Ld-tbt"/>
                     </navigationItem>
                     <connections>
                         <segue destination="IFH-H1-VVg" kind="showDetail" identifier="checkProf" id="hiX-3v-nsz"/>
@@ -2641,7 +2642,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="ndj-T2-Wic">
+                                    <barButtonItem tag="1" image="私聊" style="plain" id="ndj-T2-Wic">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7hU-Dm-fDB">
                                             <rect key="frame" x="111" y="0.0" width="100" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2886,6 +2887,9 @@
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fx-R2-4qG">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9fx-R2-4qG" secondAttribute="height" multiplier="207:22" id="DXx-Uz-omi"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" id="FLv-Ob-vYg">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h0g-U6-4tn">
@@ -2897,7 +2901,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="Ctn-aV-gQj">
+                                    <barButtonItem image="私聊" style="plain" id="Ctn-aV-gQj">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XJn-n0-hLp">
                                             <rect key="frame" x="111" y="0.0" width="100" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2907,6 +2911,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
+                                    <barButtonItem id="cPX-TI-ziq"/>
                                     <barButtonItem style="plain" id="N2F-7K-rD4">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Cs-X2-Xum">
                                             <rect key="frame" x="283" y="6.6666666666666679" width="111" height="31.000000000000004"/>
@@ -2993,6 +2998,9 @@
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-Ki-M4v">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3DI-Ki-M4v" secondAttribute="height" multiplier="207:22" id="E3F-Gp-H06"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" id="S2B-LJ-Jgw">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q7o-Tp-Tzg">
@@ -3004,7 +3012,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="9Zu-fS-0sf">
+                                    <barButtonItem image="私聊" style="plain" id="9Zu-fS-0sf">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mZg-tD-Lop">
                                             <rect key="frame" x="111" y="0.0" width="100" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3014,6 +3022,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
+                                    <barButtonItem id="oiS-bC-MWN"/>
                                     <barButtonItem style="plain" id="VvI-jk-zeZ">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aZ5-gn-3Qg">
                                             <rect key="frame" x="283" y="6.6666666666666679" width="111" height="31.000000000000004"/>
@@ -3100,6 +3109,7 @@
                             <constraint firstItem="5YJ-Qh-NSD" firstAttribute="trailing" secondItem="hxp-zD-2eZ" secondAttribute="trailing" id="HWn-si-6q1"/>
                             <constraint firstItem="5YJ-Qh-NSD" firstAttribute="leading" secondItem="hxp-zD-2eZ" secondAttribute="leading" id="IUl-LL-OZg"/>
                             <constraint firstItem="3DI-Ki-M4v" firstAttribute="centerX" secondItem="hS5-04-89T" secondAttribute="centerX" id="Joz-AY-Uoj"/>
+                            <constraint firstItem="3DI-Ki-M4v" firstAttribute="centerX" secondItem="hS5-04-89T" secondAttribute="centerX" id="Jx9-1O-v5H"/>
                             <constraint firstItem="cxQ-sU-XNf" firstAttribute="top" secondItem="S76-RJ-IAc" secondAttribute="bottom" constant="65" id="Mhj-EC-MCG"/>
                             <constraint firstItem="Dya-mI-LIv" firstAttribute="top" secondItem="hxp-zD-2eZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Pjn-3r-Ng7"/>
                             <constraint firstItem="5YJ-Qh-NSD" firstAttribute="top" secondItem="urd-Nn-7bL" secondAttribute="bottom" constant="89" id="Q7w-Ue-HuS"/>
@@ -3399,7 +3409,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMq-83-pfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="-1836"/>
+            <point key="canvasLocation" x="3004" y="-1718"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R2G-96-J2D">
@@ -3584,7 +3594,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="Jss-ka-Uac"/>
+        <segue reference="MsP-c5-dSl"/>
         <segue reference="3A1-YK-hyk"/>
     </inferredMetricsTieBreakers>
 </document>
