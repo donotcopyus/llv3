@@ -43,7 +43,7 @@ class personalVC: UIViewController {
             
             if(length > 18){
                 let lengthalert = UIAlertController(title: self.title, message: "用户名过长", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                lengthalert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                     alert.dismiss(animated: true, completion: nil)
                 } ))
                 self.present(lengthalert, animated: true, completion: nil)
