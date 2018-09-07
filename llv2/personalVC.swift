@@ -57,21 +57,5 @@ class personalVC: UIViewController {
     }
 }
 
-//extension profileViewController {
-//
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
-//
-//            self.profileImageView.image = pickedImage
-//        }
-//
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-//
-//
-//}
+
 //
