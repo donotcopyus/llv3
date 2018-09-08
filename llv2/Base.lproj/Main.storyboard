@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
-                                <rect key="frame" x="16" y="93" width="87.5" height="89"/>
+                                <rect key="frame" x="16" y="93" width="309" height="313"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gq8-fi-jWK" secondAttribute="height" multiplier="189:191" id="8zk-CW-qdo"/>
                                 </constraints>
@@ -61,7 +61,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
-                                <rect key="frame" x="77.5" y="255" width="220" height="38"/>
+                                <rect key="frame" x="77.5" y="479" width="220" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dDK-K1-PsJ"/>
                                 </constraints>
@@ -1348,36 +1348,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xo8-ww-6x2">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="87l-iD-pd3"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="旧物 闲置 租房" id="hlH-dc-6Pb">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Uwh-sk-5az">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LC1-Hf-w5K">
-                                                <rect key="frame" x="16" y="8" width="72" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="          " image="backbtn"/>
-                                                <connections>
-                                                    <segue destination="DYu-iB-2be" kind="showDetail" id="0g4-zD-bWK"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="8bU-Os-HwL">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="svY-L8-8oo">
-                                                <rect key="frame" x="301" y="6.5" width="58" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="发送"/>
-                                                <connections>
-                                                    <action selector="send:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="30D-1a-uIt"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-Tm-FkU">
                                 <rect key="frame" x="-4" y="157" width="111" height="111"/>
                                 <constraints>
@@ -1444,8 +1414,8 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="67M-3i-XTK">
                                 <rect key="frame" x="177" y="413" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bse-V7-ZSm">
-                                <rect key="frame" x="303" y="105" width="91" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bse-V7-ZSm">
+                                <rect key="frame" x="243" y="100" width="91" height="49"/>
                                 <color key="tintColor" red="0.45882352939999999" green="0.53725490200000003" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="上传图片">
                                     <color key="titleColor" red="0.30980392156862746" green="0.41176470588235292" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1454,6 +1424,36 @@
                                     <action selector="upload:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="vtB-dj-SSO"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xo8-ww-6x2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="87l-iD-pd3"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="旧物 闲置 租房" id="hlH-dc-6Pb">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Uwh-sk-5az">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LC1-Hf-w5K">
+                                                <rect key="frame" x="16" y="8" width="72" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="          " image="backbtn"/>
+                                                <connections>
+                                                    <segue destination="DYu-iB-2be" kind="showDetail" id="0g4-zD-bWK"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="8bU-Os-HwL">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="svY-L8-8oo">
+                                                <rect key="frame" x="301" y="6.5" width="58" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="发送"/>
+                                                <connections>
+                                                    <action selector="send:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="30D-1a-uIt"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -4189,9 +4189,9 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UHY-qs-nmR"/>
+        <segue reference="0g4-zD-bWK"/>
         <segue reference="uJp-nh-C7I"/>
-        <segue reference="ivw-CZ-U9A"/>
+        <segue reference="Jss-ka-Uac"/>
         <segue reference="C1I-Ic-Opq"/>
     </inferredMetricsTieBreakers>
 </document>
