@@ -157,7 +157,7 @@ class personalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.labelText.text = "欢迎，" + (Auth.auth().currentUser?.displayName)!
+        self.labelText.text = " 欢迎，" + (Auth.auth().currentUser?.displayName)!
         
         guard let uid = Auth.auth().currentUser?.uid else{
             return
