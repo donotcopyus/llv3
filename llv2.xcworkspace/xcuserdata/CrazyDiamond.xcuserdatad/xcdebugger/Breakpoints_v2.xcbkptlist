@@ -179,5 +179,83 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "llv2/MainListPage/checkXianzhi2Controller.swift"
+            timestampString = "558084997.431437"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "checkXianzhi2Controller"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.checkXianzhi2Controller.pid.getter : Swift.String"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/MainListPage/checkXianzhi2Controller.swift"
+                  timestampString = "558084913.817755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.checkXianzhi2Controller.pid.setter : Swift.String"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/MainListPage/checkXianzhi2Controller.swift"
+                  timestampString = "558084913.822035"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.checkXianzhi2Controller.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; llv2.checkXianzhi2Controller"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/MainListPage/checkXianzhi2Controller.swift"
+                  timestampString = "558084913.825855"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1332">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "llv2.checkXianzhi2Controller.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;llv2.checkXianzhi2Controller&gt;"
+                  moduleName = "llv2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CrazyDiamond/Desktop/llv3/llv2/MainListPage/checkXianzhi2Controller.swift"
+                  timestampString = "558084913.829718"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

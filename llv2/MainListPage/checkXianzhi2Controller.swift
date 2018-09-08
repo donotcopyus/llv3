@@ -29,6 +29,7 @@ class checkXianzhi2Controller: UIViewController {
     
     @IBOutlet weak var delete: UIButton!
     @IBOutlet weak var chat: UIButton!
+    
     @IBOutlet weak var imageurl: UILabel!
     
     var pid = String()
@@ -36,14 +37,17 @@ class checkXianzhi2Controller: UIViewController {
     var photoArray = [Image]()
     
   override func viewDidLoad() {
+    
+    print("hey iam here")
+    print("pid is" + pid)
+    
         super.viewDidLoad()
                 headImage.layer.cornerRadius = headImage.frame.height / 2.0
         headImage.layer.masksToBounds = true
-        
-        
-        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
+    
+    let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
         let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
-        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
+
         
         
         //get pid，藏起来
