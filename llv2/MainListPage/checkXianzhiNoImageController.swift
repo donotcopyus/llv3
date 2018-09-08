@@ -1,35 +1,193 @@
 //
-//  checkXianzhiNoImageController.swift
+//  checkXianzhiController.swift
 //  llv2
 //
-//  Created by Luna Cao on 2018/9/8.
+//  Created by Luna Cao on 2018/8/10.
 //  Copyright © 2018年 Luna Cao. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import Kingfisher
+
 
 class checkXianzhiNoImageController: UIViewController {
+    
+    @IBOutlet weak var pidLabel: UILabel!
+    @IBOutlet weak var uidLabel: UILabel!
+    @IBOutlet weak var imageurl: UILabel!
+    
+    
+    @IBOutlet weak var headImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var time: UILabel!
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var info: UILabel!
+    
+    @IBOutlet weak var delete: UIButton!
+    @IBOutlet weak var chat: UIButton!
+    
+    
+    var pid = String()
+    var uid = String()
+    var photoArray = [Image]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        headImage.layer.cornerRadius = headImage.frame.height / 2.0
+        headImage.layer.masksToBounds = true
+        
 
-        // Do any additional setup after loading the view.
+        
+        
+        //get pid，藏起来
+        self.pidLabel.isHidden = true
+        self.pidLabel.text = pid
+        self.uidLabel.isHidden = true
+        self.uidLabel.text = uid
+        self.imageurl.isHidden = true
+        
+        //如果是自己，没办法chat
+        if (uidLabel.text == Auth.auth().currentUser!.uid){
+            self.chat.isHidden = true
+        }
+        else{
+            
+            self.delete.isHidden = true
+        }
+        
+        let postRef = Database.database().reference().child("xianzhi/\(pid)")
+        let image = UIImage(named:"default_profile_icon")
+        
+        
+        postRef.observe(DataEventType.value, with:{
+            (snapshot) in
+            if let post = snapshot.value as? [String:Any]{
+                let author = post["author"] as? [String:Any]
+                
+                let url = author!["photoURL"] as? String
+                let tourl = URL(string:url!)
+                
+                self.headImage.kf.indicatorType = .activity
+                self.headImage.kf.setImage(with: tourl, placeholder:image)
+                
+                self.imageurl.text = url
+                
+                self.username.text = author!["username"] as? String
+                
+                let timeInterval = (post["timestamp"] as? Double)! / 1000
+                let date = NSDate(timeIntervalSince1970: timeInterval)
+                let dform = DateFormatter()
+                dform.dateFormat = "MM月dd日 HH:mm"
+                
+                self.time.text = "发送于：" + dform.string(from:date as Date)
+                
+                
+                self.name.text = "物品： " + (post["name"] as? String)!
+                self.price.text = "价格： " + (post["price"] as? String)!
+                
+                self.info.text = post["extraInfo"] as? String
+                
+            }
+        })
+        
+        
+    }
+    
+    @objc func imageTappedIndex(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        
+        //加左拉右拉的gesture，触发，同时里面需要连接dismiss
+        
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+        
+    }
+    
+    
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+    
+    @IBAction func chat(_ sender: UIButton) {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        viewController.uid = uid
+        viewController.username = self.username.text!
+        viewController.url = self.imageurl.text!
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
+    @IBAction func deletepost(_ sender: UIButton) {
+        let postRef = Database.database().reference().child("xianzhi/\(pid)")
+        
+        let alert = UIAlertController(title: "删除广告", message: "确定删除广告吗？", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action: UIAlertAction!) in
+            postRef.removeValue()
+            
+            let likedRef = Database.database().reference().child("users/collection/xianzhi/")
+            
+            likedRef.observeSingleEvent(of: .value, with: {
+                snapshot in
+                
+                for child in snapshot.children{
+                    if let childSnapshot = child as? DataSnapshot,
+                        let dict = childSnapshot.value as? [String:Any],
+                        let thispid = dict["pid"] as? String{
+                        
+                        if (thispid == self.pid){
+                            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/\(childSnapshot.key)")
+                            userLikeRef.removeValue()
+                        }
+                        
+                    }
+                }
+                
+            })
+            
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (action: UIAlertAction!) in
+            //啥也不做！
+        }))
+        
+        present(alert, animated: true, completion: nil)
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func share(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["www.google.ca"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
     }
-    */
-
+    
+    
 }
+
+
+
