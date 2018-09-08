@@ -728,7 +728,7 @@
                                     <constraint firstAttribute="height" constant="33" id="uoX-Iw-1vT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="点击更改头像">
+                                <state key="normal" title="更改头像">
                                     <color key="titleColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -752,6 +752,7 @@
                             <constraint firstItem="qzR-ob-8Lx" firstAttribute="leading" secondItem="zYk-Cc-l3y" secondAttribute="leading" constant="-1" id="bxh-hK-q13"/>
                             <constraint firstItem="SQ2-R9-kti" firstAttribute="bottom" secondItem="qFe-VK-iUo" secondAttribute="bottom" constant="117" id="eCZ-4D-uE2"/>
                             <constraint firstItem="ba4-gh-ZhH" firstAttribute="centerX" secondItem="SQ2-R9-kti" secondAttribute="centerX" id="i7Q-nD-yCA"/>
+                            <constraint firstItem="ba4-gh-ZhH" firstAttribute="width" secondItem="zYk-Cc-l3y" secondAttribute="width" id="n4s-LA-QGJ"/>
                             <constraint firstItem="qFe-VK-iUo" firstAttribute="top" secondItem="ba4-gh-ZhH" secondAttribute="bottom" constant="45" id="owr-ub-fy2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SQ2-R9-kti"/>
@@ -3595,6 +3596,6 @@
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
         <segue reference="MsP-c5-dSl"/>
-        <segue reference="3A1-YK-hyk"/>
+        <segue reference="C1I-Ic-Opq"/>
     </inferredMetricsTieBreakers>
 </document>
