@@ -155,6 +155,7 @@ class personalVC: UIViewController {
         } ))
         
         self.present(alert, animated: true, completion: nil)
+        self.labelText.text = " 欢迎，" + (Auth.auth().currentUser?.displayName)!
         
     }
     
