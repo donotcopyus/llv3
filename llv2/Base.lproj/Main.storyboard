@@ -441,11 +441,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-kg-LQG">
-<<<<<<< HEAD
-                                <rect key="frame" x="0.0" y="591" width="375" height="39"/>
-=======
+
                                 <rect key="frame" x="0.0" y="660" width="182" height="39"/>
->>>>>>> 9017c215f11637a9cb0fe9adb7833d552a2b7dc9
+
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fyK-xU-6CA"/>
