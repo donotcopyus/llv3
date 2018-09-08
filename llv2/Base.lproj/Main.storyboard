@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
-                                <rect key="frame" x="16" y="93" width="309" height="313"/>
+                                <rect key="frame" x="16" y="93" width="87.5" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gq8-fi-jWK" secondAttribute="height" multiplier="189:191" id="8zk-CW-qdo"/>
                                 </constraints>
@@ -61,7 +61,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
-                                <rect key="frame" x="77.5" y="479" width="220" height="38"/>
+                                <rect key="frame" x="77.5" y="255" width="220" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dDK-K1-PsJ"/>
                                 </constraints>
@@ -1349,7 +1349,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xo8-ww-6x2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="390" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="87l-iD-pd3"/>
                                 </constraints>
@@ -1367,7 +1367,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="8bU-Os-HwL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="svY-L8-8oo">
-                                                <rect key="frame" x="301" y="6.5" width="58" height="31"/>
+                                                <rect key="frame" x="316" y="6.5" width="58" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="发送"/>
                                                 <connections>
@@ -1379,7 +1379,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-Tm-FkU">
-                                <rect key="frame" x="-4" y="157" width="111" height="111"/>
+                                <rect key="frame" x="11" y="157" width="111" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="MRI-U8-05E"/>
                                     <constraint firstAttribute="width" secondItem="Kac-Tm-FkU" secondAttribute="height" multiplier="1:1" id="Ndr-j6-W6u"/>
@@ -1396,7 +1396,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="详细信息:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-Sz-WmR">
-                                <rect key="frame" x="25" y="432" width="42" height="21"/>
+                                <rect key="frame" x="25" y="432" width="57" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0P8-Rt-Rzf"/>
                                 </constraints>
@@ -1405,26 +1405,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G7J-bn-ygn">
-                                <rect key="frame" x="25" y="461" width="334" height="228"/>
+                                <rect key="frame" x="25" y="461" width="349" height="228"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fI1-cS-nCV">
-                                <rect key="frame" x="114" y="157" width="111" height="111"/>
+                                <rect key="frame" x="129" y="157" width="111" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="kAS-cI-WxU"/>
                                     <constraint firstAttribute="width" secondItem="fI1-cS-nCV" secondAttribute="height" multiplier="1:1" id="lGZ-Aj-ZfM"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-Y6-U8F">
-                                <rect key="frame" x="233" y="157" width="111" height="111"/>
+                                <rect key="frame" x="248" y="157" width="111" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mdU-Y6-U8F" secondAttribute="height" multiplier="1:1" id="lLl-SK-mRj"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="物品名称" textAlignment="natural" minimumFontSize="17" background="输入框" translatesAutoresizingMaskIntoConstraints="NO" id="FwC-za-CfP">
-                                <rect key="frame" x="25" y="303" width="334" height="30"/>
+                                <rect key="frame" x="25" y="303" width="349" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cha-kb-PSX"/>
                                 </constraints>
@@ -1433,7 +1433,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="价格" textAlignment="natural" minimumFontSize="17" background="输入框" translatesAutoresizingMaskIntoConstraints="NO" id="p33-8S-l96">
-                                <rect key="frame" x="25" y="360" width="334" height="30"/>
+                                <rect key="frame" x="25" y="360" width="349" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9kH-D7-oRl"/>
                                 </constraints>
@@ -1887,7 +1887,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
+                                <rect key="frame" x="77" y="341.5" width="221" height="69.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -1927,7 +1927,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="457" width="221" height="69.5"/>
+                                <rect key="frame" x="77" y="450" width="221" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2038,8 +2038,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="底部工作室名字" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-rI-DvM">
                                 <rect key="frame" x="170" y="623" width="74" height="24"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="oDE-5G-2Lb">
-                                <rect key="frame" x="168" y="97" width="190" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="oDE-5G-2Lb">
+                                <rect key="frame" x="97" y="102" width="190" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oDE-5G-2Lb" secondAttribute="height" multiplier="25:24" id="LE9-Qr-mnC"/>
                                 </constraints>
@@ -2861,7 +2861,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5np-qQ-ykv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7167" y="-1568"/>
+            <point key="canvasLocation" x="7165" y="-1537"/>
         </scene>
         <!--Check Xianzhi2 Controller-->
         <scene sceneID="GLk-3G-zON">
@@ -2922,7 +2922,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="删除广告"/>
                                                     <connections>
-                                                        <action selector="deletepost:" destination="PpY-Oq-3Vx" eventType="touchUpInside" id="MT3-z8-W1N"/>
+                                                        <action selector="deletepost:" destination="PpY-Oq-3Vx" eventType="touchUpInside" id="MPe-xd-haC"/>
                                                     </connections>
                                                 </button>
                                             </barButtonItem>
@@ -2932,7 +2932,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="私聊"/>
                                                     <connections>
-                                                        <action selector="chat:" destination="PpY-Oq-3Vx" eventType="touchUpInside" id="hG7-yh-yMF"/>
+                                                        <action selector="chat:" destination="PpY-Oq-3Vx" eventType="touchUpInside" id="F1d-jy-Zrb"/>
                                                     </connections>
                                                 </button>
                                             </barButtonItem>
@@ -2943,7 +2943,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="分享"/>
                                                     <connections>
-                                                        <action selector="share:" destination="PpY-Oq-3Vx" eventType="touchUpInside" id="94u-YI-0jl"/>
+                                                        <action selector="share:" destination="PpY-Oq-3Vx" eventType="touchUpInside" id="hP5-2C-dFp"/>
                                                     </connections>
                                                 </button>
                                             </barButtonItem>
@@ -2992,7 +2992,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rM-Ds-TOO">
-                                        <rect key="frame" x="119" y="1493" width="20" height="21"/>
+                                        <rect key="frame" x="119" y="1493" width="134" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="viewcontroller2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-sF-ehp">
+                                        <rect key="frame" x="152" y="158" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -3036,24 +3043,24 @@
                     </view>
                     <size key="freeformSize" width="414" height="1600"/>
                     <connections>
-                        <outlet property="chat" destination="8Of-Zk-oRa" id="BND-0W-iPa"/>
-                        <outlet property="delete" destination="7YB-1L-eaF" id="cXc-mX-HHO"/>
-                        <outlet property="headImage" destination="lWK-Ut-rgt" id="ZWz-xd-WeW"/>
-                        <outlet property="image1" destination="cLC-fQ-ax3" id="UuQ-uc-WCE"/>
-                        <outlet property="image2" destination="iIf-MR-joa" id="2cD-uK-9mr"/>
-                        <outlet property="imageurl" destination="4rM-Ds-TOO" id="irX-ED-ucn"/>
-                        <outlet property="info" destination="DOs-wg-gfA" id="Rb1-Gn-ynQ"/>
-                        <outlet property="name" destination="mlf-PI-hip" id="ESC-GP-QbZ"/>
-                        <outlet property="pidLabel" destination="kQ2-1K-HHH" id="2Iu-1S-2gK"/>
-                        <outlet property="price" destination="X6o-wB-ThZ" id="JfU-AK-xfg"/>
-                        <outlet property="time" destination="NJA-ct-6kS" id="jjy-IX-J4L"/>
-                        <outlet property="uidLabel" destination="4ru-1Q-VnA" id="sBz-nl-jyF"/>
-                        <outlet property="username" destination="Rj1-xC-yXR" id="qX1-Kk-W8Y"/>
+                        <outlet property="chat" destination="8Of-Zk-oRa" id="Jk9-dL-xxl"/>
+                        <outlet property="delete" destination="7YB-1L-eaF" id="Cfw-ZC-Dgx"/>
+                        <outlet property="headImage" destination="lWK-Ut-rgt" id="rno-xt-6ud"/>
+                        <outlet property="image1" destination="cLC-fQ-ax3" id="1md-Zj-kEH"/>
+                        <outlet property="image3" destination="iIf-MR-joa" id="ASg-RE-7qm"/>
+                        <outlet property="imageurl" destination="4rM-Ds-TOO" id="hbE-mH-zhK"/>
+                        <outlet property="info" destination="DOs-wg-gfA" id="WVp-BV-ij2"/>
+                        <outlet property="name" destination="mlf-PI-hip" id="N2u-V6-5bz"/>
+                        <outlet property="pidLabel" destination="kQ2-1K-HHH" id="X7f-oP-6WW"/>
+                        <outlet property="price" destination="X6o-wB-ThZ" id="8qe-D6-ycS"/>
+                        <outlet property="time" destination="NJA-ct-6kS" id="rAV-8m-ZNs"/>
+                        <outlet property="uidLabel" destination="4ru-1Q-VnA" id="DQS-lq-Bxo"/>
+                        <outlet property="username" destination="Rj1-xC-yXR" id="dgL-Jf-ZUl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgg-Ep-ykX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7850.7246376811599" y="-1731.521739130435"/>
+            <point key="canvasLocation" x="7869" y="-1711"/>
         </scene>
         <!--Check Xianzhi1 Controller-->
         <scene sceneID="pTY-Ls-C8Z">
@@ -3264,7 +3271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqi-Ih-6Uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8473.9130434782619" y="-1895.3804347826087"/>
+            <point key="canvasLocation" x="8552" y="-1897"/>
         </scene>
         <!--Check Xianzhi No Image Controller-->
         <scene sceneID="I55-Dx-bnA">
@@ -3411,7 +3418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyW-cm-FaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9089.855072463768" y="-2085.326086956522"/>
+            <point key="canvasLocation" x="9238" y="-2105"/>
         </scene>
         <!--Profile Check Controller-->
         <scene sceneID="INd-4Y-oQm">
@@ -4190,8 +4197,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0g4-zD-bWK"/>
-        <segue reference="uJp-nh-C7I"/>
+        <segue reference="ljE-ht-r2G"/>
         <segue reference="Jss-ka-Uac"/>
-        <segue reference="C1I-Ic-Opq"/>
+        <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
 </document>
