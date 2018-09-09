@@ -45,10 +45,15 @@ class xianzhiTVC: UITableViewController{
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     
+<<<<<<< HEAD
     @IBOutlet weak var nav: UINavigationItem!
     
     var b2 = dropDownBtn()
     
+=======
+//    var b2 = dropDownBtn()
+
+>>>>>>> parent of 578af5d... 1
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
     
@@ -58,6 +63,7 @@ class xianzhiTVC: UITableViewController{
         //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
         //        nav.rightBarButtonItem? = b2
         
+<<<<<<< HEAD
         
         b2.setTitle("选择类型", for: .normal)
         
@@ -74,6 +80,25 @@ class xianzhiTVC: UITableViewController{
         //
         //
         //        }
+=======
+//        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
+//
+//        b2.setTitle("选择类型", for: .normal)
+//
+//        b2.translatesAutoresizingMaskIntoConstraints = true
+//
+//        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+        
+//        self.view.addSubview(b2)
+      
+//        if self.revealViewController() != nil{
+//            btnMenu.target = self.revealViewController()
+//            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//
+//
+//        }
+>>>>>>> parent of 578af5d... 1
         
         tableView = UITableView()
         tableView.delegate = self
