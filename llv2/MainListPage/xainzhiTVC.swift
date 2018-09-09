@@ -44,10 +44,14 @@ class xianzhiData{
 class xianzhiTVC: UITableViewController{
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
+<<<<<<< HEAD
     
     @IBOutlet weak var nav: UINavigationItem!
-   
-    var b2 = dropDownBtn()
+//
+//    var b2 = dropDownBtn()
+=======
+
+>>>>>>> a2d87fd7fafa35464f91c0de71f6e6acaabbaba9
 
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
@@ -55,17 +59,18 @@ class xianzhiTVC: UITableViewController{
     override func viewDidLoad() {
        super.viewDidLoad()
         
+<<<<<<< HEAD
 //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
 //        nav.rightBarButtonItem? = b2
         
 
-        b2.setTitle("选择类型", for: .normal)
-
-        b2.translatesAutoresizingMaskIntoConstraints = true
-
-        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
-        
-        self.view.addSubview(b2)
+//        b2.setTitle("选择类型", for: .normal)
+//
+//        b2.translatesAutoresizingMaskIntoConstraints = true
+//
+//        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+//
+//        self.view.addSubview(b2)
       
 //        if self.revealViewController() != nil{
 //            btnMenu.target = self.revealViewController()
@@ -74,6 +79,9 @@ class xianzhiTVC: UITableViewController{
 //
 //
 //        }
+=======
+
+>>>>>>> a2d87fd7fafa35464f91c0de71f6e6acaabbaba9
         
         tableView = UITableView()
         tableView.delegate = self

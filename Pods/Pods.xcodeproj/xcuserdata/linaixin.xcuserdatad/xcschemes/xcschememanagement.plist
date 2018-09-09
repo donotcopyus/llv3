@@ -165,6 +165,11 @@
 			<key>orderHint</key>
 			<integer>24</integer>
 		</dict>
+		<key>YNDropDownMenu.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>25</integer>
+		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
