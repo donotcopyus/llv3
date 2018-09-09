@@ -31,9 +31,9 @@ class personalVC: UIViewController {
             if (newname == ""){
                 let newAlert = UIAlertController(title:"错误", message:"请输入新的昵称", preferredStyle:.alert)
                 newAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    return
                 } ))
                 self.present(newAlert, animated: true, completion: nil)
+                return
             }
             
             var length = 0
@@ -158,10 +158,7 @@ class personalVC: UIViewController {
         self.labelText.text = " 欢迎，" + (Auth.auth().currentUser?.displayName)!
         
     }
-    
-    @IBAction func passwordChange(_ sender: UIButton) {
-    }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

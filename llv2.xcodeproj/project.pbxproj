@@ -43,6 +43,7 @@
 		51BF3DF92143819200DCF3F3 /* checkXianzhi2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3DF82143819200DCF3F3 /* checkXianzhi2Controller.swift */; };
 		51BF3DFB214381C400DCF3F3 /* checkXianzhi1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3DFA214381C400DCF3F3 /* checkXianzhi1Controller.swift */; };
 		51BF3DFD214381DE00DCF3F3 /* checkXianzhiNoImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3DFC214381DE00DCF3F3 /* checkXianzhiNoImageController.swift */; };
+		51C907D32144FBAE00021187 /* changePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C907D22144FBAE00021187 /* changePassVC.swift */; };
 		51D52D8E2131017A00AA706F /* dra3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D52D8D2131017A00AA706F /* dra3.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
@@ -141,6 +142,7 @@
 		51BF3DF82143819200DCF3F3 /* checkXianzhi2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhi2Controller.swift; sourceTree = "<group>"; };
 		51BF3DFA214381C400DCF3F3 /* checkXianzhi1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhi1Controller.swift; sourceTree = "<group>"; };
 		51BF3DFC214381DE00DCF3F3 /* checkXianzhiNoImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiNoImageController.swift; sourceTree = "<group>"; };
+		51C907D22144FBAE00021187 /* changePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePassVC.swift; sourceTree = "<group>"; };
 		51D52D8D2131017A00AA706F /* dra3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dra3.swift; sourceTree = "<group>"; };
 		5DCC7E38A6E9E8BCF7FC66D5 /* Pods-llv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E57A1D2C0F8FDC1089BDE4B /* Pods-llv2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2/Pods-llv2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			children = (
 				FA93FF462108155E0070DD60 /* settingPageVC.swift */,
 				FAC7EB662116359500FE2FDE /* personalVC.swift */,
+				51C907D22144FBAE00021187 /* changePassVC.swift */,
 				FA1454F5212921FF00B03E1D /* cacheVC.swift */,
 				FA19E115213CCBD9005E6B2B /* contactUs.swift */,
 				FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */,
@@ -703,6 +706,7 @@
 				FA3F68B5212A83A20061572E /* exchangeSearchVC.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
+				51C907D32144FBAE00021187 /* changePassVC.swift in Sources */,
 				FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */,
 				51BF3DFD214381DE00DCF3F3 /* checkXianzhiNoImageController.swift in Sources */,
 				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
