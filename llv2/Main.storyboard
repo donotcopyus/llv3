@@ -2637,6 +2637,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="FPZ-Ld-tbt"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="nav" destination="aPv-Av-2wD" id="vBh-D7-XGk"/>
                         <segue destination="IFH-H1-VVg" kind="showDetail" identifier="checkProf" id="hiX-3v-nsz"/>
                     </connections>
                 </tableViewController>
@@ -3582,7 +3583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtN-Sk-Zjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6599" y="-1920"/>
+            <point key="canvasLocation" x="6358" y="-1897"/>
         </scene>
         <!--Check Carpool Controller-->
         <scene sceneID="EQT-n0-gth">
