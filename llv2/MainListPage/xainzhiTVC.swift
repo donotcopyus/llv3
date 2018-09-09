@@ -46,30 +46,70 @@ class xianzhiTVC: UITableViewController{
     @IBOutlet weak var btnMenu: UIBarButtonItem!
 <<<<<<< HEAD
     
+<<<<<<< HEAD
     @IBOutlet weak var nav: UINavigationItem!
+<<<<<<< HEAD
 //
 //    var b2 = dropDownBtn()
 =======
 
 >>>>>>> a2d87fd7fafa35464f91c0de71f6e6acaabbaba9
+=======
+    
+    var b2 = dropDownBtn()
+    
+=======
+//    var b2 = dropDownBtn()
+>>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
 
+>>>>>>> parent of 578af5d... 1
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
     
     override func viewDidLoad() {
-       super.viewDidLoad()
+        super.viewDidLoad()
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
 //        nav.rightBarButtonItem? = b2
         
 
+=======
+        //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
+        //        nav.rightBarButtonItem? = b2
+        
+<<<<<<< HEAD
+        
+        b2.setTitle("选择类型", for: .normal)
+        
+        b2.translatesAutoresizingMaskIntoConstraints = true
+        
+        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+        
+        self.view.addSubview(b2)
+        
+        //        if self.revealViewController() != nil{
+        //            btnMenu.target = self.revealViewController()
+        //            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+        //            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //
+        //
+        //        }
+=======
+//        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
+//
+>>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
 //        b2.setTitle("选择类型", for: .normal)
 //
 //        b2.translatesAutoresizingMaskIntoConstraints = true
 //
 //        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+<<<<<<< HEAD
 //
+=======
+        
+>>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
 //        self.view.addSubview(b2)
       
 //        if self.revealViewController() != nil{
@@ -79,9 +119,13 @@ class xianzhiTVC: UITableViewController{
 //
 //
 //        }
+<<<<<<< HEAD
 =======
 
 >>>>>>> a2d87fd7fafa35464f91c0de71f6e6acaabbaba9
+=======
+>>>>>>> parent of 578af5d... 1
+>>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
         
         tableView = UITableView()
         tableView.delegate = self
@@ -90,7 +134,7 @@ class xianzhiTVC: UITableViewController{
         
         observePost()
         
-       
+        
         
         self.tableView.es.addInfiniteScrolling {
             [unowned self] in
@@ -118,19 +162,19 @@ class xianzhiTVC: UITableViewController{
             
             for child in snapshot.children{
                 if let childSnapshot = child as? DataSnapshot,
-                let dict = childSnapshot.value as? [String:Any],
-                let author = dict["author"] as? [String:Any],
-                let uid = author["uid"] as? String,
-                let username = author["username"] as? String,
-                let photoURL = author["photoURL"] as? String,
-                let url = URL(string:photoURL),
-                let name = dict["name"] as? String,
-                let price = dict["price"] as? String,
-                let extraInfo = dict["extraInfo"] as? String,
-                let timestamp = dict["timestamp"] as? Double,
-                let imageOneUrl = dict["imageOneUrl"] as? String,
-                let imageTwoUrl = dict["imageTwoUrl"] as? String,
-                let imageThreeUrl = dict["imageThreeUrl"] as? String
+                    let dict = childSnapshot.value as? [String:Any],
+                    let author = dict["author"] as? [String:Any],
+                    let uid = author["uid"] as? String,
+                    let username = author["username"] as? String,
+                    let photoURL = author["photoURL"] as? String,
+                    let url = URL(string:photoURL),
+                    let name = dict["name"] as? String,
+                    let price = dict["price"] as? String,
+                    let extraInfo = dict["extraInfo"] as? String,
+                    let timestamp = dict["timestamp"] as? Double,
+                    let imageOneUrl = dict["imageOneUrl"] as? String,
+                    let imageTwoUrl = dict["imageTwoUrl"] as? String,
+                    let imageThreeUrl = dict["imageThreeUrl"] as? String
                 {
                     let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
                     let post = xianzhiData(id: childSnapshot.key, name: name, price: price, extraInfo: extraInfo, timestamp: timestamp, imageOneUrl: imageOneUrl, imageTwoUrl: imageTwoUrl, imageThreeUrl: imageThreeUrl, author: userProfile)
@@ -141,9 +185,9 @@ class xianzhiTVC: UITableViewController{
             self.arrayOfCellData = tempPosts.reversed()
             
             DispatchQueue.main.async {
-              self.tableView.reloadData()
+                self.tableView.reloadData()
             }
-
+            
         })
         
     }
@@ -155,37 +199,37 @@ class xianzhiTVC: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      //  if arrayOfCellData[indexPath.row].cell == 1 {
-            let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
+        //  if arrayOfCellData[indexPath.row].cell == 1 {
+        let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
         
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
-
+            
             if(self.arrayOfCellData[indexPath.row].imageOneUrl != ""){
                 let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageOneUrl)
-            cell.image1.kf.indicatorType = .activity
-            cell.image1.kf.setImage(with: url1)
-        }
-       
+                cell.image1.kf.indicatorType = .activity
+                cell.image1.kf.setImage(with: url1)
+            }
+            
             if(self.arrayOfCellData[indexPath.row].imageTwoUrl != ""){
                 let url2 = URL(string:self.arrayOfCellData[indexPath.row].imageTwoUrl)
                 cell.image2.kf.indicatorType = .activity
-           cell.image2.kf.setImage(with: url2)
-        }
-
+                cell.image2.kf.setImage(with: url2)
+            }
+            
             if(self.arrayOfCellData[indexPath.row].imageThreeUrl != ""){
                 let url3 = URL(string:self.arrayOfCellData[indexPath.row].imageThreeUrl)
                 cell.image3.kf.indicatorType = .activity
-            cell.image3.kf.setImage(with: url3)
-        }
-        
+                cell.image3.kf.setImage(with: url3)
+            }
+            
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
             cell.headImage.kf.indicatorType = .activity
-         cell.headImage.kf.setImage(with: url)
+            cell.headImage.kf.setImage(with: url)
             
         })
-
-
+        
+        
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
         let timeInterval = arrayOfCellData[indexPath.row].timestamp / 1000
@@ -193,22 +237,22 @@ class xianzhiTVC: UITableViewController{
         let dform = DateFormatter()
         dform.dateFormat = "MM月dd日 HH:mm"
         cell.dateLabel.text = dform.string(from:date as Date)
-            
+        
         let nameprice = arrayOfCellData[indexPath.row].name + " 出价:"+arrayOfCellData[indexPath.row].price
         cell.namePrice.text = nameprice
         
         cell.extraInfo.text = arrayOfCellData[indexPath.row].extraInfo
-
+        
         cell.id.isHidden = true
         cell.id.text = arrayOfCellData[indexPath.row].id
         
         cell.collectionID.isHidden = true
-
+        
         let likedRef = Database.database().reference().child("users/collection/xianzhi/")
         
-      let uid = Auth.auth().currentUser?.uid
+        let uid = Auth.auth().currentUser?.uid
         
-       let pid = arrayOfCellData[indexPath.row].id
+        let pid = arrayOfCellData[indexPath.row].id
         
         likedRef.observeSingleEvent(of:.value, with:{
             snapshot in
@@ -224,14 +268,14 @@ class xianzhiTVC: UITableViewController{
                         cell.likeButton.setTitle("❤️", for: .normal)
                         
                     }}}
-
+            
         })
         
         cell.authorID.isHidden = true
         cell.authorID.text = arrayOfCellData[indexPath.row].author.uid
-
-            return cell
-       // } else
+        
+        return cell
+        // } else
     }
     
     
@@ -246,7 +290,7 @@ class xianzhiTVC: UITableViewController{
     }
     
     
-
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = tableView.indexPathForSelectedRow?.row
@@ -255,26 +299,26 @@ class xianzhiTVC: UITableViewController{
         let image3 = arrayOfCellData[index!].imageThreeUrl
         
         if(image1 != "" && image2 != "" && image3 != ""){
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
-        viewController.pid = arrayOfCellData[index!].id
-        viewController.uid = arrayOfCellData[index!].author.uid
-        self.navigationController?.pushViewController(viewController, animated: true)
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
+            viewController.pid = arrayOfCellData[index!].id
+            viewController.uid = arrayOfCellData[index!].author.uid
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
-        
+            
         else if (image1 != "" && image3 != "" && image2 == ""){
             let viewController = storyboard?.instantiateViewController(withIdentifier: "two") as! checkXianzhi2Controller
             viewController.pid = arrayOfCellData[index!].id
             viewController.uid = arrayOfCellData[index!].author.uid
             self.navigationController?.pushViewController(viewController, animated: true)
         }
-        
+            
         else if (image1 != "" && image2 == "" && image3 == ""){
             let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhi1Controller") as! checkXianzhi1Controller
             viewController.pid = arrayOfCellData[index!].id
             viewController.uid = arrayOfCellData[index!].author.uid
             self.navigationController?.pushViewController(viewController, animated: true)
         }
-        
+            
         else if (image1 == "" && image2 == "" && image3 == ""){
             let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhiNoImageController") as! checkXianzhiNoImageController
             viewController.pid = arrayOfCellData[index!].id
@@ -286,7 +330,7 @@ class xianzhiTVC: UITableViewController{
         
     }
     
-
+    
     
     
 }
