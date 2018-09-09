@@ -250,7 +250,7 @@ class xianzhiTVC: UITableViewController{
         }
         
         else if (image1 != "" && image3 != "" && image2 == ""){
-            let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhi2Controller") as! checkXianzhi2Controller
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "two") as! checkXianzhi2Controller
             viewController.pid = arrayOfCellData[index!].id
             viewController.uid = arrayOfCellData[index!].author.uid
             self.navigationController?.pushViewController(viewController, animated: true)
