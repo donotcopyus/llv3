@@ -45,7 +45,9 @@ class xianzhiTVC: UITableViewController{
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     
-//    var b2 = dropDownBtn()
+    @IBOutlet weak var nav: UINavigationItem!
+   
+    var b2 = dropDownBtn()
 
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
@@ -54,14 +56,16 @@ class xianzhiTVC: UITableViewController{
        super.viewDidLoad()
         
 //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
-//
-//        b2.setTitle("选择类型", for: .normal)
-//
-//        b2.translatesAutoresizingMaskIntoConstraints = true
-//
-//        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+//        nav.rightBarButtonItem? = b2
         
-//        self.view.addSubview(b2)
+
+        b2.setTitle("选择类型", for: .normal)
+
+        b2.translatesAutoresizingMaskIntoConstraints = true
+
+        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+        
+        self.view.addSubview(b2)
       
 //        if self.revealViewController() != nil{
 //            btnMenu.target = self.revealViewController()
