@@ -421,7 +421,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
           txtv.returnKeyType = .done
           txtv.delegate = self
         
-        b2 = dropDownBtn.init(frame: CGRect(x:34, y:81, width: 150, height: 31))
+        b2 = dropDownBtn.init(frame: CGRect(x:34, y:100, width: 150, height: 31))
         
         b2.setTitle("选择类型", for: .normal)
         
