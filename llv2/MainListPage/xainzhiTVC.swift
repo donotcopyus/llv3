@@ -44,50 +44,28 @@ class xianzhiData{
 class xianzhiTVC: UITableViewController{
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     @IBOutlet weak var nav: UINavigationItem!
-<<<<<<< HEAD
-//
-//    var b2 = dropDownBtn()
-=======
-
->>>>>>> a2d87fd7fafa35464f91c0de71f6e6acaabbaba9
-=======
     
-    var b2 = dropDownBtn()
+    //    var b2 = dropDownBtn()
     
-=======
-//    var b2 = dropDownBtn()
->>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
-
->>>>>>> parent of 578af5d... 1
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-//        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
-//        nav.rightBarButtonItem? = b2
-        
-
-=======
         //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
         //        nav.rightBarButtonItem? = b2
         
-<<<<<<< HEAD
         
-        b2.setTitle("选择类型", for: .normal)
-        
-        b2.translatesAutoresizingMaskIntoConstraints = true
-        
-        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
-        
-        self.view.addSubview(b2)
+        //        b2.setTitle("选择类型", for: .normal)
+        //
+        //        b2.translatesAutoresizingMaskIntoConstraints = true
+        //
+        //        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
+        //
+        //        self.view.addSubview(b2)
         
         //        if self.revealViewController() != nil{
         //            btnMenu.target = self.revealViewController()
@@ -96,36 +74,6 @@ class xianzhiTVC: UITableViewController{
         //
         //
         //        }
-=======
-//        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
-//
->>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
-//        b2.setTitle("选择类型", for: .normal)
-//
-//        b2.translatesAutoresizingMaskIntoConstraints = true
-//
-//        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
-<<<<<<< HEAD
-//
-=======
-        
->>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
-//        self.view.addSubview(b2)
-      
-//        if self.revealViewController() != nil{
-//            btnMenu.target = self.revealViewController()
-//            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//
-//
-//        }
-<<<<<<< HEAD
-=======
-
->>>>>>> a2d87fd7fafa35464f91c0de71f6e6acaabbaba9
-=======
->>>>>>> parent of 578af5d... 1
->>>>>>> 6a8233f3c9661d3e8f27a35ad5aa40f89c1fc09d
         
         tableView = UITableView()
         tableView.delegate = self
@@ -312,7 +260,7 @@ class xianzhiTVC: UITableViewController{
             self.navigationController?.pushViewController(viewController, animated: true)
         }
             
-        else if (image1 != "" && image2 == "" && image3 == ""){
+        else if (image1 == "" && image2 != "" && image3 == ""){
             let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhi1Controller") as! checkXianzhi1Controller
             viewController.pid = arrayOfCellData[index!].id
             viewController.uid = arrayOfCellData[index!].author.uid

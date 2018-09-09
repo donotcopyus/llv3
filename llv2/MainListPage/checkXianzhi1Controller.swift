@@ -41,8 +41,6 @@ class checkXianzhi1Controller: UIViewController {
         
         
         let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
-        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
-        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
         
         
         //get pid，藏起来
@@ -88,7 +86,7 @@ class checkXianzhi1Controller: UIViewController {
                 self.time.text = "发送于：" + dform.string(from:date as Date)
                 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
-                    let url1 = post["imageOneUrl"] as? String
+                    let url1 = post["imageTwoUrl"] as? String
                     if (url1 != ""){
                         let tourl1 = URL(string:url1!)
                         self.image1.kf.indicatorType = .activity

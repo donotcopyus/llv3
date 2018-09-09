@@ -1,11 +1,9 @@
 interactive key for all
 
-解决link问题，三个新的闲置详情界面.  整个view没有被load
-
-imagepicker突然没有了？
+前端修复一个image空白界面问题 + 两个下拉问题 + 下拉按钮选择
 
 
-修改密码ui + 修复修改界面长度 + 一些隐藏起来的label长度修改
+修改密码ui 
 
 ——————
 
