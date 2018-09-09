@@ -77,12 +77,10 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     
     
     @IBAction func upload(_ sender: Any) {
-        
         let imagePickerController = ImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.imageLimit = 3
         present(imagePickerController,animated: true, completion: nil)
-
     }
     
     @IBOutlet weak var wait: UIActivityIndicatorView!

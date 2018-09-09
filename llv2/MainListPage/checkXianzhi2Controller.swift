@@ -13,7 +13,6 @@ import Kingfisher
 
 class checkXianzhi2Controller: UIViewController {
     
-
     @IBOutlet weak var pidLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
     @IBOutlet weak var headImage: UIImageView!
@@ -21,33 +20,29 @@ class checkXianzhi2Controller: UIViewController {
     @IBOutlet weak var time: UILabel!
     
     @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
-
+    @IBOutlet weak var image3: UIImageView!
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var price: UILabel!
+    
     @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var imageurl: UILabel!
     
     @IBOutlet weak var delete: UIButton!
     @IBOutlet weak var chat: UIButton!
     
-    @IBOutlet weak var imageurl: UILabel!
-    
     var pid = String()
     var uid = String()
-    var photoArray = [Image]()
     
-  override func viewDidLoad() {
-    
-    print("hey iam here")
-    print("pid is" + pid)
+    override func viewDidLoad() {
+        
     
         super.viewDidLoad()
-                headImage.layer.cornerRadius = headImage.frame.height / 2.0
+        headImage.layer.cornerRadius = headImage.frame.height / 2.0
         headImage.layer.masksToBounds = true
-    
-    let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
-        let pictureTap2 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
-
+        
+        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
+        let pictureTap3 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
         
         
         //get pid，藏起来
@@ -68,7 +63,6 @@ class checkXianzhi2Controller: UIViewController {
         
         let postRef = Database.database().reference().child("xianzhi/\(pid)")
         let image = UIImage(named:"default_profile_icon")
-        
         
         postRef.observe(DataEventType.value, with:{
             (snapshot) in
@@ -103,16 +97,15 @@ class checkXianzhi2Controller: UIViewController {
                         self.image1.isUserInteractionEnabled = true
                     }
                     
-                    let url2 = post["imageThreeUrl"] as? String
-                    if (url2 != ""){
-                        let tourl2 = URL(string:url2!)
-                        self.image2.kf.indicatorType = .activity
-                        self.image2.kf.setImage(with: tourl2)
+                    let url3 = post["imageThreeUrl"] as? String
+                    if (url3 != ""){
+                        let tourl3 = URL(string:url3!)
+                        self.image3.kf.indicatorType = .activity
+                        self.image3.kf.setImage(with: tourl3)
                         
-                        self.image2.addGestureRecognizer(pictureTap2)
-                        self.image2.isUserInteractionEnabled = true
+                        self.image3.addGestureRecognizer(pictureTap3)
+                        self.image3.isUserInteractionEnabled = true
                     }
-                    
                     
                 })
                 
@@ -120,11 +113,9 @@ class checkXianzhi2Controller: UIViewController {
                 self.name.text = "物品： " + (post["name"] as? String)!
                 self.price.text = "价格： " + (post["price"] as? String)!
                 
-                self.info.text = post["extraInfo"] as? String
                 
             }
         })
-        
         
     }
     
@@ -147,29 +138,19 @@ class checkXianzhi2Controller: UIViewController {
         
     }
     
-    
-    
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
         sender.view?.removeFromSuperview()
     }
     
-    
-    
-    @IBAction func chat(_ sender: UIButton) {
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
-        
-        viewController.uid = uid
-        viewController.username = self.username.text!
-        viewController.url = self.imageurl.text!
-        self.navigationController?.pushViewController(viewController, animated: true)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    
-
-    
     @IBAction func deletepost(_ sender: UIButton) {
+        
         let postRef = Database.database().reference().child("xianzhi/\(pid)")
         
         let alert = UIAlertController(title: "删除广告", message: "确定删除广告吗？", preferredStyle: UIAlertControllerStyle.alert)
@@ -204,22 +185,31 @@ class checkXianzhi2Controller: UIViewController {
             //啥也不做！
         }))
         
-        present(alert, animated: true, completion: nil)}
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        present(alert, animated: true, completion: nil)
+        
     }
     
+    
+    @IBAction func chat(_ sender: UIButton) {
         
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "chatLog") as! ChatLogController
+        
+        viewController.uid = uid
+        viewController.username = self.username.text!
+        viewController.url = self.imageurl.text!
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+    
+
     @IBAction func share(_ sender: Any) {
+        
         let activityVC = UIActivityViewController(activityItems: ["www.google.ca"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         
         self.present(activityVC, animated: true, completion: nil)
+        
     }
-    
     
     
 }

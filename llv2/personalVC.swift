@@ -50,6 +50,15 @@ class personalVC: UIViewController {
                 return
             }
             
+            
+            let wait = UIAlertController(title: "修改信息", message: "请等待...", preferredStyle: .alert)
+            let loadingIndicator = UIActivityIndicatorView(frame:wait.view.bounds)
+            loadingIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+            wait.view.addSubview(loadingIndicator)
+            loadingIndicator.isUserInteractionEnabled = false
+            loadingIndicator.startAnimating()
+            self.present(wait, animated: true, completion: nil)
+            //开始处理
             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             changeRequest?.displayName = newname
             changeRequest?.commitChanges{
@@ -73,12 +82,7 @@ class personalVC: UIViewController {
                                 let thisAuthor = dict["author"] as? [String:Any],
                                 let thisuid = thisAuthor["uid"] as? String
                             {if (thisuid == uid){
-                                carpoolRef.child(childSnapshot.key).child("author").updateChildValues(newObj){
-                                    error, ref in
-                                    if error != nil{
-                                        print("错误")
-                                    }
-                                }
+                                carpoolRef.child(childSnapshot.key).child("author").updateChildValues(newObj)
                                 }}}})
                     
                             let exchangeRef = Database.database().reference().child("exchange")
@@ -127,9 +131,10 @@ class personalVC: UIViewController {
                             }
                         }
                     })
-                    
+                    //结束处理
                     
                     alert.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
                 else{
                     let newAlert1 = UIAlertController(title:"错误", message:"修改昵称失败", preferredStyle:.alert)
@@ -140,13 +145,17 @@ class personalVC: UIViewController {
                 }
             }
             
-        } ))
+        }
+            
+            )
+        )
         
         alert.addAction(UIAlertAction(title: "取消", style: .default, handler: { (action) in
             return
         } ))
         
         self.present(alert, animated: true, completion: nil)
+        self.labelText.text = " 欢迎，" + (Auth.auth().currentUser?.displayName)!
         
     }
     
