@@ -39,6 +39,16 @@ class changePassVC: UIViewController {
                             return
         }
         
+        if (oldpass.text == newpass.text){
+            
+            let same = UIAlertController(title:"错误", message:"旧密码不能与新密码一致", preferredStyle:.alert)
+            same.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                
+            } ))
+            self.present(same, animated: true, completion: nil)
+            return
+        }
+        
         if (newpass.text != renewpass.text){
             
             let error = UIAlertController(title:"错误", message:"请确保新密码与重新输入的新密码一致", preferredStyle:.alert)
@@ -62,12 +72,23 @@ class changePassVC: UIViewController {
                 return
             }
             else{
-                Auth.auth().currentUser?.updatePassword(to: self.newpass.text!)
+                Auth.auth().currentUser?.updatePassword(to: self.newpass.text!){
+                    error in
+                    if error == nil{
                 let suc = UIAlertController(title:"成功", message:"修改密码成功！", preferredStyle:.alert)
                 suc.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                     self.dismiss(animated: true, completion: nil)
                 } ))
                 self.present(suc, animated: true, completion: nil)
+                    }
+                else{
+                    let errorAlert = UIAlertController(title:"错误", message:"更改密码错误", preferredStyle:.alert)
+                    errorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                        
+                    } ))
+                    self.present(errorAlert, animated: true, completion: nil)
+                    return
+                    }}
             }
             
         })
