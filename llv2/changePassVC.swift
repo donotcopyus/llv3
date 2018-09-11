@@ -10,7 +10,15 @@ import UIKit
 import Firebase
 
 class changePassVC: UIViewController {
+    
 
+    //back btn
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    //
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
