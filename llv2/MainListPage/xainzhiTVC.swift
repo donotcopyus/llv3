@@ -300,7 +300,7 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
             
-        else if (image1 != "" && image2 == "" && image3 == ""){
+        else if (image1 == "" && image2 != "" && image3 == ""){
             let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhi1Controller") as! checkXianzhi1Controller
             viewController.pid = arrayOfCellData[index!].id
             viewController.uid = arrayOfCellData[index!].author.uid
