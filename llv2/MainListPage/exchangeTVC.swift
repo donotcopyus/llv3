@@ -35,13 +35,11 @@ struct exchangeData {
 
 class exchangeTVC: UITableViewController, UIGestureRecognizerDelegate {
     
+    
 //*********************************************
     var identities = [String]()
  //****************************************
 
-
-    
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
     
 
     var numberOfPosts: Int = 5
@@ -50,12 +48,9 @@ class exchangeTVC: UITableViewController, UIGestureRecognizerDelegate {
     //*********************************************
     override func viewDidLoad() {
         
-    //右滑返回
-//        let swipe = self.navigationController?.interactivePopGestureRecognizer!.delegate
-//        let pan = UIPanGestureRecognizer(target: swipe, action: Selector("handleNavigationTransition:"))
-//        pan.delegate = self as! UIGestureRecognizerDelegate
-//        self.view.addGestureRecognizer(pan)
-//        self.navigationController?.interactivePopGestureRecognizer!.isEnabled = true
+
+        
+        
         let target = self.navigationController?.interactivePopGestureRecognizer?.delegate
         let pan:UIPanGestureRecognizer = UIPanGestureRecognizer.init(target: target!, action: Selector(("handleNavigationTransition:")))
         self.view.addGestureRecognizer(pan)

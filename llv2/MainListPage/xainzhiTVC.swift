@@ -41,7 +41,7 @@ class xianzhiData{
 
 
 
-class xianzhiTVC: UITableViewController{
+class xianzhiTVC: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBAction func btnMenu(_ sender: Any) {
@@ -68,6 +68,9 @@ class xianzhiTVC: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
         //        nav.rightBarButtonItem? = b2
@@ -110,8 +113,31 @@ class xianzhiTVC: UITableViewController{
             if(self.numberOfPosts - self.arrayOfCellData.count > 10){
                 self.tableView.es.noticeNoMoreData()}
         }
+        
+        
+        setUpSearchBar()
+        
     }
     
+
+
+    
+    
+    fileprivate func setUpSearchBar() {
+        let searchBar = UISearchBar(frame: CGRect(x:0, y:0, width: self.view.bounds.width, height: 65))
+        
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles = ["text","etet","jeiji","ddddd","eegge","dfefef", "teetet", "esfdg", "etett"]
+        searchBar.selectedScopeButtonIndex = 0
+        
+        searchBar.delegate = self
+        self.tableView.tableHeaderView = searchBar
+        
+    }
+    
+
+    
+
     
     func observePost(){
         
