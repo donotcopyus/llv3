@@ -47,6 +47,7 @@ class checkXianzhiNoImageController: UIViewController {
         self.pidLabel.text = pid
         self.uidLabel.isHidden = true
         self.uidLabel.text = uid
+
         self.imageurl.isHidden = true
         
         //如果是自己，没办法chat
@@ -54,7 +55,6 @@ class checkXianzhiNoImageController: UIViewController {
             self.chat.isHidden = true
         }
         else{
-            
             self.delete.isHidden = true
         }
         
