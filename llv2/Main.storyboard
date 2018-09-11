@@ -423,59 +423,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginUI" translatesAutoresizingMaskIntoConstraints="NO" id="X11-8d-hPC">
+                                <rect key="frame" x="0.0" y="9" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="修改密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiU-FX-aqk">
-                                <rect key="frame" x="151" y="85" width="70" height="21"/>
+                                <rect key="frame" x="150" y="142" width="74" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="旧密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-dJ-kjM">
-                                <rect key="frame" x="62" y="166" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-yq-XvU">
-                                <rect key="frame" x="138" y="161" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="新密码" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-Kh-K5w">
+                                <rect key="frame" x="87" y="306" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPs-vO-rVz">
-                                <rect key="frame" x="62" y="223" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwM-jD-aiC">
+                                <rect key="frame" x="45" y="281" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-Kh-K5w">
-                                <rect key="frame" x="138" y="218" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认新密码" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="3H6-1U-aVG">
+                                <rect key="frame" x="87" y="344" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="确认新密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwM-jD-aiC">
-                                <rect key="frame" x="45" y="281" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3H6-1U-aVG">
-                                <rect key="frame" x="140" y="272" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="旧密码" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-yq-XvU">
+                                <rect key="frame" x="87" y="266" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMU-ZY-OXy">
-                                <rect key="frame" x="155" y="366" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMU-ZY-OXy">
+                                <rect key="frame" x="77" y="382" width="220" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="确认修改"/>
+                                <state key="normal" image="submit"/>
                                 <connections>
                                     <action selector="changeWithSender:" destination="2rf-bj-gCm" eventType="touchUpInside" id="Lgy-4N-uPz"/>
                                 </connections>
@@ -492,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNy-zE-K8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1518" y="-3"/>
+            <point key="canvasLocation" x="-1519.2" y="-3.1484257871064472"/>
         </scene>
         <!--个人资料-->
         <scene sceneID="Pxn-pJ-Xer">
@@ -2457,8 +2462,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="查找物品" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-O9-A9o">
-                                <rect key="frame" x="54" y="246" width="270" height="102"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="查找物品" minimumFontSize="17" background="输入框" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-O9-A9o">
+                                <rect key="frame" x="52" y="318" width="270" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FRc-O9-A9o" secondAttribute="height" multiplier="9:1" id="r2y-vo-Fgd"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2467,12 +2475,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wyO-iF-vnX" firstAttribute="top" secondItem="y06-2y-vYw" secondAttribute="topMargin" constant="-4" id="04m-Qc-jw1"/>
-                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerX" secondItem="wyO-iF-vnX" secondAttribute="centerX" constant="1.5" id="6dp-Ce-sed"/>
-                            <constraint firstItem="DYJ-aZ-mkZ" firstAttribute="bottom" secondItem="FRc-O9-A9o" secondAttribute="bottom" constant="226" id="ITM-fB-kYv"/>
-                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerX" secondItem="DYJ-aZ-mkZ" secondAttribute="centerX" constant="1.5" id="KCA-vV-IYI"/>
+                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerX" secondItem="DYJ-aZ-mkZ" secondAttribute="centerX" id="1WS-ki-eYW"/>
                             <constraint firstAttribute="trailing" secondItem="wyO-iF-vnX" secondAttribute="trailing" id="N0R-9K-0M0"/>
-                            <constraint firstItem="FRc-O9-A9o" firstAttribute="top" secondItem="DYJ-aZ-mkZ" secondAttribute="top" constant="226" id="kTj-kN-0Yz"/>
+                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerY" secondItem="DYJ-aZ-mkZ" secondAttribute="centerY" id="qvc-aK-Q9x"/>
                             <constraint firstItem="wyO-iF-vnX" firstAttribute="leading" secondItem="y06-2y-vYw" secondAttribute="leading" id="sPM-I1-BVx"/>
+                            <constraint firstItem="FRc-O9-A9o" firstAttribute="height" secondItem="y06-2y-vYw" secondAttribute="height" id="tuc-b0-wSe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DYJ-aZ-mkZ"/>
                     </view>
@@ -4334,7 +4341,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="ljE-ht-r2G"/>
-        <segue reference="Tcy-uH-Aec"/>
+        <segue reference="wij-hC-xO5"/>
         <segue reference="3A1-YK-hyk"/>
     </inferredMetricsTieBreakers>
 </document>
