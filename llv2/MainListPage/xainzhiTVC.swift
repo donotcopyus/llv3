@@ -54,43 +54,18 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
         
         present(alert, animated: true, completion: nil)
         
-       // return
     }
     
     
     
     @IBOutlet weak var nav: UINavigationItem!
-    
-    //    var b2 = dropDownBtn()
+
     
     var numberOfPosts: Int = 5
     var arrayOfCellData = [xianzhiData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        //        b2 = dropDownBtn.init(frame: CGRect(x:0, y:81, width: 150, height: 31))
-        //        nav.rightBarButtonItem? = b2
-        
-        
-        //        b2.setTitle("选择类型", for: .normal)
-        //
-        //        b2.translatesAutoresizingMaskIntoConstraints = true
-        //
-        //        b2.dropView.dropDownOptions = ["书","药妆","家具","租房","服饰","其他"]
-        //
-        //        self.view.addSubview(b2)
-        
-        //        if self.revealViewController() != nil{
-        //            btnMenu.target = self.revealViewController()
-        //            btnMenu.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-        //            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        //
-        //
-        //        }
         
         tableView = UITableView()
         tableView.delegate = self
@@ -99,12 +74,11 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
         
         observePost()
         
-        
-        
         self.tableView.es.addInfiniteScrolling {
             [unowned self] in
             
             self.numberOfPosts += 5
+            
             self.observePost()
             
             self.tableView.es.stopLoadingMore()
@@ -119,23 +93,80 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
         
     }
     
-
-
-    
     
     fileprivate func setUpSearchBar() {
-        let searchBar = UISearchBar(frame: CGRect(x:0, y:0, width: self.view.bounds.width, height: 65))
         
-        searchBar.showsScopeBar = true
-        searchBar.scopeButtonTitles = ["text","etet","jeiji","ddddd","eegge","dfefef", "teetet", "esfdg", "etett"]
-        searchBar.selectedScopeButtonIndex = 0
-        
-        searchBar.delegate = self
-        self.tableView.tableHeaderView = searchBar
+        let items = ["all","书","药妆","家具","租房","服饰","其他"]
+        let segmented = UISegmentedControl(items:items)
+        segmented.addTarget(self, action: #selector(segmentChange),for: .valueChanged)
+        segmented.tintColor = UIColor(red: 0.2824, green: 0.3255, blue: 0.6471, alpha: 1.0)
+        self.tableView.tableHeaderView = segmented
         
     }
     
+    @objc func segmentChange(_ segmented:UISegmentedControl){
+        
+       let index = segmented.selectedSegmentIndex
+       let type = segmented.titleForSegment(at: index)!
+        print(type)
+        
+        if (type == "all"){
+           observePost()
+        }
+        
+        else{
+            self.tableView.es.stopLoadingMore()
+            observeWithType(type: type)
+      
+            
+        }
+        
+    }
 
+    
+    func observeWithType(type:String){
+        
+        let postRef = Database.database().reference().child("xianzhi")
+        
+        postRef.observe(.value, with:{
+            snapshot in
+            
+            var tempPosts = [xianzhiData]()
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let author = dict["author"] as? [String:Any],
+                    let uid = author["uid"] as? String,
+                    let username = author["username"] as? String,
+                    let photoURL = author["photoURL"] as? String,
+                    let url = URL(string:photoURL),
+                    let name = dict["name"] as? String,
+                    let price = dict["price"] as? String,
+                    let thistype = dict["genre"] as? String,
+                    let extraInfo = dict["extraInfo"] as? String,
+                    let timestamp = dict["timestamp"] as? Double,
+                    let imageOneUrl = dict["imageOneUrl"] as? String,
+                    let imageTwoUrl = dict["imageTwoUrl"] as? String,
+                    let imageThreeUrl = dict["imageThreeUrl"] as? String
+                {
+                    if (thistype == type){
+                    let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
+                    let post = xianzhiData(id: childSnapshot.key, name: name, price: price, extraInfo: extraInfo, timestamp: timestamp, imageOneUrl: imageOneUrl, imageTwoUrl: imageTwoUrl, imageThreeUrl: imageThreeUrl, author: userProfile)
+                    
+                    tempPosts.append(post)
+                    }
+                }
+            }
+            self.arrayOfCellData = tempPosts.reversed()
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+           }
+            
+        })
+        
+    }
     
 
     
@@ -191,31 +222,40 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
         let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
         
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
-            
+
             if(self.arrayOfCellData[indexPath.row].imageOneUrl != ""){
                 let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageOneUrl)
                 cell.image1.kf.indicatorType = .activity
+                
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
                 cell.image1.kf.setImage(with: url1)
+                })
             }
             
             if(self.arrayOfCellData[indexPath.row].imageTwoUrl != ""){
                 let url2 = URL(string:self.arrayOfCellData[indexPath.row].imageTwoUrl)
                 cell.image2.kf.indicatorType = .activity
+                
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
                 cell.image2.kf.setImage(with: url2)
+                })
             }
             
             if(self.arrayOfCellData[indexPath.row].imageThreeUrl != ""){
                 let url3 = URL(string:self.arrayOfCellData[indexPath.row].imageThreeUrl)
                 cell.image3.kf.indicatorType = .activity
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
                 cell.image3.kf.setImage(with: url3)
+                })
             }
             
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
             cell.headImage.kf.indicatorType = .activity
-            cell.headImage.kf.setImage(with: url)
+        
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+                    cell.headImage.kf.setImage(with: url)})
             
-        })
+    
         
         
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
