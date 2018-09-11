@@ -1995,11 +1995,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-<<<<<<< HEAD
-                                <rect key="frame" x="77" y="368" width="260" height="90"/>
-=======
+
                                 <rect key="frame" x="77" y="341.5" width="221" height="76.5"/>
->>>>>>> 7d5c06d102fb994baef962182720c88b410caf9a
+
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -2039,11 +2037,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-<<<<<<< HEAD
-                                <rect key="frame" x="77" y="496.99999999999994" width="260" height="90.333333333333314"/>
-=======
+
                                 <rect key="frame" x="77" y="457" width="221" height="69.5"/>
->>>>>>> 7d5c06d102fb994baef962182720c88b410caf9a
+
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2108,11 +2104,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginUI" translatesAutoresizingMaskIntoConstraints="NO" id="Pel-gN-j5O">
-<<<<<<< HEAD
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-=======
+
                                 <rect key="frame" x="0.0" y="0.0" width="529" height="667"/>
->>>>>>> 7d5c06d102fb994baef962182720c88b410caf9a
+
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-7i-FbU">
                                 <rect key="frame" x="97" y="406" width="220" height="38"/>
@@ -2150,11 +2144,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SO-LH-UUn">
-<<<<<<< HEAD
-                                <rect key="frame" x="31" y="415" width="314" height="21"/>
-=======
+
                                 <rect key="frame" x="31" y="415" width="429" height="21"/>
->>>>>>> 7d5c06d102fb994baef962182720c88b410caf9a
+
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4375,14 +4367,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="BX5-SO-Qtr"/>
         <segue reference="Bh3-wn-Akz"/>
-<<<<<<< HEAD
-        <segue reference="uJp-nh-C7I"/>
-        <segue reference="ivw-CZ-U9A"/>
-        <segue reference="C6l-iW-G4h"/>
-=======
+
         <segue reference="ljE-ht-r2G"/>
         <segue reference="Tcy-uH-Aec"/>
         <segue reference="3A1-YK-hyk"/>
->>>>>>> 7d5c06d102fb994baef962182720c88b410caf9a
+
     </inferredMetricsTieBreakers>
 </document>
