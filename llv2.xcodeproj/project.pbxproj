@@ -13,6 +13,8 @@
 		514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FAD1F210A361800C780AD /* forgetPassViewController.swift */; };
 		51626E10210106B10047B303 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51626E0E210106B10047B303 /* SWRevealViewController.m */; };
 		51626E13210108700047B303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51626E122101086F0047B303 /* GoogleService-Info.plist */; };
+		516E211F2148F7180074B581 /* ratedonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E211E2148F7180074B581 /* ratedonation.swift */; };
+		516E21212148FAEE0074B581 /* donationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E21202148FAEE0074B581 /* donationVC.swift */; };
 		516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FBD210101BB001C0C55 /* AppDelegate.swift */; };
 		516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FBF210101BB001C0C55 /* ViewController.swift */; };
 		516F7FC5210101BD001C0C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516F7FC4210101BD001C0C55 /* Assets.xcassets */; };
@@ -47,7 +49,6 @@
 		51D52D8E2131017A00AA706F /* dra3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D52D8D2131017A00AA706F /* dra3.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
-		FA01DB6B2140F9BE001D57E2 /* 鼓励.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */; };
 		FA01DB6D21420BB1001D57E2 /* notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01DB6C21420BB1001D57E2 /* notice.swift */; };
 		FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454EB2123C49A00B03E1D /* LikeTab.swift */; };
 		FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454ED2123CCD300B03E1D /* sent1.swift */; };
@@ -106,6 +107,8 @@
 		51626E0E210106B10047B303 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		51626E11210106E90047B303 /* llv2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "llv2-Bridging-Header.h"; path = "llv2/llv2-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		51626E122101086F0047B303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		516E211E2148F7180074B581 /* ratedonation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ratedonation.swift; sourceTree = "<group>"; };
+		516E21202148FAEE0074B581 /* donationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationVC.swift; sourceTree = "<group>"; };
 		516F7FBA210101BB001C0C55 /* llv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = llv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516F7FBD210101BB001C0C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516F7FBF210101BB001C0C55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +156,6 @@
 		D315C848D886DCBB8F607BC6 /* Pods-llv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F31EDFF509925B70133C3FB1 /* Pods-llv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_llv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "鼓励.swift"; sourceTree = "<group>"; };
 		FA01DB6C21420BB1001D57E2 /* notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notice.swift; sourceTree = "<group>"; };
 		FA1454EB2123C49A00B03E1D /* LikeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTab.swift; sourceTree = "<group>"; };
 		FA1454ED2123CCD300B03E1D /* sent1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent1.swift; sourceTree = "<group>"; };
@@ -417,8 +419,9 @@
 				51C907D22144FBAE00021187 /* changePassVC.swift */,
 				FA1454F5212921FF00B03E1D /* cacheVC.swift */,
 				FA19E115213CCBD9005E6B2B /* contactUs.swift */,
-				FA01DB6A2140F9BE001D57E2 /* 鼓励.swift */,
 				FA01DB6C21420BB1001D57E2 /* notice.swift */,
+				516E211E2148F7180074B581 /* ratedonation.swift */,
+				516E21202148FAEE0074B581 /* donationVC.swift */,
 			);
 			name = "Setting Page";
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -638,6 +642,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -676,7 +681,6 @@
 				51B52D60211FE0D200D2B9E9 /* messageRecCell.swift in Sources */,
 				5176808D21352735003A8F39 /* xianzhiSearch.swift in Sources */,
 				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
-				FA01DB6B2140F9BE001D57E2 /* 鼓励.swift in Sources */,
 				FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */,
@@ -695,10 +699,12 @@
 				FAE91A0C2144F668000DC12F /* xainzhiTVC.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
+				516E21212148FAEE0074B581 /* donationVC.swift in Sources */,
 				FA1DE45F213900DB00489425 /* carnav.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */,
+				516E211F2148F7180074B581 /* ratedonation.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,

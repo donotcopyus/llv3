@@ -33,6 +33,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="账户与安全功能暂时不可用，敬请谅解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-HJ-Rug">
+                                <rect key="frame" x="60" y="292" width="295" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f90-vd-6u8"/>
@@ -50,8 +57,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
-                                <rect key="frame" x="16" y="93.333333333333314" width="87.666666666666671" height="89"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧...也可以手动发送到harkoreapp@gmail.com哦～" textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
+                                <rect key="frame" x="16" y="93.333333333333371" width="382.66666666666669" height="387"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gq8-fi-jWK" secondAttribute="height" multiplier="189:191" id="8zk-CW-qdo"/>
                                 </constraints>
@@ -61,7 +68,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
-                                <rect key="frame" x="97" y="255.33333333333337" width="220" height="38"/>
+                                <rect key="frame" x="97" y="553.33333333333326" width="220" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dDK-K1-PsJ"/>
                                 </constraints>
@@ -93,13 +100,13 @@
         <!--鼓励一下-->
         <scene sceneID="oq1-w5-zhR">
             <objects>
-                <viewController storyboardIdentifier="鼓励一下" title="鼓励一下" id="COF-NG-KZs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="鼓励一下" title="鼓励一下" id="COF-NG-KZs" customClass="ratedonation" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zV9-Aq-mVF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuC-D8-uSr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="鼓励一下" id="YJU-Xw-tmO">
@@ -109,6 +116,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc9-7X-Siz">
+                                <rect key="frame" x="149" y="208" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="五星好评"/>
+                                <connections>
+                                    <action selector="rate:" destination="COF-NG-KZs" eventType="touchUpInside" id="1xm-S5-3Vd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="感谢您对找啥的支持，您的每一份支持都是我们继续改进的动力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-yi-Erx">
+                                <rect key="frame" x="20" y="144" width="358" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-Ku-vqr">
+                                <rect key="frame" x="149" y="315" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="分享应用"/>
+                                <connections>
+                                    <action selector="share:" destination="COF-NG-KZs" eventType="touchUpInside" id="t4O-cs-XT8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6s-Mx-246">
+                                <rect key="frame" x="149" y="263" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="资金捐赠"/>
+                                <connections>
+                                    <action selector="donation:" destination="COF-NG-KZs" eventType="touchUpInside" id="iDU-fx-yjf"/>
+                                    <segue destination="HEl-sw-5Jp" kind="showDetail" id="aMS-Fk-f26"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ahg-la-cnV"/>
@@ -116,7 +155,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMc-qs-g2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4350" y="1138"/>
+            <point key="canvasLocation" x="4349.275362318841" y="1137.2282608695652"/>
+        </scene>
+        <!--DonationVC-->
+        <scene sceneID="1aL-aL-rIP">
+            <objects>
+                <viewController id="HEl-sw-5Jp" customClass="donationVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgO-aR-g8V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="捐赠金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-e5-skA">
+                                <rect key="frame" x="72" y="114" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCH-DG-yIm">
+                                <rect key="frame" x="171" y="110" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vs-8C-4hq">
+                                <rect key="frame" x="176" y="441" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确认捐赠"/>
+                                <connections>
+                                    <action selector="click:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="Odr-ls-pom"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lmx-Te-fbj"/>
+                    </view>
+                    <connections>
+                        <outlet property="amount" destination="wCH-DG-yIm" id="zIw-v6-1rV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrb-iZ-1D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4316" y="1820"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uam-bY-FOE">

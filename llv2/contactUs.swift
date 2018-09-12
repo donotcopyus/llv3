@@ -25,7 +25,7 @@ class contactUs: UIViewController,MFMailComposeViewControllerDelegate {
     func configureMailController() -> MFMailComposeViewController{
         let mailComoser = MFMailComposeViewController()
         mailComoser.mailComposeDelegate = self
-        mailComoser.setToRecipients(["lunacao214@outlook.com","iamlinaixin@gmail.com"])
+        mailComoser.setToRecipients(["lunacao214@outlook.com","iamlinaixin@gmail.com","harkoreapp@gmail.com"])
         mailComoser.setSubject("HarKore找啥app意见反馈")
         mailComoser.setMessageBody(message.text!, isHTML: false)
         return mailComoser
