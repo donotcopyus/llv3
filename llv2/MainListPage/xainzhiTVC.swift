@@ -108,7 +108,6 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
         
        let index = segmented.selectedSegmentIndex
        let type = segmented.titleForSegment(at: index)!
-        print(type)
         
         if (type == "all"){
            observePost()
@@ -117,8 +116,7 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
         else{
             self.tableView.es.stopLoadingMore()
             observeWithType(type: type)
-      
-            
+
         }
         
     }

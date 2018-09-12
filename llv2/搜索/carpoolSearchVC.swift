@@ -170,9 +170,11 @@ class carpoolSearchVC: UIViewController {
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                     return
                 } ))
-                present(alert, animated: true, completion: nil)}}
+                present(alert, animated: true, completion: nil)}
+                return
+        }
         
-        if(dept == "出发城市" || arri == "到达城市"){
+        if(dept == "选择城市" || arri == "选择城市"){
             //alert
             let alert = UIAlertController(title: title, message: "出发或到达城市不能为空（tips:如果不需要设置出发或到达城市限制，请选择‘任意’）", preferredStyle: .alert)
             
@@ -180,6 +182,7 @@ class carpoolSearchVC: UIViewController {
                 return
             } ))
             present(alert, animated: true, completion: nil)
+            return
         }
         
         //出发日期
@@ -208,6 +211,7 @@ class carpoolSearchVC: UIViewController {
                 return
             } ))
             present(alert, animated: true, completion: nil)
+            return
         }
         
         //dept是出发城市，arri是到达城市，“任意”为没有限制
