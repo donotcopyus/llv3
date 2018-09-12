@@ -16,7 +16,6 @@ target 'llv2' do
   pod "ESPullToRefresh"
   
   pod 'RevealingSplashView'
-  pod 'Stripe'
 
 
   # Pods for llv2
