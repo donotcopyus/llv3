@@ -2443,7 +2443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKh-sT-ycr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4724" y="-2807.1428571428573"/>
+            <point key="canvasLocation" x="4894" y="-2786"/>
         </scene>
         <!--闲置搜索-->
         <scene sceneID="Y7V-Vw-VbF">
@@ -2480,10 +2480,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="查找物品" minimumFontSize="17" background="输入框" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-O9-A9o">
-                                <rect key="frame" x="52" y="318" width="270" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="查找物品" minimumFontSize="17" background="输入框" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-O9-A9o">
+                                <rect key="frame" x="72" y="314" width="270" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="FRc-O9-A9o" secondAttribute="height" multiplier="9:1" id="r2y-vo-Fgd"/>
+                                    <constraint firstAttribute="height" constant="30" id="o5X-4F-smq"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2493,11 +2493,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wyO-iF-vnX" firstAttribute="top" secondItem="y06-2y-vYw" secondAttribute="topMargin" constant="-4" id="04m-Qc-jw1"/>
-                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerX" secondItem="DYJ-aZ-mkZ" secondAttribute="centerX" id="1WS-ki-eYW"/>
+                            <constraint firstItem="DYJ-aZ-mkZ" firstAttribute="bottom" secondItem="FRc-O9-A9o" secondAttribute="bottom" constant="299" id="2OW-md-RZd"/>
                             <constraint firstAttribute="trailing" secondItem="wyO-iF-vnX" secondAttribute="trailing" id="N0R-9K-0M0"/>
-                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerY" secondItem="DYJ-aZ-mkZ" secondAttribute="centerY" id="qvc-aK-Q9x"/>
+                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerX" secondItem="wyO-iF-vnX" secondAttribute="centerX" id="UHK-Hr-bHe"/>
                             <constraint firstItem="wyO-iF-vnX" firstAttribute="leading" secondItem="y06-2y-vYw" secondAttribute="leading" id="sPM-I1-BVx"/>
-                            <constraint firstItem="FRc-O9-A9o" firstAttribute="height" secondItem="y06-2y-vYw" secondAttribute="height" id="tuc-b0-wSe"/>
+                            <constraint firstItem="FRc-O9-A9o" firstAttribute="leading" secondItem="DYJ-aZ-mkZ" secondAttribute="leading" constant="72" id="wLr-En-WAH"/>
+                            <constraint firstItem="FRc-O9-A9o" firstAttribute="centerX" secondItem="DYJ-aZ-mkZ" secondAttribute="centerX" id="yVQ-MR-NEe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DYJ-aZ-mkZ"/>
                     </view>
@@ -4309,7 +4310,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="ljE-ht-r2G"/>
-        <segue reference="wij-hC-xO5"/>
+        <segue reference="wYX-fP-eqP"/>
         <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
 </document>
