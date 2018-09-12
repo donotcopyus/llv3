@@ -3647,6 +3647,8 @@
                         <viewLayoutGuide key="safeArea" id="2v5-bX-jSE"/>
                     </view>
                     <connections>
+                        <outlet property="chat" destination="ak9-L3-U2W" id="B2K-Kn-sZg"/>
+                        <outlet property="delete" destination="8lk-3d-Imx" id="UsG-Xh-dKb"/>
                         <outlet property="headImage" destination="qhn-tl-ydY" id="wja-kw-6i9"/>
                         <outlet property="imageurl" destination="585-g7-E15" id="hKu-kg-eph"/>
                         <outlet property="info" destination="m8y-13-Nbj" id="e89-dm-Lyi"/>
@@ -4438,9 +4440,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="ljE-ht-r2G"/>
-
         <segue reference="m7f-Ab-Z84"/>
-
         <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
 </document>
