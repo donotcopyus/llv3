@@ -2894,7 +2894,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn9-7H-ZTK">
                                         <rect key="frame" x="116" y="127" width="290" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3050,7 +3050,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-PI-hip">
                                         <rect key="frame" x="108" y="115" width="298" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3210,7 +3210,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="gAR-um-5Jn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3239,6 +3239,7 @@
                                         <rect key="frame" x="0.0" y="79" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="TH6-mf-dxx"/>
+                                            <constraint firstAttribute="width" secondItem="iU6-vo-LSC" secondAttribute="height" multiplier="1:1" id="UPG-8K-p7c"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ8-Ix-x7S">
@@ -3504,15 +3505,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8y-13-Nbj">
-                                <rect key="frame" x="8" y="310" width="386" height="415"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="415" id="Nx1-TA-dCh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C2-MF-Z3I">
                                 <rect key="frame" x="29" y="95" width="24" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -3532,43 +3524,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hm-4t-vdn">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" id="3F1-AH-XKY">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oq2-VK-weU">
-                                            <rect key="frame" x="20" y="6.6666666666666679" width="91" height="31.000000000000004"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="删除广告"/>
-                                            <connections>
-                                                <action selector="deletepost:" destination="xdC-th-xje" eventType="touchUpInside" id="JQy-cT-w0d"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem tag="1" image="私聊" style="plain" id="IdW-FR-1dA">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sU5-qT-vto">
-                                            <rect key="frame" x="111" y="0.0" width="100" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="私聊"/>
-                                            <connections>
-                                                <action selector="chat:" destination="xdC-th-xje" eventType="touchUpInside" id="88D-7m-elb"/>
-                                                <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="y2k-yQ-OUN"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem id="oGB-Xt-FtJ"/>
-                                    <barButtonItem style="plain" id="IK8-ZO-qdd">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hha-vk-cwo">
-                                            <rect key="frame" x="283" y="6.6666666666666679" width="111" height="31.000000000000004"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="分享"/>
-                                            <connections>
-                                                <action selector="share:" destination="xdC-th-xje" eventType="touchUpInside" id="8v4-Te-eHb"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8y-13-Nbj">
+                                <rect key="frame" x="8" y="301" width="386" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="415" id="Nx1-TA-dCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3577,7 +3541,6 @@
                             <constraint firstItem="ckw-Qz-iwp" firstAttribute="top" secondItem="CCP-YK-Yk7" secondAttribute="bottom" constant="73" id="FDh-sR-AHf"/>
                             <constraint firstItem="ioA-fa-TUf" firstAttribute="trailing" secondItem="Ldq-Ix-RFC" secondAttribute="trailingMargin" id="HuI-FU-3qc"/>
                             <constraint firstItem="Qgo-1f-gf3" firstAttribute="leading" secondItem="m8y-13-Nbj" secondAttribute="leading" id="Oat-OM-eyW"/>
-                            <constraint firstItem="0Hm-4t-vdn" firstAttribute="leading" secondItem="4yx-Wu-0Au" secondAttribute="leading" id="QGl-P9-5c1"/>
                             <constraint firstItem="qhn-tl-ydY" firstAttribute="leading" secondItem="Ldq-Ix-RFC" secondAttribute="leading" id="SNb-Bv-pZb"/>
                             <constraint firstItem="ioA-fa-TUf" firstAttribute="leading" secondItem="CCP-YK-Yk7" secondAttribute="leading" id="T90-Ko-gIb"/>
                             <constraint firstItem="ioA-fa-TUf" firstAttribute="leading" secondItem="qhn-tl-ydY" secondAttribute="trailing" constant="7" id="WQj-xb-anY"/>
@@ -3594,15 +3557,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ckw-Qz-iwp" secondAttribute="trailing" constant="-47" id="pqa-kA-qju"/>
                             <constraint firstItem="CCP-YK-Yk7" firstAttribute="top" secondItem="585-g7-E15" secondAttribute="bottom" constant="51" id="q7x-Y0-UR2"/>
                             <constraint firstItem="ckw-Qz-iwp" firstAttribute="trailing" secondItem="Qgo-1f-gf3" secondAttribute="trailing" id="qli-Wb-bGc"/>
-                            <constraint firstItem="0Hm-4t-vdn" firstAttribute="bottom" secondItem="2v5-bX-jSE" secondAttribute="bottom" id="uED-bA-gM9"/>
-                            <constraint firstAttribute="trailing" secondItem="0Hm-4t-vdn" secondAttribute="trailing" id="vm7-mm-nDH"/>
                             <constraint firstItem="ioA-fa-TUf" firstAttribute="trailing" secondItem="CCP-YK-Yk7" secondAttribute="trailing" id="ynj-yB-YzE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2v5-bX-jSE"/>
                     </view>
                     <connections>
-                        <outlet property="chat" destination="sU5-qT-vto" id="jwz-S5-g1d"/>
-                        <outlet property="delete" destination="oq2-VK-weU" id="OPh-RD-kO1"/>
                         <outlet property="headImage" destination="qhn-tl-ydY" id="wja-kw-6i9"/>
                         <outlet property="imageurl" destination="585-g7-E15" id="hKu-kg-eph"/>
                         <outlet property="info" destination="m8y-13-Nbj" id="e89-dm-Lyi"/>
@@ -3616,7 +3575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyW-cm-FaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9648.7999999999993" y="-2101.7991004497753"/>
+            <point key="canvasLocation" x="9647.826086956522" y="-2102.445652173913"/>
         </scene>
         <!--Profile Check Controller-->
         <scene sceneID="INd-4Y-oQm">
