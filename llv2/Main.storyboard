@@ -3203,7 +3203,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="355" id="PNq-T1-4Eg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3335,8 +3335,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cww-2p-xAP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1155"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p02-oe-11S">
-                                        <rect key="frame" x="108" y="114" width="53" height="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="物品：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p02-oe-11S">
+                                        <rect key="frame" x="108" y="114" width="298" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="gAR-um-5Jn"/>
                                         </constraints>
@@ -3345,7 +3345,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMP-HQ-PdB">
-                                        <rect key="frame" x="108" y="158" width="398" height="21"/>
+                                        <rect key="frame" x="108" y="158" width="306" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="VBC-QZ-5Oz"/>
                                         </constraints>
@@ -3359,8 +3359,8 @@
                                             <constraint firstAttribute="height" constant="414" id="pXO-WC-8RR"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nt-id-AKg">
-                                        <rect key="frame" x="108" y="79" width="53" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nt-id-AKg">
+                                        <rect key="frame" x="108" y="79" width="298" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3372,8 +3372,8 @@
                                             <constraint firstAttribute="width" secondItem="iU6-vo-LSC" secondAttribute="height" multiplier="1:1" id="UPG-8K-p7c"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ8-Ix-x7S">
-                                        <rect key="frame" x="108" y="98" width="53" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ8-Ix-x7S">
+                                        <rect key="frame" x="108" y="98" width="298" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3397,12 +3397,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Po-grt">
-                                        <rect key="frame" x="8" y="644" width="153" height="415"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Po-grt">
+                                        <rect key="frame" x="8" y="644" width="398" height="480"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="415" id="fbA-Uj-vkc"/>
+                                            <constraint firstAttribute="height" constant="480" id="fbA-Uj-vkc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3420,17 +3420,17 @@
                                     <constraint firstItem="iU6-vo-LSC" firstAttribute="top" secondItem="cww-2p-xAP" secondAttribute="top" constant="79" id="RBe-KW-eJl"/>
                                     <constraint firstItem="K0F-Po-grt" firstAttribute="top" secondItem="WGt-CY-fko" secondAttribute="bottom" constant="8" symbolic="YES" id="TUL-us-cb3"/>
                                     <constraint firstItem="lQ8-Ix-x7S" firstAttribute="top" secondItem="qXH-kd-Iv9" secondAttribute="bottom" constant="58" id="Xdd-te-l6x"/>
-                                    <constraint firstAttribute="bottom" secondItem="K0F-Po-grt" secondAttribute="bottom" constant="96" id="cI3-9Z-aBw"/>
+                                    <constraint firstAttribute="bottom" secondItem="K0F-Po-grt" secondAttribute="bottom" constant="31" id="cI3-9Z-aBw"/>
                                     <constraint firstItem="WGt-CY-fko" firstAttribute="centerX" secondItem="cww-2p-xAP" secondAttribute="centerX" id="iJB-UP-gSM"/>
                                     <constraint firstItem="1nt-id-AKg" firstAttribute="trailing" secondItem="lQ8-Ix-x7S" secondAttribute="trailing" id="ijb-aa-6kK"/>
-                                    <constraint firstItem="p02-oe-11S" firstAttribute="trailing" secondItem="K0F-Po-grt" secondAttribute="trailing" id="lMe-w5-Mex"/>
+                                    <constraint firstItem="p02-oe-11S" firstAttribute="trailing" secondItem="K0F-Po-grt" secondAttribute="trailing" constant="-0.33333333333331439" id="lMe-w5-Mex"/>
                                     <constraint firstItem="p02-oe-11S" firstAttribute="top" secondItem="1nt-id-AKg" secondAttribute="bottom" constant="14" id="ntz-Jn-uNl"/>
                                     <constraint firstItem="1nt-id-AKg" firstAttribute="leading" secondItem="iU6-vo-LSC" secondAttribute="trailing" constant="8" symbolic="YES" id="oFu-cJ-XMi"/>
                                     <constraint firstItem="iU6-vo-LSC" firstAttribute="leading" secondItem="WGt-CY-fko" secondAttribute="leading" id="paQ-R7-cBk"/>
                                     <constraint firstItem="1nt-id-AKg" firstAttribute="leading" secondItem="lQ8-Ix-x7S" secondAttribute="leading" id="qhd-Fg-4rJ"/>
                                     <constraint firstAttribute="trailing" secondItem="WGt-CY-fko" secondAttribute="trailing" id="taj-FT-pyu"/>
                                     <constraint firstItem="iU6-vo-LSC" firstAttribute="top" secondItem="Geb-Of-H7k" secondAttribute="bottom" constant="39" id="u7t-24-dvH"/>
-                                    <constraint firstAttribute="trailing" secondItem="EMP-HQ-PdB" secondAttribute="trailing" constant="-92" id="uOy-fk-MFl"/>
+                                    <constraint firstAttribute="trailing" secondItem="EMP-HQ-PdB" secondAttribute="trailing" id="uOy-fk-MFl"/>
                                     <constraint firstItem="iU6-vo-LSC" firstAttribute="top" secondItem="1nt-id-AKg" secondAttribute="top" id="viz-EI-gJs"/>
                                 </constraints>
                             </scrollView>
@@ -3562,7 +3562,7 @@
                                     <constraint firstAttribute="width" constant="100" id="dTr-5Z-sXd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-YK-Yk7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-YK-Yk7">
                                 <rect key="frame" x="107" y="93" width="287" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3601,7 +3601,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="488" id="TR0-Bd-OBp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3726,7 +3726,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="2vs-Qt-qcD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4411,7 +4411,7 @@
         <image name="上传图片" width="91" height="31"/>
         <image name="中文logo" width="168" height="168"/>
         <image name="分享" width="57" height="31"/>
-        <image name="删除广告" width="91" height="31"/>
+        <image name="删除广告" width="58" height="31"/>
         <image name="反馈" width="333" height="407"/>
         <image name="发送" width="57" height="31"/>
         <image name="发送广告" width="117" height="28"/>
@@ -4423,7 +4423,7 @@
         <image name="我的私信" width="116" height="28"/>
         <image name="换汇" width="260" height="90"/>
         <image name="横线" width="220" height="28"/>
-        <image name="私聊" width="56" height="31"/>
+        <image name="私聊" width="58" height="31"/>
         <image name="联系工作室" width="179" height="28"/>
         <image name="英文logo" width="190" height="192"/>
         <image name="设置" width="76" height="28"/>
