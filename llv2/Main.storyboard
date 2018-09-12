@@ -4438,11 +4438,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="ljE-ht-r2G"/>
-<<<<<<< HEAD
-        <segue reference="wYX-fP-eqP"/>
-=======
+
         <segue reference="m7f-Ab-Z84"/>
->>>>>>> 5a1754cb0c2274e6063113dc715876342f6c627f
+
         <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
 </document>
