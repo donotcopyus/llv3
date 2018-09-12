@@ -33,6 +33,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="账户与安全功能暂时不可用，敬请谅解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-HJ-Rug">
+                                <rect key="frame" x="60" y="292" width="295" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f90-vd-6u8"/>
@@ -45,13 +52,13 @@
         <!--意见反馈-->
         <scene sceneID="1Vz-Jk-vYg">
             <objects>
-                <viewController storyboardIdentifier="意见反馈" title="意见反馈" id="vhh-BY-Pzs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="意见反馈" title="意见反馈" id="vhh-BY-Pzs" customClass="contactUs" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EXz-MJ-5cx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧..." textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
-                                <rect key="frame" x="16" y="93.333333333333314" width="87.666666666666671" height="89"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="留点意见吧...也可以手动发送到harkoreapp@gmail.com哦～" textAlignment="center" minimumFontSize="17" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
+                                <rect key="frame" x="16" y="93.333333333333371" width="382.66666666666669" height="387"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gq8-fi-jWK" secondAttribute="height" multiplier="189:191" id="8zk-CW-qdo"/>
                                 </constraints>
@@ -61,11 +68,14 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
-                                <rect key="frame" x="97" y="255.33333333333337" width="220" height="38"/>
+                                <rect key="frame" x="97" y="553.33333333333326" width="220" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dDK-K1-PsJ"/>
                                 </constraints>
                                 <state key="normal" image="submit"/>
+                                <connections>
+                                    <action selector="send:" destination="vhh-BY-Pzs" eventType="touchUpInside" id="DsF-b2-L55"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +89,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BAa-jO-X7u"/>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="gq8-fi-jWK" id="Pq9-mK-yar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zue-K2-qre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,13 +100,13 @@
         <!--鼓励一下-->
         <scene sceneID="oq1-w5-zhR">
             <objects>
-                <viewController storyboardIdentifier="鼓励一下" title="鼓励一下" id="COF-NG-KZs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="鼓励一下" title="鼓励一下" id="COF-NG-KZs" customClass="ratedonation" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zV9-Aq-mVF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuC-D8-uSr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="鼓励一下" id="YJU-Xw-tmO">
@@ -103,6 +116,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc9-7X-Siz">
+                                <rect key="frame" x="149" y="208" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="五星好评"/>
+                                <connections>
+                                    <action selector="rate:" destination="COF-NG-KZs" eventType="touchUpInside" id="1xm-S5-3Vd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="感谢您对找啥的支持，您的每一份支持都是我们继续改进的动力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-yi-Erx">
+                                <rect key="frame" x="20" y="144" width="358" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-Ku-vqr">
+                                <rect key="frame" x="149" y="315" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="分享应用"/>
+                                <connections>
+                                    <action selector="share:" destination="COF-NG-KZs" eventType="touchUpInside" id="t4O-cs-XT8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6s-Mx-246">
+                                <rect key="frame" x="149" y="263" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="资金捐赠"/>
+                                <connections>
+                                    <action selector="donation:" destination="COF-NG-KZs" eventType="touchUpInside" id="iDU-fx-yjf"/>
+                                    <segue destination="HEl-sw-5Jp" kind="showDetail" id="aMS-Fk-f26"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ahg-la-cnV"/>
@@ -110,7 +155,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMc-qs-g2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4350" y="1138"/>
+            <point key="canvasLocation" x="4349.275362318841" y="1137.2282608695652"/>
+        </scene>
+        <!--DonationVC-->
+        <scene sceneID="1aL-aL-rIP">
+            <objects>
+                <viewController id="HEl-sw-5Jp" customClass="donationVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgO-aR-g8V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="捐赠金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-e5-skA">
+                                <rect key="frame" x="72" y="114" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCH-DG-yIm">
+                                <rect key="frame" x="171" y="110" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vs-8C-4hq">
+                                <rect key="frame" x="176" y="441" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确认捐赠"/>
+                                <connections>
+                                    <action selector="click:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="Odr-ls-pom"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lmx-Te-fbj"/>
+                    </view>
+                    <connections>
+                        <outlet property="amount" destination="wCH-DG-yIm" id="zIw-v6-1rV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrb-iZ-1D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4316" y="1820"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uam-bY-FOE">
@@ -539,7 +626,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBg-pH-Ael">
-                                <rect key="frame" x="16" y="62" width="408" height="100"/>
+                                <rect key="frame" x="16" y="62" width="176" height="100"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CBg-pH-Ael" secondAttribute="height" multiplier="207:50" id="8FE-vL-GMV"/>
@@ -547,7 +634,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doA-kc-dS5">
-                                <rect key="frame" x="324" y="62" width="100" height="100"/>
+                                <rect key="frame" x="92" y="62" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="3vB-cX-tIp"/>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="V6m-an-GtQ"/>
@@ -557,7 +644,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-kg-LQG">
-                                <rect key="frame" x="0.0" y="660" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="660" width="182" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fyK-xU-6CA"/>
@@ -573,7 +660,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
-                                <rect key="frame" x="0.0" y="235" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="235" width="182" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="u71-zb-kPf"/>
@@ -593,7 +680,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-81-hRT">
-                                <rect key="frame" x="0.0" y="188" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="188" width="182" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="rUc-JZ-RtM"/>
@@ -1201,7 +1288,7 @@
                                     <constraint firstAttribute="height" constant="22" id="1gw-CN-YwF"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harkore" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-9I-rEQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="harkore" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-9I-rEQ">
                                 <rect key="frame" x="97" y="296" width="218" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tF1-9I-rEQ" secondAttribute="height" multiplier="109:73" id="mvq-JT-Ni8"/>
@@ -1221,10 +1308,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrL-T9-nMS">
-                                <rect key="frame" x="97" y="550" width="220" height="38"/>
-                                <state key="normal" image="联系我们"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-bv-v5G">
                                 <rect key="frame" x="167" y="187" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1238,6 +1321,55 @@
                                     <constraint firstAttribute="height" constant="82" id="t92-5o-I5V"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About HarKore:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFT-Kg-7v3">
+                                <rect key="frame" x="31" y="518" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aixin Lin(Lauren)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3u-Ap-aH3">
+                                <rect key="frame" x="37" y="573" width="129" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jingyi Cao(Luna)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-ul-SdD">
+                                <rect key="frame" x="235" y="573" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="·IOS开发工程师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyC-8L-SO1">
+                                <rect key="frame" x="37" y="592" width="129" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="·email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG2-dv-YQz">
+                                <rect key="frame" x="37" y="626" width="129" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="林蔼欣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRq-me-Aqh">
+                                <rect key="frame" x="37" y="544" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="曹靖宜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-RH-bxZ">
+                                <rect key="frame" x="235" y="544" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1248,17 +1380,14 @@
                             <constraint firstItem="ZNu-9c-7P5" firstAttribute="centerX" secondItem="RzA-yv-WGe" secondAttribute="centerX" id="Jkf-la-jx6"/>
                             <constraint firstItem="zKw-yV-PNH" firstAttribute="centerX" secondItem="RzA-yv-WGe" secondAttribute="centerX" id="N8o-Zn-t9h"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="ZNu-9c-7P5" secondAttribute="centerX" id="PAl-To-sah"/>
-                            <constraint firstItem="tF1-9I-rEQ" firstAttribute="leading" secondItem="YrL-T9-nMS" secondAttribute="leading" id="PdG-UE-DWu"/>
                             <constraint firstItem="Bg2-1H-fhV" firstAttribute="top" secondItem="jNr-bv-v5G" secondAttribute="bottom" constant="36" id="SAG-eK-J07"/>
                             <constraint firstItem="jNr-bv-v5G" firstAttribute="top" secondItem="zKw-yV-PNH" secondAttribute="bottom" constant="8" symbolic="YES" id="SJX-0M-1aB"/>
-                            <constraint firstItem="YrL-T9-nMS" firstAttribute="top" secondItem="RzA-yv-WGe" secondAttribute="bottom" constant="56" id="WpH-4a-1xm"/>
                             <constraint firstItem="Bg2-1H-fhV" firstAttribute="leading" secondItem="ZNu-9c-7P5" secondAttribute="leading" id="Xdj-fk-X7E"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="top" secondItem="oG3-sI-3ii" secondAttribute="top" id="Y1d-7X-DxG"/>
                             <constraint firstItem="zKw-yV-PNH" firstAttribute="leading" secondItem="oG3-sI-3ii" secondAttribute="leading" constant="167" id="YFJ-Yh-sKr"/>
                             <constraint firstItem="zKw-yV-PNH" firstAttribute="leading" secondItem="jNr-bv-v5G" secondAttribute="leading" id="Zlx-7S-s8p"/>
                             <constraint firstItem="tF1-9I-rEQ" firstAttribute="top" secondItem="Bg2-1H-fhV" secondAttribute="bottom" constant="30" id="fi1-Ac-wZO"/>
                             <constraint firstItem="RzA-yv-WGe" firstAttribute="top" secondItem="ZNu-9c-7P5" secondAttribute="bottom" constant="8" symbolic="YES" id="irs-Nz-deh"/>
-                            <constraint firstItem="SVu-mm-gzI" firstAttribute="centerX" secondItem="YrL-T9-nMS" secondAttribute="centerX" id="loQ-3l-ibv"/>
                             <constraint firstItem="tF1-9I-rEQ" firstAttribute="top" secondItem="gaV-hc-Agr" secondAttribute="top" id="vHi-a1-RE1"/>
                             <constraint firstItem="SVu-mm-gzI" firstAttribute="leading" secondItem="mDF-S3-evP" secondAttribute="leading" id="vhM-9c-ZAd"/>
                         </constraints>
@@ -4297,7 +4426,6 @@
         <image name="横线" width="220" height="28"/>
         <image name="私聊" width="56" height="31"/>
         <image name="联系工作室" width="179" height="28"/>
-        <image name="联系我们" width="220" height="38"/>
         <image name="英文logo" width="190" height="192"/>
         <image name="设置" width="76" height="28"/>
         <image name="输入框" width="315" height="48"/>
@@ -4308,9 +4436,13 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bh3-wn-Akz"/>
+        <segue reference="UHY-qs-nmR"/>
         <segue reference="ljE-ht-r2G"/>
+<<<<<<< HEAD
         <segue reference="wYX-fP-eqP"/>
+=======
+        <segue reference="m7f-Ab-Z84"/>
+>>>>>>> 5a1754cb0c2274e6063113dc715876342f6c627f
         <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
 </document>

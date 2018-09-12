@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MessageUI
+import Firebase
 
-class contactUs: UIViewController {
+class contactUs: UIViewController,MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,23 @@ class contactUs: UIViewController {
         
     }
     
+    func configureMailController() -> MFMailComposeViewController{
+        let mailComoser = MFMailComposeViewController()
+        mailComoser.mailComposeDelegate = self
+        mailComoser.setToRecipients(["lunacao214@outlook.com","iamlinaixin@gmail.com","harkoreapp@gmail.com"])
+        mailComoser.setSubject("HarKore找啥app意见反馈")
+        mailComoser.setMessageBody(message.text!, isHTML: false)
+        return mailComoser
+    }
+    
+    func showError(){
+        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        sendMailErrorAlert.addAction(dismiss)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+
+    
     @objc func handleSwipe(_ sender:UISwipeGestureRecognizer) {
         performSegue(withIdentifier: "goRight", sender: self)
         
@@ -30,7 +49,26 @@ class contactUs: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBOutlet weak var message: UITextField!
+    
+    
+    @IBAction func send(_ sender: UIButton) {
+        
+        let mailCompose = configureMailController()
+        if MFMailComposeViewController.canSendMail(){
+            self.present(mailCompose, animated: true, completion: nil)
+        }
+        else{
+            showError()
+        }
+      
+        
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
