@@ -119,9 +119,9 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }
         }
         
-        if(dept == "出发城市" || arri == "到达城市"){
+        if(dept == "出发地点" || arri == "到达地点"){
             //alert
-            let alert = UIAlertController(title: title, message: "出发或到达城市不能为空", preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: "出发或到达地点不能为空", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 //                    alert.dismiss(animated: true, completion: nil)
@@ -133,7 +133,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         if (dept == arri){
-            let alert = UIAlertController(title: title, message: "出发城市与到达城市相同", preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: "出发地点与到达地点相同", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                 //                    alert.dismiss(animated: true, completion: nil)
@@ -289,7 +289,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         button = dropDownBtn.init(frame: CGRect(x:30, y:90, width: 150, height: 40))
         
-        button.setTitle("出发城市", for: .normal)
+        button.setTitle("出发地点", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = true
         
@@ -297,18 +297,18 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         
         
-        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
+        button.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         
         
         //---------------------------------
         b2 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 40))
         
-        b2.setTitle("到达城市", for: .normal)
+        b2.setTitle("到达地点", for: .normal)
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
-        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
+        b2.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         self.view.addSubview(b2)
         

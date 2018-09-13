@@ -101,25 +101,25 @@ class carpoolSearchVC: UIViewController {
         
         button = dropDownBtn.init(frame: CGRect(x:50, y:205, width: 150, height: 30))
         
-        button.setTitle("选择城市", for: .normal)
+        button.setTitle("选择地点", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = true
         
         self.view.addSubview(button)
     
         
-        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他","任意"]
+        button.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         
         
         //---------------------------------
         b2 = dropDownBtn.init(frame: CGRect(x:205, y:205, width: 150, height: 30))
         
-        b2.setTitle("选择城市", for: .normal)
+        b2.setTitle("选择地点", for: .normal)
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
-        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他","任意"]
+        b2.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         self.view.addSubview(b2)
         
@@ -155,7 +155,7 @@ class carpoolSearchVC: UIViewController {
             //如果没有输入城市名
             if dept == ""{
                 //alert
-                let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
+                let alert = UIAlertController(title: title, message: "请填写具体地点", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                     return
                 } ))
@@ -165,7 +165,7 @@ class carpoolSearchVC: UIViewController {
             //如果没有输入城市名
             if arri == ""{
                 //alert
-                let alert = UIAlertController(title: title, message: "请填写具体城市", preferredStyle: .alert)
+                let alert = UIAlertController(title: title, message: "请填写具体地点", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                     return
@@ -174,9 +174,9 @@ class carpoolSearchVC: UIViewController {
                 return
         }
         
-        if(dept == "选择城市" || arri == "选择城市"){
+        if(dept == "选择地点" || arri == "选择地点"){
             //alert
-            let alert = UIAlertController(title: title, message: "出发或到达城市不能为空（tips:如果不需要设置出发或到达城市限制，请选择‘任意’）", preferredStyle: .alert)
+            let alert = UIAlertController(title: title, message: "出发或到达地点不能为空（tips:如果不需要设置出发或到达地点限制，请选择‘任意’）", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 return
