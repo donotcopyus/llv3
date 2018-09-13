@@ -313,6 +313,7 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
     @IBAction func goback(_ sender: UIButton) {
         // self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil);
+        
     }
     
     
