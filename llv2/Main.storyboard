@@ -3666,6 +3666,7 @@ email: lunacao214@outlook.com</string>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ddp-PO-aDV"/>
                                     <constraint firstAttribute="width" secondItem="tPN-tx-Lrr" secondAttribute="height" multiplier="1:1" id="MuI-4v-tuK"/>
+                                    <constraint firstAttribute="width" secondItem="tPN-tx-Lrr" secondAttribute="height" multiplier="1:1" id="Oxg-JY-tLM"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="反正要bb一堆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4K-jJ-2gS">
@@ -3729,6 +3730,7 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="YCJ-4f-8oQ" firstAttribute="top" secondItem="ayI-gC-IKN" secondAttribute="top" id="NGl-fS-WSh"/>
                             <constraint firstItem="eCf-Hb-ZjG" firstAttribute="leading" secondItem="tPN-tx-Lrr" secondAttribute="trailing" constant="8" symbolic="YES" id="NtT-Pt-NvR"/>
                             <constraint firstItem="o5N-xx-Eu0" firstAttribute="top" secondItem="dsp-pG-OSX" secondAttribute="bottom" constant="94" id="OEJ-8U-Za0"/>
+                            <constraint firstItem="tPN-tx-Lrr" firstAttribute="width" secondItem="ayI-gC-IKN" secondAttribute="height" multiplier="25:184" id="Rdi-Ah-Nh7"/>
                             <constraint firstItem="yZG-DA-DTD" firstAttribute="top" secondItem="f4K-jJ-2gS" secondAttribute="bottom" constant="11" id="WKs-r9-dkU"/>
                             <constraint firstAttribute="trailing" secondItem="9fx-R2-4qG" secondAttribute="trailing" id="XxG-Qh-flp"/>
                             <constraint firstItem="GPR-HY-1g5" firstAttribute="trailing" secondItem="f4K-jJ-2gS" secondAttribute="trailing" constant="33" id="Yq6-1K-RAK"/>

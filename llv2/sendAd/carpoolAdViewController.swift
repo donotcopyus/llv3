@@ -297,7 +297,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         
         
-        button.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
+        button.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         
         
@@ -308,7 +308,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         b2.translatesAutoresizingMaskIntoConstraints = true
         
-        b2.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
+        b2.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
         
         self.view.addSubview(b2)
         
