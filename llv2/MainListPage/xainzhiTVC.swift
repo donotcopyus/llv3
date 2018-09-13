@@ -43,18 +43,18 @@ class xianzhiData{
 
 class xianzhiTVC: UITableViewController, UISearchBarDelegate {
     
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
-    @IBAction func btnMenu(_ sender: Any) {
-        let alert = UIAlertController(title: title, message: "选择广告类型", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-            
-            
-        } ))
-        
-        present(alert, animated: true, completion: nil)
-        
-    }
+//    @IBOutlet weak var btnMenu: UIBarButtonItem!
+//    @IBAction func btnMenu(_ sender: Any) {
+//        let alert = UIAlertController(title: title, message: "选择广告类型", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+//            alert.dismiss(animated: true, completion: nil)
+//            
+//            
+//        } ))
+//        
+//        present(alert, animated: true, completion: nil)
+//        
+//    }
     
     
     
