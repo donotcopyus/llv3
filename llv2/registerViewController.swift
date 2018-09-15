@@ -157,8 +157,6 @@ class registerViewController: UIViewController {
                         alert.dismiss(animated: true, completion: nil)
                     } ))
                     
-                    self.present(alert, animated: true, completion: nil)
-                    
                     return
         
             }
@@ -230,7 +228,7 @@ class registerViewController: UIViewController {
                         return
                     }
                    completion(downloadURL)
-
+                   alert.dismiss(animated: true, completion: nil)
                 }
             }
             else{

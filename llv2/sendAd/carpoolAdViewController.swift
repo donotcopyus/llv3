@@ -186,7 +186,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             } ))
             
             present(alert, animated: true, completion: nil)
-                            return
+            return
         }
         
         //点击发送时出现的圆圈等待标识
@@ -233,10 +233,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         postRef.setValue(postObj, withCompletionBlock: {error, ref in
 
             if error == nil {
-            
-
+                alert.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "goB", sender: self)
-
                 
             }
             else{
