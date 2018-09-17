@@ -61,7 +61,7 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var nav: UINavigationItem!
 
     
-    var numberOfPosts: Int = 5
+    var numberOfPosts: Int = 10
     var arrayOfCellData = [xianzhiData]()
     
     override func viewDidLoad() {

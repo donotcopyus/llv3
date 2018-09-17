@@ -42,7 +42,7 @@ class exchangeTVC: UITableViewController, UIGestureRecognizerDelegate {
 
     
 
-    var numberOfPosts: Int = 5
+    var numberOfPosts: Int = 10
     var arrayOfCellData = [exchangeData]()
    
     //*********************************************
