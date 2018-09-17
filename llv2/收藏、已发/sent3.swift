@@ -153,8 +153,13 @@ class sent3: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute:{
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
+            
+            if (url == URL(string: "default")){
+                cell.mainimage.image = #imageLiteral(resourceName: "icon.jpg")
+            }
+            else{
         cell.mainimage.kf.indicatorType = .activity
-        cell.mainimage.kf.setImage(with: url)
+         cell.mainimage.kf.setImage(with: url)}
     })
         
         cell.mainlabel.text = arrayOfCellData[indexPath.row].author.username

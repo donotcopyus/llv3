@@ -83,8 +83,13 @@ class myMesController: UITableViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
         let url = URL(string: message.fromUrl!)
-            cell.head.kf.indicatorType = .activity
-        cell.head.kf.setImage(with: url)}
+            
+            if (url == URL(string: "default")){
+                cell.head.image = #imageLiteral(resourceName: "icon.jpg")
+            }
+            else{
+                cell.head.kf.indicatorType = .activity
+                cell.head.kf.setImage(with: url)}}
             )
             
         cell.username.text = message.fromUname
@@ -93,8 +98,13 @@ class myMesController: UITableViewController {
             
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(2), execute: {
             let url = URL(string: message.toUrl!)
+                        
+                        if (url == URL(string: "default")){
+                            cell.head.image = #imageLiteral(resourceName: "icon.jpg")
+                        }
+                        else{
                         cell.head.kf.indicatorType = .activity
-                        cell.head.kf.setImage(with: url)}
+                        cell.head.kf.setImage(with: url)}}
             )
                         
                         

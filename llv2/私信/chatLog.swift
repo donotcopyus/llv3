@@ -190,9 +190,15 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
         let url = message.fromUrl
+            
+            if url == "default"{
+                cell.profileImageView.image = #imageLiteral(resourceName: "icon.jpg")
+            }
+            else{
         let tourl = URL(string:url!)
         cell.profileImageView.kf.indicatorType = .activity
-        cell.profileImageView.kf.setImage(with: tourl)})
+                cell.profileImageView.kf.setImage(with: tourl)}}
+        )
         
         if message.fromId == Auth.auth().currentUser?.uid{
             //outgoing blackblue
