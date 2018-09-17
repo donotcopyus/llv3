@@ -67,7 +67,7 @@ class dra2: UITableViewController{
         
     }
     
-        var numberOfPosts:Int = 5
+        var numberOfPosts:Int = 10
         var collectionId = [String]()
     
     func observePost(){

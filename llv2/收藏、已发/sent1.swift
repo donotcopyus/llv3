@@ -42,7 +42,7 @@ class carpoolData3{
 
 class sent1: UITableViewController {
     
-    var numberOfPosts:Int = 5
+    var numberOfPosts:Int = 10
     var arrayOfCellData = [carpoolData3]()
     
     override func viewDidLoad() {

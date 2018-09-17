@@ -44,7 +44,7 @@ class CarVC: UITableViewController {
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     
-    var numberOfPosts: Int = 5
+    var numberOfPosts: Int = 10
     var arrayOfCellData = [carpoolData]()
     
 

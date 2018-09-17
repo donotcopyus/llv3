@@ -55,7 +55,7 @@ class sent3: UITableViewController {
     @IBOutlet weak var nav: UINavigationItem!
     
     
-    var numberOfPosts:Int = 5
+    var numberOfPosts:Int = 10
     var arrayOfCellData = [exchangeData3]()
     
     //*********************************************

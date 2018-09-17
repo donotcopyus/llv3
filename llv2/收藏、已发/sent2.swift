@@ -39,7 +39,7 @@ class xianzhiData4{
 
 class sent2: UITableViewController{
     
-    var numberOfPosts:Int = 5
+    var numberOfPosts:Int = 10
     var arrayOfCellData = [xianzhiData4]()
     
     override func viewDidLoad() {
