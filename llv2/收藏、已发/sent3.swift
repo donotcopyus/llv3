@@ -51,7 +51,6 @@ class sent3: UITableViewController {
     
     
     
-    
     @IBOutlet weak var nav: UINavigationItem!
     
     
