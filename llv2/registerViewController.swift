@@ -96,23 +96,15 @@ class registerViewController: UIViewController {
         }
 
         
-        guard let image = profileImageView.image else{
-            let alert = UIAlertController(title: title, message: "请上传头像", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-            } ))
-            present(alert, animated: true, completion: nil)
-            return
-        }
-        
-
+        var image = profileImageView.image
         
         Auth.auth().createUser(withEmail: email, password: pass){
             user,error in
             if error == nil && user != nil {
                 
- 
-                self.uploadProfileImage(image) {
+                if image != nil{
+
+                    self.uploadProfileImage(image!) {
                     url in
                     
                     if url != nil{
@@ -120,33 +112,54 @@ class registerViewController: UIViewController {
                         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                         changeRequest?.displayName = username
                         changeRequest?.photoURL = url
-                        
-                        
+             
                         changeRequest?.commitChanges {error in
-                        
                             if error == nil{
                                 //转到profile
                                 
                                 self.saveProfile(username: username, profileImageURL: url!){
                                     success in
                                     if success{
-                                       
                                     }
                                     else{
                                         print("出问题")
                                     }
                                 }
-                                
                             }else{
                                 return
                         }
+                        }
                         
-                        }}
+                    }
                     else{
-                        return
+                  return
                     }
                         
                     }
+                }
+                else{
+                    let newurl = URL(string: "default")
+                    
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = username
+                    changeRequest?.photoURL = newurl
+                    
+                    changeRequest?.commitChanges {error in
+                        if error == nil{
+                            //转到profile
+                            
+                            self.saveProfile(username: username, profileImageURL: newurl!){
+                                success in
+                                if success{
+                                }
+                                else{
+                                    print("出问题")
+                                }}
+                        }else{
+                            return
+                        }
+                    }
+                }
 
 
             }
@@ -160,7 +173,7 @@ class registerViewController: UIViewController {
                     return
         
             }
-        }
+            }
         
     }
     

@@ -36,9 +36,7 @@ class profileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.labelText.text = "欢迎，" + (Auth.auth().currentUser?.displayName)!
-        
+     
         guard let uid = Auth.auth().currentUser?.uid else{
             return
         }
@@ -49,9 +47,15 @@ class profileViewController: UIViewController {
             let curUser = snapshot.value as? NSDictionary
             let urlString = curUser?["photoURL"] as? String ?? ""
 
+            if (urlString == "default"){
+                self.profileImageView.image = #imageLiteral(resourceName: "icon.jpg")
+//                    UIImage("icon.jpg")
+            }
+            else{
             let url = URL(string:urlString)
                 let data = try? Data(contentsOf:url!)
                 self.profileImageView.image = UIImage(data:data!)
+            }
         })
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
