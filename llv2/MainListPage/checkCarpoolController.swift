@@ -64,13 +64,19 @@ class checkCarpoolController: UIViewController {
             if let post = snapshot.value as? [String:Any]{
                 let author = post["author"] as? [String:Any]
             
-         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
             let url = author!["photoURL"] as? String
-                        self.imageurl.text = url
+                
+                if(url == "default"){
+                    self.imageurl.text = "default"
+                    self.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+                }
+                else{
+         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+            self.imageurl.text = url
             let tourl = URL(string:url!)
             self.headImage.kf.indicatorType = .activity
             self.headImage.kf.setImage(with: tourl)
-             })
+         })}
                 
             self.username.text = author!["username"] as? String
             

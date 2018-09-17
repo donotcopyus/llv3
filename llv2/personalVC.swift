@@ -176,10 +176,14 @@ class personalVC: UIViewController {
             let curUser = snapshot.value as? NSDictionary
             let urlString = curUser?["photoURL"] as? String ?? ""
             
+            if (urlString == "default"){
+                self.profileImageView.image = #imageLiteral(resourceName: "icon.jpg")
+            }
+            else{
             let url = URL(string:urlString)
             let data = try? Data(contentsOf:url!)
             self.profileImageView.image = UIImage(data:data!)
-
+            }
             
         })
         

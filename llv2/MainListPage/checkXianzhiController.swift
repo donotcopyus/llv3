@@ -76,12 +76,20 @@ class checkXianzhiController: UIViewController {
                 let author = post["author"] as? [String:Any]
             
             let url = author!["photoURL"] as? String
+                
+                if(url == "default"){
+                    self.imageurl.text = "default"
+                    self.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+                }
+            
+        else{
             let tourl = URL(string:url!)
 
             self.headImage.kf.indicatorType = .activity
             self.headImage.kf.setImage(with: tourl, placeholder:image)
-                
             self.imageurl.text = url
+                }
+
             
             self.username.text = author!["username"] as? String
             

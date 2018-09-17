@@ -144,12 +144,16 @@ class CarVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell2", owner: self, options: nil)?.first as! TableViewCell2
         
+        
         let url = arrayOfCellData[indexPath.row].author.photoURL
- 
+        if (url == URL(string: "default")){
+            cell.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+        }
+        else{
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
           cell.headImage.kf.indicatorType = .activity
           cell.headImage.kf.setImage(with: url)
-        })
+        })}
 
         
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username

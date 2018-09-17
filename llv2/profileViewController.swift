@@ -49,7 +49,6 @@ class profileViewController: UIViewController {
 
             if (urlString == "default"){
                 self.profileImageView.image = #imageLiteral(resourceName: "icon.jpg")
-//                    UIImage("icon.jpg")
             }
             else{
             let url = URL(string:urlString)

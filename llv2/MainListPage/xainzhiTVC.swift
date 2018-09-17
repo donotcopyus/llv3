@@ -248,11 +248,16 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
             }
             
             let url = self.arrayOfCellData[indexPath.row].author.photoURL
+
             cell.headImage.kf.indicatorType = .activity
         
+        if (url == URL(string: "default")){
+            cell.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+        }else{
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
-                    cell.headImage.kf.setImage(with: url)})
-            
+                    cell.headImage.kf.setImage(with: url)}
+            )
+        }
     
         
         

@@ -70,11 +70,19 @@ class profileCheckController: UIViewController {
             
          DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
             
+            
             let url = author!["photoURL"] as? String
+            
+            if(url == "default"){
+                self.imageurl.text = "default"
+                self.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+            }
+            else{
             self.imageurl.text = url
             let tourl = URL(string:url!)
              self.headImage.kf.indicatorType = .activity
             self.headImage.kf.setImage(with: tourl)
+            }
              })
             
             self.username.text = author!["username"] as? String
