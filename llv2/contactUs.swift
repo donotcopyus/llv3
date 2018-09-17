@@ -14,7 +14,6 @@ class contactUs: UIViewController,MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
         

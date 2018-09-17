@@ -404,8 +404,8 @@
 			children = (
 				51B562532101022F00FF8D25 /* profileViewController.swift */,
 				51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */,
-				51B562582101023000FF8D25 /* registerViewController.swift */,
 				51B562562101023000FF8D25 /* loginController.swift */,
+				51B562582101023000FF8D25 /* registerViewController.swift */,
 				514FAD1F210A361800C780AD /* forgetPassViewController.swift */,
 			);
 			name = login;
