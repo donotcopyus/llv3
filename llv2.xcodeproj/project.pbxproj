@@ -47,6 +47,7 @@
 		51BF3DFD214381DE00DCF3F3 /* checkXianzhiNoImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3DFC214381DE00DCF3F3 /* checkXianzhiNoImageController.swift */; };
 		51C907D32144FBAE00021187 /* changePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C907D22144FBAE00021187 /* changePassVC.swift */; };
 		51D52D8E2131017A00AA706F /* dra3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D52D8D2131017A00AA706F /* dra3.swift */; };
+		51F67341214F6078001FF201 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51F67340214F6078001FF201 /* icon.jpg */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
 		FA01DB6D21420BB1001D57E2 /* notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01DB6C21420BB1001D57E2 /* notice.swift */; };
@@ -147,6 +148,7 @@
 		51BF3DFC214381DE00DCF3F3 /* checkXianzhiNoImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiNoImageController.swift; sourceTree = "<group>"; };
 		51C907D22144FBAE00021187 /* changePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePassVC.swift; sourceTree = "<group>"; };
 		51D52D8D2131017A00AA706F /* dra3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dra3.swift; sourceTree = "<group>"; };
+		51F67340214F6078001FF201 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = "UI图片 3.21.46 PM/icon.jpg"; sourceTree = SOURCE_ROOT; };
 		5DCC7E38A6E9E8BCF7FC66D5 /* Pods-llv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E57A1D2C0F8FDC1089BDE4B /* Pods-llv2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2/Pods-llv2.debug.xcconfig"; sourceTree = "<group>"; };
 		7455DF52F7C9EFE395776486 /* Pods-llv2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				51B5624E2101022E00FF8D25 /* revealController.swift */,
 				51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */,
 				516F7FC4210101BD001C0C55 /* Assets.xcassets */,
+				51F67340214F6078001FF201 /* icon.jpg */,
 				FA93FF532109010F0070DD60 /* IMG_5333.jpg */,
 				FA93FF52210901020070DD60 /* IMG_2159.jpg */,
 				516F7FC6210101BD001C0C55 /* LaunchScreen.storyboard */,
@@ -546,6 +549,7 @@
 				FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */,
 				516F7FC8210101BD001C0C55 /* LaunchScreen.storyboard in Resources */,
 				51B52D61211FE0D200D2B9E9 /* messageRecCell.xib in Resources */,
+				51F67341214F6078001FF201 /* icon.jpg in Resources */,
 				FAE91A092144C2EC000DC12F /* Main.storyboard in Resources */,
 				51626E13210108700047B303 /* GoogleService-Info.plist in Resources */,
 				516F7FC5210101BD001C0C55 /* Assets.xcassets in Resources */,
