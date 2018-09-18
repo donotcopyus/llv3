@@ -24,7 +24,18 @@ class friendAdVCViewController: UIViewController {
     @IBOutlet weak var infor: UITextView!
     
     //选择日期
-    @IBOutlet weak var datePick: UIDatePicker!
+    @IBOutlet weak var godate: UILabel!
+    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    @IBAction func datepicker(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datepicker.date)
+        godate.text = "出发日期 \(strDate)"
+    }
+    
     
     
     var b3 = dropDownBtn()
@@ -34,7 +45,7 @@ class friendAdVCViewController: UIViewController {
         
         
         
-        b3 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 40))
+        b3 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 30))
         
         b3.setTitle("活动地址", for: .normal)
         
