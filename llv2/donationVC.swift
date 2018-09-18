@@ -13,9 +13,33 @@ class donationVC: UIViewController,SKProductsRequestDelegate,SKPaymentTransactio
     
     
     @IBAction func small(_ sender: Any) {
+        
+        if SKPaymentQueue.canMakePayments(){
+            requestProductInfo("supportSmall")
+        }
+        else{
+            let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func middle(_ sender: Any) {
+        
+        if SKPaymentQueue.canMakePayments(){
+            requestProductInfo("supportMedium")
+        }
+        else{
+            let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     
@@ -75,7 +99,7 @@ class donationVC: UIViewController,SKProductsRequestDelegate,SKPaymentTransactio
     fileprivate func transactionFailed(_ transacation: SKPaymentTransaction){
         let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
-            self.dismiss(animated: true, completion: nil)
+            alert.dismiss(animated: true, completion: nil)
         } ))
         
         self.present(alert, animated: true, completion: nil)
@@ -99,13 +123,19 @@ class donationVC: UIViewController,SKProductsRequestDelegate,SKPaymentTransactio
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var amount: UITextField!
-    
+
  
     @IBAction func click(_ sender: UIButton) {
         
         if SKPaymentQueue.canMakePayments(){
-          //  requestProductInfo(<#T##productId: String##String#>)
+           requestProductInfo("supportLarge")
+        }
+        else{
+            let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            } ))
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
