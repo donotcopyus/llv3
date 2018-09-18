@@ -23,13 +23,28 @@ class ratedonation: UIViewController {
     
     @IBAction func rate(_ sender: UIButton) {
         
-        //
+        let alert = UIAlertController(title: "五星好评", message: "您将要打开appstore评论界面，", preferredStyle: .actionSheet)
+        let confirm = UIAlertAction(title: "确定", style: .default, handler:{ (action) -> Void in
+            
+         let url = URL(string:"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1436232989&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8")
+            if UIApplication.shared.canOpenURL(url!){
+                UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        }
+        }
+         )
+        
+        let cancel = UIAlertAction(title:"取消", style:UIAlertActionStyle.cancel, handler: nil)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        
+        present(alert,animated: true, completion: nil)
+        
         
     }
     
     @IBAction func donation(_ sender: UIButton) {
         
-        
+        //app内购买
         
     }
     
