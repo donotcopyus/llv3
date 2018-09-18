@@ -228,7 +228,6 @@ class ChatLogController: UICollectionViewController,UITextFieldDelegate,UICollec
         }
         
         return CGSize(width: view.frame.width, height: height)
-        
     }
     
     private func estimateFrameForText(text:String) -> CGRect{
