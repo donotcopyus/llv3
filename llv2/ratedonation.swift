@@ -35,7 +35,13 @@ class ratedonation: UIViewController {
     
     @IBAction func share(_ sender: UIButton) {
     
-        //
+        UIPasteboard.general.string = "itms-apps://itunes.apple.com/app/id1436232989"
+        
+        let alert = UIAlertController(title: "分享找啥", message: "已将找啥(FindWhat) appstore链接添加至剪切板，感谢您对找啥的支持 <3", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        } ))
+        self.present(alert, animated: true, completion: nil)
         
     }
     
