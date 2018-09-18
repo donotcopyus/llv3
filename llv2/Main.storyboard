@@ -287,7 +287,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="中钱"/>
                                 <connections>
-                                    <action selector="middle:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="r8E-xB-6Va"/>
+                                    <action selector="middle:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="m95-KP-6rg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-b4-lbQ">
@@ -295,7 +295,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="小钱"/>
                                 <connections>
-                                    <action selector="small:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="sHg-xU-qaU"/>
+                                    <action selector="small:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="Njm-iQ-7Sc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -321,6 +321,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lmx-Te-fbj"/>
                     </view>
+                    <connections>
+                        <outlet property="big" destination="9vs-8C-4hq" id="x7S-zY-Jbf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrb-iZ-1D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,17 @@ import StoreKit
 
 class donationVC: UIViewController,SKProductsRequestDelegate,SKPaymentTransactionObserver {
     
+    
+    @IBAction func small(_ sender: Any) {
+    }
+    
+    @IBAction func middle(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var big: UIButton!
+    
+    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
 
         
