@@ -15,21 +15,29 @@ import ESPullToRefresh
 
 class friendADVC: UIViewController {
 
-    var b2 = dropDownBtn()
+    //发送btn
+    @IBAction func send(_ sender: Any) {
+        
+    }
+    //上传图片btn
+    @IBAction func upload(_ sender: Any) {
+    }
+    
+    //照片
+    @IBOutlet weak var oneImage: UIImageView!
+    
+    //交友宣言
+    @IBOutlet weak var infor: UITextView!
+    
+    //选择日期
+    @IBOutlet weak var datePick: UIDatePicker!
+    
+
     var b3 = dropDownBtn()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        b2 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 40))
-        
-        b2.setTitle("选择时间", for: .normal)
-        
-        b2.translatesAutoresizingMaskIntoConstraints = true
-        
-        b2.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
-        
-        self.view.addSubview(b2)
+
         
         
         b3 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 40))
