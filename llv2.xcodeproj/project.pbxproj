@@ -66,6 +66,7 @@
 		FA3F68B3212A83A20061572E /* xianzhiSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */; };
 		FA3F68B4212A83A20061572E /* carpoolSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */; };
 		FA3F68B5212A83A20061572E /* exchangeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */; };
+		FA561CF32151B70100E09F3F /* friendAdVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA561CF22151B70100E09F3F /* friendAdVCViewController.swift */; };
 		FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF462108155E0070DD60 /* settingPageVC.swift */; };
 		FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF4B2108EDD40070DD60 /* TableViewCell1.swift */; };
 		FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */; };
@@ -74,7 +75,6 @@
 		FA9F882A21516DA100F1C17D /* friendTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F882921516DA100F1C17D /* friendTVC.swift */; };
 		FA9F882D21516DD800F1C17D /* friendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F882B21516DD800F1C17D /* friendCell.swift */; };
 		FA9F882E21516DD800F1C17D /* friendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9F882C21516DD800F1C17D /* friendCell.xib */; };
-		FA9F88302151780E00F1C17D /* friendADVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F882F2151780E00F1C17D /* friendADVC.swift */; };
 		FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839921212EA700BB3FE9 /* dra1.swift */; };
 		FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839B21212EB500BB3FE9 /* dra2.swift */; };
 		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
@@ -178,6 +178,7 @@
 		FA3F68B0212A83A20061572E /* xianzhiSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xianzhiSearchVC.swift; sourceTree = "<group>"; };
 		FA3F68B1212A83A20061572E /* carpoolSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carpoolSearchVC.swift; sourceTree = "<group>"; };
 		FA3F68B2212A83A20061572E /* exchangeSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangeSearchVC.swift; sourceTree = "<group>"; };
+		FA561CF22151B70100E09F3F /* friendAdVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendAdVCViewController.swift; sourceTree = "<group>"; };
 		FA93FF462108155E0070DD60 /* settingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageVC.swift; sourceTree = "<group>"; };
 		FA93FF4B2108EDD40070DD60 /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
@@ -188,7 +189,6 @@
 		FA9F882921516DA100F1C17D /* friendTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendTVC.swift; sourceTree = "<group>"; };
 		FA9F882B21516DD800F1C17D /* friendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendCell.swift; sourceTree = "<group>"; };
 		FA9F882C21516DD800F1C17D /* friendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = friendCell.xib; sourceTree = "<group>"; };
-		FA9F882F2151780E00F1C17D /* friendADVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendADVC.swift; sourceTree = "<group>"; };
 		FAA2839921212EA700BB3FE9 /* dra1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra1.swift; sourceTree = "<group>"; };
 		FAA2839B21212EB500BB3FE9 /* dra2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra2.swift; sourceTree = "<group>"; };
 		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
@@ -367,7 +367,7 @@
 				51B562572101023000FF8D25 /* carpoolAdViewController.swift */,
 				FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */,
 				5134CD6E21153E3500CDD11F /* xianzhiVController.swift */,
-				FA9F882F2151780E00F1C17D /* friendADVC.swift */,
+				FA561CF22151B70100E09F3F /* friendAdVCViewController.swift */,
 			);
 			path = sendAd;
 			sourceTree = "<group>";
@@ -726,7 +726,6 @@
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
-				FA9F88302151780E00F1C17D /* friendADVC.swift in Sources */,
 				FA3F68B5212A83A20061572E /* exchangeSearchVC.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
@@ -745,6 +744,7 @@
 				FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */,
 				FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */,
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
+				FA561CF32151B70100E09F3F /* friendAdVCViewController.swift in Sources */,
 				FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,

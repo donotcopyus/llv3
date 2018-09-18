@@ -1,5 +1,5 @@
 //
-//  friendADVC.swift
+//  friendAdVCViewController.swift
 //  llv2
 //
 //  Created by 林蔼欣 on 2018-09-18.
@@ -7,14 +7,8 @@
 //
 
 import UIKit
-import Firebase
-import Kingfisher
-import ESPullToRefresh
 
-
-
-class friendADVC: UIViewController {
-
+class friendAdVCViewController: UIViewController {
     //发送btn
     @IBAction func send(_ sender: Any) {
         
@@ -32,12 +26,12 @@ class friendADVC: UIViewController {
     //选择日期
     @IBOutlet weak var datePick: UIDatePicker!
     
-
+    
     var b3 = dropDownBtn()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         
         b3 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 40))
@@ -52,13 +46,12 @@ class friendADVC: UIViewController {
         
     }
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
     
+
 
 }
