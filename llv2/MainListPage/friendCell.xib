@@ -12,21 +12,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="friendCell" customModule="llv2" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="friendCell" customModule="llv2" customModuleProvider="target">
+            <connections>
+                <outlet property="address" destination="hlF-0F-lPl" id="xuW-bK-EyF"/>
+                <outlet property="namePrice" destination="LP0-RT-qaY" id="bUp-5Z-iah"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="219" id="wP9-GF-dB3" customClass="TableViewCell1" customModule="llv2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="219"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="224" id="wP9-GF-dB3" customClass="TableViewCell1" customModule="llv2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wP9-GF-dB3" id="kSr-4F-vlw">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="218.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="223.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP0-RT-qaY">
-                        <rect key="frame" x="62" y="34" width="346" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dw-76-91J">
                         <rect key="frame" x="62" y="1" width="274" height="25"/>
                         <constraints>
@@ -46,20 +45,20 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eR4-3n-LMx">
-                        <rect key="frame" x="122" y="112" width="103" height="103"/>
+                        <rect key="frame" x="122" y="117" width="103" height="103"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="103" id="apD-Ch-d8z"/>
                             <constraint firstAttribute="width" secondItem="eR4-3n-LMx" secondAttribute="height" multiplier="1:1" id="gx3-c3-q6F"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lXV-Kr-CDW">
-                        <rect key="frame" x="233" y="112" width="103" height="103"/>
+                        <rect key="frame" x="233" y="117" width="103" height="103"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="lXV-Kr-CDW" secondAttribute="height" multiplier="1:1" id="dAn-kf-DTI"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9oU-Aa-qPO">
-                        <rect key="frame" x="11" y="112" width="103" height="103"/>
+                        <rect key="frame" x="11" y="117" width="103" height="103"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="103" id="NNF-RZ-rKx"/>
                             <constraint firstAttribute="width" secondItem="9oU-Aa-qPO" secondAttribute="height" multiplier="1:1" id="bQh-7P-qxE"/>
@@ -106,12 +105,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTn-72-z6Z">
-                        <rect key="frame" x="12" y="52" width="396" height="57"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTn-72-z6Z">
+                        <rect key="frame" x="12" y="77" width="396" height="37"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="57" id="k2f-KY-Tdm"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="地点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlF-0F-lPl">
+                        <rect key="frame" x="62" y="34" width="340" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="时间+主题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP0-RT-qaY">
+                        <rect key="frame" x="11" y="54" width="397" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -169,7 +181,7 @@
                 <outlet property="nameLabel" destination="7dw-76-91J" id="NLK-dd-BhY"/>
                 <outlet property="namePrice" destination="LP0-RT-qaY" id="qwY-Pp-cfa"/>
             </connections>
-            <point key="canvasLocation" x="-274" y="15.5"/>
+            <point key="canvasLocation" x="-274" y="18"/>
         </tableViewCell>
     </objects>
     <resources>

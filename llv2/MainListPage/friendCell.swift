@@ -22,6 +22,9 @@ class friendCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var namePrice: UILabel!
+    @IBOutlet weak var address: UILabel!
+    
+
     @IBOutlet weak var extraInfo: UILabel!
     
     
