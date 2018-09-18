@@ -1154,6 +1154,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NZy-RZ-hH6" firstAttribute="top" secondItem="QNs-4J-mLt" secondAttribute="bottom" constant="33" id="0C5-L8-qS9"/>
+                            <constraint firstItem="R9V-Rw-r1N" firstAttribute="leading" secondItem="ebi-Ez-E8b" secondAttribute="trailing" constant="-246" id="0DW-dg-UHU"/>
                             <constraint firstItem="R9V-Rw-r1N" firstAttribute="centerX" secondItem="3va-mf-uzb" secondAttribute="centerX" id="1FR-y5-YlD"/>
                             <constraint firstItem="NZy-RZ-hH6" firstAttribute="trailing" secondItem="a4X-Ve-L6A" secondAttribute="trailing" id="1bd-wj-HiS"/>
                             <constraint firstItem="QNs-4J-mLt" firstAttribute="top" secondItem="a4X-Ve-L6A" secondAttribute="top" constant="372" id="1wd-AN-R7u"/>
@@ -1175,8 +1176,10 @@
                             <constraint firstItem="ebi-Ez-E8b" firstAttribute="trailing" secondItem="a4X-Ve-L6A" secondAttribute="trailing" id="HhD-tv-YS3"/>
                             <constraint firstItem="QNs-4J-mLt" firstAttribute="top" secondItem="UzJ-wO-041" secondAttribute="bottom" constant="13" id="I6F-Oh-s8A"/>
                             <constraint firstItem="XBQ-ks-iy5" firstAttribute="top" secondItem="3va-mf-uzb" secondAttribute="bottom" constant="53" id="IpD-4Y-ny8"/>
+                            <constraint firstItem="QNs-4J-mLt" firstAttribute="centerX" secondItem="ebi-Ez-E8b" secondAttribute="centerX" id="JGK-oA-fmG"/>
                             <constraint firstItem="b17-pu-ez2" firstAttribute="centerX" secondItem="a4X-Ve-L6A" secondAttribute="centerX" id="KGa-Qo-oUO"/>
                             <constraint firstItem="3va-mf-uzb" firstAttribute="top" secondItem="R9V-Rw-r1N" secondAttribute="bottom" constant="53" id="Kfg-WS-veY"/>
+                            <constraint firstItem="R9V-Rw-r1N" firstAttribute="centerX" secondItem="ebi-Ez-E8b" secondAttribute="centerX" id="KqM-DW-dKg"/>
                             <constraint firstItem="3va-mf-uzb" firstAttribute="leading" secondItem="ebi-Ez-E8b" secondAttribute="leading" id="LZc-oa-p2N"/>
                             <constraint firstItem="a4X-Ve-L6A" firstAttribute="bottom" secondItem="QNs-4J-mLt" secondAttribute="bottom" constant="306" id="LhI-Oj-gNv"/>
                             <constraint firstItem="a4X-Ve-L6A" firstAttribute="trailing" secondItem="3va-mf-uzb" secondAttribute="trailing" id="Li7-M3-XuA"/>
@@ -1193,6 +1196,7 @@
                             <constraint firstItem="LFe-eH-avf" firstAttribute="top" secondItem="b17-pu-ez2" secondAttribute="bottom" constant="8" id="Tjy-Ls-aZG"/>
                             <constraint firstItem="a4X-Ve-L6A" firstAttribute="trailing" secondItem="QNs-4J-mLt" secondAttribute="trailing" constant="97" id="XYD-Xf-P9y"/>
                             <constraint firstItem="b17-pu-ez2" firstAttribute="top" secondItem="NZy-RZ-hH6" secondAttribute="bottom" constant="43" id="YDi-k5-s2k"/>
+                            <constraint firstItem="a4X-Ve-L6A" firstAttribute="bottom" secondItem="R9V-Rw-r1N" secondAttribute="bottom" constant="558" id="Zjr-8l-3n6"/>
                             <constraint firstItem="LFe-eH-avf" firstAttribute="top" secondItem="b17-pu-ez2" secondAttribute="bottom" constant="8" id="ajY-EJ-e8O"/>
                             <constraint firstItem="XBQ-ks-iy5" firstAttribute="centerX" secondItem="a4X-Ve-L6A" secondAttribute="centerX" id="akn-Zj-ezG"/>
                             <constraint firstItem="LFe-eH-avf" firstAttribute="top" secondItem="b17-pu-ez2" secondAttribute="bottom" constant="8" symbolic="YES" id="boM-B7-cRO"/>
@@ -1206,10 +1210,12 @@
                             <constraint firstItem="NZy-RZ-hH6" firstAttribute="leading" secondItem="YP9-ji-Pfx" secondAttribute="leadingMargin" id="pZF-Hx-Ltp"/>
                             <constraint firstItem="XBQ-ks-iy5" firstAttribute="trailing" secondItem="UzJ-wO-041" secondAttribute="trailing" id="q6j-fV-yGZ"/>
                             <constraint firstItem="ebi-Ez-E8b" firstAttribute="leading" secondItem="YP9-ji-Pfx" secondAttribute="leading" id="ru4-Fz-uN7"/>
+                            <constraint firstItem="QNs-4J-mLt" firstAttribute="top" secondItem="UzJ-wO-041" secondAttribute="bottom" constant="13" id="s08-Y0-JgE"/>
                             <constraint firstItem="NZy-RZ-hH6" firstAttribute="top" secondItem="QNs-4J-mLt" secondAttribute="bottom" constant="33" id="sF7-WO-uGs"/>
                             <constraint firstItem="ebi-Ez-E8b" firstAttribute="top" secondItem="YP9-ji-Pfx" secondAttribute="top" id="t0d-Ea-AFX"/>
                             <constraint firstItem="R9V-Rw-r1N" firstAttribute="leading" secondItem="a4X-Ve-L6A" secondAttribute="leading" constant="168" id="uLh-A6-Yjw"/>
                             <constraint firstItem="NZy-RZ-hH6" firstAttribute="trailing" secondItem="b17-pu-ez2" secondAttribute="trailing" id="weF-dh-CmM"/>
+                            <constraint firstItem="QNs-4J-mLt" firstAttribute="leading" secondItem="ebi-Ez-E8b" secondAttribute="trailing" constant="-317" id="woQ-2w-axR"/>
                             <constraint firstItem="3va-mf-uzb" firstAttribute="centerX" secondItem="XBQ-ks-iy5" secondAttribute="centerX" id="xs8-7w-wmW"/>
                             <constraint firstItem="3va-mf-uzb" firstAttribute="top" secondItem="R9V-Rw-r1N" secondAttribute="bottom" constant="53" id="zP6-eg-Id0"/>
                         </constraints>
@@ -1267,26 +1273,7 @@
                                     <segue destination="wzd-ub-EvT" kind="show" id="Qyz-gG-cqo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMt-Js-RHw">
-                                <rect key="frame" x="0.0" y="225" width="231" height="28"/>
-                                <state key="normal" image="我的私信">
-                                    <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="zsV-gD-299" kind="show" id="Uwq-L7-Bw7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
-                                <rect key="frame" x="0.0" y="930" width="182" height="28"/>
-                                <state key="normal" image="设置">
-                                    <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="setting:" destination="Sr3-Md-37M" eventType="touchUpInside" id="pbW-Sg-n2I"/>
-                                    <segue destination="kpS-wi-Uo9" kind="show" id="ZuW-Xa-HXX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwp-f4-zka">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwp-f4-zka">
                                 <rect key="frame" x="52" y="606" width="179" height="28"/>
                                 <state key="normal" image="联系工作室"/>
                                 <connections>
@@ -1303,38 +1290,47 @@
                                     <constraint firstAttribute="width" constant="51" id="BAP-Jn-pYO"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
+                                <rect key="frame" x="0.0" y="632" width="187" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="N9h-aK-ugp"/>
+                                </constraints>
+                                <state key="normal" image="设置">
+                                    <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setting:" destination="Sr3-Md-37M" eventType="touchUpInside" id="pbW-Sg-n2I"/>
+                                    <segue destination="kpS-wi-Uo9" kind="show" id="ZuW-Xa-HXX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="4kA-7Y-n0P" secondAttribute="leading" id="1K7-oh-1K3"/>
-                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="HIR-C5-yPH" secondAttribute="leading" id="1aW-fJ-vao"/>
                             <constraint firstItem="kts-h1-pgA" firstAttribute="top" secondItem="4kA-7Y-n0P" secondAttribute="bottom" constant="10" id="2z3-Dd-frL"/>
+                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="4kA-7Y-n0P" secondAttribute="leading" id="3gI-BQ-yYN"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="leading" secondItem="hG6-ne-AUc" secondAttribute="leading" id="545-ak-wH7"/>
                             <constraint firstItem="Ukb-d5-8i0" firstAttribute="top" secondItem="6TH-Fg-XDB" secondAttribute="bottom" constant="20" id="7lH-dW-nic"/>
                             <constraint firstItem="4kA-7Y-n0P" firstAttribute="top" secondItem="Ukb-d5-8i0" secondAttribute="bottom" constant="8" symbolic="YES" id="8b1-d2-Nu0"/>
                             <constraint firstItem="kwp-f4-zka" firstAttribute="trailing" secondItem="kts-h1-pgA" secondAttribute="trailing" id="8dx-97-2Pr"/>
                             <constraint firstItem="uAa-kn-6nw" firstAttribute="leading" secondItem="6TH-Fg-XDB" secondAttribute="leading" id="Anq-vs-4XM"/>
-                            <constraint firstItem="kwp-f4-zka" firstAttribute="trailing" secondItem="sMt-Js-RHw" secondAttribute="trailing" id="Fgm-am-CyD"/>
-                            <constraint firstItem="Ite-js-Byc" firstAttribute="top" secondItem="kwp-f4-zka" secondAttribute="bottom" constant="8" symbolic="YES" id="JdZ-BR-YvH"/>
-                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="sMt-Js-RHw" secondAttribute="leading" id="LDj-Ef-YvT"/>
-                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="kts-h1-pgA" secondAttribute="leading" id="R1Y-HL-cE3"/>
-                            <constraint firstItem="sMt-Js-RHw" firstAttribute="top" secondItem="kts-h1-pgA" secondAttribute="bottom" constant="10" id="RVc-rt-iNz"/>
-                            <constraint firstItem="hG6-ne-AUc" firstAttribute="trailing" secondItem="Ite-js-Byc" secondAttribute="trailing" constant="144" id="Sz1-c3-OL6"/>
+                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="Ukb-d5-8i0" secondAttribute="leading" id="OcL-hG-rbQ"/>
+                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="kts-h1-pgA" secondAttribute="leading" id="PUl-xC-spo"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="trailing" secondItem="hG6-ne-AUc" secondAttribute="trailing" id="Ui4-Kf-Kid"/>
                             <constraint firstItem="kwp-f4-zka" firstAttribute="trailing" secondItem="Ukb-d5-8i0" secondAttribute="trailing" id="V5d-a1-EZK"/>
-                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="Ukb-d5-8i0" secondAttribute="leading" id="W6W-D0-LbC"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="leading" secondItem="hG6-ne-AUc" secondAttribute="leading" id="ZS0-dF-deb"/>
+                            <constraint firstItem="uAa-kn-6nw" firstAttribute="top" secondItem="Ite-js-Byc" secondAttribute="bottom" constant="28" id="awd-Ht-aep"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="top" secondItem="Rtk-dt-6D4" secondAttribute="top" id="bxY-uV-P9A"/>
                             <constraint firstAttribute="bottom" secondItem="uAa-kn-6nw" secondAttribute="bottom" constant="20" symbolic="YES" id="cax-i6-B0Z"/>
                             <constraint firstItem="kwp-f4-zka" firstAttribute="trailing" secondItem="4kA-7Y-n0P" secondAttribute="trailing" id="cta-lb-tTJ"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="bottom" secondItem="hG6-ne-AUc" secondAttribute="bottom" constant="34" id="eES-Lb-h53"/>
+                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="HIR-C5-yPH" secondAttribute="leading" id="k6f-fI-8h5"/>
                             <constraint firstAttribute="bottom" secondItem="HIR-C5-yPH" secondAttribute="bottom" id="kb9-Uv-jeS"/>
-                            <constraint firstItem="hG6-ne-AUc" firstAttribute="bottom" secondItem="Ite-js-Byc" secondAttribute="bottom" constant="66" id="nnb-P7-w12"/>
                             <constraint firstItem="6TH-Fg-XDB" firstAttribute="top" secondItem="hG6-ne-AUc" secondAttribute="top" constant="23" id="oQL-aI-57u"/>
                             <constraint firstItem="Ukb-d5-8i0" firstAttribute="top" secondItem="hG6-ne-AUc" secondAttribute="top" constant="83" id="ofv-te-exY"/>
                             <constraint firstItem="uAa-kn-6nw" firstAttribute="leading" secondItem="hG6-ne-AUc" secondAttribute="leading" constant="86" id="osA-Ug-e4f"/>
                             <constraint firstItem="kwp-f4-zka" firstAttribute="leading" secondItem="hG6-ne-AUc" secondAttribute="leading" constant="52" id="pcM-F0-JmD"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="top" secondItem="Rtk-dt-6D4" secondAttribute="top" id="qPo-Ri-AJT"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="trailing" secondItem="hG6-ne-AUc" secondAttribute="trailing" id="vVK-wv-tbD"/>
+                            <constraint firstItem="hG6-ne-AUc" firstAttribute="trailing" secondItem="Ite-js-Byc" secondAttribute="trailing" constant="227" id="xKN-Ng-HnL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hG6-ne-AUc"/>
                     </view>
@@ -1347,7 +1343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-CB-36v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.625" y="-479.29687499999994"/>
+            <point key="canvasLocation" x="40.579710144927539" y="-479.34782608695656"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fzi-BE-mLR">
@@ -1575,6 +1571,18 @@ email: lunacao214@outlook.com</string>
                                 <items>
                                     <navigationItem id="hQg-72-8GW">
                                         <barButtonItem key="leftBarButtonItem" title="menu" image="menubutton" landscapeImage="menubutton" id="pKc-6h-K1k"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ku0-Th-QFS">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sMt-Js-RHw">
+                                                <rect key="frame" x="353" y="10" width="41" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="私信标">
+                                                    <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="zsV-gD-299" kind="show" id="Uwq-L7-Bw7"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1685,7 +1693,7 @@ email: lunacao214@outlook.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1328.985507246377" y="-691.304347826087"/>
+            <point key="canvasLocation" x="1409" y="-690"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -4525,9 +4533,9 @@ email: lunacao214@outlook.com</string>
         <image name="底部广告" width="209" height="45"/>
         <image name="忘记密码" width="120" height="15"/>
         <image name="我的收藏" width="118" height="28"/>
-        <image name="我的私信" width="116" height="28"/>
         <image name="换汇" width="260" height="90"/>
         <image name="横线" width="220" height="28"/>
+        <image name="私信标" width="26" height="24"/>
         <image name="私聊" width="58" height="31"/>
         <image name="联系工作室" width="179" height="28"/>
         <image name="英文logo" width="190" height="192"/>
@@ -4541,7 +4549,7 @@ email: lunacao214@outlook.com</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
-        <segue reference="uJp-nh-C7I"/>
+        <segue reference="mmZ-63-Igj"/>
         <segue reference="wij-hC-xO5"/>
         <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
