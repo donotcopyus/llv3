@@ -71,6 +71,9 @@
 		FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */; };
 		FA93FF51210900F90070DD60 /* image in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF50210900F90070DD60 /* image */; };
 		FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */; };
+		FA9F882A21516DA100F1C17D /* friendTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F882921516DA100F1C17D /* friendTVC.swift */; };
+		FA9F882D21516DD800F1C17D /* friendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F882B21516DD800F1C17D /* friendCell.swift */; };
+		FA9F882E21516DD800F1C17D /* friendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9F882C21516DD800F1C17D /* friendCell.xib */; };
 		FAA2839A21212EA700BB3FE9 /* dra1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839921212EA700BB3FE9 /* dra1.swift */; };
 		FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2839B21212EB500BB3FE9 /* dra2.swift */; };
 		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
@@ -181,6 +184,9 @@
 		FA93FF52210901020070DD60 /* IMG_2159.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2159.jpg; sourceTree = "<group>"; };
 		FA93FF532109010F0070DD60 /* IMG_5333.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5333.jpg; sourceTree = "<group>"; };
 		FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeVC.swift; sourceTree = "<group>"; };
+		FA9F882921516DA100F1C17D /* friendTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendTVC.swift; sourceTree = "<group>"; };
+		FA9F882B21516DD800F1C17D /* friendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendCell.swift; sourceTree = "<group>"; };
+		FA9F882C21516DD800F1C17D /* friendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = friendCell.xib; sourceTree = "<group>"; };
 		FAA2839921212EA700BB3FE9 /* dra1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra1.swift; sourceTree = "<group>"; };
 		FAA2839B21212EB500BB3FE9 /* dra2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra2.swift; sourceTree = "<group>"; };
 		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
@@ -383,6 +389,9 @@
 				51BF3DFA214381C400DCF3F3 /* checkXianzhi1Controller.swift */,
 				51BF3DFC214381DE00DCF3F3 /* checkXianzhiNoImageController.swift */,
 				518BD2C1211D402F00B56514 /* checkCarpoolController.swift */,
+				FA9F882921516DA100F1C17D /* friendTVC.swift */,
+				FA9F882B21516DD800F1C17D /* friendCell.swift */,
+				FA9F882C21516DD800F1C17D /* friendCell.xib */,
 			);
 			path = MainListPage;
 			sourceTree = "<group>";
@@ -550,6 +559,7 @@
 				516F7FC8210101BD001C0C55 /* LaunchScreen.storyboard in Resources */,
 				51B52D61211FE0D200D2B9E9 /* messageRecCell.xib in Resources */,
 				51F67341214F6078001FF201 /* icon.jpg in Resources */,
+				FA9F882E21516DD800F1C17D /* friendCell.xib in Resources */,
 				FAE91A092144C2EC000DC12F /* Main.storyboard in Resources */,
 				51626E13210108700047B303 /* GoogleService-Info.plist in Resources */,
 				516F7FC5210101BD001C0C55 /* Assets.xcassets in Resources */,
@@ -692,11 +702,13 @@
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
 				FAA2839C21212EB500BB3FE9 /* dra2.swift in Sources */,
+				FA9F882D21516DD800F1C17D /* friendCell.swift in Sources */,
 				FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */,
 				FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				51BF3DF92143819200DCF3F3 /* checkXianzhi2Controller.swift in Sources */,
+				FA9F882A21516DA100F1C17D /* friendTVC.swift in Sources */,
 				FAFBA01B2131253500A90A58 /* testViewController.swift in Sources */,
 				FAE91A0C2144F668000DC12F /* xainzhiTVC.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
