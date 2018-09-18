@@ -126,11 +126,6 @@
             </connections>
             <point key="canvasLocation" x="186" y="79"/>
         </tableViewCell>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="enc-Li-Nf8">
-            <rect key="frame" x="0.0" y="0.0" width="196" height="119"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="69" y="-69"/>
-        </imageView>
     </objects>
     <resources>
         <image name="like" width="20" height="18"/>
