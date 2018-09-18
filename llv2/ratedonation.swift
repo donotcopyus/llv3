@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class ratedonation: UIViewController {
 
@@ -23,21 +24,7 @@ class ratedonation: UIViewController {
     
     @IBAction func rate(_ sender: UIButton) {
         
-        let alert = UIAlertController(title: "五星好评", message: "您将要打开appstore评论界面，", preferredStyle: .actionSheet)
-        let confirm = UIAlertAction(title: "确定", style: .default, handler:{ (action) -> Void in
-            
-            let url = URL(string:"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1436232989&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8")
-            if UIApplication.shared.canOpenURL(url!){
-                UIApplication.shared.open(url!, options: [:], completionHandler: nil)
-            }
-        }
-        )
-        
-        let cancel = UIAlertAction(title:"取消", style:UIAlertActionStyle.cancel, handler: nil)
-        alert.addAction(confirm)
-        alert.addAction(cancel)
-        
-        self.present(alert, animated: true, completion: nil)
+        SKStoreReviewController.requestReview()
     }
     
     @IBAction func donation(_ sender: UIButton) {
@@ -47,15 +34,20 @@ class ratedonation: UIViewController {
     }
     
     @IBAction func share(_ sender: UIButton) {
-    
-        UIPasteboard.general.string = "itms-apps://itunes.apple.com/app/id1436232989"
-        
-        let alert = UIAlertController(title: "分享找啥", message: "已将找啥(FindWhat) appstore链接添加至剪切板，感谢您对找啥的支持 <3", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        } ))
-        
-        self.present(alert, animated: true, completion: nil)
+        let textToShare = "我在使用一个非常好用的在加华人app，一键发布carpool/闲置/换汇/交友广告，特别酷，你也来试试吧: "
+        if let myWebsite = URL(string: "http://itunes.apple.com/app/id1436232989") {//Enter link to your app here
+            let objectsToShare = [textToShare, myWebsite] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //Excluded Activities
+            //activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+            
+            
+            activityVC.popoverPresentationController?.sourceView = sender
+
+            self.present(activityVC, animated: true, completion: nil)
+        }
+
     }
 
 }
