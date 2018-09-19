@@ -22,12 +22,15 @@ class friendCell: UITableViewCell {
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var address: UILabel!
     
-
+    @IBOutlet weak var info: UILabel!
+    
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
     @IBOutlet weak var senttime: UILabel!
     
+    @IBOutlet weak var collectionID: UILabel!
+    @IBOutlet weak var authorId: UILabel!
     
     //tap on icon
     override func awakeFromNib() {
@@ -55,7 +58,7 @@ class friendCell: UITableViewCell {
             return
         }
         
-        let likedRef = Database.database().reference().child("users/collection/xianzhi/")
+        let likedRef = Database.database().reference().child("users/collection/friend/")
         
         var liked = false
         
@@ -73,18 +76,17 @@ class friendCell: UITableViewCell {
                         //删除收藏
                         self.likeButton.setImage(UIImage(named:"like"), for: .normal)
                         
-                        
-                        guard let cid = self.collectionID.text else{
+                    guard let cid = self.collectionID.text else{
                             return}
                         
-                        let userLikeRef = Database.database().reference().child("users/collection/xianzhi/\(cid)")
+                        let userLikeRef = Database.database().reference().child("users/collection/friend/\(cid)")
                         userLikeRef.removeValue()
                         liked = true
                         break
                     }}}
             
             if (liked == false){
-                let userLikeRef = Database.database().reference().child("users/collection/xianzhi/").childByAutoId()
+                let userLikeRef = Database.database().reference().child("users/collection/friend/").childByAutoId()
                 
                 let likeObj = [
                     "pid": pid,
