@@ -160,7 +160,10 @@ class friendAdVCViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        imagepicker = UIImagePickerController()
+        imagepicker.allowsEditing = true
+        imagepicker.sourceType = .photoLibrary
+        imagepicker.delegate = self
  
     }
 
@@ -172,4 +175,23 @@ class friendAdVCViewController: UIViewController{
     
 
 
+}
+
+
+extension friendAdVCViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
+            
+            self.oneImage.image = pickedImage
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
