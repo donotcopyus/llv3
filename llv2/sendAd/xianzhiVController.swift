@@ -477,8 +477,6 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         
         return true
     }
-    
-
 
 
 }

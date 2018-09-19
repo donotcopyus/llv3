@@ -8,7 +8,8 @@
 
 import UIKit
 
-class friendAdVCViewController: UIViewController {
+class friendAdVCViewController: UIViewController{
+    
     //发送btn
     @IBAction func send(_ sender: Any) {
         
