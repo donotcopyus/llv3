@@ -21,26 +21,21 @@ class friendAdVCViewController: UIViewController{
     //照片
     @IBOutlet weak var oneImage: UIImageView!
     
+    //填写地址
+    @IBOutlet weak var text: UITextView!
+    
+    
     //交友宣言
     @IBOutlet weak var infor: UITextView!
     
     //选择日期
-    @IBOutlet weak var godate: UILabel!
+    @IBOutlet weak var showDate: UILabel!
     @IBOutlet weak var datepicker: UIDatePicker!
-    
-    @IBAction func datepicker(_ sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateStyle = DateFormatter.Style.short
-        
-        let strDate = dateFormatter.string(from: datepicker.date)
-        godate.text = "出发日期 \(strDate)"
+    @IBAction func datepicker(_ sender: Any) {
     }
     
     
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
