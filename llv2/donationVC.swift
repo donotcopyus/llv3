@@ -9,114 +9,162 @@
 import UIKit
 import StoreKit
 
-class donationVC: UIViewController,SKProductsRequestDelegate,SKPaymentTransactionObserver {
+enum IAPHandlerAlertType{
+    case disabled
+    case restored
+    case purchased
+    
+    //https://hackernoon.com/swift-how-to-add-in-app-purchases-in-your-ios-app-c1dc2fc82319
+    
+    func message() -> String{
+        switch self{
+        case .disabled: return "Purchases are disabled in your device!"
+        case .restored: return "You've successfully restored your purchase!"
+        case .purchased: return "You've successfully bought this purchase!"
+        
+        }
+    }
+}
+
+class IAPHandler: NSObject{
+    static let shared = IAPHandler()
+    
+    let SMALLID = "supportSmall"
+    let MEDIUMID = "supportMedium"
+    let LARGEID = "supportLarge"
+    
+    fileprivate var productID = ""
+    fileprivate var productRequest = SKProductsRequest()
+    fileprivate var iapProducts = [SKProduct]()
+    
+    var purchaseStatusBlock: ((IAPHandlerAlertType) -> Void)?
+    
+    func canMakePurchase() -> Bool{
+        return SKPaymentQueue.canMakePayments()
+    }
+    
+    func purchaseMyProduct(index: Int){
+        if iapProducts.count == 0{
+            return
+        }
+        
+        if self.canMakePurchase(){
+            let product = iapProducts[index]
+            let payment = SKPayment(product:product)
+            SKPaymentQueue.default().add(self)
+            SKPaymentQueue.default().add(payment)
+            
+            productID = product.productIdentifier
+        }else{
+            purchaseStatusBlock?(.disabled)
+        }
+    }
+    
+    func restorePurchase(){
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    func fetchAvailableProducts(){
+        let productIdentifiers = NSSet(objects: SMALLID,MEDIUMID,LARGEID)
+        
+        let productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers as! Set<String>)
+        productsRequest.delegate = self
+        productsRequest.start()
+    }
+    }
+
+extension IAPHandler:SKProductsRequestDelegate,SKPaymentTransactionObserver{
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        if (response.products.count > 0) {
+            iapProducts = response.products
+            for product in iapProducts{
+                let numberFormatter = NumberFormatter()
+                numberFormatter.formatterBehavior = .behavior10_4
+                numberFormatter.numberStyle = .currency
+                numberFormatter.locale = product.priceLocale
+                let price1Str = numberFormatter.string(from: product.price)
+                print(product.localizedDescription + "\nfor just \(price1Str!)")
+            }
+        }
+    }
+    
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        purchaseStatusBlock?(.restored)
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction:AnyObject in transactions {
+            if let trans = transaction as? SKPaymentTransaction {
+                switch trans.transactionState {
+                case .purchased:
+                    print("purchased")
+                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    purchaseStatusBlock?(.purchased)
+                    break
+                    
+                case .failed:
+                    print("failed")
+                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    break
+                case .restored:
+                    print("restored")
+                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    break
+                    
+                default: break
+                }}}
+    }
     
     
+    
+}
+
+
+class donationVC: UIViewController{
+    
+  
     @IBAction func small(_ sender: Any) {
-        
-        if SKPaymentQueue.canMakePayments(){
-            requestProductInfo("supportSmall")
-        }
-        else{
-            let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-            } ))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
+      
+        IAPHandler.shared.purchaseMyProduct(index: 0)
+      
     }
     
     @IBAction func middle(_ sender: Any) {
         
-        if SKPaymentQueue.canMakePayments(){
-            requestProductInfo("supportMedium")
-        }
-        else{
-            let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-            } ))
-            self.present(alert, animated: true, completion: nil)
-        }
+     IAPHandler.shared.purchaseMyProduct(index: 1)
         
     }
     
     
     @IBOutlet weak var big: UIButton!
     
-    
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-
-        
-    }
-    
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        
-        for transaction in transactions{
-            switch(transaction.transactionState){
-            case .purchasing:
-                transactionPurchasing(transaction)
-            case .purchased:
-                transactionPurchased(transaction)
-            case .failed:
-                transactionFailed(transaction)
-            case .restored:
-                return
-            case .deferred:
-                return
-            }
-        }
-        
-    }
-    
-    fileprivate func requestProductInfo (_ productId: String){
-        let identifiers: Set<String> = [productId]
-        let request = SKProductsRequest(productIdentifiers: identifiers)
-        
-        request.delegate = self
-        request.start()
-    }
-    
-    fileprivate func transactionPurchasing(_ transaction: SKPaymentTransaction){
-        //交易中
-    }
-    
-    fileprivate func transactionPurchased(_ transaction:SKPaymentTransaction){
-        
-        if let receiptUrl = Bundle.main.appStoreReceiptURL{
-            let receipt = NSData(contentsOf: receiptUrl)
-            let receiptStr = receipt?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 3)){
-                print("receiptStr:\(String(describing:receiptStr))")
-                print("applicationUsername:\(String(describing:transaction.payment.applicationUsername))")
-                SKPaymentQueue.default().finishTransaction(transaction)
-            }
-        }
-        
-    }
-    
-    fileprivate func transactionFailed(_ transacation: SKPaymentTransaction){
-        let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        } ))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        SKPaymentQueue.default().add(self as SKPaymentTransactionObserver)
+
+       IAPHandler.shared.fetchAvailableProducts()
+        IAPHandler.shared.purchaseStatusBlock = {
+            [weak self] (type) in
+            guard let strongSelf = self else{
+                return
+            }
+            
+            if type == .purchased{
+                let alertView = UIAlertController(title:"",message: type.message(),preferredStyle:.alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                    
+                })
+                alertView.addAction(action)
+                strongSelf.present(alertView, animated: true, completion: nil)
+            
+            }
+        }
+      
     }
 
-    deinit{
-        SKPaymentQueue.default().remove(self as SKPaymentTransactionObserver)
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -126,18 +174,9 @@ class donationVC: UIViewController,SKProductsRequestDelegate,SKPaymentTransactio
 
  
     @IBAction func click(_ sender: UIButton) {
-        
-        if SKPaymentQueue.canMakePayments(){
-           requestProductInfo("supportLarge")
-        }
-        else{
-            let alert = UIAlertController(title: self.title, message: "付款出错", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "返回重试", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-            } ))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
+       IAPHandler.shared.purchaseMyProduct(index: 2)
     }
 
 }
+
+
