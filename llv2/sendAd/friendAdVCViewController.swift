@@ -38,7 +38,9 @@ class friendAdVCViewController: UIViewController{
             return
         }
         
-        guard let address = self.text.text else{
+         let address = self.text.text
+        
+         if address == "活动地址"{
             let alert = UIAlertController(title: title, message: "请输入地址", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
@@ -48,18 +50,20 @@ class friendAdVCViewController: UIViewController{
             return
         }
         
+        
         guard let userProfile = UserService.currentUserProfile else{
             return}
+        
         
         let postRef = Database.database().reference().child("friend").childByAutoId()
         
         let postObj = [
             
-            "info": extrainfo,
+            "info": extrainfo ?? "他什么也没说...",
             "date": date,
             "timestamp":[".sv":"timestamp"],
             "imageUrl":"",
-            "address":address,
+            "address":address!,
             "author":[
                 "uid":userProfile.uid,
                 "username":userProfile.username,
@@ -88,6 +92,10 @@ class friendAdVCViewController: UIViewController{
                 self.dismiss(animated: true, completion: nil)
             }
         }
+            
+        }
+        else{
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
