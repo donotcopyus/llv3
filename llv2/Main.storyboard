@@ -760,7 +760,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBg-pH-Ael">
-                                <rect key="frame" x="0.0" y="61" width="176" height="101"/>
+                                <rect key="frame" x="0.0" y="61" width="424" height="101"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CBg-pH-Ael" secondAttribute="height" multiplier="207:50" id="8FE-vL-GMV"/>
@@ -768,7 +768,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doA-kc-dS5">
-                                <rect key="frame" x="76" y="62" width="100" height="100"/>
+                                <rect key="frame" x="324" y="62" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="3vB-cX-tIp"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Gyo-YS-vg7"/>
@@ -780,7 +780,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-kg-LQG">
-                                <rect key="frame" x="0.0" y="660" width="166" height="39"/>
+                                <rect key="frame" x="0.0" y="660" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fyK-xU-6CA"/>
@@ -796,7 +796,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
-                                <rect key="frame" x="0.0" y="235" width="166" height="39"/>
+                                <rect key="frame" x="0.0" y="235" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="u71-zb-kPf"/>
@@ -816,7 +816,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-81-hRT">
-                                <rect key="frame" x="0.0" y="188" width="166" height="39"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="SqN-0U-TUi"/>
@@ -831,7 +831,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivz-Zj-xao">
-                                <rect key="frame" x="0.0" y="61" width="176" height="101"/>
+                                <rect key="frame" x="0.0" y="61" width="424" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TF8-Ge-YJi"/>
                                     <constraint firstAttribute="width" secondItem="ivz-Zj-xao" secondAttribute="height" multiplier="199:50" id="kLL-nj-AE6"/>
@@ -2264,9 +2264,6 @@ email: lunacao214@outlook.com</string>
                                 <rect key="frame" x="25" y="94" width="91" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="上传图片"/>
-                                <connections>
-                                    <action selector="upload:" destination="iIE-cW-pNE" eventType="touchUpInside" id="O2M-Tc-Yno"/>
-                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAn-40-ueE">
                                 <rect key="frame" x="2" y="20" width="414" height="44"/>
@@ -2278,9 +2275,6 @@ email: lunacao214@outlook.com</string>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="发送" id="CJO-5b-iES">
                                             <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="send:" destination="iIE-cW-pNE" id="0uc-GS-7cI"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -2296,11 +2290,6 @@ email: lunacao214@outlook.com</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RkX-0i-eCj"/>
                     </view>
-                    <connections>
-                        <outlet property="datePick" destination="V7L-Hj-fs8" id="OdQ-14-i3Y"/>
-                        <outlet property="infor" destination="lJW-w6-ab6" id="vw8-tF-tn3"/>
-                        <outlet property="oneImage" destination="SLQ-m1-P2W" id="ZrL-3a-aOW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNj-dV-vwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
