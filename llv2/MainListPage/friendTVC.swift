@@ -306,7 +306,7 @@ class friendTVC: UITableViewController, UISearchBarDelegate {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 224
+        return 275
         
     }
     

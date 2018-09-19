@@ -13,28 +13,20 @@ import Firebase
 class friendCell: UITableViewCell {
     
     @IBOutlet weak var image1: UIImageView!
-    
-    @IBOutlet weak var image2: UIImageView!
-    @IBOutlet weak var image3: UIImageView!
+
     
     @IBOutlet weak var headImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+
     
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var address: UILabel!
     
 
-    @IBOutlet weak var extraInfo: UILabel!
-    
-    
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
-    
-    @IBOutlet weak var collectionID: UILabel!
-    
-    @IBOutlet weak var authorID: UILabel!
+    @IBOutlet weak var senttime: UILabel!
     
     
     //tap on icon
