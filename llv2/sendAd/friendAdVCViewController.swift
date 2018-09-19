@@ -37,8 +37,97 @@ class friendAdVCViewController: UIViewController{
             present(alert, animated: true, completion: nil)
             return
         }
- 
         
+        guard let address = self.text.text else{
+            let alert = UIAlertController(title: title, message: "请输入地址", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        guard let userProfile = UserService.currentUserProfile else{
+            return}
+        
+        let postRef = Database.database().reference().child("friend").childByAutoId()
+        
+        let postObj = [
+            
+            "info": extrainfo,
+            "date": date,
+            "timestamp":[".sv":"timestamp"],
+            "imageUrl":"",
+            "address":address,
+            "author":[
+                "uid":userProfile.uid,
+                "username":userProfile.username,
+                "photoURL":userProfile.photoURL.absoluteString]
+        ] as [String:Any]
+        
+        postRef.setValue(postObj, withCompletionBlock:{
+            error, ref in
+            if error == nil{
+                
+            }else{
+                
+            }
+        })
+        
+        let imageOne = self.oneImage.image
+        if imageOne != nil{
+        self.uploadProfileImage(imageOne!){
+            url in
+            
+            let imageOne = (url?.absoluteString)!
+            let newObj = ["imageUrl":imageOne]
+            
+            postRef.updateChildValues(newObj){
+                error, ref in
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        }
+        
+    }
+    
+    
+    func uploadProfileImage(_ image:UIImage, completion: @escaping((_ url:URL?)->())){
+        
+        
+        let uuid = UUID().uuidString
+        
+        let storageRef = Storage.storage().reference().child("postFriend/\(uuid)")
+        
+        guard let imageData = UIImageJPEGRepresentation(image, 0.75) else{
+            return
+        }
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        storageRef.putData(imageData, metadata: metaData){
+            metaData, error in
+            if error == nil, metaData != nil{
+                //success
+                storageRef.downloadURL{(url,error) in
+                    guard let downloadURL = url else{
+                        print("error")
+                        return
+                    }
+                    if error != nil{
+                        completion(nil)
+                        return
+                    }
+                    completion(downloadURL)
+                    
+                }
+            }
+            else{
+                completion(nil)
+            }
+        }
     }
     
     
