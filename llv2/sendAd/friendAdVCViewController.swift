@@ -39,23 +39,13 @@ class friendAdVCViewController: UIViewController{
     
     
     
-    var b3 = dropDownBtn()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
-        b3 = dropDownBtn.init(frame: CGRect(x:210, y:90, width: 150, height: 30))
-        
-        b3.setTitle("活动地址", for: .normal)
-        
-        b3.translatesAutoresizingMaskIntoConstraints = true
-        
-        b3.dropView.dropDownOptions = ["Weldon Lib","丰盛附近","mason附近","kipps Ln","伦敦DT","Toronto","London","Hamilton","Waterloo","其他","任意"]
-        
-        self.view.addSubview(b3)
-        
+ 
     }
 
 
