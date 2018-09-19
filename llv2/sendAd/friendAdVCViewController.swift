@@ -7,15 +7,46 @@
 //
 
 import UIKit
+import Firebase
 
 class friendAdVCViewController: UIViewController{
+    
+    var imagepicker: UIImagePickerController!
+    
     
     //发送btn
     @IBAction func send(_ sender: Any) {
         
+        let extrainfo = self.infor.text
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yy-MM-dd"
+        let date = dateFormatter.string(from: datepicker.date)
+        
+        //确保出发日期比目前日期要晚
+        let currentDate = Date()
+        let compare = NSCalendar.current.compare(currentDate, to: datepicker.date, toGranularity: .day)
+        
+        if (compare == ComparisonResult.orderedDescending) {
+            //alert
+            let alert = UIAlertController(title: title, message: "出发日期或时间已过！", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        
+        
+        
     }
+    
+    
     //上传图片btn
     @IBAction func upload(_ sender: Any) {
+        self.present(imagepicker,animated:true,completion:nil)
     }
     
     //照片
