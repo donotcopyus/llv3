@@ -2252,7 +2252,7 @@ email: lunacao214@outlook.com</string>
                                 </constraints>
                                 <state key="normal" image="上传图片"/>
                                 <connections>
-                                    <action selector="upload:" destination="iIE-cW-pNE" eventType="touchUpInside" id="hF8-3n-YHl"/>
+                                    <action selector="upload:" destination="iIE-cW-pNE" eventType="touchUpInside" id="iJa-ak-gGL"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAn-40-ueE">
@@ -2271,7 +2271,7 @@ email: lunacao214@outlook.com</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="发送"/>
                                                 <connections>
-                                                    <action selector="send:" destination="iIE-cW-pNE" eventType="touchUpInside" id="7dc-Jm-beQ"/>
+                                                    <action selector="send:" destination="iIE-cW-pNE" eventType="touchUpInside" id="T9W-eN-ptQ"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -2290,7 +2290,7 @@ email: lunacao214@outlook.com</string>
                                     <!--2018-09-18 23:30:44 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="datepicker:" destination="iIE-cW-pNE" eventType="valueChanged" id="97I-kX-Gci"/>
+                                    <action selector="datepicker:" destination="iIE-cW-pNE" eventType="valueChanged" id="qHb-7j-Xo4"/>
                                 </connections>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="交友宣言.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lJW-w6-ab6">
@@ -2370,11 +2370,10 @@ email: lunacao214@outlook.com</string>
                         <viewLayoutGuide key="safeArea" id="RkX-0i-eCj"/>
                     </view>
                     <connections>
-                        <outlet property="datepicker" destination="V7L-Hj-fs8" id="AAf-jA-gH4"/>
-                        <outlet property="infor" destination="lJW-w6-ab6" id="A2q-cx-yUe"/>
-                        <outlet property="oneImage" destination="SLQ-m1-P2W" id="cdk-fl-LID"/>
-                        <outlet property="showDate" destination="DQc-XJ-Sue" id="LpK-wl-eZo"/>
-                        <outlet property="shwoDate" destination="DQc-XJ-Sue" id="BCj-Dg-kfm"/>
+                        <outlet property="datepicker" destination="V7L-Hj-fs8" id="uJf-v9-HZK"/>
+                        <outlet property="infor" destination="lJW-w6-ab6" id="Dv9-WJ-xV9"/>
+                        <outlet property="oneImage" destination="SLQ-m1-P2W" id="qe8-fm-qoE"/>
+                        <outlet property="showDate" destination="DQc-XJ-Sue" id="3b0-mQ-kEf"/>
                         <outlet property="text" destination="CEQ-GR-9hk" id="x3M-H7-uV0"/>
                     </connections>
                 </viewController>
