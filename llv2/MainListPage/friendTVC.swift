@@ -13,25 +13,21 @@ import ESPullToRefresh
 
 class friendData{
     
-    var id: String
-    var name: String
-    var price: String
-    var extraInfo:String
+    var id:String
+    var address: String
+    var date: String
     var timestamp:Double
-    var imageOneUrl: String
-    var imageTwoUrl: String
-    var imageThreeUrl: String
+    var imageUrl: String
+    var info: String
     var author: UserProfile
     
-    init(id: String, name:String, price:String, extraInfo:String, timestamp:Double, imageOneUrl:String, imageTwoUrl:String,imageThreeUrl:String, author:UserProfile){
+    init(id:String, address:String, date:String, timestamp:Double, imageUrl:String, info:String, author:UserProfile){
         self.id = id
-        self.name = name
-        self.price = price
-        self.extraInfo = extraInfo
+        self.address = address
+        self.date = date
         self.timestamp = timestamp
-        self.imageOneUrl = imageOneUrl
-        self.imageTwoUrl = imageTwoUrl
-        self.imageThreeUrl = imageThreeUrl
+        self.imageUrl = imageUrl
+        self.info = info
         self.author = author
     }
     
