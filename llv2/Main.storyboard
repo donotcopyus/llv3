@@ -1260,7 +1260,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
-                                <rect key="frame" x="0.0" y="632" width="231" height="32"/>
+                                <rect key="frame" x="0.0" y="632" width="191" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="N9h-aK-ugp"/>
                                 </constraints>
@@ -1300,7 +1300,7 @@
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="top" secondItem="Rtk-dt-6D4" secondAttribute="top" id="qPo-Ri-AJT"/>
                             <constraint firstItem="uAa-kn-6nw" firstAttribute="top" secondItem="kwp-f4-zka" secondAttribute="bottom" constant="58" id="t7H-zZ-K9g"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="trailing" secondItem="hG6-ne-AUc" secondAttribute="trailing" id="vVK-wv-tbD"/>
-                            <constraint firstItem="hG6-ne-AUc" firstAttribute="trailing" secondItem="Ite-js-Byc" secondAttribute="trailing" constant="183" id="xKN-Ng-HnL"/>
+                            <constraint firstItem="hG6-ne-AUc" firstAttribute="trailing" secondItem="Ite-js-Byc" secondAttribute="trailing" constant="223" id="xKN-Ng-HnL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hG6-ne-AUc"/>
                     </view>
@@ -1647,6 +1647,7 @@ email: lunacao214@outlook.com</string>
                                 <rect key="frame" x="77" y="505" width="260" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fsJ-k0-Ev4" secondAttribute="height" multiplier="26:9" id="eXj-UY-L1V"/>
+                                    <constraint firstAttribute="width" secondItem="fsJ-k0-Ev4" secondAttribute="height" multiplier="26:9" id="j9i-zt-QSJ"/>
                                 </constraints>
                                 <state key="normal" image="活动交友"/>
                                 <connections>
@@ -1667,8 +1668,10 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="ar2-bt-oQC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3QH-L8-UJs"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="ar2-bt-oQC" secondAttribute="leading" id="3nt-Ad-hr6"/>
                             <constraint firstItem="Blp-mc-HQD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3x5-V9-wEF"/>
+                            <constraint firstItem="fsJ-k0-Ev4" firstAttribute="top" secondItem="ar2-bt-oQC" secondAttribute="bottom" constant="21" id="7Y2-9Y-ldU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ar2-bt-oQC" secondAttribute="trailing" constant="77" id="7aO-TH-lxo"/>
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="95b-tr-YFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fsJ-k0-Ev4" secondAttribute="trailing" constant="77" id="9Q1-Te-R4c"/>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Xg-X1-M5Z"/>
                             <constraint firstItem="gBg-Ik-XeL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="CLD-ox-PZD"/>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="top" secondItem="gBg-Ik-XeL" secondAttribute="bottom" constant="22.670000000000002" id="DqG-rK-fba"/>
@@ -1683,7 +1686,9 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="TAs-dI-Y6S"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" id="Was-HB-zFB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="cz4-OG-1td" secondAttribute="bottom" constant="31" id="WkT-nG-nnP"/>
+                            <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="bCZ-HI-Lv1"/>
                             <constraint firstItem="Blp-mc-HQD" firstAttribute="top" secondItem="6Nc-cD-YZA" secondAttribute="bottom" constant="-108" id="hSs-J3-N61"/>
+                            <constraint firstItem="cz4-OG-1td" firstAttribute="top" secondItem="fsJ-k0-Ev4" secondAttribute="bottom" constant="21" id="oJH-Jd-M7j"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="oOH-Bi-Gl1"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" id="oRQ-7U-3k3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="the-Ct-AdR" secondAttribute="trailing" constant="77" id="pwZ-70-5Xl"/>
@@ -4727,9 +4732,9 @@ email: lunacao214@outlook.com</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bh3-wn-Akz"/>
-        <segue reference="uJp-nh-C7I"/>
-        <segue reference="wij-hC-xO5"/>
+        <segue reference="UHY-qs-nmR"/>
+        <segue reference="mmZ-63-Igj"/>
+        <segue reference="ivw-CZ-U9A"/>
         <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
 </document>
