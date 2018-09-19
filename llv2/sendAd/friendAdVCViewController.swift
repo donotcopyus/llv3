@@ -17,7 +17,17 @@ class friendAdVCViewController: UIViewController{
     //发送btn
     @IBAction func send(_ sender: Any) {
         
-        let extrainfo = self.infor.text
+        guard let info = self.infor.text else{
+            let alert = UIAlertController(title: title, message: "请输入具体信息", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+
+            } ))
+            
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yy-MM-dd"
