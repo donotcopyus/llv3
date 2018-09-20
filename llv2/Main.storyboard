@@ -2059,7 +2059,7 @@ email: lunacao214@outlook.com</string>
                             <outlet property="delegate" destination="gHh-Kh-Yht" id="DuP-ad-7dc"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="friendTab" id="ohP-3A-zLB"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="friendTab" landscapeImage="friendTab" selectedImage="friendTab" id="ohP-3A-zLB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EID-YK-7Ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3104,7 +3104,7 @@ email: lunacao214@outlook.com</string>
                             <outlet property="delegate" destination="dvY-uu-NZ2" id="y4n-jb-lL2"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="friendTab" id="Bn1-oY-mbG"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="friendTab" landscapeImage="friendTab" selectedImage="friendTab" id="Bn1-oY-mbG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uig-rR-pPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4839,14 +4839,10 @@ email: lunacao214@outlook.com</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="活动搜索" id="IfO-l1-nZr">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="1J1-Ea-F5A">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7oc-CG-GaE">
-                                                <rect key="frame" x="20" y="8" width="70" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="backbtn"/>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" id="MS7-u9-TSd">
+                                            <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="HGJ-zl-43D" kind="showDetail" id="d8R-MQ-eYe"/>
+                                                <segue destination="HGJ-zl-43D" kind="showDetail" id="PrV-AN-2D6"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="searchbtn" style="plain" id="bl3-fG-WYL">
@@ -4880,7 +4876,7 @@ email: lunacao214@outlook.com</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wfu-3z-tXd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cs2-ja-Gzj"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="friendTab" landscapeImage="friendTab" selectedImage="friendTab" id="cs2-ja-Gzj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xZ-TB-S7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5006,7 +5002,7 @@ email: lunacao214@outlook.com</string>
     <inferredMetricsTieBreakers>
         <segue reference="83B-YN-Mds"/>
         <segue reference="uJp-nh-C7I"/>
-        <segue reference="Gcp-fH-gbO"/>
+        <segue reference="PrV-AN-2D6"/>
         <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
 </document>
