@@ -5,6 +5,28 @@
 //  Created by 林蔼欣 on 2018-09-19.
 //  Copyright © 2018 Luna Cao. All rights reserved.
 //
+class friendData2{
+    
+    var id:String
+    var address: String
+    var date: String
+    var timestamp:Double
+    var imageUrl: String
+    var info: String
+    var author: UserProfile
+    
+    init(id:String, address:String, date:String, timestamp:Double, imageUrl:String, info:String, author:UserProfile){
+        self.id = id
+        self.address = address
+        self.date = date
+        self.timestamp = timestamp
+        self.imageUrl = imageUrl
+        self.info = info
+        self.author = author
+    }
+    
+}
+
 
 import Foundation
 import Firebase
@@ -13,9 +35,10 @@ import ESPullToRefresh
 
 class dra4: UITableViewController{
     
-    var arrayOfCellData = [friendData]()
+    var arrayOfCellData = [friendData2]()
     
-    override func viewDidLoad(){
+override func viewDidLoad(){
+        
     super.viewDidLoad()
     
     tableView = UITableView()
@@ -66,7 +89,7 @@ class dra4: UITableViewController{
                         count = count + 1
                     }}}
             
-            var tempPosts = [friendData]()
+            var tempPosts = [friendData2]()
             
             for childPost in collectionPid{
                 
@@ -87,7 +110,7 @@ class dra4: UITableViewController{
                             let imageUrl = dict["imageUrl"] as? String
                         {
                             let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
-                            let post = friendData(id: childPost, address:address, date:date, timestamp: timestamp, imageUrl: imageUrl, info:info, author: userProfile)
+                            let post = friendData2(id: childPost, address:address, date:date, timestamp: timestamp, imageUrl: imageUrl, info:info, author: userProfile)
                             
                             //append the array
                             tempPosts.append(post)
@@ -161,7 +184,7 @@ class dra4: UITableViewController{
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
+                        cell.likeButton.setImage(UIImage(named:"liked"), for: .normal)
                         
                     }}}
             
