@@ -149,8 +149,8 @@ class friendTVC: UITableViewController {
         cell.id.isHidden = true
         cell.id.text = arrayOfCellData[indexPath.row].id
         
-
-        let likedRef = Database.database().reference().child("users/collection/xianzhi/")
+        cell.collectionID.isHidden = true
+        let likedRef = Database.database().reference().child("users/collection/friend/")
         
         let uid = Auth.auth().currentUser?.uid
         
@@ -167,7 +167,7 @@ class friendTVC: UITableViewController {
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
+                        cell.likeButton.setImage(UIImage(named:"liked"), for: .normal)
                         
                     }}}
             
