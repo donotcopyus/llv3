@@ -1,5 +1,5 @@
 //
-//  carnav.swift
+//  friendSearchVC.swift
 //  llv2
 //
 //  Created by 林蔼欣 on 2018-08-31.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+class friendSearchVC: UITableViewController {
+    
+    
+}

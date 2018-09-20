@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 //        setupViews()
         
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
 
         
@@ -81,17 +82,23 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(otherView, animated: true)
     }
     
-//    func setupViews() {
-//        view.addSubview(revealingSplashView)
-//        
-//        revealingSplashView.startAnimation()
+//
+//    func addNavBarImage() {
+////        let navController = navigationController!
+//        let image = #imageLiteral(resourceName: "中文logo")
+//        let imageView = UIImageView(image: image)
+//
+//        let bannerWidth = navigationController?.navigationBar.frame.size.width
+//        let bannerHeight = navigationController?.navigationBar.frame.size.height
+//
+//        let bannerX = bannerWidth! / 2 - image.size.width / 2
+//        let bannerY = bannerHeight! / 2 - image.size.height / 2
+//
+//        imageView.frame = CGRect(x: bannerX, y:bannerY, width: bannerWidth!, height: bannerHeight!)
+//        imageView.contentMode = .scaleAspectFit
+//
+//        navigationItem.titleView = imageView
 //    }
-//    let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "harkore"), iconInitialSize: CGSize(width: 123, height: 123), backgroundColor: UIColor.white)
-    
-    
-    
-    
-
-    
+  
 }
 
