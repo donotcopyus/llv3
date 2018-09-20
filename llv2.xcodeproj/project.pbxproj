@@ -26,8 +26,8 @@
 		5176808D21352735003A8F39 /* xianzhiSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176808C21352735003A8F39 /* xianzhiSearch.swift */; };
 		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
 		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
-		51911965215353A20016962A /* friendSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911964215353A20016962A /* friendSearchVC.swift */; };
 		51911967215353BC0016962A /* friendSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911966215353BC0016962A /* friendSearch.swift */; };
+		5191196B21535B2B0016962A /* friendSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191196A21535B2B0016962A /* friendSearchVC.swift */; };
 		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
 		51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A077B82123C9AE005DC26E /* CollectionViewCell.swift */; };
 		51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E72E211E9C7E0022AD66 /* chatLog.swift */; };
@@ -59,7 +59,6 @@
 		FA1454F22123CCE800B03E1D /* sent3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F12123CCE800B03E1D /* sent3.swift */; };
 		FA1454F6212921FF00B03E1D /* cacheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1454F5212921FF00B03E1D /* cacheVC.swift */; };
 		FA19E116213CCBD9005E6B2B /* contactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19E115213CCBD9005E6B2B /* contactUs.swift */; };
-		FA1DE45F213900DB00489425 /* friendSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE45E213900DB00489425 /* friendSearchVC.swift */; };
 		FA2602B02152051C00A2A8C4 /* dra4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2602AF2152051C00A2A8C4 /* dra4.swift */; };
 		FA270009211B41E000B6133A /* alreadySendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA270008211B41E000B6133A /* alreadySendVC.swift */; };
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
@@ -135,8 +134,8 @@
 		5176808C21352735003A8F39 /* xianzhiSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhiSearch.swift; sourceTree = "<group>"; };
 		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
 		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
-		51911964215353A20016962A /* friendSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendSearchVC.swift; sourceTree = "<group>"; };
 		51911966215353BC0016962A /* friendSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendSearch.swift; sourceTree = "<group>"; };
+		5191196A21535B2B0016962A /* friendSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendSearchVC.swift; sourceTree = "<group>"; };
 		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
 		51A077B82123C9AE005DC26E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		51A7E72E211E9C7E0022AD66 /* chatLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatLog.swift; sourceTree = "<group>"; };
@@ -175,7 +174,6 @@
 		FA1454F12123CCE800B03E1D /* sent3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sent3.swift; sourceTree = "<group>"; };
 		FA1454F5212921FF00B03E1D /* cacheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheVC.swift; sourceTree = "<group>"; };
 		FA19E115213CCBD9005E6B2B /* contactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactUs.swift; sourceTree = "<group>"; };
-		FA1DE45E213900DB00489425 /* friendSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendSearchVC.swift; sourceTree = "<group>"; };
 		FA2602AF2152051C00A2A8C4 /* dra4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dra4.swift; sourceTree = "<group>"; };
 		FA270008211B41E000B6133A /* alreadySendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alreadySendVC.swift; sourceTree = "<group>"; };
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
@@ -363,13 +361,8 @@
 				51768088213525CC003A8F39 /* carpoolSearch.swift */,
 				5176808A21352728003A8F39 /* exchangeSearch.swift */,
 				5176808C21352735003A8F39 /* xianzhiSearch.swift */,
-<<<<<<< HEAD
-				FA1DE45E213900DB00489425 /* carnav.swift */,
-				51911964215353A20016962A /* friendSearchVC.swift */,
 				51911966215353BC0016962A /* friendSearch.swift */,
-=======
-				FA1DE45E213900DB00489425 /* friendSearchVC.swift */,
->>>>>>> 8a31fc6138765d8071ed22bb4b3f2d00d827f7a6
+				5191196A21535B2B0016962A /* friendSearchVC.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -726,7 +719,7 @@
 				FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */,
 				FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
-				51911965215353A20016962A /* friendSearchVC.swift in Sources */,
+				5191196B21535B2B0016962A /* friendSearchVC.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FABFC7322152C74D00C5786B /* sent4.swift in Sources */,
 				51BF3DF92143819200DCF3F3 /* checkXianzhi2Controller.swift in Sources */,
@@ -736,7 +729,6 @@
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */,
 				516E21212148FAEE0074B581 /* donationVC.swift in Sources */,
-				FA1DE45F213900DB00489425 /* friendSearchVC.swift in Sources */,
 				519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */,
