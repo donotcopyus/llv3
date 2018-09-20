@@ -12,6 +12,9 @@ import Firebase
 
 class friendCell: UITableViewCell {
     
+    
+
+    
     @IBOutlet weak var image1: UIImageView!
 
     
