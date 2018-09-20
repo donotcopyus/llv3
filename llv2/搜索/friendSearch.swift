@@ -1,8 +1,8 @@
 //
-//  carpoolSearch.swift
+//  friendSearch.swift
 //  llv2
 //
-//  Created by Luna Cao on 2018/8/28.
+//  Created by Luna Cao on 2018/9/20.
 //  Copyright © 2018年 Luna Cao. All rights reserved.
 //
 
@@ -10,61 +10,52 @@ import UIKit
 import Firebase
 import Kingfisher
 
-class carpoolSearchData{
-    var id: String
-    var arrCity: String
-    var depCity: String
-    var depTime1: String
-    var depTime2: String
-    var depDate: String
-    var remainSeat: String
-    var timestamp: Double
+class friendSearchData{
+    
+    var id:String
+    var address: String
+    var date: String
+    var timestamp:Double
+    var imageUrl: String
+    var info: String
     var author: UserProfile
     
-    init(id:String, arrCity:String, depCity:String, depTime1:String, depTime2:String, depDate:String, remainSeat:String, timestamp:Double, author:UserProfile){
+    init(id:String, address:String, date:String, timestamp:Double, imageUrl:String, info:String, author:UserProfile){
         self.id = id
-        self.arrCity = arrCity
-        self.depCity = depCity
-        self.depTime1 = depTime1
-        self.depTime2 = depTime2
-        self.depDate = depDate
-        self.remainSeat = remainSeat
+        self.address = address
+        self.date = date
         self.timestamp = timestamp
+        self.imageUrl = imageUrl
+        self.info = info
         self.author = author
     }
+    
 }
 
-class carpoolSearch: UITableViewController {
+class friendSearch: UITableViewController {
     
     var pidSearchData = [String]()
     
-    var arrayOfCellData = [carpoolSearchData]()
-    
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+    var arrayOfCellData = [friendSearchData]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView = UITableView()
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+
         observePost()
-        
-        
     }
-    
+
     func observePost(){
         
-        var tempPosts = [carpoolSearchData]()
+        var tempPosts = [friendSearchData]()
         
         for pid in pidSearchData{
-            
-            let postRef = Database.database().reference().child("carpool/\(pid)")
+            let postRef = Database.database().reference().child("friend/\(pid)")
             
             postRef.observe(.value, with: {snapshot in
                 
@@ -72,32 +63,29 @@ class carpoolSearch: UITableViewController {
                     let author = dict["author"] as? [String:Any],
                     let uid = author["uid"] as? String,
                     let username = author["username"] as? String,
+                    
                     let photoURL = author["photoURL"] as? String,
+                    
                     let url = URL(string:photoURL),
-                    let arrCity = dict["arrCity"] as? String,
-                    let depCity = dict["depCity"] as? String,
-                    let depDate = dict["depDate"] as? String,
-                    let depTime1 = dict["depTime1"] as? String,
-                    let depTime2 = dict["depTime2"] as? String,
-                    let remainSeat = dict["remainSeat"] as? String,
-                    let timestamp = dict["timestamp"] as? Double
-                {
+                    
+                    let address = dict["address"] as? String,
+                    let date = dict["date"] as? String,
+                    let info = dict["info"] as? String,
+                    let timestamp = dict["timestamp"] as? Double,
+                    let imageUrl = dict["imageUrl"] as? String{
+                    
                     let userProfile = UserProfile(uid:uid, username:username, photoURL:url)
-                    let post = carpoolSearchData(id: pid, arrCity: arrCity, depCity: depCity, depTime1: depTime1, depTime2: depTime2, depDate:depDate, remainSeat: remainSeat, timestamp: timestamp, author: userProfile)
+                    let post = friendSearchData(id: pid, address:address, date:date, timestamp: timestamp, imageUrl: imageUrl, info:info, author: userProfile)
                     
-                    //append the array
                     tempPosts.append(post)
-                    
                     self.arrayOfCellData = tempPosts
-                    
-                    
                     self.tableView.reloadData()
                 }
-                
             })
             
-            
         }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,23 +93,22 @@ class carpoolSearch: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
-    
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return arrayOfCellData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("TableViewCell2", owner: self, options: nil)?.first as! TableViewCell2
+        
+        let cell = Bundle.main.loadNibNamed("friendCell", owner: self, options: nil)?.first as! friendCell
+        
         let url = self.arrayOfCellData[indexPath.row].author.photoURL
         if (url == URL(string: "default")){
             cell.headImage.image = #imageLiteral(resourceName: "icon.jpg")
         }
         else{
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+
             cell.headImage.kf.indicatorType = .activity
             cell.headImage.kf.setImage(with: url)
         })}
@@ -135,27 +122,19 @@ class carpoolSearch: UITableViewController {
         let dform = DateFormatter()
         dform.dateFormat = "MM月dd日 HH:mm"
         
-        cell.sendTimeLabel.text = dform.string(from:date as Date)
+        cell.senttime.text = dform.string(from:date as Date)
         
-        cell.depatureC.text = arrayOfCellData[indexPath.row].depCity
-        
-        cell.arriveC.text = arrayOfCellData[indexPath.row].arrCity
-        
-        cell.date.text = arrayOfCellData[indexPath.row].depDate
-        
-        cell.time1.text = arrayOfCellData[indexPath.row].depTime1
-        
-        cell.time2.text = arrayOfCellData[indexPath.row].depTime2
-        
-        cell.seatLabel.text = arrayOfCellData[indexPath.row].remainSeat
+        cell.namePrice.text = arrayOfCellData[indexPath.row].date
+        cell.address.text = arrayOfCellData[indexPath.row].address
+        cell.info.text = arrayOfCellData[indexPath.row].info
         
         cell.id.isHidden = true
         cell.collectionID.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
+ 
         
-        
-        let likedRef = Database.database().reference().child("users/collection/carpool/")
+        let likedRef = Database.database().reference().child("users/collection/friend/")
         
         let uid = Auth.auth().currentUser?.uid
         
@@ -172,7 +151,7 @@ class carpoolSearch: UITableViewController {
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likedButton.setTitle("❤️", for: .normal)
+                   cell.likeButton.setImage(UIImage(named:"liked"), for: .normal)
                         
                     }}}
             
@@ -184,30 +163,26 @@ class carpoolSearch: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 101.5
+        return 275
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
-        
-        let index = tableView.indexPathForSelectedRow?.row
-        viewController.pid = arrayOfCellData[index!].id
-        viewController.uid = arrayOfCellData[index!].author.uid
-        
-        let backbutton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(goback))
-        backbutton.image = UIImage(named: "backbtn")
-        viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
-        
-         let navC:UINavigationController = UINavigationController(rootViewController: viewController)
-        
-        self.present(navC, animated: true)
-        
+//        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
+//
+//        let index = tableView.indexPathForSelectedRow?.row
+//        viewController.pid = arrayOfCellData[index!].id
+//        viewController.uid = arrayOfCellData[index!].author.uid
+//
+//        let backbutton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(goback))
+//        backbutton.image = UIImage(named: "backbtn")
+//        viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
+//
+//        let navC:UINavigationController = UINavigationController(rootViewController: viewController)
+//
+//        self.present(navC, animated: true)
+//
     }
-    
-    @objc func goback(){
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+ 
 }

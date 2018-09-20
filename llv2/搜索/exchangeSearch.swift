@@ -105,11 +105,17 @@ class exchangeSearch: UITableViewController {
         
         let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
         
+      let url = self.arrayOfCellData[indexPath.row].author.photoURL
+        if (url == URL(string: "default")){
+            cell.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+        }
+        else{
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
-            let url = self.arrayOfCellData[indexPath.row].author.photoURL
+
             cell.mainimage.kf.indicatorType = .activity
             cell.mainimage.kf.setImage(with: url)
-        })
+        })}
         cell.mainlabel.text = arrayOfCellData[indexPath.row].author.username
         
         let timeInterval = arrayOfCellData[indexPath.row].timestamp / 1000
