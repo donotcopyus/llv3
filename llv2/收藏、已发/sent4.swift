@@ -151,6 +151,7 @@ class sent4: UITableViewController {
         cell.collectionID.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
+        cell.authorId.isHidden = true
         
         cell.likeButton.isHidden = true
         

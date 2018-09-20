@@ -41,6 +41,7 @@ override func viewDidLoad(){
         
     super.viewDidLoad()
     
+    
     tableView = UITableView()
     tableView.delegate = self
         tableView.dataSource = self
@@ -163,6 +164,7 @@ override func viewDidLoad(){
         
         cell.id.isHidden = true
         cell.collectionID.isHidden = true
+        cell.authorId.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
         cell.collectionID.text = collectionId[indexPath.row]

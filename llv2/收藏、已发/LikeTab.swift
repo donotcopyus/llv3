@@ -31,6 +31,7 @@ class LikeTab: UITabBarController {
         tabBarItem.image = deSelectedImage3
         tabBarItem.selectedImage = selectedImage3
         
+        
         self.selectedIndex = 0
 
         // Do any additional setup after loading the view.
