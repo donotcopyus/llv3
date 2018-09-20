@@ -26,6 +26,8 @@
 		5176808D21352735003A8F39 /* xianzhiSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176808C21352735003A8F39 /* xianzhiSearch.swift */; };
 		518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C1211D402F00B56514 /* checkCarpoolController.swift */; };
 		518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BD2C3211D464D00B56514 /* checkXianzhiController.swift */; };
+		51911965215353A20016962A /* friendSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911964215353A20016962A /* friendSearchVC.swift */; };
+		51911967215353BC0016962A /* friendSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911966215353BC0016962A /* friendSearch.swift */; };
 		519B31E9211BEBFB002850AB /* profileCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B31E8211BEBFB002850AB /* profileCheckController.swift */; };
 		51A077B92123C9AE005DC26E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A077B82123C9AE005DC26E /* CollectionViewCell.swift */; };
 		51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E72E211E9C7E0022AD66 /* chatLog.swift */; };
@@ -133,6 +135,8 @@
 		5176808C21352735003A8F39 /* xianzhiSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhiSearch.swift; sourceTree = "<group>"; };
 		518BD2C1211D402F00B56514 /* checkCarpoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkCarpoolController.swift; sourceTree = "<group>"; };
 		518BD2C3211D464D00B56514 /* checkXianzhiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkXianzhiController.swift; sourceTree = "<group>"; };
+		51911964215353A20016962A /* friendSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendSearchVC.swift; sourceTree = "<group>"; };
+		51911966215353BC0016962A /* friendSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendSearch.swift; sourceTree = "<group>"; };
 		519B31E8211BEBFB002850AB /* profileCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCheckController.swift; sourceTree = "<group>"; };
 		51A077B82123C9AE005DC26E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		51A7E72E211E9C7E0022AD66 /* chatLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatLog.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				5176808A21352728003A8F39 /* exchangeSearch.swift */,
 				5176808C21352735003A8F39 /* xianzhiSearch.swift */,
 				FA1DE45E213900DB00489425 /* carnav.swift */,
+				51911964215353A20016962A /* friendSearchVC.swift */,
+				51911966215353BC0016962A /* friendSearch.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -716,6 +722,7 @@
 				FA1454F02123CCDE00B03E1D /* sent2.swift in Sources */,
 				FA1454EC2123C49B00B03E1D /* LikeTab.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
+				51911965215353A20016962A /* friendSearchVC.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FABFC7322152C74D00C5786B /* sent4.swift in Sources */,
 				51BF3DF92143819200DCF3F3 /* checkXianzhi2Controller.swift in Sources */,
@@ -741,6 +748,7 @@
 				FAEB9EBB211E9661004F8DA0 /* sentTBC.swift in Sources */,
 				51BF3DFD214381DE00DCF3F3 /* checkXianzhiNoImageController.swift in Sources */,
 				518BD2C4211D464D00B56514 /* checkXianzhiController.swift in Sources */,
+				51911967215353BC0016962A /* friendSearch.swift in Sources */,
 				FA19E116213CCBD9005E6B2B /* contactUs.swift in Sources */,
 				FA1454F22123CCE800B03E1D /* sent3.swift in Sources */,
 				518BD2C2211D402F00B56514 /* checkCarpoolController.swift in Sources */,
