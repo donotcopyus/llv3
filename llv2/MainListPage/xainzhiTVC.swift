@@ -296,7 +296,7 @@ class xianzhiTVC: UITableViewController, UISearchBarDelegate {
                     
                     //如果已经被like
                     if(thisuid == uid && thispid == pid){
-                        cell.likeButton.setTitle("❤️", for: .normal)
+                        cell.likeButton.setImage(UIImage(named:"liked"), for: .normal)
                         
                     }}}
             
