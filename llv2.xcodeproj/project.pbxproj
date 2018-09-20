@@ -83,6 +83,7 @@
 		FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */; };
 		FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */; };
 		FABFC7322152C74D00C5786B /* sent4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC7312152C74C00C5786B /* sent4.swift */; };
+		FABFC73421536D3800C5786B /* checkFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC73321536D3800C5786B /* checkFriendVC.swift */; };
 		FAC7EB672116359500FE2FDE /* personalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC7EB662116359500FE2FDE /* personalVC.swift */; };
 		FAE91A092144C2EC000DC12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE91A082144C2EC000DC12F /* Main.storyboard */; };
 		FAE91A0C2144F668000DC12F /* xainzhiTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE91A0B2144F668000DC12F /* xainzhiTVC.swift */; };
@@ -200,6 +201,7 @@
 		FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
 		FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTVC.swift; sourceTree = "<group>"; };
 		FABFC7312152C74C00C5786B /* sent4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sent4.swift; sourceTree = "<group>"; };
+		FABFC73321536D3800C5786B /* checkFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkFriendVC.swift; sourceTree = "<group>"; };
 		FAC7EB662116359500FE2FDE /* personalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalVC.swift; sourceTree = "<group>"; };
 		FAE91A082144C2EC000DC12F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAE91A0B2144F668000DC12F /* xainzhiTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xainzhiTVC.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				FA9F882921516DA100F1C17D /* friendTVC.swift */,
 				FA9F882B21516DD800F1C17D /* friendCell.swift */,
 				FA9F882C21516DD800F1C17D /* friendCell.xib */,
+				FABFC73321536D3800C5786B /* checkFriendVC.swift */,
 			);
 			path = MainListPage;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
 				51768089213525CC003A8F39 /* carpoolSearch.swift in Sources */,
+				FABFC73421536D3800C5786B /* checkFriendVC.swift in Sources */,
 				51B52D5D211FA5FB00D2B9E9 /* myMesController.swift in Sources */,
 				51A7E72F211E9C7F0022AD66 /* chatLog.swift in Sources */,
 				FA1454EE2123CCD300B03E1D /* sent1.swift in Sources */,

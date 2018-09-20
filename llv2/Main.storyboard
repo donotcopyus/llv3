@@ -2426,7 +2426,7 @@ email: lunacao214@outlook.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSt-Aa-Tr4">
-                                <rect key="frame" x="77" y="147" width="260" height="90"/>
+                                <rect key="frame" x="77" y="153" width="260" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TSt-Aa-Tr4" secondAttribute="height" multiplier="26:9" id="VZS-L6-VcA"/>
                                 </constraints>
@@ -2439,7 +2439,7 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
-                                <rect key="frame" x="77" y="276" width="260" height="90"/>
+                                <rect key="frame" x="77" y="282" width="260" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eXq-29-TeV" secondAttribute="height" multiplier="26:9" id="phM-uC-q80"/>
                                 </constraints>
@@ -2479,7 +2479,7 @@ email: lunacao214@outlook.com</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="77" y="405" width="260" height="89.666666666666686"/>
+                                <rect key="frame" x="77" y="411" width="260" height="89.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2493,15 +2493,16 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="选择广告类型" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-I5-fK5">
-                                <rect key="frame" x="87" y="74" width="240" height="56"/>
+                                <rect key="frame" x="87" y="80" width="240" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cU3-I5-fK5" secondAttribute="height" multiplier="30:7" id="Df9-5m-TPV"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mee-2V-CWq">
-                                <rect key="frame" x="77" y="534.66666666666663" width="260" height="90"/>
+                                <rect key="frame" x="77" y="540" width="260" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="7Su-lZ-j4G"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="LvN-EY-o0J"/>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="P2X-Jc-9P0"/>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="aKj-dX-qFv"/>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="lu6-hJ-hls"/>
@@ -2514,7 +2515,7 @@ email: lunacao214@outlook.com</string>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
-                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="162" id="1Ot-1U-dVO"/>
+                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="155.99999999999994" id="1Ot-1U-dVO"/>
                             <constraint firstItem="IgQ-kZ-Yp7" firstAttribute="top" secondItem="eXq-29-TeV" secondAttribute="bottom" constant="39" id="34r-Cl-8xk"/>
                             <constraint firstItem="nJM-Aw-Zpy" firstAttribute="trailing" secondItem="OeG-4k-zAu" secondAttribute="trailing" id="9Qu-xo-H4x"/>
                             <constraint firstItem="nJM-Aw-Zpy" firstAttribute="leading" secondItem="OeG-4k-zAu" secondAttribute="leading" id="AI4-Xh-Sqi"/>
@@ -2531,19 +2532,20 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="IgQ-kZ-Yp7" firstAttribute="leading" secondItem="OeG-4k-zAu" secondAttribute="leading" constant="77" id="SDC-ST-Z6X"/>
                             <constraint firstItem="eXq-29-TeV" firstAttribute="leading" secondItem="OeG-4k-zAu" secondAttribute="leading" constant="77" id="UMf-dL-0a0"/>
                             <constraint firstItem="OeG-4k-zAu" firstAttribute="bottom" secondItem="sqd-4S-rm1" secondAttribute="bottom" constant="34.329999999999998" id="X3f-SK-0cy"/>
-                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="mee-2V-CWq" secondAttribute="bottom" constant="32" id="XGG-xn-b7q"/>
+                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="mee-2V-CWq" secondAttribute="bottom" constant="26.666666666666629" id="XGG-xn-b7q"/>
                             <constraint firstItem="nJM-Aw-Zpy" firstAttribute="top" secondItem="OeG-4k-zAu" secondAttribute="top" id="cea-vg-gnA"/>
                             <constraint firstItem="OeG-4k-zAu" firstAttribute="trailing" secondItem="TSt-Aa-Tr4" secondAttribute="trailing" constant="77" id="dg1-hA-t0Q"/>
                             <constraint firstItem="OeG-4k-zAu" firstAttribute="trailing" secondItem="IgQ-kZ-Yp7" secondAttribute="trailing" constant="77" id="eKi-AT-9Qa"/>
                             <constraint firstItem="TSt-Aa-Tr4" firstAttribute="top" secondItem="cU3-I5-fK5" secondAttribute="bottom" constant="17" id="ek3-f6-jvr"/>
-                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="162" id="ih2-5S-iVH"/>
+                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="155.99999999999994" id="ih2-5S-iVH"/>
                             <constraint firstItem="mee-2V-CWq" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="40" id="ky2-4x-gdF"/>
-                            <constraint firstItem="cU3-I5-fK5" firstAttribute="top" secondItem="nJM-Aw-Zpy" secondAttribute="bottom" constant="10" id="lxe-mE-Xt2"/>
+                            <constraint firstItem="cU3-I5-fK5" firstAttribute="top" secondItem="nJM-Aw-Zpy" secondAttribute="bottom" constant="16" id="lxe-mE-Xt2"/>
                             <constraint firstItem="OeG-4k-zAu" firstAttribute="bottom" secondItem="sqd-4S-rm1" secondAttribute="bottom" constant="34.329999999999998" id="oJo-BZ-3U6"/>
+                            <constraint firstItem="mee-2V-CWq" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="40" id="pPv-Cz-Tep"/>
                             <constraint firstItem="OeG-4k-zAu" firstAttribute="trailing" secondItem="sqd-4S-rm1" secondAttribute="trailing" constant="29" id="q7z-Vw-0f3"/>
                             <constraint firstItem="OeG-4k-zAu" firstAttribute="trailing" secondItem="sqd-4S-rm1" secondAttribute="trailing" constant="29" id="sDV-Qh-ywI"/>
-                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="mee-2V-CWq" secondAttribute="bottom" constant="32" id="sDb-62-A3d"/>
-                            <constraint firstItem="cU3-I5-fK5" firstAttribute="top" secondItem="nJM-Aw-Zpy" secondAttribute="bottom" constant="10" id="xIa-Eh-hVQ"/>
+                            <constraint firstItem="sqd-4S-rm1" firstAttribute="top" secondItem="mee-2V-CWq" secondAttribute="bottom" constant="26.666666666666629" id="sDb-62-A3d"/>
+                            <constraint firstItem="cU3-I5-fK5" firstAttribute="top" secondItem="nJM-Aw-Zpy" secondAttribute="bottom" constant="16" id="xIa-Eh-hVQ"/>
                             <constraint firstItem="mee-2V-CWq" firstAttribute="top" secondItem="IgQ-kZ-Yp7" secondAttribute="bottom" constant="40" id="yM6-NZ-eKp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OeG-4k-zAu"/>
@@ -3108,10 +3110,10 @@ email: lunacao214@outlook.com</string>
             </objects>
             <point key="canvasLocation" x="4813" y="-1152"/>
         </scene>
-        <!--View Controller-->
+        <!--Check FriendVC-->
         <scene sceneID="myF-EE-sQ5">
             <objects>
-                <viewController id="Bgl-gt-Lth" sceneMemberID="viewController">
+                <viewController id="Bgl-gt-Lth" customClass="checkFriendVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M07-Q3-sCr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3226,6 +3228,14 @@ email: lunacao214@outlook.com</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eeq-hq-shP"/>
                     </view>
+                    <connections>
+                        <outlet property="address" destination="ruh-DZ-Qvc" id="Iv3-Ai-jVe"/>
+                        <outlet property="headimage" destination="Ai3-vz-UE4" id="zYd-NJ-R1F"/>
+                        <outlet property="image1" destination="j1G-gf-0tO" id="Flt-Wy-qZr"/>
+                        <outlet property="infor" destination="2Mp-48-8y1" id="evt-J1-PX8"/>
+                        <outlet property="senttime" destination="OA2-6g-8p8" id="x1K-Ia-THN"/>
+                        <outlet property="username" destination="Roh-ES-NaZ" id="HR7-Cm-DMG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0m-H8-pZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4993,9 +5003,10 @@ email: lunacao214@outlook.com</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="phr-Tw-Rlc"/>
         <segue reference="83B-YN-Mds"/>
         <segue reference="uJp-nh-C7I"/>
-        <segue reference="Jss-ka-Uac"/>
+        <segue reference="ivw-CZ-U9A"/>
         <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
 </document>
