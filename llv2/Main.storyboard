@@ -3113,7 +3113,7 @@ email: lunacao214@outlook.com</string>
         <!--Check FriendVC-->
         <scene sceneID="myF-EE-sQ5">
             <objects>
-                <viewController id="Bgl-gt-Lth" customClass="checkFriendVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="friendV" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bgl-gt-Lth" customClass="checkFriendVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M07-Q3-sCr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3127,7 +3127,7 @@ email: lunacao214@outlook.com</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="删除广告"/>
                                             <connections>
-                                                <action selector="deletePost:" destination="IFH-H1-VVg" eventType="touchUpInside" id="scD-kg-u2n"/>
+                                                <action selector="deletePost:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="FJQ-n7-yV1"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3138,6 +3138,7 @@ email: lunacao214@outlook.com</string>
                                             <state key="normal" image="私聊"/>
                                             <connections>
                                                 <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="In4-Sr-IVF"/>
+                                                <action selector="chat:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="ZAx-lV-6dO"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3149,6 +3150,7 @@ email: lunacao214@outlook.com</string>
                                             <state key="normal" image="分享"/>
                                             <connections>
                                                 <action selector="share:" destination="IFH-H1-VVg" eventType="touchUpInside" id="13q-Hl-6nU"/>
+                                                <action selector="share:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="G68-sD-yX2"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3199,6 +3201,27 @@ email: lunacao214@outlook.com</string>
                                     <constraint firstAttribute="height" constant="240" id="8UB-9i-aUc"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-7E-zTK">
+                                <rect key="frame" x="261" y="501" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3D-x1-OUW">
+                                <rect key="frame" x="261" y="563" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12Z-Nd-Qsc">
+                                <rect key="frame" x="261" y="607" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3230,10 +3253,15 @@ email: lunacao214@outlook.com</string>
                     </view>
                     <connections>
                         <outlet property="address" destination="ruh-DZ-Qvc" id="Iv3-Ai-jVe"/>
+                        <outlet property="chat" destination="juW-QO-v10" id="Abd-UE-vgS"/>
+                        <outlet property="delete" destination="8ne-g2-1DG" id="Eqz-iw-W6X"/>
                         <outlet property="headimage" destination="Ai3-vz-UE4" id="zYd-NJ-R1F"/>
                         <outlet property="image1" destination="j1G-gf-0tO" id="Flt-Wy-qZr"/>
                         <outlet property="infor" destination="2Mp-48-8y1" id="evt-J1-PX8"/>
+                        <outlet property="pidLabel" destination="LRN-7E-zTK" id="dBv-Gw-yfP"/>
                         <outlet property="senttime" destination="OA2-6g-8p8" id="x1K-Ia-THN"/>
+                        <outlet property="uidLabel" destination="e3D-x1-OUW" id="Epe-ve-7b6"/>
+                        <outlet property="urlLabel" destination="12Z-Nd-Qsc" id="mLe-Gk-ict"/>
                         <outlet property="username" destination="Roh-ES-NaZ" id="HR7-Cm-DMG"/>
                     </connections>
                 </viewController>
