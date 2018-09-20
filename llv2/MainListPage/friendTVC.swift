@@ -186,11 +186,12 @@ class friendTVC: UITableViewController {
     }
     
     
-    @IBAction func goback(_ sender: UIButton) {
-        // self.navigationController?.popViewController(animated: true)
+    
+    @IBAction func goback(_ sender: Any) {
         dismiss(animated: true, completion: nil);
-        
     }
+    
+
     
     
     

@@ -547,7 +547,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7D-Xq-Xmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7236" y="-280"/>
+            <point key="canvasLocation" x="6161" y="-198"/>
         </scene>
         <!--CarVC-->
         <scene sceneID="3lp-VP-KAH">
@@ -590,7 +590,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WO-Rm-rEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8238" y="-280"/>
+            <point key="canvasLocation" x="6833" y="-197"/>
         </scene>
         <!--ExchangeTVC-->
         <scene sceneID="WFt-vb-ZTV">
@@ -1524,7 +1524,14 @@ email: lunacao214@outlook.com</string>
                             <outlet property="delegate" destination="Sb3-h1-bUN" id="Afc-vm-Vjk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ADE-V6-j1T"/>
+                    <navigationItem key="navigationItem" id="ADE-V6-j1T">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" id="xNi-O5-Eee">
+                            <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="goback:" destination="Sb3-h1-bUN" id="7LN-Ir-yFa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ade-ey-mgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1877,7 +1884,7 @@ email: lunacao214@outlook.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEb-Cg-iVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-557" y="-540"/>
+            <point key="canvasLocation" x="-564" y="-427"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="y5a-R7-tVw">
@@ -2290,6 +2297,9 @@ email: lunacao214@outlook.com</string>
                                     <navigationItem title="Title" id="7xH-DT-EDR">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" id="8AR-bM-Zcr">
                                             <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="DYu-iB-2be" kind="showDetail" id="83B-YN-Mds"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="9bH-Gw-Inj">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xW8-hp-ZLy">
@@ -2319,7 +2329,7 @@ email: lunacao214@outlook.com</string>
                                     <action selector="datepicker:" destination="iIE-cW-pNE" eventType="valueChanged" id="qHb-7j-Xo4"/>
                                 </connections>
                             </datePicker>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="交友宣言.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lJW-w6-ab6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="活动主题、交友宣言.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lJW-w6-ab6">
                                 <rect key="frame" x="20" y="574" width="369" height="142"/>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2405,7 +2415,7 @@ email: lunacao214@outlook.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNj-dV-vwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1239.1304347826087" y="-1410.3260869565217"/>
+            <point key="canvasLocation" x="-1114" y="-1413"/>
         </scene>
         <!--Send Ad View Contronller-->
         <scene sceneID="WDc-TF-2vN">
@@ -2491,6 +2501,7 @@ email: lunacao214@outlook.com</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mee-2V-CWq">
                                 <rect key="frame" x="77" y="534.66666666666663" width="260" height="90"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="7Su-lZ-j4G"/>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="P2X-Jc-9P0"/>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="aKj-dX-qFv"/>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="lu6-hJ-hls"/>
@@ -3097,6 +3108,129 @@ email: lunacao214@outlook.com</string>
             </objects>
             <point key="canvasLocation" x="4813" y="-1152"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="myF-EE-sQ5">
+            <objects>
+                <viewController id="Bgl-gt-Lth" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M07-Q3-sCr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R1-Vd-lsS">
+                                <rect key="frame" x="0.0" y="696" width="414" height="40"/>
+                                <items>
+                                    <barButtonItem style="plain" id="BZN-EK-aMS">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8ne-g2-1DG">
+                                            <rect key="frame" x="20" y="4.6666666666666679" width="91" height="31.000000000000004"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="删除广告"/>
+                                            <connections>
+                                                <action selector="deletePost:" destination="IFH-H1-VVg" eventType="touchUpInside" id="scD-kg-u2n"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem image="私聊" style="plain" id="zPy-qO-eR9">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="juW-QO-v10">
+                                            <rect key="frame" x="111" y="0.0" width="97" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="私聊"/>
+                                            <connections>
+                                                <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="In4-Sr-IVF"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem id="E18-fx-dcp"/>
+                                    <barButtonItem style="plain" id="lhs-g5-UVT">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3V5-Hw-OFc">
+                                            <rect key="frame" x="336" y="4.6666666666666679" width="58" height="31.000000000000004"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="分享"/>
+                                            <connections>
+                                                <action selector="share:" destination="IFH-H1-VVg" eventType="touchUpInside" id="13q-Hl-6nU"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-vz-UE4">
+                                <rect key="frame" x="20" y="95" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WO8-fL-eEK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roh-ES-NaZ">
+                                <rect key="frame" x="128" y="95" width="286" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cZ3-To-Kta"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-6g-8p8">
+                                <rect key="frame" x="128" y="116" width="266" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Ba9-sG-t1u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-48-8y1">
+                                <rect key="frame" x="11" y="451" width="374" height="245"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动地点：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-DZ-Qvc">
+                                <rect key="frame" x="128" y="140" width="266" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="6j8-Rk-Egs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j1G-gf-0tO">
+                                <rect key="frame" x="87" y="203" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="8UB-9i-aUc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OA2-6g-8p8" firstAttribute="trailing" secondItem="ruh-DZ-Qvc" secondAttribute="trailing" id="0Y3-SW-MIw"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="leading" secondItem="M07-Q3-sCr" secondAttribute="leading" id="0cb-EF-GrF"/>
+                            <constraint firstItem="2Mp-48-8y1" firstAttribute="bottom" secondItem="4R1-Vd-lsS" secondAttribute="top" id="3PK-C9-ZUa"/>
+                            <constraint firstItem="OA2-6g-8p8" firstAttribute="top" secondItem="Roh-ES-NaZ" secondAttribute="bottom" id="Aqr-0O-oZJ"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="bottom" secondItem="eeq-hq-shP" secondAttribute="bottom" id="G1e-Dc-Fz2"/>
+                            <constraint firstItem="Roh-ES-NaZ" firstAttribute="leading" secondItem="Ai3-vz-UE4" secondAttribute="trailing" constant="8" symbolic="YES" id="GH8-X1-g4x"/>
+                            <constraint firstItem="Ai3-vz-UE4" firstAttribute="top" secondItem="Roh-ES-NaZ" secondAttribute="top" id="Kb0-gG-zbO"/>
+                            <constraint firstItem="Ai3-vz-UE4" firstAttribute="top" secondItem="eeq-hq-shP" secondAttribute="top" constant="75" id="Kbg-yl-0xG"/>
+                            <constraint firstItem="Roh-ES-NaZ" firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" id="NLO-mg-f7e"/>
+                            <constraint firstItem="eeq-hq-shP" firstAttribute="trailing" secondItem="2Mp-48-8y1" secondAttribute="trailing" constant="29" id="NWi-Ov-wmg"/>
+                            <constraint firstItem="ruh-DZ-Qvc" firstAttribute="top" secondItem="OA2-6g-8p8" secondAttribute="bottom" constant="8" symbolic="YES" id="QRb-Du-axQ"/>
+                            <constraint firstItem="j1G-gf-0tO" firstAttribute="centerX" secondItem="4R1-Vd-lsS" secondAttribute="centerX" id="SZI-AQ-uQk"/>
+                            <constraint firstItem="j1G-gf-0tO" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" constant="87" id="Z4r-lx-njw"/>
+                            <constraint firstItem="Roh-ES-NaZ" firstAttribute="leading" secondItem="OA2-6g-8p8" secondAttribute="leading" id="f6s-oJ-o1V"/>
+                            <constraint firstItem="j1G-gf-0tO" firstAttribute="top" secondItem="Ai3-vz-UE4" secondAttribute="bottom" constant="8" symbolic="YES" id="iaP-ts-pMS"/>
+                            <constraint firstItem="OA2-6g-8p8" firstAttribute="trailing" secondItem="M07-Q3-sCr" secondAttribute="trailingMargin" id="lMV-CH-LTd"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="top" secondItem="eeq-hq-shP" secondAttribute="top" constant="676" id="mSk-rE-1cB"/>
+                            <constraint firstItem="2Mp-48-8y1" firstAttribute="top" secondItem="j1G-gf-0tO" secondAttribute="bottom" constant="8" symbolic="YES" id="pqy-RA-5ED"/>
+                            <constraint firstItem="j1G-gf-0tO" firstAttribute="top" secondItem="ruh-DZ-Qvc" secondAttribute="bottom" constant="8" symbolic="YES" id="scp-To-2fJ"/>
+                            <constraint firstItem="OA2-6g-8p8" firstAttribute="leading" secondItem="ruh-DZ-Qvc" secondAttribute="leading" id="soN-qM-CSq"/>
+                            <constraint firstItem="Ai3-vz-UE4" firstAttribute="leading" secondItem="M07-Q3-sCr" secondAttribute="leadingMargin" id="vhZ-JO-uQy"/>
+                            <constraint firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" id="wCu-ar-ife"/>
+                            <constraint firstItem="2Mp-48-8y1" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" constant="11" id="wKz-hb-YSF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eeq-hq-shP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0m-H8-pZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6428.985507246377" y="-1153.5326086956522"/>
+        </scene>
         <!--闲置-->
         <scene sceneID="7Z1-3b-rjK">
             <objects>
@@ -3353,8 +3487,8 @@ email: lunacao214@outlook.com</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIG-X5-jOd">
-                                        <rect key="frame" x="116" y="108" width="290" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <rect key="frame" x="116" y="109.66666666666667" width="290" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3565,7 +3699,7 @@ email: lunacao214@outlook.com</string>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJA-ct-6kS">
                                         <rect key="frame" x="108" y="114" width="298" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3717,7 +3851,7 @@ email: lunacao214@outlook.com</string>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ8-Ix-x7S">
                                         <rect key="frame" x="108" y="98" width="298" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3908,7 +4042,7 @@ email: lunacao214@outlook.com</string>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-YK-Yk7">
                                 <rect key="frame" x="107" y="99" width="287" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4021,7 +4155,7 @@ email: lunacao214@outlook.com</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送于：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsp-pG-OSX">
                                 <rect key="frame" x="107" y="83" width="251" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4105,7 +4239,7 @@ email: lunacao214@outlook.com</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="393" id="KCr-G7-pzR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4199,7 +4333,7 @@ email: lunacao214@outlook.com</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="hMh-5W-lNS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4331,7 +4465,7 @@ email: lunacao214@outlook.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozO-S4-xp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7263.7681159420299" y="-1236.6847826086957"/>
+            <point key="canvasLocation" x="7043" y="-1153"/>
         </scene>
         <!--Carpool Ad View Controller-->
         <scene sceneID="kOQ-ba-K59">
@@ -4696,18 +4830,24 @@ email: lunacao214@outlook.com</string>
                                 <items>
                                     <navigationItem title="活动搜索" id="IfO-l1-nZr">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="1J1-Ea-F5A">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7oc-CG-GaE">
-                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7oc-CG-GaE">
+                                                <rect key="frame" x="20" y="8" width="70" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" image="backbtn"/>
                                             </button>
+                                            <connections>
+                                                <segue destination="HGJ-zl-43D" kind="showDetail" id="d8R-MQ-eYe"/>
+                                            </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="bl3-fG-WYL">
+                                        <barButtonItem key="rightBarButtonItem" image="searchbtn" style="plain" id="bl3-fG-WYL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tcm-fZ-tKk">
-                                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                                <rect key="frame" x="337" y="6.6666666666666679" width="57" height="31.000000000000004"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" backgroundImage="searchbtn"/>
                                             </button>
+                                            <connections>
+                                                <action selector="search:" destination="seH-VL-VyW" id="YOq-A0-AVl"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -4853,9 +4993,9 @@ email: lunacao214@outlook.com</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UHY-qs-nmR"/>
-        <segue reference="mmZ-63-Igj"/>
-        <segue reference="Gcp-fH-gbO"/>
+        <segue reference="83B-YN-Mds"/>
+        <segue reference="uJp-nh-C7I"/>
+        <segue reference="Jss-ka-Uac"/>
         <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
 </document>

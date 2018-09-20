@@ -18,7 +18,13 @@ class pidSortFriend{
     }
 }
 
+
+
 class friendSearchVC: UIViewController {
+    
+    @IBAction func search(_ sender: Any) {
+    }
+    
     
     var pidData = [String]()
     var button = dropDownBtn()
