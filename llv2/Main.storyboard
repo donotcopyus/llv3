@@ -1262,7 +1262,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
                                 <rect key="frame" x="48" y="642" width="89" height="32"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="049-0e-V0d"/>
                                     <constraint firstAttribute="height" constant="32" id="N9h-aK-ugp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="poU-bs-zen"/>
                                 </constraints>
                                 <state key="normal" image="设置">
                                     <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1300,7 +1302,9 @@
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="top" secondItem="Rtk-dt-6D4" secondAttribute="top" id="qPo-Ri-AJT"/>
                             <constraint firstItem="uAa-kn-6nw" firstAttribute="top" secondItem="kwp-f4-zka" secondAttribute="bottom" constant="58" id="t7H-zZ-K9g"/>
                             <constraint firstItem="HIR-C5-yPH" firstAttribute="trailing" secondItem="hG6-ne-AUc" secondAttribute="trailing" id="vVK-wv-tbD"/>
+                            <constraint firstItem="Ite-js-Byc" firstAttribute="leading" secondItem="hG6-ne-AUc" secondAttribute="leading" constant="48" id="x1Q-bn-Djq"/>
                             <constraint firstItem="hG6-ne-AUc" firstAttribute="trailing" secondItem="Ite-js-Byc" secondAttribute="trailing" constant="277" id="xKN-Ng-HnL"/>
+                            <constraint firstItem="Ite-js-Byc" firstAttribute="top" secondItem="kwp-f4-zka" secondAttribute="bottom" constant="8" id="xqa-I1-1Kz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hG6-ne-AUc"/>
                     </view>
@@ -1569,7 +1573,15 @@ email: lunacao214@outlook.com</string>
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="hQg-72-8GW">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" title="menu" image="menubutton" landscapeImage="menubutton" id="pKc-6h-K1k"/>
+                                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="中文logo" id="gIW-tD-mbF">
+                                            <rect key="frame" x="189.66666666666666" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Ku0-Th-QFS">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sMt-Js-RHw">
                                                 <rect key="frame" x="353" y="10" width="41" height="24"/>
@@ -1654,15 +1666,6 @@ email: lunacao214@outlook.com</string>
                                     <segue destination="wqY-M0-DuM" kind="show" id="EEM-QH-bfx"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="中文logo" translatesAutoresizingMaskIntoConstraints="NO" id="Blp-mc-HQD">
-                                <rect key="frame" x="185" y="17" width="56" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="6oj-7F-T95"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="f7Z-Yj-ou4"/>
-                                    <constraint firstAttribute="height" constant="48" id="ijY-mI-7Ot"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="jsP-cy-gpF"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
@@ -1670,7 +1673,6 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="35m-TA-yDh"/>
                             <constraint firstItem="ar2-bt-oQC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3QH-L8-UJs"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="ar2-bt-oQC" secondAttribute="leading" id="3nt-Ad-hr6"/>
-                            <constraint firstItem="Blp-mc-HQD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3x5-V9-wEF"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="top" secondItem="ar2-bt-oQC" secondAttribute="bottom" constant="21" id="7Y2-9Y-ldU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ar2-bt-oQC" secondAttribute="trailing" constant="77" id="7aO-TH-lxo"/>
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="95b-tr-YFM"/>
@@ -1680,7 +1682,6 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="top" secondItem="gBg-Ik-XeL" secondAttribute="bottom" constant="22.670000000000002" id="DqG-rK-fba"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DwE-lo-H6A"/>
                             <constraint firstItem="ar2-bt-oQC" firstAttribute="top" secondItem="the-Ct-AdR" secondAttribute="bottom" constant="22.670000000000002" id="EGP-wo-xXE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Blp-mc-HQD" secondAttribute="trailing" constant="173" id="GhP-cR-q8v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cz4-OG-1td" secondAttribute="trailing" constant="20" id="Jgf-dl-g37"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="top" secondItem="ar2-bt-oQC" secondAttribute="bottom" constant="21" id="KS9-Z3-6Q4"/>
                             <constraint firstItem="ar2-bt-oQC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="KTo-fH-QIy"/>
@@ -1688,22 +1689,18 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nbg-bb-WPG"/>
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OxE-yf-dE0"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Q37-17-6a1"/>
-                            <constraint firstItem="Blp-mc-HQD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="17" id="QTC-5a-jfQ"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" id="RTh-cU-FJZ"/>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="TAs-dI-Y6S"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" id="Was-HB-zFB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="cz4-OG-1td" secondAttribute="bottom" constant="31" id="WkT-nG-nnP"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="bCZ-HI-Lv1"/>
-                            <constraint firstItem="Blp-mc-HQD" firstAttribute="top" secondItem="6Nc-cD-YZA" secondAttribute="bottom" constant="-108" id="hSs-J3-N61"/>
                             <constraint firstItem="cz4-OG-1td" firstAttribute="top" secondItem="fsJ-k0-Ev4" secondAttribute="bottom" constant="21" id="oJH-Jd-M7j"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="oOH-Bi-Gl1"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="top" secondItem="a7a-EC-RL8" secondAttribute="bottom" id="oRQ-7U-3k3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="the-Ct-AdR" secondAttribute="trailing" constant="77" id="pwZ-70-5Xl"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="top" secondItem="ar2-bt-oQC" secondAttribute="bottom" constant="21" id="pzG-dN-8SP"/>
                             <constraint firstItem="gBg-Ik-XeL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qsh-Ic-ESi"/>
-                            <constraint firstItem="gBg-Ik-XeL" firstAttribute="top" secondItem="Blp-mc-HQD" secondAttribute="bottom" constant="103" id="sou-ms-N7h"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tCv-bd-Srw"/>
-                            <constraint firstItem="Blp-mc-HQD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="185" id="tRV-BO-Kyf"/>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uah-iW-FlQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1719,7 +1716,7 @@ email: lunacao214@outlook.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="-1480"/>
+            <point key="canvasLocation" x="1976.8115942028987" y="-1480.4347826086957"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -3157,21 +3154,6 @@ email: lunacao214@outlook.com</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6d-iJ-eYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6350.7246376811599" y="-1835.054347826087"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="L2o-nA-G9B">
-            <objects>
-                <viewController id="c4V-31-Cye" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3RX-hK-Q8g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Jzs-Xu-Bi2"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LZV-4e-kAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3593" y="-308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="anH-hh-wHO">
@@ -4703,7 +4685,7 @@ email: lunacao214@outlook.com</string>
         <!--Item-->
         <scene sceneID="T55-LO-hy9">
             <objects>
-                <viewController id="seH-VL-VyW" sceneMemberID="viewController">
+                <viewController id="seH-VL-VyW" customClass="friendSearchVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Hk-MZ-s5Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4730,6 +4712,20 @@ email: lunacao214@outlook.com</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-cy-Ag8">
+                                <rect key="frame" x="0.0" y="287" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="559108286.01567197">
+                                    <!--2018-09-20 03:51:26 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="搜索活动日期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-Pv-65N">
+                                <rect key="frame" x="20" y="258" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wfu-3z-tXd"/>
@@ -4738,7 +4734,7 @@ email: lunacao214@outlook.com</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xZ-TB-S7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4294" y="-2786"/>
+            <point key="canvasLocation" x="4237.68115942029" y="-2786.413043478261"/>
         </scene>
         <!--Carnav-->
         <scene sceneID="2nM-aE-Zun">
