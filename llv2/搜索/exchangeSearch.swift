@@ -107,7 +107,7 @@ class exchangeSearch: UITableViewController {
         
       let url = self.arrayOfCellData[indexPath.row].author.photoURL
         if (url == URL(string: "default")){
-            cell.headImage.image = #imageLiteral(resourceName: "icon.jpg")
+            cell.mainimage.image = #imageLiteral(resourceName: "icon.jpg")
         }
         else{
         
