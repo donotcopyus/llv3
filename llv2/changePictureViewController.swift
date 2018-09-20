@@ -136,6 +136,27 @@ class changePictureViewController: UIViewController {
             }
         })
         
+        let friendRef = Database.database().reference().child("friend")
+        
+        friendRef.observe(.value, with: {
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let thisAuthor = dict["author"] as? [String:Any],
+                    let thisuid = thisAuthor["uid"] as? String
+                {
+                    if (thisuid == uid){
+                        friendRef.child(childSnapshot.key).child("author").updateChildValues(newObj){error,ref in
+                            completion(error == nil)
+                        }
+                    }
+                }
+                
+            }
+        })
+        
         let messageRef = Database.database().reference().child("messages")
         let fromObj = ["fromUrl":profileImageURL.absoluteString]
         let toObj = ["toUrl":profileImageURL.absoluteString]

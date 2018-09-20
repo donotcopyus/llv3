@@ -109,6 +109,18 @@ class personalVC: UIViewController {
                                 xianzhiRef.child(childSnapshot.key).child("author").updateChildValues(newObj)
                                 }}}})
                     
+                    let friendRef = Database.database().reference().child("friend")
+                    friendRef.observe(.value, with: {
+                        snapshot in
+                        for child in snapshot.children{
+                            if let childSnapshot = child as? DataSnapshot,
+                                let dict = childSnapshot.value as? [String:Any],
+                                let thisAuthor = dict["author"] as? [String:Any],
+                                let thisuid = thisAuthor["uid"] as? String
+                            {if (thisuid == uid){
+                                friendRef.child(childSnapshot.key).child("author").updateChildValues(newObj)
+                                }}}})
+                    
                     
                     let messageRef = Database.database().reference().child("messages")
                     let fromObj = ["fromUname":newname]
