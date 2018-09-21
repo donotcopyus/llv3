@@ -176,7 +176,10 @@ class donationVC: UIViewController{
     @IBAction func click(_ sender: UIButton) {
        IAPHandler.shared.purchaseMyProduct(index: 2)
     }
-
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 
