@@ -186,4 +186,7 @@ class friendSearch: UITableViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
  
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

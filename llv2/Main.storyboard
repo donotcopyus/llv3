@@ -2777,7 +2777,14 @@ email: lunacao214@outlook.com</string>
                             <outlet property="delegate" destination="zJ1-LA-u7D" id="aQY-0u-Oe3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6PT-9e-o7d"/>
+                    <navigationItem key="navigationItem" id="6PT-9e-o7d">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backbtn" id="KTc-k2-uUq">
+                            <color key="tintColor" red="0.30980392159999998" green="0.41176470590000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="back:" destination="zJ1-LA-u7D" id="hc3-jz-WLv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzG-Vm-IQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
