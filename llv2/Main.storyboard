@@ -1083,8 +1083,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="英文logo" translatesAutoresizingMaskIntoConstraints="NO" id="R9V-Rw-r1N">
                                 <rect key="frame" x="168" y="106" width="78" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="QkP-WP-cM1"/>
-                                    <constraint firstAttribute="width" constant="78" id="hCb-1y-uPe"/>
+                                    <constraint firstAttribute="width" secondItem="R9V-Rw-r1N" secondAttribute="height" multiplier="13:12" id="Khl-F1-04g"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="RcU-QZ-NZC"/>
                             </imageView>
@@ -1179,9 +1178,9 @@
                             <constraint firstItem="3va-mf-uzb" firstAttribute="trailing" secondItem="NZy-RZ-hH6" secondAttribute="trailing" id="OQD-5G-dY9"/>
                             <constraint firstItem="3va-mf-uzb" firstAttribute="leading" secondItem="YP9-ji-Pfx" secondAttribute="leading" id="UxM-R3-1wL"/>
                             <constraint firstItem="XBQ-ks-iy5" firstAttribute="trailing" secondItem="QNs-4J-mLt" secondAttribute="trailing" id="XRW-AN-l6Q"/>
-                            <constraint firstItem="R9V-Rw-r1N" firstAttribute="leading" secondItem="a4X-Ve-L6A" secondAttribute="leading" constant="168" id="XlP-y3-R89"/>
                             <constraint firstItem="QNs-4J-mLt" firstAttribute="centerY" secondItem="NZy-RZ-hH6" secondAttribute="centerY" id="fjN-mI-YEF"/>
                             <constraint firstItem="XBQ-ks-iy5" firstAttribute="top" secondItem="UzJ-wO-041" secondAttribute="bottom" constant="-68" id="gUp-ze-T0R"/>
+                            <constraint firstItem="3va-mf-uzb" firstAttribute="top" secondItem="R9V-Rw-r1N" secondAttribute="bottom" constant="53" id="hWy-ff-lRq"/>
                             <constraint firstItem="NZy-RZ-hH6" firstAttribute="leading" secondItem="YP9-ji-Pfx" secondAttribute="leadingMargin" id="pZF-Hx-Ltp"/>
                             <constraint firstItem="b17-pu-ez2" firstAttribute="leading" secondItem="3va-mf-uzb" secondAttribute="leading" id="rtc-to-zTR"/>
                             <constraint firstItem="b17-pu-ez2" firstAttribute="trailing" secondItem="LFe-eH-avf" secondAttribute="trailing" id="ufQ-ki-avp"/>
@@ -1189,7 +1188,6 @@
                             <constraint firstItem="a4X-Ve-L6A" firstAttribute="bottom" secondItem="LFe-eH-avf" secondAttribute="bottom" constant="32" id="v2a-MA-CXz"/>
                             <constraint firstItem="R9V-Rw-r1N" firstAttribute="centerX" secondItem="3va-mf-uzb" secondAttribute="centerX" id="v98-Hh-qch"/>
                             <constraint firstItem="R9V-Rw-r1N" firstAttribute="leading" secondItem="ebi-Ez-E8b" secondAttribute="trailing" constant="-246" id="vQ2-Pc-0E2"/>
-                            <constraint firstItem="3va-mf-uzb" firstAttribute="top" secondItem="R9V-Rw-r1N" secondAttribute="bottom" constant="53" id="xAH-zR-FWj"/>
                             <constraint firstItem="b17-pu-ez2" firstAttribute="trailing" secondItem="NZy-RZ-hH6" secondAttribute="trailing" id="xlE-dr-UVY"/>
                             <constraint firstItem="R9V-Rw-r1N" firstAttribute="centerX" secondItem="ebi-Ez-E8b" secondAttribute="centerX" id="z8d-QV-Bf6"/>
                             <constraint firstItem="QNs-4J-mLt" firstAttribute="top" secondItem="XBQ-ks-iy5" secondAttribute="bottom" constant="58" id="zeL-v5-fzc"/>
@@ -1900,12 +1898,13 @@ email: lunacao214@outlook.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginUI" translatesAutoresizingMaskIntoConstraints="NO" id="cla-47-cCY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="415.33333333333331" height="736"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-B8-XCJ">
-                                <rect key="frame" x="99.333333333333329" y="398" width="219.66666666666669" height="30"/>
+                                <rect key="frame" x="99.333333333333343" y="398" width="221.00000000000003" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZmJ-Mz-G2T"/>
+                                    <constraint firstAttribute="width" constant="221" id="lb4-N7-hcu"/>
                                 </constraints>
                                 <color key="textColor" red="0.81931268599999996" green="0.81440662200000002" blue="0.82421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1917,9 +1916,10 @@ email: lunacao214@outlook.com</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-9a-kcA">
-                                <rect key="frame" x="99.333333333333329" y="436" width="219.66666666666669" height="30"/>
+                                <rect key="frame" x="99.333333333333343" y="436" width="221.00000000000003" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Puc-kw-wKv"/>
+                                    <constraint firstAttribute="width" constant="221" id="8aQ-TM-1r1"/>
+                                    <constraint firstAttribute="height" constant="30" id="lag-cd-jl2"/>
                                 </constraints>
                                 <color key="textColor" red="0.81931268599999996" green="0.81440662200000002" blue="0.82421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1931,15 +1931,16 @@ email: lunacao214@outlook.com</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXe-t5-5Md">
-                                <rect key="frame" x="200.66666666666666" y="207" width="13" height="14"/>
+                                <rect key="frame" x="201.33333333333331" y="207" width="13" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" name="Color"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="b2R-bH-b9L">
-                                <rect key="frame" x="98.333333333333329" y="474" width="218.66666666666669" height="30"/>
+                                <rect key="frame" x="98.333333333333343" y="474" width="220.00000000000003" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7lL-fb-E3k"/>
+                                    <constraint firstAttribute="width" constant="220" id="iQW-Uw-J16"/>
                                 </constraints>
                                 <color key="textColor" red="0.81931268599999996" green="0.81440662200000002" blue="0.82421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1951,18 +1952,18 @@ email: lunacao214@outlook.com</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-64-LOU">
-                                <rect key="frame" x="0.0" y="120" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="120" width="415.33333333333331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-Rd-g33">
-                                <rect key="frame" x="137.33333333333337" y="161" width="139.66666666666663" height="141"/>
+                                <rect key="frame" x="137.33333333333331" y="161" width="141" height="141"/>
                                 <color key="backgroundColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-b0-VnB">
-                                <rect key="frame" x="98.333333333333329" y="521" width="218.66666666666669" height="38"/>
+                                <rect key="frame" x="98.333333333333343" y="521" width="220.00000000000003" height="38"/>
                                 <state key="normal" image="submit"/>
                                 <connections>
                                     <action selector="handleSignUp:" destination="kXZ-2K-9Tl" eventType="touchUpInside" id="fzF-JZ-01I"/>
@@ -1970,7 +1971,7 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-h6-A4c">
-                                <rect key="frame" x="-329" y="20" width="40" height="37"/>
+                                <rect key="frame" x="-327.66666666666663" y="20" width="40" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="yaV-lw-fKa"/>
                                 </constraints>
@@ -1980,7 +1981,7 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo8-Dj-DT3">
-                                <rect key="frame" x="169.66666666666666" y="310" width="74" height="34"/>
+                                <rect key="frame" x="170.33333333333331" y="310" width="74" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="选择头像">
                                     <color key="titleColor" red="0.45882352941176469" green="0.53725490196078429" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1990,9 +1991,11 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poF-dF-ktB">
-                                <rect key="frame" x="0.0" y="12" width="48" height="45"/>
+                                <rect key="frame" x="20.000000000000004" y="16" width="49.333333333333343" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="vLG-qT-wx5"/>
+                                    <constraint firstAttribute="height" constant="45" id="FET-N9-CVf"/>
+                                    <constraint firstAttribute="width" constant="48" id="WSL-W8-RP3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="j2g-yU-BOL"/>
                                 </constraints>
                                 <state key="normal" image="backbtn"/>
                                 <connections>
@@ -2002,29 +2005,25 @@ email: lunacao214@outlook.com</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4Pd-9a-kcA" firstAttribute="trailing" secondItem="hSb-B8-XCJ" secondAttribute="trailing" id="0dx-5h-5lW"/>
+                            <constraint firstItem="cBA-mY-QUZ" firstAttribute="trailing" secondItem="poF-dF-ktB" secondAttribute="trailing" constant="346" id="0rT-rR-GZw"/>
                             <constraint firstItem="cBA-mY-QUZ" firstAttribute="bottom" secondItem="ZYn-b0-VnB" secondAttribute="bottom" constant="177" id="1Sk-D5-jWl"/>
                             <constraint firstItem="hSb-B8-XCJ" firstAttribute="leading" secondItem="cBA-mY-QUZ" secondAttribute="leading" constant="99" id="2br-Ps-Eu0"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="top" secondItem="6sb-3i-nJs" secondAttribute="top" id="2gE-2i-s0G"/>
-                            <constraint firstItem="4Pd-9a-kcA" firstAttribute="top" secondItem="hSb-B8-XCJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3Xg-WM-WAq"/>
                             <constraint firstItem="cBA-mY-QUZ" firstAttribute="trailing" secondItem="jaW-h6-A4c" secondAttribute="trailing" constant="703" id="5mL-YK-ec6"/>
+                            <constraint firstItem="4Pd-9a-kcA" firstAttribute="leading" secondItem="hSb-B8-XCJ" secondAttribute="leading" id="80B-yt-bJ2"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="trailing" secondItem="cBA-mY-QUZ" secondAttribute="trailing" id="BNl-pc-Lhd"/>
-                            <constraint firstItem="poF-dF-ktB" firstAttribute="bottom" secondItem="jaW-h6-A4c" secondAttribute="bottom" id="E9u-vp-KQo"/>
                             <constraint firstItem="cBA-mY-QUZ" firstAttribute="trailing" secondItem="hSb-B8-XCJ" secondAttribute="trailing" constant="95" id="IXd-AS-FTH"/>
-                            <constraint firstItem="poF-dF-ktB" firstAttribute="leading" secondItem="MEv-64-LOU" secondAttribute="leading" id="JvH-c6-JAw"/>
                             <constraint firstItem="Yo8-Dj-DT3" firstAttribute="top" secondItem="d1O-Rd-g33" secondAttribute="bottom" constant="8" id="K4E-Bf-1qg"/>
                             <constraint firstItem="d1O-Rd-g33" firstAttribute="top" secondItem="MEv-64-LOU" secondAttribute="bottom" constant="20" id="KVW-Nj-QyW"/>
                             <constraint firstItem="ZYn-b0-VnB" firstAttribute="top" secondItem="b2R-bH-b9L" secondAttribute="bottom" constant="17" id="MNY-cg-v1j"/>
-                            <constraint firstItem="cBA-mY-QUZ" firstAttribute="trailing" secondItem="poF-dF-ktB" secondAttribute="trailing" constant="366" id="NhX-Ew-SFv"/>
-                            <constraint firstItem="b2R-bH-b9L" firstAttribute="top" secondItem="4Pd-9a-kcA" secondAttribute="bottom" constant="8" symbolic="YES" id="O7P-Xo-SKQ"/>
+                            <constraint firstItem="MEv-64-LOU" firstAttribute="top" secondItem="poF-dF-ktB" secondAttribute="bottom" constant="59" id="Niq-Zf-R04"/>
                             <constraint firstItem="d1O-Rd-g33" firstAttribute="centerX" secondItem="b2R-bH-b9L" secondAttribute="centerX" id="P3v-jH-gCg"/>
                             <constraint firstItem="b2R-bH-b9L" firstAttribute="trailing" secondItem="ZYn-b0-VnB" secondAttribute="trailing" id="Pbc-lC-ntg"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="leading" secondItem="cBA-mY-QUZ" secondAttribute="leading" id="QzG-RT-cgM"/>
-                            <constraint firstItem="hSb-B8-XCJ" firstAttribute="trailing" secondItem="4Pd-9a-kcA" secondAttribute="trailing" id="TXs-Db-8h7"/>
-                            <constraint firstItem="poF-dF-ktB" firstAttribute="top" secondItem="6sb-3i-nJs" secondAttribute="topMargin" constant="-8" id="UUM-vM-noc"/>
                             <constraint firstItem="MEv-64-LOU" firstAttribute="centerX" secondItem="RXe-t5-5Md" secondAttribute="centerX" id="UiJ-vT-9ch"/>
                             <constraint firstAttribute="trailing" secondItem="MEv-64-LOU" secondAttribute="trailing" id="Vid-6b-3jA"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="bottom" secondItem="cBA-mY-QUZ" secondAttribute="bottom" id="XC5-tJ-6qG"/>
-                            <constraint firstItem="hSb-B8-XCJ" firstAttribute="leading" secondItem="4Pd-9a-kcA" secondAttribute="leading" id="Xed-Hl-ExW"/>
                             <constraint firstItem="jaW-h6-A4c" firstAttribute="leading" secondItem="6sb-3i-nJs" secondAttribute="leadingMargin" id="Z6E-46-XF4"/>
                             <constraint firstItem="hSb-B8-XCJ" firstAttribute="top" secondItem="Yo8-Dj-DT3" secondAttribute="bottom" constant="54" id="ZBD-sx-eHy"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="leading" secondItem="6sb-3i-nJs" secondAttribute="leading" id="ajC-pi-wnH"/>
@@ -2032,12 +2031,16 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="cla-47-cCY" firstAttribute="leading" secondItem="MEv-64-LOU" secondAttribute="leading" id="cPu-Wc-WaX"/>
                             <constraint firstItem="b2R-bH-b9L" firstAttribute="leading" secondItem="ZYn-b0-VnB" secondAttribute="leading" id="cZV-Ql-qeE"/>
                             <constraint firstItem="Yo8-Dj-DT3" firstAttribute="centerX" secondItem="RXe-t5-5Md" secondAttribute="centerX" id="ejV-De-6qj"/>
+                            <constraint firstItem="poF-dF-ktB" firstAttribute="leading" secondItem="6sb-3i-nJs" secondAttribute="leadingMargin" id="fHM-6K-3r1"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="top" secondItem="6sb-3i-nJs" secondAttribute="top" id="fXQ-xg-fIr"/>
                             <constraint firstItem="jaW-h6-A4c" firstAttribute="top" secondItem="cBA-mY-QUZ" secondAttribute="top" id="jzw-Bu-BUR"/>
                             <constraint firstItem="cla-47-cCY" firstAttribute="trailing" secondItem="MEv-64-LOU" secondAttribute="trailing" id="l6t-Wd-dbK"/>
                             <constraint firstItem="d1O-Rd-g33" firstAttribute="centerX" secondItem="RXe-t5-5Md" secondAttribute="centerX" id="mxf-aR-XBM"/>
+                            <constraint firstItem="b2R-bH-b9L" firstAttribute="top" secondItem="4Pd-9a-kcA" secondAttribute="bottom" constant="8" symbolic="YES" id="unc-7S-cEw"/>
                             <constraint firstItem="b2R-bH-b9L" firstAttribute="leading" secondItem="cBA-mY-QUZ" secondAttribute="leading" constant="98" id="whV-AI-goH"/>
+                            <constraint firstItem="4Pd-9a-kcA" firstAttribute="top" secondItem="hSb-B8-XCJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wn2-2N-fGf"/>
                             <constraint firstItem="MEv-64-LOU" firstAttribute="top" secondItem="jaW-h6-A4c" secondAttribute="bottom" constant="63" id="x4R-6w-uV2"/>
+                            <constraint firstItem="poF-dF-ktB" firstAttribute="centerY" secondItem="jaW-h6-A4c" secondAttribute="centerY" id="zRO-da-eHR"/>
                             <constraint firstItem="Yo8-Dj-DT3" firstAttribute="top" secondItem="d1O-Rd-g33" secondAttribute="bottom" constant="8" symbolic="YES" id="zgi-Eg-aou"/>
                             <constraint firstItem="d1O-Rd-g33" firstAttribute="leading" secondItem="cBA-mY-QUZ" secondAttribute="leading" constant="137" id="zvx-He-hX0"/>
                         </constraints>
@@ -5104,7 +5107,7 @@ email: lunacao214@outlook.com</string>
     <inferredMetricsTieBreakers>
         <segue reference="GUo-7z-K6W"/>
         <segue reference="uJp-nh-C7I"/>
-        <segue reference="vVO-m1-ivf"/>
-        <segue reference="2bQ-Ce-pAo"/>
+        <segue reference="wij-hC-xO5"/>
+        <segue reference="C6l-iW-G4h"/>
     </inferredMetricsTieBreakers>
 </document>
