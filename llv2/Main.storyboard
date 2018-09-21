@@ -1580,13 +1580,6 @@ email: lunacao214@outlook.com</string>
                                     <navigationItem id="hQg-72-8GW">
                                         <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" title="menu" image="menubutton" landscapeImage="menubutton" id="pKc-6h-K1k"/>
-                                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="中文logo" id="gIW-tD-mbF">
-                                            <rect key="frame" x="203" y="13.666666666666664" width="8" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Ku0-Th-QFS">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sMt-Js-RHw">
                                                 <rect key="frame" x="353" y="10" width="41" height="24"/>
@@ -1671,6 +1664,13 @@ email: lunacao214@outlook.com</string>
                                     <segue destination="wqY-M0-DuM" kind="show" id="EEM-QH-bfx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="中文logo" translatesAutoresizingMaskIntoConstraints="NO" id="2hQ-30-dHd">
+                                <rect key="frame" x="185" y="21" width="52" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0cD-kB-Yis"/>
+                                    <constraint firstAttribute="width" constant="52" id="gGE-Gg-WpW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
@@ -1678,8 +1678,10 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="6Nc-cD-YZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="35m-TA-yDh"/>
                             <constraint firstItem="ar2-bt-oQC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3QH-L8-UJs"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="leading" secondItem="ar2-bt-oQC" secondAttribute="leading" id="3nt-Ad-hr6"/>
+                            <constraint firstItem="2hQ-30-dHd" firstAttribute="leading" secondItem="a7a-EC-RL8" secondAttribute="trailing" constant="-229" id="4qD-CN-S9Y"/>
                             <constraint firstItem="fsJ-k0-Ev4" firstAttribute="top" secondItem="ar2-bt-oQC" secondAttribute="bottom" constant="21" id="7Y2-9Y-ldU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ar2-bt-oQC" secondAttribute="trailing" constant="77" id="7aO-TH-lxo"/>
+                            <constraint firstItem="2hQ-30-dHd" firstAttribute="centerY" secondItem="a7a-EC-RL8" secondAttribute="centerY" id="8uS-fE-xHX"/>
                             <constraint firstItem="a7a-EC-RL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="95b-tr-YFM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fsJ-k0-Ev4" secondAttribute="trailing" constant="77" id="9Q1-Te-R4c"/>
                             <constraint firstItem="the-Ct-AdR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Xg-X1-M5Z"/>
@@ -3152,8 +3154,17 @@ email: lunacao214@outlook.com</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-vz-UE4">
+                                <rect key="frame" x="15" y="68" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WO8-fL-eEK"/>
+                                </constraints>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R1-Vd-lsS">
                                 <rect key="frame" x="0.0" y="696" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="x6H-Aq-akf"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" id="BZN-EK-aMS">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8ne-g2-1DG">
@@ -3190,14 +3201,8 @@ email: lunacao214@outlook.com</string>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-vz-UE4">
-                                <rect key="frame" x="15" y="68" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="WO8-fL-eEK"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roh-ES-NaZ">
-                                <rect key="frame" x="123" y="68" width="286" height="21"/>
+                                <rect key="frame" x="123" y="68" width="52" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cZ3-To-Kta"/>
                                 </constraints>
@@ -3233,22 +3238,23 @@ email: lunacao214@outlook.com</string>
                                 <rect key="frame" x="82" y="176" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="8UB-9i-aUc"/>
+                                    <constraint firstAttribute="width" secondItem="j1G-gf-0tO" secondAttribute="height" multiplier="1:1" id="EOw-nR-WqX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-7E-zTK">
-                                <rect key="frame" x="256" y="474" width="24" height="21"/>
+                                <rect key="frame" x="139" y="474" width="24" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3D-x1-OUW">
-                                <rect key="frame" x="256" y="536" width="24" height="21"/>
+                                <rect key="frame" x="139" y="536" width="24" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12Z-Nd-Qsc">
-                                <rect key="frame" x="256" y="580" width="20" height="21"/>
+                                <rect key="frame" x="139" y="580" width="20" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3257,32 +3263,33 @@ email: lunacao214@outlook.com</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OA2-6g-8p8" firstAttribute="trailing" secondItem="ruh-DZ-Qvc" secondAttribute="trailing" id="0Y3-SW-MIw"/>
-                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="leading" secondItem="M07-Q3-sCr" secondAttribute="leading" id="0cb-EF-GrF"/>
-                            <constraint firstItem="2Mp-48-8y1" firstAttribute="bottom" secondItem="4R1-Vd-lsS" secondAttribute="top" constant="-27" id="3PK-C9-ZUa"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="bottom" secondItem="eeq-hq-shP" secondAttribute="bottom" id="19p-28-2HO"/>
+                            <constraint firstItem="eeq-hq-shP" firstAttribute="trailing" secondItem="j1G-gf-0tO" secondAttribute="trailing" constant="92" id="1SX-ot-fHG"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="trailing" secondItem="eeq-hq-shP" secondAttribute="trailing" id="6zm-GL-m4X"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="bottom" secondItem="eeq-hq-shP" secondAttribute="bottom" id="8Cf-IM-7AZ"/>
                             <constraint firstItem="OA2-6g-8p8" firstAttribute="top" secondItem="Roh-ES-NaZ" secondAttribute="bottom" id="Aqr-0O-oZJ"/>
                             <constraint firstItem="LRN-7E-zTK" firstAttribute="leading" secondItem="e3D-x1-OUW" secondAttribute="leading" id="BPC-61-dqu"/>
-                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="bottom" secondItem="eeq-hq-shP" secondAttribute="bottom" id="G1e-Dc-Fz2"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" id="EaZ-Tr-GXW"/>
                             <constraint firstItem="Roh-ES-NaZ" firstAttribute="leading" secondItem="Ai3-vz-UE4" secondAttribute="trailing" constant="8" symbolic="YES" id="GH8-X1-g4x"/>
                             <constraint firstItem="e3D-x1-OUW" firstAttribute="leading" secondItem="12Z-Nd-Qsc" secondAttribute="leading" id="I8u-Ry-ENY"/>
                             <constraint firstItem="Ai3-vz-UE4" firstAttribute="top" secondItem="Roh-ES-NaZ" secondAttribute="top" id="Kb0-gG-zbO"/>
                             <constraint firstItem="Ai3-vz-UE4" firstAttribute="top" secondItem="eeq-hq-shP" secondAttribute="top" constant="48" id="Kbg-yl-0xG"/>
-                            <constraint firstItem="Roh-ES-NaZ" firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" constant="-5" id="NLO-mg-f7e"/>
                             <constraint firstItem="eeq-hq-shP" firstAttribute="trailing" secondItem="2Mp-48-8y1" secondAttribute="trailing" constant="34" id="NWi-Ov-wmg"/>
                             <constraint firstItem="ruh-DZ-Qvc" firstAttribute="top" secondItem="OA2-6g-8p8" secondAttribute="bottom" constant="8" symbolic="YES" id="QRb-Du-axQ"/>
                             <constraint firstItem="e3D-x1-OUW" firstAttribute="centerY" secondItem="2Mp-48-8y1" secondAttribute="centerY" id="RVa-9g-sEN"/>
-                            <constraint firstItem="j1G-gf-0tO" firstAttribute="centerX" secondItem="4R1-Vd-lsS" secondAttribute="centerX" constant="-5" id="SZI-AQ-uQk"/>
                             <constraint firstItem="j1G-gf-0tO" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" constant="82" id="Z4r-lx-njw"/>
                             <constraint firstItem="12Z-Nd-Qsc" firstAttribute="centerX" secondItem="Roh-ES-NaZ" secondAttribute="centerX" id="bLz-Lv-hOM"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="leading" secondItem="M07-Q3-sCr" secondAttribute="leading" id="cxw-08-j8T"/>
                             <constraint firstItem="Roh-ES-NaZ" firstAttribute="leading" secondItem="OA2-6g-8p8" secondAttribute="leading" id="f6s-oJ-o1V"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="top" secondItem="2Mp-48-8y1" secondAttribute="bottom" constant="27" id="f9d-BS-iQT"/>
                             <constraint firstItem="12Z-Nd-Qsc" firstAttribute="top" secondItem="e3D-x1-OUW" secondAttribute="bottom" constant="23" id="fDS-Lz-b2z"/>
+                            <constraint firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" id="h65-J3-V6Q"/>
                             <constraint firstItem="j1G-gf-0tO" firstAttribute="top" secondItem="Ai3-vz-UE4" secondAttribute="bottom" constant="8" symbolic="YES" id="iaP-ts-pMS"/>
                             <constraint firstItem="OA2-6g-8p8" firstAttribute="trailing" secondItem="M07-Q3-sCr" secondAttribute="trailingMargin" constant="-5" id="lMV-CH-LTd"/>
-                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="top" secondItem="eeq-hq-shP" secondAttribute="top" constant="676" id="mSk-rE-1cB"/>
                             <constraint firstItem="2Mp-48-8y1" firstAttribute="top" secondItem="j1G-gf-0tO" secondAttribute="bottom" constant="8" symbolic="YES" id="pqy-RA-5ED"/>
                             <constraint firstItem="j1G-gf-0tO" firstAttribute="top" secondItem="ruh-DZ-Qvc" secondAttribute="bottom" constant="8" symbolic="YES" id="scp-To-2fJ"/>
                             <constraint firstItem="OA2-6g-8p8" firstAttribute="leading" secondItem="ruh-DZ-Qvc" secondAttribute="leading" id="soN-qM-CSq"/>
                             <constraint firstItem="Ai3-vz-UE4" firstAttribute="leading" secondItem="M07-Q3-sCr" secondAttribute="leadingMargin" constant="-5" id="vhZ-JO-uQy"/>
-                            <constraint firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" id="wCu-ar-ife"/>
                             <constraint firstItem="2Mp-48-8y1" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" constant="6" id="wKz-hb-YSF"/>
                             <constraint firstItem="e3D-x1-OUW" firstAttribute="top" secondItem="LRN-7E-zTK" secondAttribute="bottom" constant="41" id="zlx-nP-2U2"/>
                         </constraints>
@@ -4833,7 +4840,7 @@ email: lunacao214@outlook.com</string>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nW2-KZ-KO2">
                                 <rect key="frame" x="20" y="8" width="67" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;back" image="backbtn"/>
+                                <state key="normal" title="       " image="backbtn"/>
                                 <connections>
                                     <segue destination="HGJ-zl-43D" kind="showDetail" id="bmT-Ue-Vr4"/>
                                 </connections>
