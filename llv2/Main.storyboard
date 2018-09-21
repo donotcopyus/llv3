@@ -265,7 +265,6 @@
                                 </constraints>
                                 <state key="normal" image="赏顿早餐"/>
                                 <connections>
-                                    <action selector="big:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="lc0-AV-nl7"/>
                                     <action selector="click:" destination="HEl-sw-5Jp" eventType="touchUpInside" id="Odr-ls-pom"/>
                                 </connections>
                             </button>
