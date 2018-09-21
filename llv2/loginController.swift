@@ -55,10 +55,15 @@ class loginController: UIViewController {
     }
     
     
+    @IBOutlet weak var logo: UIImageView!
     
     override func viewDidLoad() {
 
-                super.viewDidLoad()
+      super.viewDidLoad()
+        
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            logo.isHidden = true
+        }
         
         Auth.auth().addStateDidChangeListener {auth, user in
             if user != nil{
