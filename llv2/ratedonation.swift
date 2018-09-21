@@ -29,7 +29,11 @@ class ratedonation: UIViewController {
     
     @IBAction func donation(_ sender: UIButton) {
         
-        
+        let newAlert1 = UIAlertController(title:"抱歉",message: "谢谢您的好意，但我们暂时不支持捐赠功能，敬请谅解并期待下个版本～",preferredStyle:.alert)
+        newAlert1.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            return
+        } ))
+        self.present(newAlert1, animated: true, completion: nil)
         
     }
     

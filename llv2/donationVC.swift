@@ -14,7 +14,6 @@ enum IAPHandlerAlertType{
     case restored
     case purchased
     
-    //https://hackernoon.com/swift-how-to-add-in-app-purchases-in-your-ios-app-c1dc2fc82319
     
     func message() -> String{
         switch self{
@@ -144,6 +143,16 @@ class donationVC: UIViewController{
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let alertView = UIAlertController(title:"抱歉",message: "谢谢您的好意，但我们暂时不支持捐赠功能，敬请谅解并期待下个版本～",preferredStyle:.alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+            return
+            self.dismiss(animated: true)
+        })
+        alertView.addAction(action)
+        self.present(alertView, animated: true, completion: nil)
+        self.dismiss(animated: true)
+        
 
        IAPHandler.shared.fetchAvailableProducts()
         IAPHandler.shared.purchaseStatusBlock = {
