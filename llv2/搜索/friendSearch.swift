@@ -141,6 +141,7 @@ class friendSearch: UITableViewController {
         cell.collectionID.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
+        cell.authorId.isHidden = true
  
         
         let likedRef = Database.database().reference().child("users/collection/friend/")
