@@ -199,10 +199,10 @@ class friendTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = tableView.indexPathForSelectedRow?.row
 
-//            let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhiNoImageController") as! checkXianzhiNoImageController
-//            viewController.pid = arrayOfCellData[index!].id
-//            viewController.uid = arrayOfCellData[index!].author.uid
-//            self.navigationController?.pushViewController(viewController, animated: true)
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "friendV") as! checkFriendVC
+            viewController.pid = arrayOfCellData[index!].id
+            viewController.uid = arrayOfCellData[index!].author.uid
+            self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     

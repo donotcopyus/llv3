@@ -113,6 +113,15 @@ class friendSearch: UITableViewController {
             cell.headImage.kf.setImage(with: url)
         })}
         
+        if(self.arrayOfCellData[indexPath.row].imageUrl != ""){
+            let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageUrl)
+            cell.image1.kf.indicatorType = .activity
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+                cell.image1.kf.setImage(with: url1)
+            })
+        }
+        
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
         

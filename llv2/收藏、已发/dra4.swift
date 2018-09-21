@@ -41,6 +41,7 @@ override func viewDidLoad(){
         
     super.viewDidLoad()
     
+    
     tableView = UITableView()
     tableView.delegate = self
         tableView.dataSource = self
@@ -146,6 +147,15 @@ override func viewDidLoad(){
                 cell.headImage.kf.setImage(with: url)
             })}
         
+        if(self.arrayOfCellData[indexPath.row].imageUrl != ""){
+            let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageUrl)
+            cell.image1.kf.indicatorType = .activity
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+                cell.image1.kf.setImage(with: url1)
+            })
+        }
+        
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
         
@@ -163,6 +173,7 @@ override func viewDidLoad(){
         
         cell.id.isHidden = true
         cell.collectionID.isHidden = true
+        cell.authorId.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
         cell.collectionID.text = collectionId[indexPath.row]
@@ -202,13 +213,13 @@ override func viewDidLoad(){
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
-//
-//        let index = tableView.indexPathForSelectedRow?.row
-//        viewController.pid = arrayOfCellData[index!].id
-//        viewController.uid = arrayOfCellData[index!].author.uid
-//        self.navigationController?.pushViewController(viewController, animated: true)
-//
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "friendV") as! checkFriendVC
+
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
+        self.navigationController?.pushViewController(viewController, animated: true)
+
     }
     
     

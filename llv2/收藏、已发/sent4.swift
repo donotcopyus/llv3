@@ -132,6 +132,15 @@ class sent4: UITableViewController {
                 cell.headImage.kf.setImage(with: url)
             }})
         
+        if(self.arrayOfCellData[indexPath.row].imageUrl != ""){
+            let url1 = URL(string:self.arrayOfCellData[indexPath.row].imageUrl)
+            cell.image1.kf.indicatorType = .activity
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+                cell.image1.kf.setImage(with: url1)
+            })
+        }
+        
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
         
@@ -151,6 +160,7 @@ class sent4: UITableViewController {
         cell.collectionID.isHidden = true
         
         cell.id.text = arrayOfCellData[indexPath.row].id
+        cell.authorId.isHidden = true
         
         cell.likeButton.isHidden = true
         
@@ -166,12 +176,12 @@ class sent4: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
-//
-//        let index = tableView.indexPathForSelectedRow?.row
-//        viewController.pid = arrayOfCellData[index!].id
-//        viewController.uid = arrayOfCellData[index!].author.uid
-//        self.navigationController?.pushViewController(viewController, animated: true)
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "friendV") as! checkFriendVC
+
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     
