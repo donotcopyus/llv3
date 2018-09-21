@@ -4702,20 +4702,6 @@ email: lunacao214@outlook.com</string>
                                     <action selector="gotime:" destination="bSy-bC-x5m" eventType="valueChanged" id="HHg-vA-JtU"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-1F-C3S">
-                                <rect key="frame" x="50" y="70" width="42" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="到达" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgP-9i-sPX">
-                                <rect key="frame" x="230" y="70" width="42" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -5116,9 +5102,9 @@ email: lunacao214@outlook.com</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0g4-zD-bWK"/>
+        <segue reference="GUo-7z-K6W"/>
         <segue reference="uJp-nh-C7I"/>
-        <segue reference="wij-hC-xO5"/>
+        <segue reference="vVO-m1-ivf"/>
         <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
 </document>
