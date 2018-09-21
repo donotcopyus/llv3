@@ -179,7 +179,7 @@ class sent2: UITableViewController{
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 165
+        return 219
     }
     
     
@@ -188,11 +188,38 @@ class sent2: UITableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
         let index = tableView.indexPathForSelectedRow?.row
-        viewController.pid = arrayOfCellData[index!].id
-        viewController.uid = arrayOfCellData[index!].author.uid
-        self.navigationController?.pushViewController(viewController, animated: true)
+        let image1 = arrayOfCellData[index!].imageOneUrl
+        let image2 = arrayOfCellData[index!].imageTwoUrl
+        let image3 = arrayOfCellData[index!].imageThreeUrl
+        
+        if(image1 != "" && image2 != "" && image3 != ""){
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckX") as! checkXianzhiController
+            viewController.pid = arrayOfCellData[index!].id
+            viewController.uid = arrayOfCellData[index!].author.uid
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+            
+        else if (image1 != "" && image3 != "" && image2 == ""){
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "two") as! checkXianzhi2Controller
+            viewController.pid = arrayOfCellData[index!].id
+            viewController.uid = arrayOfCellData[index!].author.uid
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+            
+        else if (image1 == "" && image2 != "" && image3 == ""){
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhi1Controller") as! checkXianzhi1Controller
+            viewController.pid = arrayOfCellData[index!].id
+            viewController.uid = arrayOfCellData[index!].author.uid
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+            
+        else if (image1 == "" && image2 == "" && image3 == ""){
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "checkXianzhiNoImageController") as! checkXianzhiNoImageController
+            viewController.pid = arrayOfCellData[index!].id
+            viewController.uid = arrayOfCellData[index!].author.uid
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
         
     }
     
