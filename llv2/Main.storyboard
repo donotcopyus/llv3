@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" placeholder="留点意见吧...也可以手动发送到harkoreapp@gmail.com哦～" minimumFontSize="12" background="反馈" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-fi-jWK">
-                                <rect key="frame" x="16" y="93.333333333333371" width="332" height="335"/>
+                                <rect key="frame" x="16" y="93.333333333333343" width="378.33333333333331" height="381.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gq8-fi-jWK" secondAttribute="height" multiplier="189:191" id="8zk-CW-qdo"/>
                                 </constraints>
@@ -68,7 +68,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-Gm-FYc">
-                                <rect key="frame" x="97" y="501.33333333333326" width="220" height="38"/>
+                                <rect key="frame" x="97" y="548" width="220" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dDK-K1-PsJ"/>
                                 </constraints>
@@ -1057,7 +1057,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginUI" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-Ez-E8b">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="-452" width="414" height="1188"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-RZ-hH6">
                                 <rect key="frame" x="20" y="463" width="394" height="71"/>
@@ -1166,6 +1166,7 @@
                             <constraint firstItem="b17-pu-ez2" firstAttribute="trailing" secondItem="LFe-eH-avf" secondAttribute="trailing" id="7cD-97-SI2"/>
                             <constraint firstItem="ebi-Ez-E8b" firstAttribute="bottom" secondItem="a4X-Ve-L6A" secondAttribute="bottom" id="82E-Ba-Pzd"/>
                             <constraint firstItem="3va-mf-uzb" firstAttribute="trailing" secondItem="NZy-RZ-hH6" secondAttribute="trailing" id="8R8-iZ-ECB"/>
+                            <constraint firstItem="R9V-Rw-r1N" firstAttribute="centerY" secondItem="ebi-Ez-E8b" secondAttribute="centerY" id="EXy-R1-maG"/>
                             <constraint firstItem="XBQ-ks-iy5" firstAttribute="trailing" secondItem="UzJ-wO-041" secondAttribute="trailing" id="FNj-yC-KAK"/>
                             <constraint firstItem="ebi-Ez-E8b" firstAttribute="trailing" secondItem="a4X-Ve-L6A" secondAttribute="trailing" id="HhD-tv-YS3"/>
                             <constraint firstItem="a4X-Ve-L6A" firstAttribute="bottom" secondItem="LFe-eH-avf" secondAttribute="bottom" constant="80" id="HnO-2t-LjU"/>
