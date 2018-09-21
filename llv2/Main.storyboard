@@ -760,7 +760,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBg-pH-Ael">
-                                <rect key="frame" x="0.0" y="61" width="424" height="101"/>
+                                <rect key="frame" x="0.0" y="61" width="176" height="101"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CBg-pH-Ael" secondAttribute="height" multiplier="207:50" id="8FE-vL-GMV"/>
@@ -768,7 +768,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doA-kc-dS5">
-                                <rect key="frame" x="324" y="62" width="100" height="100"/>
+                                <rect key="frame" x="76" y="62" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="3vB-cX-tIp"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Gyo-YS-vg7"/>
@@ -780,7 +780,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-kg-LQG">
-                                <rect key="frame" x="0.0" y="660" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="660" width="166" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fyK-xU-6CA"/>
@@ -796,7 +796,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
-                                <rect key="frame" x="0.0" y="235" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="235" width="166" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="u71-zb-kPf"/>
@@ -816,7 +816,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-81-hRT">
-                                <rect key="frame" x="0.0" y="188" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="188" width="166" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="SqN-0U-TUi"/>
@@ -831,7 +831,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivz-Zj-xao">
-                                <rect key="frame" x="0.0" y="61" width="424" height="101"/>
+                                <rect key="frame" x="0.0" y="61" width="176" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TF8-Ge-YJi"/>
                                     <constraint firstAttribute="width" secondItem="ivz-Zj-xao" secondAttribute="height" multiplier="199:50" id="kLL-nj-AE6"/>
@@ -2039,7 +2039,7 @@ email: lunacao214@outlook.com</string>
         <!--Item-->
         <scene sceneID="odJ-yW-XDh">
             <objects>
-                <tableViewController id="gHh-Kh-Yht" sceneMemberID="viewController">
+                <tableViewController id="gHh-Kh-Yht" customClass="sent4" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sTS-G4-rBy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3084,7 +3084,7 @@ email: lunacao214@outlook.com</string>
         <!--Item-->
         <scene sceneID="5ru-dc-VPH">
             <objects>
-                <tableViewController id="dvY-uu-NZ2" sceneMemberID="viewController">
+                <tableViewController id="dvY-uu-NZ2" customClass="dra4" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PFI-Ww-9Nh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3113,7 +3113,7 @@ email: lunacao214@outlook.com</string>
         <!--Check FriendVC-->
         <scene sceneID="myF-EE-sQ5">
             <objects>
-                <viewController id="Bgl-gt-Lth" customClass="checkFriendVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="friendV" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bgl-gt-Lth" customClass="checkFriendVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M07-Q3-sCr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3127,7 +3127,7 @@ email: lunacao214@outlook.com</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="删除广告"/>
                                             <connections>
-                                                <action selector="deletePost:" destination="IFH-H1-VVg" eventType="touchUpInside" id="scD-kg-u2n"/>
+                                                <action selector="deletePost:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="FJQ-n7-yV1"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3138,6 +3138,7 @@ email: lunacao214@outlook.com</string>
                                             <state key="normal" image="私聊"/>
                                             <connections>
                                                 <action selector="chat:" destination="IFH-H1-VVg" eventType="touchUpInside" id="In4-Sr-IVF"/>
+                                                <action selector="chat:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="ZAx-lV-6dO"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3149,6 +3150,7 @@ email: lunacao214@outlook.com</string>
                                             <state key="normal" image="分享"/>
                                             <connections>
                                                 <action selector="share:" destination="IFH-H1-VVg" eventType="touchUpInside" id="13q-Hl-6nU"/>
+                                                <action selector="share:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="G68-sD-yX2"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -3199,6 +3201,27 @@ email: lunacao214@outlook.com</string>
                                     <constraint firstAttribute="height" constant="240" id="8UB-9i-aUc"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-7E-zTK">
+                                <rect key="frame" x="261" y="501" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3D-x1-OUW">
+                                <rect key="frame" x="261" y="563" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12Z-Nd-Qsc">
+                                <rect key="frame" x="261" y="607" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3230,10 +3253,15 @@ email: lunacao214@outlook.com</string>
                     </view>
                     <connections>
                         <outlet property="address" destination="ruh-DZ-Qvc" id="Iv3-Ai-jVe"/>
+                        <outlet property="chat" destination="juW-QO-v10" id="Abd-UE-vgS"/>
+                        <outlet property="delete" destination="8ne-g2-1DG" id="Eqz-iw-W6X"/>
                         <outlet property="headimage" destination="Ai3-vz-UE4" id="zYd-NJ-R1F"/>
                         <outlet property="image1" destination="j1G-gf-0tO" id="Flt-Wy-qZr"/>
                         <outlet property="infor" destination="2Mp-48-8y1" id="evt-J1-PX8"/>
+                        <outlet property="pidLabel" destination="LRN-7E-zTK" id="dBv-Gw-yfP"/>
                         <outlet property="senttime" destination="OA2-6g-8p8" id="x1K-Ia-THN"/>
+                        <outlet property="uidLabel" destination="e3D-x1-OUW" id="Epe-ve-7b6"/>
+                        <outlet property="urlLabel" destination="12Z-Nd-Qsc" id="mLe-Gk-ict"/>
                         <outlet property="username" destination="Roh-ES-NaZ" id="HR7-Cm-DMG"/>
                     </connections>
                 </viewController>
@@ -4850,23 +4878,23 @@ email: lunacao214@outlook.com</string>
                                                 <rect key="frame" x="337" y="6.6666666666666679" width="57" height="31.000000000000004"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="searchbtn"/>
+                                                <connections>
+                                                    <action selector="search:" destination="seH-VL-VyW" eventType="touchUpInside" id="4Gl-gt-LeW"/>
+                                                </connections>
                                             </button>
-                                            <connections>
-                                                <action selector="search:" destination="seH-VL-VyW" id="YOq-A0-AVl"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-cy-Ag8">
-                                <rect key="frame" x="0.0" y="287" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="559108286.01567197">
-                                    <!--2018-09-20 03:51:26 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="搜索活动日期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-Pv-65N">
-                                <rect key="frame" x="20" y="258" width="374" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-EF-Jcy">
+                                <rect key="frame" x="28" y="379" width="358" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="关键字:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLc-mr-Gkq">
+                                <rect key="frame" x="28" y="329" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -4877,6 +4905,9 @@ email: lunacao214@outlook.com</string>
                         <viewLayoutGuide key="safeArea" id="Wfu-3z-tXd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="friendTab" landscapeImage="friendTab" selectedImage="friendTab" id="cs2-ja-Gzj"/>
+                    <connections>
+                        <outlet property="keyword" destination="YXY-EF-Jcy" id="ZAZ-Kg-aI1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xZ-TB-S7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5001,7 +5032,7 @@ email: lunacao214@outlook.com</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="83B-YN-Mds"/>
-        <segue reference="uJp-nh-C7I"/>
+        <segue reference="f0C-Pt-C9H"/>
         <segue reference="PrV-AN-2D6"/>
         <segue reference="2bQ-Ce-pAo"/>
     </inferredMetricsTieBreakers>
