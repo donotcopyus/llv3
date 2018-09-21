@@ -178,20 +178,12 @@ class friendSearch: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: "profileCheckC") as! checkCarpoolController
-//
-//        let index = tableView.indexPathForSelectedRow?.row
-//        viewController.pid = arrayOfCellData[index!].id
-//        viewController.uid = arrayOfCellData[index!].author.uid
-//
-//        let backbutton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(goback))
-//        backbutton.image = UIImage(named: "backbtn")
-//        viewController.navigationItem.setLeftBarButton(backbutton, animated: true)
-//
-//        let navC:UINavigationController = UINavigationController(rootViewController: viewController)
-//
-//        self.present(navC, animated: true)
-//
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "friendV") as! checkFriendVC
+        
+        let index = tableView.indexPathForSelectedRow?.row
+        viewController.pid = arrayOfCellData[index!].id
+        viewController.uid = arrayOfCellData[index!].author.uid
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
  
 }

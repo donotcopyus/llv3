@@ -760,7 +760,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBg-pH-Ael">
-                                <rect key="frame" x="0.0" y="61" width="176" height="101"/>
+                                <rect key="frame" x="0.0" y="61" width="424" height="101"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CBg-pH-Ael" secondAttribute="height" multiplier="207:50" id="8FE-vL-GMV"/>
@@ -768,7 +768,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doA-kc-dS5">
-                                <rect key="frame" x="76" y="62" width="100" height="100"/>
+                                <rect key="frame" x="324" y="62" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="doA-kc-dS5" secondAttribute="height" multiplier="1:1" id="3vB-cX-tIp"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Gyo-YS-vg7"/>
@@ -780,7 +780,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-kg-LQG">
-                                <rect key="frame" x="0.0" y="660" width="166" height="39"/>
+                                <rect key="frame" x="0.0" y="660" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="fyK-xU-6CA"/>
@@ -796,7 +796,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-S5-fiK">
-                                <rect key="frame" x="0.0" y="235" width="166" height="39"/>
+                                <rect key="frame" x="0.0" y="235" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="u71-zb-kPf"/>
@@ -816,7 +816,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-81-hRT">
-                                <rect key="frame" x="0.0" y="188" width="166" height="39"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="39"/>
                                 <color key="backgroundColor" red="0.98562215350000004" green="0.98562215350000004" blue="0.98562215350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="SqN-0U-TUi"/>
@@ -831,7 +831,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivz-Zj-xao">
-                                <rect key="frame" x="0.0" y="61" width="176" height="101"/>
+                                <rect key="frame" x="0.0" y="61" width="424" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TF8-Ge-YJi"/>
                                     <constraint firstAttribute="width" secondItem="ivz-Zj-xao" secondAttribute="height" multiplier="199:50" id="kLL-nj-AE6"/>
@@ -2757,7 +2757,7 @@ email: lunacao214@outlook.com</string>
         <!--Friend Search-->
         <scene sceneID="yve-S3-1bd">
             <objects>
-                <tableViewController id="zJ1-LA-u7D" customClass="friendSearch" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="friendSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zJ1-LA-u7D" customClass="friendSearch" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PQq-Yi-rrH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
