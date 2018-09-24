@@ -39,6 +39,7 @@ class checkXianzhi1Controller: UIViewController {
         headImage.layer.cornerRadius = headImage.frame.height / 2.0
         headImage.layer.masksToBounds = true
         
+                navigationItem.rightBarButtonItem = UIBarButtonItem(title: "举报", style: .plain, target: self, action: #selector(reportUser))
         
         let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
         
@@ -111,6 +112,164 @@ class checkXianzhi1Controller: UIViewController {
                 self.info.text = post["extraInfo"] as? String
                 
             }
+        })
+        
+        
+    }
+    
+    
+    @objc func reportUser(){
+        
+        let alert = UIAlertController(title: "举报原因", message: "请选择举报原因", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "广告骚扰", style: .default , handler:{ (UIAlertAction)in
+            let reportUID = self.uidLabel.text
+            
+            let repRef = Database.database().reference().child("report").childByAutoId()
+            
+            let repObj = [
+                "uid":reportUID!,
+                "reason":"广告骚扰"
+                ] as [String:Any]
+            
+            repRef.setValue(repObj, withCompletionBlock:{
+                error, ref in
+                if error == nil{
+                    
+                    let ok = UIAlertController(title: "举报成功", message: "感谢您的举报，我们会在24小时内处理", preferredStyle: .alert)
+                    
+                    self.present(ok, animated: true, completion: nil)
+                    
+                    let when = DispatchTime.now() + 2
+                    DispatchQueue.main.asyncAfter(deadline: when){
+                        // your code with delay
+                        ok.dismiss(animated: true, completion: nil)
+                        return
+                    }
+                }else{
+                    
+                }
+            })
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "色情低俗", style: .default , handler:{ (UIAlertAction)in
+            
+            let reportUID = self.uidLabel.text
+            
+            let repRef = Database.database().reference().child("report").childByAutoId()
+            
+            let repObj = [
+                "uid":reportUID!,
+                "reason":"色情低俗"
+                ] as [String:Any]
+            
+            repRef.setValue(repObj, withCompletionBlock:{
+                error, ref in
+                if error == nil{
+                    
+                    let ok = UIAlertController(title: "举报成功", message: "感谢您的举报，我们会在24小时内处理", preferredStyle: .alert)
+                    
+                    self.present(ok, animated: true, completion: nil)
+                    
+                    let when = DispatchTime.now() + 2
+                    DispatchQueue.main.asyncAfter(deadline: when){
+                        // your code with delay
+                        ok.dismiss(animated: true, completion: nil)
+                        return
+                    }
+                }else{
+                    
+                }
+            })
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "钱财诈骗", style: .default , handler:{ (UIAlertAction)in
+            
+            let reportUID = self.uidLabel.text
+            
+            let repRef = Database.database().reference().child("report").childByAutoId()
+            
+            let repObj = [
+                "uid":reportUID!,
+                "reason":"钱财诈骗"
+                ] as [String:Any]
+            
+            repRef.setValue(repObj, withCompletionBlock:{
+                error, ref in
+                if error == nil{
+                    
+                    let ok = UIAlertController(title: "举报成功", message: "感谢您的举报，我们会在24小时内处理", preferredStyle: .alert)
+                    
+                    self.present(ok, animated: true, completion: nil)
+                    
+                    let when = DispatchTime.now() + 2
+                    DispatchQueue.main.asyncAfter(deadline: when){
+                        // your code with delay
+                        ok.dismiss(animated: true, completion: nil)
+                        return
+                    }
+                }else{
+                    
+                }
+            })
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "违反法律", style: .default, handler:{ (UIAlertAction)in
+            
+            let reportUID = self.uidLabel.text
+            
+            let repRef = Database.database().reference().child("report").childByAutoId()
+            
+            let repObj = [
+                "uid":reportUID!,
+                "reason":"违反法律"
+                ] as [String:Any]
+            
+            repRef.setValue(repObj, withCompletionBlock:{
+                error, ref in
+                if error == nil{
+                    
+                    let ok = UIAlertController(title: "举报成功", message: "感谢您的举报，我们会在24小时内处理", preferredStyle: .alert)
+                    
+                    self.present(ok, animated: true, completion: nil)
+                    
+                    let when = DispatchTime.now() + 2
+                    DispatchQueue.main.asyncAfter(deadline: when){
+                        // your code with delay
+                        ok.dismiss(animated: true, completion: nil)
+                        return
+                    }
+                }else{
+                    
+                }
+            })
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "屏蔽此人", style: .default, handler:{ (UIAlertAction)in
+            
+            
+            let ok = UIAlertController(title: "屏蔽成功", message: "您将不再收到此人的消息！", preferredStyle: .alert)
+            
+            self.present(ok, animated: true, completion: nil)
+            
+            let when = DispatchTime.now() + 2
+            DispatchQueue.main.asyncAfter(deadline: when){
+                // your code with delay
+                ok.dismiss(animated: true, completion: nil)
+                return
+            }
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler:{ (UIAlertAction)in
+            return
+        }))
+        
+        self.present(alert, animated: true, completion: {
         })
         
         

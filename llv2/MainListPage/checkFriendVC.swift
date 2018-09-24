@@ -84,7 +84,86 @@ class checkFriendVC: UIViewController {
     @IBOutlet weak var chat: UIButton!
     
     
-    @IBAction func report(_ sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        headimage.layer.cornerRadius = headimage.frame.height / 2.0
+        headimage.layer.masksToBounds = true
+        
+        
+        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "举报", style: .plain, target: self, action: #selector(reportUser))
+        
+        //get pid，藏起来
+        self.pidLabel.isHidden = true
+        self.pidLabel.text = pid
+        self.uidLabel.isHidden = true
+        self.uidLabel.text = uid
+        self.urlLabel.isHidden = true
+
+        //如果是自己，没办法chat
+        if (uidLabel.text == Auth.auth().currentUser!.uid){
+            self.chat.isHidden = true
+        }
+        else{
+            
+            self.delete.isHidden = true
+        }
+        
+        let postRef = Database.database().reference().child("friend/\(pid)")
+        let image = UIImage(named:"default_profile_icon")
+        
+        postRef.observe(DataEventType.value, with:{
+            (snapshot) in
+            if let post = snapshot.value as? [String:Any]{
+                let author = post["author"] as? [String:Any]
+                
+                let url = author!["photoURL"] as? String
+                
+                if(url == "default"){
+                    self.urlLabel.text = "default"
+                    self.headimage.image = #imageLiteral(resourceName: "icon.jpg")
+                }
+                else{
+                    let tourl = URL(string:url!)
+                    self.headimage.kf.indicatorType = .activity
+                    self.headimage.kf.setImage(with: tourl, placeholder:image)
+                    self.urlLabel.text = url
+                }
+                
+                self.username.text = author!["username"] as? String
+                
+                let timeInterval = (post["timestamp"] as? Double)! / 1000
+                let date = NSDate(timeIntervalSince1970: timeInterval)
+                let dform = DateFormatter()
+                dform.dateFormat = "MM月dd日 HH:mm"
+                
+                self.senttime.text = "发送于：" + dform.string(from:date as Date)
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
+                    let url1 = post["imageUrl"] as? String
+                    if (url1 != ""){
+                        let tourl1 = URL(string:url1!)
+                        self.image1.kf.indicatorType = .activity
+                        self.image1.kf.setImage(with: tourl1)
+                        
+                        self.image1.addGestureRecognizer(pictureTap1)
+                        self.image1.isUserInteractionEnabled = true
+                    }
+                    
+                    
+                })
+                
+                
+                self.address.text = "地址： " + (post["address"] as? String)!
+                self.infor.text = post["info"] as? String
+                
+            }
+        })
+    }
+    
+    @objc func reportUser(){
         
         let alert = UIAlertController(title: "举报原因", message: "请选择举报原因", preferredStyle: .actionSheet)
         
@@ -217,17 +296,17 @@ class checkFriendVC: UIViewController {
         
         alert.addAction(UIAlertAction(title: "屏蔽此人", style: .default, handler:{ (UIAlertAction)in
             
-
-                    let ok = UIAlertController(title: "屏蔽成功", message: "您将不再收到此人的消息！", preferredStyle: .alert)
-                    
-                    self.present(ok, animated: true, completion: nil)
-                    
-                    let when = DispatchTime.now() + 2
-                    DispatchQueue.main.asyncAfter(deadline: when){
-                        // your code with delay
-                        ok.dismiss(animated: true, completion: nil)
-                        return
-                    }
+            
+            let ok = UIAlertController(title: "屏蔽成功", message: "您将不再收到此人的消息！", preferredStyle: .alert)
+            
+            self.present(ok, animated: true, completion: nil)
+            
+            let when = DispatchTime.now() + 2
+            DispatchQueue.main.asyncAfter(deadline: when){
+                // your code with delay
+                ok.dismiss(animated: true, completion: nil)
+                return
+            }
             
         }))
         
@@ -239,86 +318,6 @@ class checkFriendVC: UIViewController {
         })
         
         
-
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        headimage.layer.cornerRadius = headimage.frame.height / 2.0
-        headimage.layer.masksToBounds = true
-        
-        
-        let pictureTap1 = UITapGestureRecognizer(target: self, action: #selector(checkXianzhiController.imageTappedIndex))
-        
-        
-        //get pid，藏起来
-        self.pidLabel.isHidden = true
-        self.pidLabel.text = pid
-        self.uidLabel.isHidden = true
-        self.uidLabel.text = uid
-        self.urlLabel.isHidden = true
-
-        //如果是自己，没办法chat
-        if (uidLabel.text == Auth.auth().currentUser!.uid){
-            self.chat.isHidden = true
-        }
-        else{
-            
-            self.delete.isHidden = true
-        }
-        
-        let postRef = Database.database().reference().child("friend/\(pid)")
-        let image = UIImage(named:"default_profile_icon")
-        
-        postRef.observe(DataEventType.value, with:{
-            (snapshot) in
-            if let post = snapshot.value as? [String:Any]{
-                let author = post["author"] as? [String:Any]
-                
-                let url = author!["photoURL"] as? String
-                
-                if(url == "default"){
-                    self.urlLabel.text = "default"
-                    self.headimage.image = #imageLiteral(resourceName: "icon.jpg")
-                }
-                else{
-                    let tourl = URL(string:url!)
-                    self.headimage.kf.indicatorType = .activity
-                    self.headimage.kf.setImage(with: tourl, placeholder:image)
-                    self.urlLabel.text = url
-                }
-                
-                self.username.text = author!["username"] as? String
-                
-                let timeInterval = (post["timestamp"] as? Double)! / 1000
-                let date = NSDate(timeIntervalSince1970: timeInterval)
-                let dform = DateFormatter()
-                dform.dateFormat = "MM月dd日 HH:mm"
-                
-                self.senttime.text = "发送于：" + dform.string(from:date as Date)
-                
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1), execute: {
-                    let url1 = post["imageUrl"] as? String
-                    if (url1 != ""){
-                        let tourl1 = URL(string:url1!)
-                        self.image1.kf.indicatorType = .activity
-                        self.image1.kf.setImage(with: tourl1)
-                        
-                        self.image1.addGestureRecognizer(pictureTap1)
-                        self.image1.isUserInteractionEnabled = true
-                    }
-                    
-                    
-                })
-                
-                
-                self.address.text = "地址： " + (post["address"] as? String)!
-                self.infor.text = post["info"] as? String
-                
-            }
-        })
     }
     
     
