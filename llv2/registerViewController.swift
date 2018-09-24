@@ -262,6 +262,8 @@ class registerViewController: UIViewController {
         imagePicker.delegate = self
 
         // Do any additional setup after loading the view.
+        
+
     }
 
     override func didReceiveMemoryWarning() {

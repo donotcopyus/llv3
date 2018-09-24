@@ -28,9 +28,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>找啥请求访问您的照相机，并保证不会以任何方式分享图片或干涉您的隐私。允许找啥访问相机吗？</string>
+	<string>找啥请求访问您的照相机以让您拍照后上传头像或本地图片等内容，并保证不会以任何方式分享图片或干涉您的隐私。允许找啥访问相机吗？</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>找啥请求访问您的图片，并保证不会以任何方式分享图片。允许找啥使用图片吗？</string>
+	<string>找啥请求访问您的图片以让您上传本地相册图片以及头像相关内容，并保证不会以任何方式分享图片。允许找啥使用图片吗？</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
