@@ -3202,6 +3202,17 @@ email: lunacao214@outlook.com</string>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem id="E18-fx-dcp"/>
+                                    <barButtonItem style="plain" id="sOZ-th-C8j">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gjy-to-GlP">
+                                            <rect key="frame" x="291" y="8" width="45" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <state key="normal" title="举报/屏蔽"/>
+                                            <connections>
+                                                <action selector="report:" destination="Bgl-gt-Lth" eventType="touchUpInside" id="xgT-vj-eFQ"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" id="lhs-g5-UVT">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3V5-Hw-OFc">
                                             <rect key="frame" x="336" y="4.6666666666666679" width="58" height="31.000000000000004"/>
