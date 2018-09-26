@@ -368,12 +368,21 @@ class checkXianzhi2Controller: UIViewController {
     }
     
 
-    @IBAction func share(_ sender: Any) {
+    @IBAction func share(_ sender: UIButton) {
         
-        let activityVC = UIActivityViewController(activityItems: ["www.google.ca"], applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = self.view
-        
-        self.present(activityVC, animated: true, completion: nil)
+        let textToShare = "我在使用一个非常好用的在加华人app，一键发布carpool/闲置/换汇/交友广告，特别酷，你也来试试吧: "
+        if let myWebsite = URL(string: "http://itunes.apple.com/app/id1436232989") {//Enter link to your app here
+            let objectsToShare = [textToShare, myWebsite] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //Excluded Activities
+            //activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+            
+            
+            activityVC.popoverPresentationController?.sourceView = sender
+            
+            self.present(activityVC, animated: true, completion: nil)
+        }
         
     }
     
