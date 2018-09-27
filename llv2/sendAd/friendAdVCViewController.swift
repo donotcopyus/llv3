@@ -172,8 +172,11 @@ class friendAdVCViewController: UIViewController{
         imagepicker.allowsEditing = true
         imagepicker.sourceType = .photoLibrary
         imagepicker.delegate = self
+        
+
  
     }
+
 
 
     override func didReceiveMemoryWarning() {
