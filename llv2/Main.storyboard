@@ -1895,10 +1895,10 @@ email: lunacao214@outlook.com</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginUI" translatesAutoresizingMaskIntoConstraints="NO" id="cla-47-cCY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="736"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-B8-XCJ">
-                                <rect key="frame" x="99" y="398" width="220" height="30"/>
+                                <rect key="frame" x="99" y="398" width="222" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZmJ-Mz-G2T"/>
                                     <constraint firstAttribute="width" constant="221" id="lb4-N7-hcu"/>
@@ -1913,7 +1913,7 @@ email: lunacao214@outlook.com</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-9a-kcA">
-                                <rect key="frame" x="99" y="436" width="220" height="30"/>
+                                <rect key="frame" x="99" y="436" width="222" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="221" id="8aQ-TM-1r1"/>
                                     <constraint firstAttribute="height" constant="30" id="lag-cd-jl2"/>
@@ -1928,13 +1928,13 @@ email: lunacao214@outlook.com</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXe-t5-5Md">
-                                <rect key="frame" x="200.66666666666666" y="207" width="13" height="14"/>
+                                <rect key="frame" x="201.66666666666666" y="207" width="13" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" name="Color"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" background="横线" translatesAutoresizingMaskIntoConstraints="NO" id="b2R-bH-b9L">
-                                <rect key="frame" x="98" y="474" width="218" height="30"/>
+                                <rect key="frame" x="98" y="474" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7lL-fb-E3k"/>
                                     <constraint firstAttribute="width" constant="220" id="iQW-Uw-J16"/>
@@ -1949,18 +1949,18 @@ email: lunacao214@outlook.com</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-64-LOU">
-                                <rect key="frame" x="0.0" y="120" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="120" width="416" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-Rd-g33">
-                                <rect key="frame" x="137" y="161" width="140" height="141"/>
+                                <rect key="frame" x="137" y="161" width="142" height="141"/>
                                 <color key="backgroundColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-b0-VnB">
-                                <rect key="frame" x="98" y="521" width="218" height="38"/>
+                                <rect key="frame" x="98" y="521" width="220" height="38"/>
                                 <state key="normal" image="submit"/>
                                 <connections>
                                     <action selector="handleSignUp:" destination="kXZ-2K-9Tl" eventType="touchUpInside" id="fzF-JZ-01I"/>
@@ -1968,7 +1968,7 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-h6-A4c">
-                                <rect key="frame" x="-329" y="20" width="40" height="37"/>
+                                <rect key="frame" x="-327" y="20" width="40" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="yaV-lw-fKa"/>
                                 </constraints>
@@ -1978,7 +1978,7 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo8-Dj-DT3">
-                                <rect key="frame" x="170" y="310" width="74" height="34"/>
+                                <rect key="frame" x="171" y="310" width="74" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="选择头像">
                                     <color key="titleColor" red="0.45882352941176469" green="0.53725490196078429" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1988,7 +1988,7 @@ email: lunacao214@outlook.com</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poF-dF-ktB">
-                                <rect key="frame" x="20" y="16" width="48" height="45"/>
+                                <rect key="frame" x="22" y="16" width="48" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="FET-N9-CVf"/>
                                     <constraint firstAttribute="width" constant="48" id="WSL-W8-RP3"/>
@@ -2499,7 +2499,7 @@ email: lunacao214@outlook.com</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-kZ-Yp7">
-                                <rect key="frame" x="76.333333333333343" y="411" width="260.66666666666663" height="90.333333333333314"/>
+                                <rect key="frame" x="76.333333333333343" y="411" width="260.66666666666663" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IgQ-kZ-Yp7" secondAttribute="height" multiplier="26:9" id="Sgs-oP-asY"/>
                                 </constraints>
@@ -2519,7 +2519,7 @@ email: lunacao214@outlook.com</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mee-2V-CWq">
-                                <rect key="frame" x="77" y="540" width="260" height="89.666666666666629"/>
+                                <rect key="frame" x="77" y="539.66666666666663" width="260" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mee-2V-CWq" secondAttribute="height" multiplier="26:9" id="lu6-hJ-hls"/>
                                 </constraints>
@@ -3720,7 +3720,7 @@ email: lunacao214@outlook.com</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rM-Ds-TOO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rM-Ds-TOO">
                                 <rect key="frame" x="140" y="789" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -3814,20 +3814,20 @@ email: lunacao214@outlook.com</string>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQ2-1K-HHH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQ2-1K-HHH">
                                         <rect key="frame" x="58" y="17" width="24" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxK-Ky-XdY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxK-Ky-XdY">
                                         <rect key="frame" x="219" y="17" width="24" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ru-1Q-VnA">
-                                        <rect key="frame" x="219" y="17" width="24" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ru-1Q-VnA">
+                                        <rect key="frame" x="219" y="17" width="5" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -4261,8 +4261,8 @@ email: lunacao214@outlook.com</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCJ-4f-8oQ">
-                                <rect key="frame" x="98" y="0.0" width="24" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCJ-4f-8oQ">
+                                <rect key="frame" x="98" y="0.0" width="4.6666666666666714" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4288,14 +4288,14 @@ email: lunacao214@outlook.com</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-Fq-AS6">
-                                <rect key="frame" x="334" y="85" width="24" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-Fq-AS6">
+                                <rect key="frame" x="353.33333333333331" y="85" width="4.6666666666666856" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZG-DA-DTD">
-                                <rect key="frame" x="277" y="440" width="20" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZG-DA-DTD">
+                                <rect key="frame" x="277" y="440" width="4.6666666666666856" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
