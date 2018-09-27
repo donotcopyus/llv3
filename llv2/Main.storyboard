@@ -3264,13 +3264,13 @@ email: lunacao214@outlook.com</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OR-tQ-vk6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OR-tQ-vk6">
                                 <rect key="frame" x="0.0" y="424" width="414" height="259"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="活动详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-48-8y1">
-                                        <rect key="frame" x="8" y="0.0" width="398" height="251"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="活动详情" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-48-8y1">
+                                        <rect key="frame" x="8" y="8" width="398" height="243"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="251" id="XGD-BZ-HfD"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="251" id="66A-dw-4J3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -3278,11 +3278,11 @@ email: lunacao214@outlook.com</string>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="leading" secondItem="1OR-tQ-vk6" secondAttribute="leadingMargin" id="J1L-l5-8UN"/>
-                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="top" secondItem="1OR-tQ-vk6" secondAttribute="top" id="NKa-YX-9H4"/>
-                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="centerX" secondItem="1OR-tQ-vk6" secondAttribute="centerX" id="dvo-8M-xCq"/>
-                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="bottom" secondItem="1OR-tQ-vk6" secondAttribute="bottomMargin" id="hyN-tO-4Ay"/>
-                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="trailing" secondItem="1OR-tQ-vk6" secondAttribute="trailingMargin" id="xa6-Qs-m96"/>
+                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="bottom" secondItem="1OR-tQ-vk6" secondAttribute="bottomMargin" id="9EH-Wa-p0B"/>
+                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="leading" secondItem="1OR-tQ-vk6" secondAttribute="leadingMargin" id="FDz-t1-H5R"/>
+                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="centerX" secondItem="1OR-tQ-vk6" secondAttribute="centerX" id="Zb2-ce-FX2"/>
+                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="top" secondItem="1OR-tQ-vk6" secondAttribute="top" id="dfj-pq-2WI"/>
+                                    <constraint firstItem="2Mp-48-8y1" firstAttribute="trailing" secondItem="1OR-tQ-vk6" secondAttribute="trailingMargin" id="oIX-Ko-TLT"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -3293,19 +3293,23 @@ email: lunacao214@outlook.com</string>
                             <constraint firstItem="eeq-hq-shP" firstAttribute="trailing" secondItem="j1G-gf-0tO" secondAttribute="trailing" constant="92" id="1SX-ot-fHG"/>
                             <constraint firstItem="4R1-Vd-lsS" firstAttribute="trailing" secondItem="eeq-hq-shP" secondAttribute="trailing" id="6zm-GL-m4X"/>
                             <constraint firstItem="4R1-Vd-lsS" firstAttribute="bottom" secondItem="eeq-hq-shP" secondAttribute="bottom" id="8Cf-IM-7AZ"/>
+                            <constraint firstItem="1OR-tQ-vk6" firstAttribute="top" secondItem="j1G-gf-0tO" secondAttribute="bottom" constant="8" symbolic="YES" id="9QI-iC-hw6"/>
                             <constraint firstItem="OA2-6g-8p8" firstAttribute="top" secondItem="Roh-ES-NaZ" secondAttribute="bottom" id="Aqr-0O-oZJ"/>
                             <constraint firstItem="LRN-7E-zTK" firstAttribute="leading" secondItem="e3D-x1-OUW" secondAttribute="leading" id="BPC-61-dqu"/>
+                            <constraint firstItem="4R1-Vd-lsS" firstAttribute="top" secondItem="1OR-tQ-vk6" secondAttribute="bottom" constant="13" id="Bhz-4x-Iwt"/>
                             <constraint firstItem="4R1-Vd-lsS" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" id="EaZ-Tr-GXW"/>
                             <constraint firstItem="Roh-ES-NaZ" firstAttribute="leading" secondItem="Ai3-vz-UE4" secondAttribute="trailing" constant="8" symbolic="YES" id="GH8-X1-g4x"/>
                             <constraint firstItem="e3D-x1-OUW" firstAttribute="leading" secondItem="12Z-Nd-Qsc" secondAttribute="leading" id="I8u-Ry-ENY"/>
                             <constraint firstItem="Ai3-vz-UE4" firstAttribute="top" secondItem="Roh-ES-NaZ" secondAttribute="top" id="Kb0-gG-zbO"/>
                             <constraint firstItem="Ai3-vz-UE4" firstAttribute="top" secondItem="eeq-hq-shP" secondAttribute="top" constant="48" id="Kbg-yl-0xG"/>
                             <constraint firstItem="ruh-DZ-Qvc" firstAttribute="top" secondItem="OA2-6g-8p8" secondAttribute="bottom" constant="8" symbolic="YES" id="QRb-Du-axQ"/>
+                            <constraint firstItem="1OR-tQ-vk6" firstAttribute="leading" secondItem="4R1-Vd-lsS" secondAttribute="leading" id="VCp-ZF-UBX"/>
                             <constraint firstItem="j1G-gf-0tO" firstAttribute="leading" secondItem="eeq-hq-shP" secondAttribute="leading" constant="82" id="Z4r-lx-njw"/>
                             <constraint firstItem="12Z-Nd-Qsc" firstAttribute="centerX" secondItem="Roh-ES-NaZ" secondAttribute="centerX" id="bLz-Lv-hOM"/>
                             <constraint firstItem="4R1-Vd-lsS" firstAttribute="leading" secondItem="M07-Q3-sCr" secondAttribute="leading" id="cxw-08-j8T"/>
                             <constraint firstItem="Roh-ES-NaZ" firstAttribute="leading" secondItem="OA2-6g-8p8" secondAttribute="leading" id="f6s-oJ-o1V"/>
                             <constraint firstItem="12Z-Nd-Qsc" firstAttribute="top" secondItem="e3D-x1-OUW" secondAttribute="bottom" constant="23" id="fDS-Lz-b2z"/>
+                            <constraint firstItem="1OR-tQ-vk6" firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" id="gbl-Lh-GUn"/>
                             <constraint firstAttribute="trailing" secondItem="4R1-Vd-lsS" secondAttribute="trailing" id="h65-J3-V6Q"/>
                             <constraint firstItem="j1G-gf-0tO" firstAttribute="top" secondItem="Ai3-vz-UE4" secondAttribute="bottom" constant="8" symbolic="YES" id="iaP-ts-pMS"/>
                             <constraint firstItem="OA2-6g-8p8" firstAttribute="trailing" secondItem="M07-Q3-sCr" secondAttribute="trailingMargin" constant="-5" id="lMV-CH-LTd"/>
@@ -3778,7 +3782,7 @@ email: lunacao214@outlook.com</string>
                                             <constraint firstAttribute="width" secondItem="cLC-fQ-ax3" secondAttribute="height" multiplier="1:1" id="Njl-S2-dsA"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-wg-gfA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbbbbbb" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-wg-gfA">
                                         <rect key="frame" x="8" y="1066" width="398" height="482"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="482" id="PNq-T1-4Eg"/>
