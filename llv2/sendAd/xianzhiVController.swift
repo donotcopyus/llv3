@@ -425,6 +425,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         wait.isHidden = true
 
           txtv.text = "在这里填写详细信息"
+        
           txtv.textColor = UIColor.lightGray
           txtv.returnKeyType = .done
           txtv.delegate = self
