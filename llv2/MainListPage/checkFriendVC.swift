@@ -158,6 +158,8 @@ class checkFriendVC: UIViewController {
                 
                 self.address.text = "地址： " + (post["address"] as? String)!
                 self.infor.text = post["info"] as? String
+
+                self.infor.lineBreakMode = NSLineBreakMode.byCharWrapping
                 
             }
         })
