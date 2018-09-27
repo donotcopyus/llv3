@@ -207,7 +207,11 @@ class friendAdVCViewController: UIViewController{
             }, completion: nil)
     
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
 
 
     override func didReceiveMemoryWarning() {
@@ -234,6 +238,7 @@ extension friendAdVCViewController: UIImagePickerControllerDelegate, UINavigatio
         
         picker.dismiss(animated: true, completion: nil)
     }
+    
     
     
 }
