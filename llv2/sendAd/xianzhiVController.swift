@@ -71,7 +71,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     //需要设置只允许数字输入
 
     @IBOutlet weak var txtv: UITextView!
-    var activeTextField: UITextField!
+//    var activeTextField: UITextField!
     //placeholder
   
     
@@ -407,9 +407,9 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         }
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        activeTextField = textField
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        activeTextField = textField
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -457,7 +457,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         let info: NSDictionary = notification.userInfo! as NSDictionary
         let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let keyboardY = self.view.frame.size.height - keyboardSize.height
-        let editingTextFieldY:CGFloat! = self.activeTextField.frame.origin.y
+        let editingTextFieldY:CGFloat! = self.txtv.frame.origin.y
         
         if editingTextFieldY > keyboardY - 60 {
             UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
