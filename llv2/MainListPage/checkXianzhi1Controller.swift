@@ -111,6 +111,9 @@ class checkXianzhi1Controller: UIViewController {
                 
                 self.info.text = post["extraInfo"] as? String
                 
+                self.info.lineBreakMode = NSLineBreakMode.byCharWrapping
+                
+                
             }
         })
         

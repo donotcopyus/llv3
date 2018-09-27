@@ -94,6 +94,7 @@ class checkXianzhiNoImageController: UIViewController {
                 self.price.text = "价格： " + (post["price"] as? String)!
                 
                 self.info.text = post["extraInfo"] as? String
+                self.info.lineBreakMode = NSLineBreakMode.byCharWrapping
                 
             }
         })
