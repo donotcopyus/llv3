@@ -156,7 +156,7 @@ class friendAdVCViewController: UIViewController{
     
     //交友宣言
     @IBOutlet weak var infor: UITextView!
-    var activeTextField: UITextField!
+//    var activeTextField: UITextField!
     
     //选择日期
     @IBOutlet weak var showDate: UILabel!
@@ -164,9 +164,9 @@ class friendAdVCViewController: UIViewController{
     @IBAction func datepicker(_ sender: Any) {
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        activeTextField = textField
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        infor = textField
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -191,7 +191,7 @@ class friendAdVCViewController: UIViewController{
         let info: NSDictionary = notification.userInfo! as NSDictionary
         let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let keyboardY = self.view.frame.size.height - keyboardSize.height
-        let editingTextFieldY:CGFloat! = self.activeTextField.frame.origin.y
+        let editingTextFieldY:CGFloat! = self.infor.frame.origin.y
         
         if editingTextFieldY > keyboardY - 60 {
             UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
