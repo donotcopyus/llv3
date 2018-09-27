@@ -156,6 +156,7 @@ class friendAdVCViewController: UIViewController{
     
     //交友宣言
     @IBOutlet weak var infor: UITextView!
+    var activeTextField: UITextField!
     
     //选择日期
     @IBOutlet weak var showDate: UILabel!
@@ -163,7 +164,14 @@ class friendAdVCViewController: UIViewController{
     @IBAction func datepicker(_ sender: Any) {
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeTextField = textField
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,8 +181,31 @@ class friendAdVCViewController: UIViewController{
         imagepicker.sourceType = .photoLibrary
         imagepicker.delegate = self
         
-
- 
+        let center: NotificationCenter = NotificationCenter.default;
+        center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+    }
+    
+    @objc func keyboardDidShow(notification: Notification) {
+        let info: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardY = self.view.frame.size.height - keyboardSize.height
+        let editingTextFieldY:CGFloat! = self.activeTextField.frame.origin.y
+        
+        if editingTextFieldY > keyboardY - 60 {
+            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+            }, completion: nil)
+            
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+            }, completion: nil)
+    
     }
 
 
