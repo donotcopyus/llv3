@@ -195,7 +195,7 @@ class friendAdVCViewController: UIViewController{
         
         if editingTextFieldY > keyboardY - 60 {
             UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y - (editingTextFieldY! - (keyboardY - 60)), width: self.view.bounds.width, height: self.view.bounds.height)
+                self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y, width: self.view.bounds.width, height: self.view.bounds.height)
             }, completion: nil)
             
         }
@@ -207,7 +207,11 @@ class friendAdVCViewController: UIViewController{
             }, completion: nil)
     
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
 
 
     override func didReceiveMemoryWarning() {
@@ -234,6 +238,7 @@ extension friendAdVCViewController: UIImagePickerControllerDelegate, UINavigatio
         
         picker.dismiss(animated: true, completion: nil)
     }
+    
     
     
 }
