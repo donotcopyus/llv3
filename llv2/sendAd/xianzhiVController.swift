@@ -411,10 +411,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
 //        activeTextField = textField
 //    }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+
     
     var b2 = dropDownBtn()
     
@@ -452,6 +449,10 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @objc func keyboardDidShow(notification: Notification) {
