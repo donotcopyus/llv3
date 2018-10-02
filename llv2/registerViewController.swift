@@ -20,6 +20,8 @@ class registerViewController: UIViewController {
         
         return true
     }
+    
+
 
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -268,10 +270,7 @@ class registerViewController: UIViewController {
         center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
     }
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
+
     
     @objc func keyboardDidShow(notification: Notification) {
         let info: NSDictionary = notification.userInfo! as NSDictionary

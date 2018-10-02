@@ -606,6 +606,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="f7n-Wv-uLD">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="CzX-iz-41j">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QNm-Uc-31Z">
                                 <rect key="frame" x="20" y="8" width="72" height="28"/>
@@ -620,7 +621,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-Ap-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5231" y="-197"/>
+            <point key="canvasLocation" x="5214" y="-198"/>
         </scene>
         <!--Change PassVC-->
         <scene sceneID="XxZ-26-9A5">
@@ -3410,7 +3411,7 @@ email: lunacao214@outlook.com</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sp-ig-RmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4484" y="-197"/>
+            <point key="canvasLocation" x="4312" y="-197"/>
         </scene>
         <!--Chat Log Controller-->
         <scene sceneID="iCO-JU-KAy">
